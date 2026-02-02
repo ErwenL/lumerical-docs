@@ -1,0 +1,11 @@
+# gratingbloch1
+
+Returns the bloch vector (k  in_1  and k  in_2  ) used in the grating calculation. This corresponds to the bloch vector setting in the simulation region. gratingbloch1 gives the bloch vector for the first dimension (2D and 3D). gratingbloch2 gives the bloch vector for the 2nd dimension (3D only). See the grating function documentation for information on interpreting N, M, ux, uy for various monitor orientations. 
+
+**Syntax** |  **Description**  
+---|---  
+out = gratingbloch1( "monitorname", ...);  |  Same arguments as grating function.   
+  
+**See Also**
+
+[ List of commands ](/hc/en-us/articles/360037228834) , [ grating ](/hc/en-us/articles/360034927213-grating) , [ gratingbloch2 ](/hc/en-us/articles/360034407154-gratingbloch2)

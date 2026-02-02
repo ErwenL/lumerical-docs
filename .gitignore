@@ -1,0 +1,203 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+pdm.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project-specific ignores
+
+# Virtual environment
+.venv/
+
+# Ruff cache
+.ruff_cache/
+
+# Log files
+*.log
+logs/
+
+# Scraping progress files (can be regenerated)
+docs/scrape-progress.json
+docs/scrape-single.log
+docs/scrape.log
+
+# Batch run logs
+batch_run*.log
+scripts/batch_scrape.log
+scripts/scrape.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Local configuration files
+local_config.json
+config.local.json
+secrets.json
+credentials.json
+.env.local
+
+# Documentation chunks (intermediate files)
+docs/DOCUMENTATION-CHUNKS.md
+
+# Generated analysis and progress files (can be regenerated)
+docs/missing-commands.json
+docs/lsf-script-progress.md
+docs/lsf-script-analysis.md
+docs/scrape-progress.json
+
+# Temporary/backup files
+*.bak
+*~
+*.swp
+*.swo
+
+# UV lock file (generated, but should be committed for reproducibility)
+# uv.lock - KEEP THIS FILE
+
+# Python virtual environment lock
+.venv.lock

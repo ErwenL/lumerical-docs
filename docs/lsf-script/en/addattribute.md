@@ -28,4 +28,11 @@ Alternatively, one can also create a vector rectilinear dataset (with the name E
 
 **See Also**
 
-[ rectilineardataset ](/hc/en-us/articles/360034409474-rectilineardataset) , [ addattribute ](/hc/en-us/articles/360034929873-addattribute) , [ addparameter ](/hc/en-us/articles/360034409494-addparameter) , [ visualize ](/hc/en-us/articles/360034410514-visualize) , [ datasets ](/hc/en-us/articles/360034409554-Datasets) , [ getparameter ](/hc/en-us/articles/360034409514-getparameter) , [ getattribute ](/hc/en-us/articles/360034409534-getattribute) , [ matrixdataset ](/hc/en-us/articles/360034409454-matrixdataset)
+- [rectilineardataset](./rectilineardataset.md)
+- [addattribute](./addattribute.md)
+- [addparameter](./addparameter.md)
+- [visualize](./visualize.md)
+- [datasets](/hc/en-us/articles/360034409554-Datasets)
+- [getparameter](./getparameter.md)
+- [getattribute](./getattribute.md)
+- [matrixdataset](./matrixdataset.md)

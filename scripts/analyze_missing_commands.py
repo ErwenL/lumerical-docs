@@ -13,7 +13,7 @@ from typing import List, Tuple, Set
 INDEX_FILE = (
     Path(__file__).parent.parent / "docs" / "lsf-script-commands-alphabetical.md"
 )
-OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "lsf-script"
+OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "lsf-script" / "en"
 MISSING_FILE = Path(__file__).parent.parent / "docs" / "missing-commands.json"
 ANALYSIS_FILE = Path(__file__).parent.parent / "docs" / "lsf-script-analysis.md"
 

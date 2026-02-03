@@ -17,4 +17,8 @@ Add a length variable called "Pname" as an analysis property for the analysis gr
 
 **See Also**
 
-[ Manipulating objects ](/hc/en-us/articles/360037228834) , [ addstructuregroup ](/hc/en-us/articles/360034924093-addstructuregroup) , [ runsetup ](/hc/en-us/articles/360034928893-runsetup) , [ addanalysisgroup ](/hc/en-us/articles/360034404074-addanalysisgroup) , [ addanalysisresult ](/hc/en-us/articles/360034928753-addanalysisresult)
+- [Manipulating objects](../lsf-script-commands-alphabetical.md)
+- [addstructuregroup](./addstructuregroup.md)
+- [runsetup](./runsetup.md)
+- [addanalysisgroup](./addanalysisgroup.md)
+- [addanalysisresult](./addanalysisresult.md)

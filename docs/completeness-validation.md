@@ -3,7 +3,7 @@
 ## 验证摘要
 - **验证时间**: 2026-02-02
 - **索引文件**: `lsf-script-commands-alphabetical.md`
-- **文档目录**: `docs/lsf-script/`
+- **文档目录**: `docs/lsf-script/en/`
 
 ## 关键统计
 

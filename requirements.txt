@@ -23,3 +23,7 @@ tqdm==4.67.1              # Progress bars (optional)
 # For development only
 pytest==8.4.2            # Testing framework
 ruff==0.14.0             # Code formatting and linting
+
+# Markdown formatting
+mdformat==0.7.0          # Markdown formatter
+mdformat-tables==0.4.0   # Table formatting plugin

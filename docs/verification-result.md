@@ -2,7 +2,7 @@
 
 **验证时间**: 2026-02-02
 **索引文件**: `lsf-script-commands-alphabetical.md`
-**文档目录**: `lsf-script`
+**文档目录**: `lsf-script/en`
 
 ## 统计
 

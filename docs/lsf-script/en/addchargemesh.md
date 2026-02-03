@@ -27,4 +27,6 @@ The following script commands will add a mesh constraint to the CHARGE solver re
 
 **See Also**
 
-[ List of commands ](/hc/en-us/articles/360037228834) , [ addchargesolver ](/hc/en-us/articles/360034924473-addchargesolver) , [ set ](/hc/en-us/articles/360034928773-set)
+- [List of commands](../lsf-script-commands-alphabetical.md)
+- [addchargesolver](./addchargesolver.md)
+- [set](./set.md)

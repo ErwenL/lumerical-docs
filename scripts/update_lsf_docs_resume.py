@@ -22,11 +22,14 @@ INDEX_URL = (
     BASE_URL
     + "/hc/en-us/articles/360034923553-Lumerical-scripting-language-Alphabetical-list"
 )
-OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "lsf-script"
+OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "lsf-script" / "en"
 COMMANDS_LIST_FILE = (
     Path(__file__).parent.parent / "docs" / "lsf-script-commands-alphabetical.md"
 )
 SLEEP_TIME = 30.0  # 增加等待时间，避免请求过载
+
+# Markdown formatting configuration
+ENABLE_MARKDOWN_FORMAT = True  # 是否启用Markdown格式化
 
 # 恢复配置
 RESUME_FROM_LETTER = "P"  # 从字母P开始
@@ -255,6 +258,34 @@ def sanitize_filename(name: str) -> str:
     return name
 
 
+def format_markdown_file(filepath: Path) -> bool:
+    """Format a markdown file using mdformat with tables plugin.
+    
+    Returns True if formatting succeeded or was skipped, False on error.
+    """
+    if not ENABLE_MARKDOWN_FORMAT:
+        return True
+    try:
+        import subprocess
+        import sys
+        
+        # 使用mdformat命令行工具格式化文件
+        result = subprocess.run(
+            [sys.executable, "-m", "mdformat", str(filepath), "--wrap", "88"],
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        if result.returncode != 0:
+            print(f"mdformat failed for {filepath}: {result.stderr}")
+            return False
+        print(f"Formatted {filepath}")
+        return True
+    except Exception as e:
+        print(f"Error formatting {filepath}: {e}")
+        return False
+
+
 def save_command_markdown(command_name: str, content: str):
     """Save command documentation as a markdown file."""
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -263,6 +294,9 @@ def save_command_markdown(command_name: str, content: str):
     filepath = OUTPUT_DIR / f"{filename}.md"
     filepath.write_text(content, encoding="utf-8")
     print(f"Saved {command_name} -> {filepath}")
+    
+    # 格式化Markdown文件
+    format_markdown_file(filepath)
 
 
 def generate_commands_list_file(commands_by_letter: Dict[str, List[Tuple[str, str]]]):

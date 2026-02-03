@@ -26,4 +26,8 @@ The following script commands will add a 2D y-normal charge monitor to the simul
 
 **See Also**
 
-[ List of commands ](/hc/en-us/articles/360037228834) , [ set ](/hc/en-us/articles/360034928773-set) , [ addbandstructuremonitor ](/hc/en-us/articles/360034924653-addbandstructuremonitor) , [ addefieldmonitor ](/hc/en-us/articles/360034924633-addefieldmonitor) , [ addjfluxmonitor ](/hc/en-us/articles/360034924673-addjfluxmonitor)
+- [List of commands](../lsf-script-commands-alphabetical.md)
+- [set](./set.md)
+- [addbandstructuremonitor](./addbandstructuremonitor.md)
+- [addefieldmonitor](./addefieldmonitor.md)
+- [addjfluxmonitor](./addjfluxmonitor.md)

@@ -20,4 +20,5 @@ Calculate acos( π /4 + i).
 
 **See Also**
 
-[ List of commands ](/hc/en-us/articles/360037228834) , [ cos ](/hc/en-us/articles/360034405554-cos)
+- [List of commands](../lsf-script-commands-alphabetical.md)
+- [cos](./cos.md)

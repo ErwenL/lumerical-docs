@@ -27,4 +27,8 @@ The following script commands will add an absorbing boundary condition to the 'D
 
 **See Also**
 
-[ adddgtdsolver ](/hc/en-us/articles/360034925013-adddgtdsolver) , [ addpml ](/hc/en-us/articles/360034924873-addabsorbing) , [ addpmc ](/hc/en-us/articles/360034924913-addpmc) , [ addpec ](/hc/en-us/articles/360034924893-addpec) , [ addperiodic ](/hc/en-us/articles/360034404934-addperiodic)
+- [adddgtdsolver](./adddgtdsolver.md)
+- [addpml](./addpml.md)
+- [addpmc](./addpmc.md)
+- [addpec](./addpec.md)
+- [addperiodic](./addperiodic.md)

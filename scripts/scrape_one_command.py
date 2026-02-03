@@ -13,6 +13,9 @@ import logging
 import re
 from pathlib import Path
 
+# Markdown formatting configuration
+ENABLE_MARKDOWN_FORMAT = True  # 是否启用Markdown格式化
+
 # 尝试从现有脚本导入抓取函数
 try:
     from update_lsf_docs_resume import (
@@ -28,7 +31,7 @@ except ImportError as e:
     logging.warning(f"无法导入现有抓取函数: {e}")
     HAVE_SCRAPER_FUNCS = False
     # 定义占位函数，实际使用时需要实现
-    OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "lsf-script"
+    OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "lsf-script" / "en"
 
     def fetch_page(url: str) -> str | None:
         logging.error("fetch_page 未实现，请确保依赖已安装")
@@ -37,12 +40,42 @@ except ImportError as e:
     def extract_command_content(html: str, command_name: str) -> str:
         return f"# {command_name}\n\n文档内容抓取失败。"
 
+    def format_markdown_file(filepath: Path) -> bool:
+        """Format a markdown file using mdformat with tables plugin.
+        
+        Returns True if formatting succeeded or was skipped, False on error.
+        """
+        if not ENABLE_MARKDOWN_FORMAT:
+            return True
+        try:
+            import subprocess
+            import sys
+            
+            # 使用mdformat命令行工具格式化文件
+            result = subprocess.run(
+                [sys.executable, "-m", "mdformat", str(filepath), "--wrap", "88"],
+                capture_output=True,
+                text=True,
+                timeout=10,
+            )
+            if result.returncode != 0:
+                logging.warning(f"mdformat failed for {filepath}: {result.stderr}")
+                return False
+            logging.info(f"Formatted {filepath}")
+            return True
+        except Exception as e:
+            logging.warning(f"Error formatting {filepath}: {e}")
+            return False
+
     def save_command_markdown(command_name: str, content: str):
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         filename = sanitize_filename(command_name)
         filepath = OUTPUT_DIR / f"{filename}.md"
         filepath.write_text(content, encoding="utf-8")
         logging.info(f"保存 {command_name} -> {filepath}")
+        
+        # 格式化Markdown文件
+        format_markdown_file(filepath)
 
     def sanitize_filename(name: str) -> str:
         original_name = name  # 保存原始名称用于哈希

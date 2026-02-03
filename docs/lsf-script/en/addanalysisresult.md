@@ -17,4 +17,7 @@ Add a result variable "A" for output. It must be calculated inside the analysis 
 
 **See Also**
 
-[ Manipulating objects ](/hc/en-us/articles/360037228834) , [ addstructuregroup ](/hc/en-us/articles/360034924093-addstructuregroup) , [ runsetup ](/hc/en-us/articles/360034928893-runsetup) , [ addanalysisgroup ](/hc/en-us/articles/360034404074-addanalysisgroup)
+- [Manipulating objects](../lsf-script-commands-alphabetical.md)
+- [addstructuregroup](./addstructuregroup.md)
+- [runsetup](./runsetup.md)
+- [addanalysisgroup](./addanalysisgroup.md)

@@ -34,4 +34,8 @@ Setting the properties while adding the object:
 
 **See Also**
 
-[ List of commands ](https://optics.ansys.com/hc/en-us/articles/360037228834) , [ set ](https://optics.ansys.com/hc/en-us/articles/360034928773-set) , [2D rectangle ](https://optics.ansys.com/hc/en-us/articles/360034901593-Structures-2D-Rectangle-Optical-) , [ add2dpoly ](https://optics.ansys.com/hc/en-us/articles/360034404774-add2dpoly) , [2D polygon ](https://optics.ansys.com/hc/en-us/articles/360034901613-Structures-2D-Polygon)
+- [List of commands](../lsf-script-commands-alphabetical.md)
+- [set](./set.md)
+- [2D rectangle](https://optics.ansys.com/hc/en-us/articles/360034901593-Structures-2D-Rectangle-Optical-)
+- [add2dpoly](./add2dpoly.md)
+- [2D polygon](https://optics.ansys.com/hc/en-us/articles/360034901613-Structures-2D-Polygon)

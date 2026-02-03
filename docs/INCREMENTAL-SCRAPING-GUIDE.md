@@ -3,7 +3,7 @@
 ## 当前状态 (2026-02-02)
 
 - **总命令数**: 727 个
-- **已抓取文档**: 639 个 (`docs/lsf-script/`)
+- **已抓取文档**: 639 个 (`docs/lsf-script/en/`)
 - **缺失命令**: 189 个 (`docs/missing-lsf-script-docs.md`)
 - **完成率**: 约 87.9%
 - **最近抓取**: `addport (FDTD)` 成功抓取并已从缺失列表中移除
@@ -35,7 +35,7 @@ python scripts/scrape_one_command.py --help
 **工作流程**:
 1. 从 `missing-lsf-script-docs.md` 读取命令列表
 2. 使用 cloudscraper + selenium 备选方案抓取页面
-3. 提取内容并保存为 Markdown 文件到 `docs/lsf-script/`
+3. 提取内容并保存为 Markdown 文件到 `docs/lsf-script/en/`
 4. 成功时：更新进度文件 `docs/scrape-progress.json`，并从缺失列表中移除
 5. 失败时：记录日志，保持命令在列表中以便重试
 

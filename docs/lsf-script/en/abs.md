@@ -22,4 +22,5 @@ Calculate the absolute value of numbers in an array.
 
 **See Also**
 
-[real](/hc/en-us/articles/360034925493-real), [ imag ](/hc/en-us/articles/360034925513-imag)
+- [real](./real.md)
+- [imag](./imag.md)

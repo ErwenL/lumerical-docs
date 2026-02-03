@@ -114,6 +114,44 @@ uv venv
 source .venv/bin/activate
 ```
 
+### Translation Helper Script
+
+A new script `translation_helper.py` has been added to manage the English-to-Chinese documentation translation workflow.
+
+**Usage**:
+```bash
+# Show translation statistics
+python scripts/translation_helper.py --stats
+
+# List untranslated commands (first 20)
+python scripts/translation_helper.py --list
+
+# List all untranslated commands
+python scripts/translation_helper.py --list --all
+
+# Prepare template for a specific command
+python scripts/translation_helper.py --prepare addmaterial
+
+# Prepare template with overwrite
+python scripts/translation_helper.py --prepare addmaterial --overwrite
+
+# Generate detailed progress report
+python scripts/translation_helper.py --report
+```
+
+**Features**:
+- Tracks translation progress between `docs/lsf-script/en/` and `docs/lsf-script/cn/`
+- Creates templates with translation metadata headers
+- Generates JSON progress reports at `docs/translation-progress.json`
+- Shows real-time statistics and recommendations
+
+**Workflow**:
+1. Use `--list` to identify untranslated commands
+2. Use `--prepare <command>` to create a template
+3. Edit the generated Chinese file in `docs/lsf-script/cn/`
+4. Use `--stats` to track progress
+5. Use `--report` to generate detailed progress data
+
 ## Code Style Guidelines
 
 ### General Principles

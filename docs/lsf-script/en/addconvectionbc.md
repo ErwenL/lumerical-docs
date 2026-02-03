@@ -61,7 +61,13 @@ The following script commands will add a convection boundary condition to the HE
     set("h convection",100);
     set("surface type","simulation region");
     set("z max",1);
-
+ 
 **See Also**
 
-[ addtemperaturebc ](/hc/en-us/articles/360034404854-addconvectionbc) , [ addradiationbc ](/hc/en-us/articles/360034924813-addradiationbc) , [ addthermalpowerbc ](/hc/en-us/articles/360034404874-addthermalpowerbc) , [ addheatfluxbc ](/hc/en-us/articles/360034404894-addheatfluxbc) , [ addthermalinsulatingbc ](/hc/en-us/articles/360034924833-addthermalinsulatingbc) , [ addvoltagebc ](/hc/en-us/articles/360034404914-addvoltagebc)
+- [List of commands](../lsf-script-commands-alphabetical.md)
+- [addtemperaturebc](./addtemperaturebc.md)
+- [addradiationbc](./addradiationbc.md)
+- [addthermalpowerbc](./addthermalpowerbc.md)
+- [addheatfluxbc](./addheatfluxbc.md)
+- [addthermalinsulatingbc](./addthermalinsulatingbc.md)
+- [addvoltagebc](./addvoltagebc.md)

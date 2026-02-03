@@ -31,4 +31,7 @@ Setting the properties while adding the object:
 
 **See Also**
 
-[ List of commands ](https://optics.ansys.com/hc/en-us/articles/360037228834) , [ add2drect ](https://optics.ansys.com/hc/en-us/articles/360034924753-add2drect) , [2D polygon ](https://optics.ansys.com/hc/en-us/articles/360034901613-Structures-2D-Polygon) , [2D rectangle ](https://optics.ansys.com/hc/en-us/articles/360034901593-Structures-2D-Rectangle-Optical-)
+- [List of commands](../lsf-script-commands-alphabetical.md)
+- [add2drect](./add2drect.md)
+- [2D polygon](https://optics.ansys.com/hc/en-us/articles/360034901613-Structures-2D-Polygon)
+- [2D rectangle](https://optics.ansys.com/hc/en-us/articles/360034901593-Structures-2D-Rectangle-Optical-)

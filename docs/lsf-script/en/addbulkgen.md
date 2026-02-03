@@ -28,4 +28,6 @@ The following script commands will add a bulk generation (source) object to the 
 
 **See Also**
 
-[ List of commands ](/hc/en-us/articles/360037228834) , [ set ](/hc/en-us/articles/360034928773-set) , [ addimportgen ](/hc/en-us/articles/360034924553-addimportgen)
+- [List of commands](../lsf-script-commands-alphabetical.md)
+- [set](./set.md)
+- [addimportgen](./addimportgen.md)

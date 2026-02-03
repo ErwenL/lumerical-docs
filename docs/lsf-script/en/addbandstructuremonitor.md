@@ -23,4 +23,8 @@ The following script commands will add a bandstructure monitor to the simulation
 
 **See Also**
 
-[ List of commands ](/hc/en-us/articles/360037228834) , [ set ](/hc/en-us/articles/360034928773-set) , [ addefieldmonitor ](/hc/en-us/articles/360034924633-addefieldmonitor) , [ addchargemonitor ](/hc/en-us/articles/360034924613-addchargemonitor) , [ addjfluxmonitor ](/hc/en-us/articles/360034924673-addjfluxmonitor)
+- [List of commands](../lsf-script-commands-alphabetical.md)
+- [set](./set.md)
+- [addefieldmonitor](./addefieldmonitor.md)
+- [addchargemonitor](./addchargemonitor.md)
+- [addjfluxmonitor](./addjfluxmonitor.md)

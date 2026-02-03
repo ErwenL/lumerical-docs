@@ -24,4 +24,9 @@ Note: To add a pre-defined analysis group from the object library, use the [ add
   
 **See Also**
 
-[ List of commands ](/hc/en-us/articles/360037228834) , [ addtogroup ](/hc/en-us/articles/360034408454-addtogroup) , [ adduserprop ](/hc/en-us/articles/360034928733-adduserprop) , [ runanalysis ](/hc/en-us/articles/360034409874-runanalysis) , [ getresult ](/hc/en-us/articles/360034409854-getresult) , [ addobject ](/hc/en-us/articles/360034404094-addobject)
+- [List of commands](../lsf-script-commands-alphabetical.md)
+- [addtogroup](./addtogroup.md)
+- [adduserprop](./adduserprop.md)
+- [runanalysis](./runanalysis.md)
+- [getresult](./getresult.md)
+- [addobject](./addobject.md)

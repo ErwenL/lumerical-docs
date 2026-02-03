@@ -37,4 +37,8 @@ NOTE:  For a newly created alloy, when the first base material is added to the a
   
 **See Also**
 
-[ addmodelmaterial ](/hc/en-us/articles/360034404974-addmodelmaterial) , [ addmaterialproperties ](/hc/en-us/articles/360034924933-addmaterialproperties) , [ addemmaterialproperty ](/hc/en-us/articles/360034924953-addemmaterialproperty) , [ addhtmaterialproperty ](/hc/en-us/articles/360034924973-addhtmaterialproperty)
+- [List of commands](../lsf-script-commands-alphabetical.md)
+- [addmodelmaterial](./addmodelmaterial.md)
+- [addmaterialproperties](./addmaterialproperties.md)
+- [addemmaterialproperty](./addemmaterialproperty.md)
+- [addhtmaterialproperty](./addhtmaterialproperty.md)

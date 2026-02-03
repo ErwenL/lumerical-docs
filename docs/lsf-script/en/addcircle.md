@@ -22,4 +22,5 @@ The following script commands will create a circle named "new_circle" with a rad
 
 **See Also**
 
-[List of commands ](/hc/en-us/articles/360037228834), [set](/hc/en-us/articles/360034928773-set)
+- [List of commands](../lsf-script-commands-alphabetical.md)
+- [set](./set.md)

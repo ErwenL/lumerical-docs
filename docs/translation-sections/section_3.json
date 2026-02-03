@@ -181,7 +181,12 @@
   ],
   "command_count": 177,
   "created_date": "2026-02-03T08:29:38.820420",
-  "status": "pending",
-  "completed_commands": [],
-  "progress": 0.0
+  "status": "in_progress",
+  "completed_commands": [
+    "groupscope",
+    "gt",
+    "gte"
+  ],
+  "progress": 1.69,
+  "last_updated": "2026-02-03T10:56:25.163577"
 }

@@ -21,4 +21,5 @@ The following script commands will add a 2D z-normal frequency domain field prof
 
 **See Also**
 
-[**List of commands**](https://optics.ansys.com/hc/en-us/articles/360037228834), [**set**](https://optics.ansys.com/hc/en-us/articles/360034928773-set)
+- [List of commands](./list-of-commands.md)
+- [set](./set.md)

@@ -24,4 +24,6 @@ The following script command will add a 2D y-normal CHARGE solver region, set it
 
 **See Also**
 
-[ List of commands ](/hc/en-us/articles/360037228834) , [ set ](/hc/en-us/articles/360034928773-set) , [ run ](/hc/en-us/articles/360034931333-run)
+- [List of commands](./list-of-commands.md)
+- [set](./set.md)
+- [run](./run.md)

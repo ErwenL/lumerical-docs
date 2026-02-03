@@ -1,12 +1,18 @@
+<!--
+Translation from English documentation
+Original command: adddgtdmesh
+Translation date: 2026-02-03 12:19:07
+-->
+
 # adddgtdmesh
 
-Adds a [mesh constraint (override region)](https://optics.ansys.com/hc/en-us/articles/360034397994) to a 'DGTD' simulation. A DGTD solver region must be present in the objects tree for this command to work.
+向 'DGTD' 仿真中添加一个 [mesh constraint (override region)](https://optics.ansys.com/hc/en-us/articles/360034397994)。对象树中必须存在 DGTD 求解器区域，此命令才能工作。
 
 **Syntax** |  **Description**  
 ---|---  
-adddgtdmesh; |  Adds a mesh constraint to the 'DGTD' simulation environment. This function does not return any data.  
+adddgtdmesh; |  向 'DGTD' 仿真环境中添加一个网格约束。此函数不返回任何数据。  
   
-**Example 1**
+**示例1**
 
 The following script commands will add a mesh constraint to the DGTD solver already present in the objects tree and print the name of all of its properties.
     

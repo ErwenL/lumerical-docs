@@ -183,8 +183,11 @@
   "created_date": "2026-02-03T08:29:38.819206",
   "status": "in_progress",
   "completed_commands": [
-    "addcustom"
+    "addcustom",
+    "adddeltachargesource",
+    "adddevice",
+    "adddftmonitor"
   ],
-  "progress": 0.56,
-  "last_updated": "2026-02-03T08:52:12.640881"
+  "progress": 2.26,
+  "last_updated": "2026-02-03T10:59:17.343508"
 }

@@ -181,7 +181,14 @@
   ],
   "command_count": 177,
   "created_date": "2026-02-03T08:29:38.819206",
-  "status": "pending",
-  "completed_commands": [],
-  "progress": 0.0
+  "status": "in_progress",
+  "completed_commands": [
+    "ctranspose",
+    "currentfilename",
+    "currentscriptname",
+    "customlibrary",
+    "cwnorm"
+  ],
+  "progress": 2.82,
+  "last_updated": "2026-02-03T10:57:12.176539"
 }

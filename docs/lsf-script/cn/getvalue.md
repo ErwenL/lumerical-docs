@@ -1,22 +1,25 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: getvalue -->
+<!--
+Translation from English documentation
+Original command: getvalue
+Translation date: 2026-02-04 22:50:00
+-->
 
 # getvalue
 
-**语法** | **描述**
----|---
-value=getvalue("element", "parameter");  value=getvalue("element", "parameter", "type"); | Gets an internal 值 for an 元素's internal ‘参数’. Different from ‘set’ or ‘getnamed’, ‘getvalue’ can have direct access to internal 元素 parameters. ‘type’ allows for variations for a given ‘参数’.
+获取 一个 internal 值 用于 一个 元素's internal ‘s 参数’. 
 
+**语法** |  **描述**  
+---|---  
+值=getvalue("元素", "参数");  值=getvalue("元素", "参数", "类型");  |  获取 一个 internal 值 用于 一个 元素's internal ‘参数’. Different 从 ‘设置’ 或 ‘getnamed’, ‘getvalue’ 可以 have direct access 到 internal 元素 参数. ‘类型’ allows 用于 variations 用于 一个 given ‘参数’.   
+  
 **示例**
 
-The following 示例 gets the "s 参数" from the 元素 "SPAR_1". 
-    ?getvalue("SPAR_1", "s parameters");
-    Cell 数组 with 3 元素
+The following example 获取 该 "s 参数" 从 该 元素 "SPAR_1". 
+    
+    
+    ?getvalue("SPAR_1", "s 参数");
+    Cell 数组 使用 3 elements
 
-The following 示例 gets the "s 参数" from the 元素 "SPAR_1". 
-    ?getvalue("SPAR_1", "s parameters");
-    Cell 数组 with 3 元素
-
-**另请参阅**
+**参见**
 
 [ setvalue ](/hc/en-us/articles/360034927773-setvalue)

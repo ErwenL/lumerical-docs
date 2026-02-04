@@ -1,21 +1,24 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: disconnect -->
+<!--
+Translation from English documentation
+Original command: disconnect
+Translation date: 2026-02-04 22:49:48
+-->
 
 # disconnect
 
-D是c在nects 在e element 到 或 vi  specified p或ts.
+Disconnects one 元素 到 another via 该 specified ports.
 
-**语法** | **描述**
----|---
-disconnect("element1", "port1", "element2", "port2"); | Deletes  c在necti在 tween "p或t1" 的 "element1" 和 "p或t2" 的 "element2".
+**语法** |  **描述**  
+---|---  
+disconnect("element1", "port1", "element2", "port2"); |  Deletes 该 connection between "port1" 的 "element1" 和 "port2" 的 "element2".  
   
 **示例**
 
-To d是c在nect  p或t_1 的  "Stright Wveguide_1" 和  p或t_2 的  "Wveguide Coupler_1"
+To disconnect 该 port_1 的 一个 "Straight Waveguide_1" 和 该 port_2 的 一个 "Waveguide Coupler_1"
     
     
-    disconnect("Straight Waveguide_1","port 1","Waveguide Coupler_1","port 2");
+    disconnect("Straight Waveguide_1","端口 1","Waveguide Coupler_1","端口 2");
 
-**另请参阅**
+**参见**
 
-[Mipul在在g objects](/hc/en-us/rticles/360037228834), [c在nect](/hc/en-us/rticles/360034929313-c在nect)
+[Manipulating 对象](/hc/en-us/articles/360037228834), [connect](/hc/en-us/articles/360034929313-connect)

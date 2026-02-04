@@ -1,27 +1,33 @@
+<!--
+Translation from English documentation
+Original command: extractstructure
+Translation date: 2026-02-04 22:49:48
+-->
+
 # extractstructure
 
-使用存储在非结构化数据集中的有限元几何数据创建多边形（2D 情况下）或平面实体（3D 情况下）。
+创建 一个 一个 polygon (在 2D) 或 一个 planar solid (在 3D) 使用 该 finite-元素 geometric 数据 stored 在 一个 unstructured dataset.
 
-**语法** | **描述**
----|---
-extractstructure(D); | 为 2D 数据创建多边形，为 3D 数据创建平面实体。参数 D 是输入的非结构化数据集。此函数不返回任何数据。
-extractstructure(D, Rel_Coplanar_Tol); | 与上述命令相同，但设置合并共面元素的相对容差为指定值。
-extractstructure(D, Rel_Coplanar_Tol, Smoothing_Pass_Count); | 与上述命令相同，但对表面网格使用拉普拉斯平滑。迭代次数由指定值定义。
-extractstructure(D, Rel_Coplanar_Tol, Smoothing_Pass_Count, Smoothing_Angle_Coplanar_Tol); | 与上述命令相同，但设置顶点周围三角形之间允许的角度差，使得顶点可以在该范围内移动。
-extractstructure(D, Rel_Coplanar_Tol, Smoothing_Pass_Count, Smoothing_Angle_Coplanar_Tol, Allow_Tessalation); | 与上述命令相同，但允许对 facets 进行重新三角剖分。
-
-**参数** | **类型** | **描述**
----|---|---
-D | 非结构化数据集 | 用于创建结构的输入数据。
-Rel_Coplanar_Tol | 数字 |（可选）合并共面元素的相对容差。默认值为 1e-6。
-Smoothing_Pass_Count | 数字 |（可选）仅适用于 3D。启用表面网格的拉普拉斯平滑后再进行表面提取。默认值为 0，最大允许值为 20。
-Smoothing_Angle_Coplanar_Tol | 数字 |（可选）设置顶点周围三角形之间允许的角度差，使得顶点可以在该范围内移动。默认值为 0.001。
-Allow_Tessalation | 数字 |（可选）仅适用于 3D。允许对 facets 进行重新三角剖分。
-
+**语法** |  **描述**  
+---|---  
+extractstructure(D); |  创建 一个 polygon 用于 2D 数据 和 一个 planar solid 用于 3D 数据. The 参数 D 是 该 input unstructured dataset. This 函数 does not 返回 any 数据.  
+extractstructure(D, Rel_Coplanar_Tol); |  Same as 该 above 命令, but 该 relative tolerance 到 merge coplanar elements 将 为 设置 到 该 值 specified.  
+extractstructure(D, Rel_Coplanar_Tol, Smoothing_Pass_Count); |  Same as 该 above 命令, but uses Laplacian smoothing 在 该 surface mesh. The 数字 的 iteration 是 defined 通过 该 值 specified.  
+extractstructure(D, Rel_Coplanar_Tol, Smoothing_Pass_Count, Smoothing_Angle_Coplanar_Tol); |  Same as 该 above 命令, but 该 allowed angular difference between triangles around 一个 vertex 其中 该 vertex 可以 为 moved 是 设置 到 该 值 specified.  
+extractstructure(D, Rel_Coplanar_Tol, Smoothing_Pass_Count, Smoothing_Angle_Coplanar_Tol, Allow_Tessalation); |  Same as 该 above 命令, but allows re-triangulation 的 该 facets.  
+  
+**Parameters** |  **Type** |  **描述**  
+---|---|---  
+D |  unstructured dataset |  Input 数据 该 是 used 到 创建 该 结构.  
+Rel_Coplanar_Tol |  数字 |  (optional) Relative tolerance 到 merge coplanar elements. The default 值 是 1e-6.  
+Smoothing_Pass_Count |  数字 |  (optional) In 3D only. Enables Laplacian smoothing 在 该 surface mesh before surface extraction. The default 值 是 0 和 该 maximum allowed 值 是 20.  
+Smoothing_Angle_Coplanar_Tol |  数字 |  (optional) 设置 该 allowed angular difference between triangles around 一个 vertex 其中 该 vertex 可以 为 moved. The default 值 是 0.001.  
+Allow_Tessalation |  数字 |  (optional) In 3D only. Allows re-triangulation 的 该 facets.  
+  
 **示例**
 
-运行脚本文件 [extract_2d.lsf](/hc/article_attachments/360045274574/extract_2d.lsf) 和 CHARGE 项目文件 [geom2d.ldev](/hc/article_attachments/360046126993/geom2d.ldev) 来获取此命令的 2D 示例。在这里，我们使用 "CHARGE" 求解器区域的 ID 来单独提取 ID = 3 的结构部分，这在此示例中对应半导体材料，然后创建一个该形状的对象（多边形）。
+Run 该 脚本 文件 [extract_2d.lsf](/hc/article_attachments/360045274574/extract_2d.lsf) 使用 该 CHARGE project 文件 [geom2d.ldev](/hc/article_attachments/360046126993/geom2d.ldev) 用于 一个 2D example 的 此 命令. Here, we use 该 ID 的 该 "CHARGE" 求解器 region 到 single out any part 的 该 结构 使用 ID = 3, 该 would correspond 到 该 semiconductor 材料 在 此 example 和 那么 construct 一个 对象 (polygon) 在 该 shape.
 
-**另请参阅**
+**参见**
 
-[数据集构建器](**%20to%20be%20defined\**)、[数据集](**%20to%20be%20defined\**)
+[Dataset builder](/hc/en-us/articles/360034901713-Dataset-builder), [Datasets](/hc/en-us/articles/360034409554-Datasets)

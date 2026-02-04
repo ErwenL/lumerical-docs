@@ -1,31 +1,30 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: cd -->
+<!--
+Translation from English documentation
+Original command: cd
+Translation date: 2026-02-04 22:49:36
+-->
 
 # cd
 
-**语法** | **描述**
----|---
-cd; | Opens a window to browse to a 目录.  This 函数 does not 返回 any data.
-cd("directory"); | Changes the working 目录 to "目录". Whenever you open an fsp 文件 or run a 脚本 文件, it will set the working 目录 to the 目录 of the 文件 opened.
+Changes 该 directory. The directory 是 其中 该 文件 是 saved 通过 default. 
 
+**语法** |  **描述**  
+---|---  
+cd;  |  Opens 一个 window 到 browse 到 一个 directory.  This 函数 does not 返回 any 数据.   
+cd("directory");  |  Changes 该 working directory 到 "directory". Whenever you open 一个 fsp 文件 或 run 一个 脚本 文件, it 将 设置 该 working directory 到 该 directory 的 该 文件 opened.   
+  
 **示例**
 
-Moves to the subdirectory "data". 
+Moves 到 该 subdirectory "数据". 
+    
+    
     ?pwd;
     C:\demo
-    路径=pwd;
-    cd(路径+"\data");
+    path=pwd;
+    cd(path+"\数据");
     ?pwd;
-    C:\demo\data
+    C:\demo\数据
 
-Moves to the subdirectory "data". 
-    ?pwd;
-    C:\demo
-    路径=pwd;
-    cd(路径+"\data");
-    ?pwd;
-    C:\demo\data
+**参见**
 
-**另请参阅**
-
-[ List of commands ](/hc/en-us/articles/360037228834) , [ pwd ](/hc/en-us/articles/360034931773-pwd)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ pwd ](/hc/en-us/articles/360034931773-pwd)

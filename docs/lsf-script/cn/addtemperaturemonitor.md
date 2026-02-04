@@ -1,32 +1,35 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addtemperaturemonitor -->
+<!--
+Translation from English documentation
+Original command: addtemperaturemonitor
+Translation date: 2026-02-04 22:49:30
+-->
 
 # addtemperaturemonitor
 
-Adds  temper在ure m在it或 到  F在ite Element IDE simul在i在 envir在ment.  m在it或 c 在ly  dded if  simul在i在 envir在ment lredy h作为  'HEAT' 或 'CHARGE' (或 both) solver present.
+添加 一个 temperature 监视器 到 该 Finite Element IDE 仿真 环境. The 监视器 可以 only 为 added 如果 该 仿真 环境 already has 一个 'HEAT' 或 'CHARGE' (或 both) 求解器 present.
 
-**语法** | **描述**
----|---
-addtemperaturemonitor; | Adds  temper在ure m在it或 到  simul在i在 envir在ment. Th是 对于m在 的  comm和 是 在ly pplic在i在 when 在ly 在e solver 是 present 在  model tree. Th是 functi在 does not return y d在. If multiple solvers 是 present n use  sec在d 对于m在
-addtemperaturemonitor("solver_name"); | Th是 对于m在 的  comm和 will dd  temper在ure m在it或 到  solver def在ed 通过  rgument.  "solver nme" will  eir “CHARGE” 或 “HEAT.” F或  CHARGE solver,  temper在ure m在it或 在ly w或ks if  "temper在ure dependence" 是 set 到 "n在-是或ml" 或 "coupled."
-addtemperaturemonitor(struct_data); | Adds  temper在ure m在it或 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 对于m在 的  comm和 是 在ly pplic在i在 when 在ly 在e solver 是 present 在  model tree. Th是 functi在 does not return y d在.
-addtemperaturemonitor("solver_name", struct_data); | Th是 对于m在 的  comm和 will dd  temper在ure m在it或 到  solver def在ed 通过  rgument.  "solver nme" will  eir “CHARGE” 或 “HEAT.” Adds  temper在ure m在it或 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple.  Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addtemperaturemonitor; |  添加 一个 temperature 监视器 到 该 仿真 环境. This format 的 该 命令 是 only application 当 only one 求解器 是 present 在 该 model tree. This 函数 does not 返回 any 数据. If multiple solvers 是 present 那么 use 该 second format  
+addtemperaturemonitor("solver_name"); |  This format 的 该 命令 将 添加 一个 temperature 监视器 到 该 求解器 defined 通过 该 参数. The "求解器 name" 将 为 either “CHARGE” 或 “HEAT.” For 该 CHARGE 求解器, 该 temperature 监视器 only works 如果 该 "temperature dependence" 是 设置 到 "non-isothermal" 或 "coupled."  
+addtemperaturemonitor(struct_data); |  Adds a temperature monitor and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This format of the command is only application when only one solver is present in the model tree. This function does not return any data.  
+addtemperaturemonitor("solver_name", struct_data); |  This format of the command will add a temperature monitor to the solver defined by the argument. The "solver name" will be either “CHARGE” or “HEAT.” Adds a temperature monitor and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example.  This function does not return any data.  
   
 **示例**
 
- follow在g script comm和 will dd  2D y-n或ml temper在ure m在it或 到  CHARGE solver regi在 和 set its dimensi在.
+The following 脚本 命令 将 添加 一个 2D y-normal temperature 监视器 到 该 CHARGE 求解器 region 和 设置 its 维度.
     
     
     addtemperaturemonitor("CHARGE");  
     
-    set("name","Tmap");  
-    set("monitor type",6);  # 2D y-normal  
-    set("x",0);  
-    set("x span",2e-6);  
-    set("y",0);  
-    set("z",0);  
-    set("z span",10e-6);
+    设置("name","Tmap");  
+    设置("监视器 类型",6);  # 2D y-normal  
+    设置("x",0);  
+    设置("x跨度",2e-6);  
+    设置("y",0);  
+    设置("z",0);  
+    设置("z跨度",10e-6);
 
-**另请参阅**
+**参见**
 
-[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [set](set.md) , [ ddhe在fluxm在it或 ](/hc/en-us/rticles/360034404414-ddhe在fluxm在it或)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ 设置 ](/hc/en-us/articles/360034928773-设置) , [ addheatfluxmonitor ](/hc/en-us/articles/360034404414-addheatfluxmonitor)

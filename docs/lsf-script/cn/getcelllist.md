@@ -1,22 +1,27 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: getcelllist -->
+<!--
+Translation from English documentation
+Original command: getcelllist
+Translation date: 2026-02-04 22:49:59
+-->
 
 # getcelllist
 
-**语法** | **描述**
----|---
-getcelllist; | 返回 the list of cells associated with the loaded gds 文件.
+返回 该 list 的 cells associated 使用 该 gds 文件 该 has been loaded into 一个 layer builder 对象. There needs 到 为 一个 layer builder 对象 选中的, 使用 一个 gds 文件 loaded.
 
+**语法** |  **描述**  
+---|---  
+getcelllist; |  返回 该 list 的 cells associated 使用 该 loaded gds 文件.  
+  
 **示例**
 
-Please refer[ this 示例](/hc/en-us/articles/360034382394-Layer-builder). run the 脚本, and then type in 
+Please refer[ 此 example](/hc/en-us/articles/360034382394-Layer-builder). run 该 脚本, 和 那么 类型 在 
+    
+    
     ?getcelllist;
-    Cell 数组 with 1 元素
+    
+    
+    Cell 数组 使用 1 elements
 
-Please refer[ this 示例](/hc/en-us/articles/360034382394-Layer-builder). run the 脚本, and then type in 
-    ?getcelllist;
-    Cell 数组 with 1 元素
-
-**另请参阅**
+**参见**
 
 [addlayerbuilder](/hc/en-us/articles/360034404714-addlayerbuilder), [getlayerlist](/hc/en-us/articles/360034409134-getlayerlist), [setlayer](/hc/en-us/articles/360034929453-setlayer), [loadgdsfile](/hc/en-us/articles/360034929473-loadgdsfile), [addlayer](/hc/en-us/articles/360034924693-addlayer), [getlayerlist](/hc/en-us/articles/360034409134-getlayerlist), [setlayer](/hc/en-us/articles/360034929453-setlayer)

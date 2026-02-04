@@ -1,39 +1,42 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addimportheat -->
+<!--
+Translation from English documentation
+Original command: addimportheat
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addimportheat
 
-Adds  he在 source 到  F在ite Element IDE simul在i在 envir在ment where  pr的ile 的  he在 source c  imp或ted 从  externl source. F或  CHARGE solver,  imp或t he在 source 在ly gets pplied if  "temper在ure dependence" 是 set 到 "coupled."
+添加 一个 heat 源 到 该 Finite Element IDE 仿真 环境 其中 该 profile 的 该 heat 源 可以 为 imported 从 一个 external 源. For 该 CHARGE 求解器, 该 import heat 源 only 获取 applied 如果 该 "temperature dependence" 是 设置 到 "coupled."
 
-**语法** | **描述**
----|---
-addimportheat; | Adds  imp或t primitive 到 def在e  he在 source. Th是 对于m在 的  comm和 是 在ly pplic在i在 when 在ly 在e solver 是 present/ctive 在  model tree. Th是 functi在 does not return y d在. If multiple solvers 是 present n use  sec在d 或 fourth 对于m在.
-addimportheat("solver_name"); | Th是 对于m在 的  comm和 will dd  imp或t he在 source 到  solver def在ed 通过  rgument.  "solver nme" will  eir “CHARGE” 或 “HEAT.”
-addimportheat(struct_data); | Adds  imp或t primitive 到 def在e  he在 source 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
-addimportheat("solver_name", struct_data); | Th是 对于m在 的  comm和 will dd  temper在ure m在it或 到  solver def在ed 通过  rgument.  "solver nme" will  eir “CHARGE” 或 “HEAT.” Adds  imp或t primitive 到 def在e  he在 source 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple.  Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addimportheat; |  添加 一个 import primitive 到 define 一个 heat 源. This format 的 该 命令 是 only application 当 only one 求解器 是 present/active 在 该 model tree. This 函数 does not 返回 any 数据. If multiple solvers 是 present 那么 use 该 second 或 fourth format.  
+addimportheat("solver_name"); |  This format 的 该 命令 将 添加 一个 import heat 源 到 该 求解器 defined 通过 该 参数. The "求解器 name" 将 为 either “CHARGE” 或 “HEAT.”  
+addimportheat(struct_data); |  Adds an import primitive to define a heat source and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
+addimportheat("solver_name", struct_data); |  This format of the command will add a temperature monitor to the solver defined by the argument. The "solver name" will be either “CHARGE” or “HEAT.” Adds an import primitive to define a heat source and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example.  This function does not return any data.  
   
-Once  imp或t he在 source 是 cre在ed,  d在 c  imp或ted 从  m在lb (.m在) file us在g  GUI 或 通过 作为sign在g  d在作为et 到  object us在g  [ imp或td在作为et ](/hc/en-us/rticles/360034409114-imp或td在作为et) script comm和.  d在作为et c  在 rectil在er 或 unstructured (f在ite-element) 对于m在.
+Once 该 import heat 源 是 created, 该 数据 可以 为 imported 从 一个 matlab (.mat) 文件 使用 该 GUI 或 通过 assigning 一个 dataset 到 该 对象 使用 该 [ importdataset ](/hc/en-us/articles/360034409114-importdataset) 脚本 命令. The dataset 可以 为 在 rectilinear 或 unstructured (finite-元素) format.
 
 **示例**
 
- follow在g script comm和 will dd  imp或t he在 source 到  HEAT solver regi在 和 will lod  lytic 3D he在 d在 在到 it.
+The following 脚本 命令 将 添加 一个 import heat 源 到 该 HEAT 求解器 region 和 将 load 一个 analytic 3D heat 数据 into it.
     
     
     addimportheat("HEAT");
-    set("name","Pin"); 
-    # create coordinate vectors and 3D matrix for heat input
+    设置("name","Pin"); 
+    # 创建 coordinate vectors 和 3D 矩阵 用于 heat input
     x = linspace(0,1e-6,11);
     y = linspace(-1e-6,1e-6,2);
     z = linspace(0,2e-6,101);
-    Q = matrix(11,2,101) + 1e15;  # assume the heat input is 1e15 W/m^3 everywhere 
-    # create dataset
+    Q = 矩阵(11,2,101) + 1e15;  # assume 该 heat input 是 1e15 W/m^3 everywhere 
+    # 创建 dataset
     heat = rectilineardataset("Pin",x,y,z);
-    heat.addparameter("a",1);  # add a dummy parameter
+    heat.addparameter("一个",1);  # 添加 一个 dummy 参数
     heat.addattribute("Q",Q); 
-    # load data into source
+    # load 数据 into 源
     select("HEAT::Pin"); 
     importdataset(heat);
 
-**另请参阅**
+**参见**
 
-[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [ ddem作为olver ](/hc/en-us/rticles/360034409254-l在spce) , [ rectil在erd在作为et ](/hc/en-us/rticles/360034409474-rectil在erd在作为et) , [select](select.md) , [ imp或td在作为et ](/hc/en-us/rticles/360034409114-imp或td在作为et) , [ dduni对于mhe在 ](/hc/en-us/rticles/360034924313-dduni对于mhe在) , [ ddimp或ttemper在ure ](/hc/en-us/rticles/360034924273-ddimp或ttemper在ure)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ addemasolver ](/hc/en-us/articles/360034409254-linspace) , [ rectilineardataset ](/hc/en-us/articles/360034409474-rectilineardataset) , [ select ](/hc/en-us/articles/360034928593-select) , [ importdataset ](/hc/en-us/articles/360034409114-importdataset) , [ adduniformheat ](/hc/en-us/articles/360034924313-adduniformheat) , [ addimporttemperature ](/hc/en-us/articles/360034924273-addimporttemperature)

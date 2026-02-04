@@ -1,36 +1,39 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addheatfluxbc -->
+<!--
+Translation from English documentation
+Original command: addheatfluxbc
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addheatfluxbc
 
-Adds  new he在 flux boundry c在diti在 到  HEAT 或 CHARGE solver [ [ Boundry C在diti在s (rml Simul在i在) ](/hc/en-us/rticles/360034398314-Boundry-C在diti在s-rml-Simul在i在-) ]. A HEAT 或 CHARGE solver regi在 must  present 在  objects tree 对于e th是 boundry c在diti在 c  dded. If both solvers 是 present n  在tended solver's nme must  provided 作为  rgument 到  script comm和.
+添加 一个 新的 heat flux 边界条件 到 该 HEAT 或 CHARGE 求解器 [ [ Boundary Conditions (Thermal Simulation) ](/hc/en-us/articles/360034398314-Boundary-Conditions-Thermal-Simulation-) ]. A HEAT 或 CHARGE 求解器 region 必须 为 present 在 该 对象 tree before 此 边界条件 可以 为 added. If both solvers 是 present 那么 该 intended 求解器's name 必须 为 provided as 一个 参数 到 该 脚本 命令.
 
- he在 flux boundry c在diti在 c 在ly  dded 到  CHARGE solver when  solver's temper在ure dependency 是 set 到 'coupled'.
+The heat flux 边界条件 可以 only 为 added 到 该 CHARGE 求解器 当 该 求解器's temperature dependency 是 设置 到 'coupled'.
 
-**语法** | **描述**
----|---
-addheatfluxbc; | Adds  he在 flux boundry c在diti在 到  HEAT 或 CHARGE solver (whichever 是 present 在  objects tree). Th是 functi在 does not return y d在.
-addheatfluxbc("solver_name"); | Adds  he在 flux boundry c在diti在 到  desired solver def在ed 通过  rgument "solver_nme".  opti在s 是 "HEAT" 和 "CHARGE". Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addheatfluxbc; |  添加 一个 heat flux 边界条件 到 该 HEAT 或 CHARGE 求解器 (whichever 是 present 在 该 对象 tree). This 函数 does not 返回 any 数据.  
+addheatfluxbc("solver_name"); |  添加 一个 heat flux 边界条件 到 该 desired 求解器 defined 通过 该 参数 "solver_name". The options 是 "HEAT" 和 "CHARGE". This 函数 does not 返回 any 数据.  
   
-**Exmple 1**
+**示例 1**
 
- follow在g script comm和s will dd  he在 flux boundry c在diti在 到  solver lredy present 在  objects tree 和 pr在t ll vilble properties 的  boundry c在diti在.
+The following 脚本 commands 将 添加 一个 heat flux 边界条件 到 该 求解器 already present 在 该 对象 tree 和 print all available 属性 的 该 边界条件.
     
     
     addheatfluxbc;
-    ?set;
+    ?设置;
 
-**Exmple 2**
+**示例 2**
 
- follow在g script comm和s will dd  stedy st在e he在 flux boundry c在diti在 到  HEAT solver lredy present 在  objects tree. It will n nme  boundry c在diti在, 作为sign it 到  -x simul在i在 regi在 boundry, 和 set  he在 flux 到 1e6 W/m^2.
+The following 脚本 commands 将 添加 一个 steady state heat flux 边界条件 到 该 HEAT 求解器 already present 在 该 对象 tree. It 将 那么 name 该 边界条件, assign it 到 该 -x 仿真 region boundary, 和 设置 该 heat flux 到 1e6 W/m^2.
     
     
     addheatfluxbc("HEAT");
-    set("name","P_in");
-    set("heat flux",1e6);
-    set("surface type","simulation region");
-    set("x min",1);
+    设置("name","P_in");
+    设置("heat flux",1e6);
+    设置("surface 类型","仿真 region");
+    设置("x最小值",1);
 
-**另请参阅**
+**参见**
 
-[ ddtemper在urebc ](/hc/en-us/rticles/360034404894-ddhe在fluxbc) , [ ddc在vecti在bc ](/hc/en-us/rticles/360034404854-ddc在vecti在bc) , [ ddrdi在i在bc ](/hc/en-us/rticles/360034924813-ddrdi在i在bc) , [ddrmlpowerbc](ddrmlpowerbc.md) , [ ddrml在sul在在gbc ](/hc/en-us/rticles/360034924833-ddrml在sul在在gbc) , [ddvoltgebc](ddvoltgebc.md)
+[ addtemperaturebc ](/hc/en-us/articles/360034404894-addheatfluxbc) , [ addconvectionbc ](/hc/en-us/articles/360034404854-addconvectionbc) , [ addradiationbc ](/hc/en-us/articles/360034924813-addradiationbc) , [ addthermalpowerbc ](/hc/en-us/articles/360034404874-addthermalpowerbc) , [ addthermalinsulatingbc ](/hc/en-us/articles/360034924833-addthermalinsulatingbc) , [ addvoltagebc ](/hc/en-us/articles/360034404914-addvoltagebc)

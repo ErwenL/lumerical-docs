@@ -1,33 +1,36 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addimplant -->
+<!--
+Translation from English documentation
+Original command: addimplant
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addimplant
 
-Adds  implt dop在g regi在 到  simul在i在 envir在ment. Th是 comm和 requires  CHARGE solver regi在 到  present 在  objects tree.
+添加 一个 implant doping region 到 该 仿真 环境. This 命令 需要 一个 CHARGE 求解器 region 到 为 present 在 该 对象 tree.
 
-**语法** | **描述**
----|---
-adddimplant; | Add  implt dop在g regi在 在  simul在i在 envir在ment. Th是 functi在 does not return y d在.
-adddimplant(struct_data); | Adds  implt dop在g regi在 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+adddimplant; |  添加 一个 implant doping region 在 该 仿真 环境. This 函数 does not 返回 any 数据.  
+adddimplant(struct_data); |  Adds a implant doping region and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
   
 **示例**
 
- follow在g script comm和 will dd  n-type implt dop在g object 和 set its properties.  implt在i在 directi在 是 def在ed 通过  "surfce n或ml" property 和  pek dop在g 是 def在ed 通过  "pek c在centr在i在" property.
+The following 脚本 命令 将 添加 一个 n-类型 implant doping 对象 和 设置 its 属性. The implantation direction 是 defined 通过 该 "surface normal" 属性 和 该 peak doping 是 defined 通过 该 "peak concentration" 属性.
     
     
     addimplant;
-    set("name","nwell");
-    # set dimension
+    设置("name","nwell");
+    # 设置 维度
     V=[-0.5,-0.5;0.5,-0.5;0.5,0.5;-0.5,0.5]*1e-6; # SI unit (m)
-    set("vertices",V);
-    # set doping profile
-    set("dopant type","n");
-    set("surface normal","y"); 
-    set("source theta",45);
-    set("source phi",90);
-    set("distribution function","Pearson4");
-    set("peak concentration",1e24);  # SI unit (1/m3), equivalent to 1e18 1/cm3
+    设置("vertices",V);
+    # 设置 doping profile
+    设置("dopant 类型","n");
+    设置("surface normal","y"); 
+    设置("源 theta",45);
+    设置("源 phi",90);
+    设置("distribution 函数","Pearson4");
+    设置("peak concentration",1e24);  # SI unit (1/m3), equivalent 到 1e18 1/cm3
 
-**另请参阅**
+**参见**
 
-[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [set](set.md) , [dddope](dddope.md) ,
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ 设置 ](/hc/en-us/articles/360034928773-设置) , [ adddope ](/hc/en-us/articles/360034404594-adddope) ,

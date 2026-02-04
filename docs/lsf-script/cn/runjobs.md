@@ -1,55 +1,57 @@
-<!-- Translated: 2024-01-XX by AI Assistant -->
-<!-- Status: Initial translation -->
-<!-- Review needed: Technical terms, consistency check -->
+<!--
+Translation from English documentation
+Original command: runjobs
+Translation date: 2026-02-04 22:50:14
+-->
 
 # runjobs
 
-运行任务管理器队列中的所有仿真。脚本执行将暂停，直到所有仿真成功完成，然后继续执行。如果发生错误，脚本将不会继续执行。
+Run all simulations 在 该 job manager queue. The 脚本 execution 将 为 paused while 该 jobs run, 那么 resume 当 all 的 该 simulations have completed successfully. If errors occur, 该 脚本 将 not proceed.
 
-适用于 Ansys Lumerical FDTD™、Ansys Lumerical MODE™、Ansys Lumerical Multiphysics™ 和 Ansys Lumerical INTERCONNECT™
+For Ansys Lumerical FDTD™, Ansys Lumerical MODE™, Ansys Lumerical Multiphysics™, 和 Ansys Lumerical INTERCONNECT™
 
-**语法** | **描述**  
+**语法** |  **描述**  
 ---|---  
-runjobs; | 为现有（活动的）求解器运行任务队列中的任务。使用资源管理器中指定的计算机资源和并行设置。  
-runjobs("solver", option); | 为指定求解器运行任务队列中的任务。option=0：以单进程模式仅使用本地计算机运行任务。option=1：使用资源管理器中指定的计算机资源和并行设置运行任务（默认）。  
+runjobs; |  Run jobs 在 该 Job queue 用于 existing (active) 求解器. Use 该 computer resources 和 parallel settings 该 是 specified 在 该 Resource Manager.  
+runjobs("求解器", option); |  Run jobs 在 该 Job queue 用于 specified 求解器. option=0: run jobs 在 single process mode 使用 only 该 local computer. option=1: run jobs 使用 该 computer resources 和 parallel settings 该 是 specified 在 该 Resource Manager. (default)  
+  
+When using [Ansys Cloud Burst Compute™ for Lumerical](https://optics.ansys.com/hc/en-us/articles/39824576734867-Ansys-Cloud-Burst-Compute-for-Lumerical),
 
-使用 [Ansys Cloud Burst Compute™ for Lumerical](https://optics.ansys.com/hc/en-us/articles/39824576734867-Ansys-Cloud-Burst-Compute-for-Lumerical) 时，
-
-**语法** | **描述**  
+**语法** |  **描述**  
 ---|---  
-runjobs("solver", "resource_type", "burst", burst_settings); | 使用 Ansys Cloud Burst Compute™ for Lumerical 为指定求解器运行任务队列中的任务：
+runjobs(“求解器”, “resource_type”, “burst”, burst_settings); |  Run jobs 在 该 job queue 用于 该 specified 求解器 使用 Ansys Cloud Burst Compute™ 用于 Lumerical:
 
-- solver：求解器名称，目前仅支持 "FDTD"
-- resource_type：仿真运行类型，"CPU" 或 "GPU"
-- burst_settings：用于当前任务提交的设置结构。结构字段应与从 getresource 获得的结果相匹配。"queue" 字段必须在此结构中指定。任何留空的字段使用默认设置。
+  * 求解器: Name 的 该 求解器, currently, only “FDTD” 是 supported
+  * resource_type: Type 的 仿真 到 run, either “CPU” 或 “GPU”
+  * burst_settings: Settings 结构 到 use 用于 该 current job submission. The 结构 fields 应该 match 该 results obtained 从 getresource. The “queue” field 必须 为 specified 在 此 结构. Any fields left blank uses default settings.
 
+  
+  
 **示例**
 
-以下脚本代码演示如何使用 addjob 和 runjobs 脚本命令进行参数扫描。初始 for 循环为扫描中的每个点创建一个仿真文件，并将仿真添加到任务队列中。接下来，runjobs 命令将运行任务队列中的所有仿真。如果资源管理器中配置了多个计算机资源，则仿真将并发运行。当所有仿真完成后，第二个 for 循环用于重新加载每个仿真文件并进行所需的分析。
+The following 脚本 code illustrates 如何 到 use 该 addjob 和 runjobs 脚本 commands 到 do 一个 参数 sweep. The initial 用于 loop 创建 一个 仿真 文件 用于 each point 在 该 sweep 和 添加 该 simulations 到 该 job queue. Next, 该 runjobs 命令 将 run all simulations 在 该 job queue. If multiple computer resources 是 configured 在 该 Resource Manager, 那么 simulations 将 run concurrently. When all 的 该 simulations 是 complete, 一个 second 用于 loop 是 used 到 re-load each 仿真 文件 和 do 该 required 分析.
+    
+    
+    # 创建 10 仿真 files 和 添加 them 到 该 job queue
+    newproject;
+    addvarfdtd;
+    adddipole;
+    addcircle;
+    rad=linspace(1e-6,10e-6,10);
+    用于(i=1:10) {
+    setnamed("circle","radius",rad(i));
+    save("temp_"+num2str(i));
+    addjob(currentfilename);
+    }
+    runjobs;
+    # run all jobs 在 该 job queue
+    runjobs;
+    # load each 仿真 和 do required 分析
+    用于(i=1:10) {
+     load("temp_"+num2str(i));
+     ...
+    }
 
-```
-# 创建 10 个仿真文件并添加到任务队列
-newproject;
-addvarfdtd;
-adddipole;
-addcircle;
-rad=linspace(1e-6,10e-6,10);
-for(i=1:10) {
-setnamed("circle","radius",rad(i));
-save("temp_"+num2str(i));
-addjob(currentfilename);
-}
+**参见**
 
-# 运行任务队列中的所有任务
-runjobs;
-
-# 加载每个仿真并进行所需的分析
-for(i=1:10) {
- load("temp_"+num2str(i));
- ...
-}
-```
-
-**另见**
-
-[run](run.md), [runsweep](runsweep.md), [addjob](addjob.md), [clearjobs](clearjobs.md), [listjobs](listjobs.md), [save](save.md), [load](load.md)
+[ run ](/hc/en-us/articles/360034931333-run) , [ runsweep ](/hc/en-us/articles/360034931413-runsweep) , [ addjob ](/hc/en-us/articles/360034410714-addjob) , [ clearjobs ](/hc/en-us/articles/360034931393-clearjobs) , [ listjobs ](/hc/en-us/articles/360034410774-listjobs) , [ save ](/hc/en-us/articles/360034410814-save) , [ load ](/hc/en-us/articles/360034410834-load)

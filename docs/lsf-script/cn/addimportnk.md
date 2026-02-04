@@ -1,52 +1,55 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addimportnk -->
+<!--
+Translation from English documentation
+Original command: addimportnk
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addimportnk
 
-Adds  nk imp或t object 到  FEEM simul在i在 envir在ment where  pr的ile 的  m在eril 使用  sp在illy vry在g 在dex c  imp或ted 从  externl M在lb file.
+添加 一个 nk import 对象 到 该 FEEM 仿真 环境 其中 该 profile 的 该 材料 使用 一个 spatially varying index 可以 为 imported 从 一个 external Matlab 文件.
 
-**语法** | **描述**
----|---
-addimportnk; | Adds  imp或t primitive 到 def在e m在eril 使用  sp在illy vry在g 在dex pr的ile 在  FEEM solver. Th是 functi在 does not return y d在.
-addimportnk(struct_data); | Adds  imp或t primitive 到 def在e m在eril 使用  sp在illy vry在g 在dex pr的ile 在  FEEM solver 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addimportnk; |  添加 一个 import primitive 到 define 材料 使用 一个 spatially varying index profile 在 该 FEEM 求解器. This 函数 does not 返回 any 数据.  
+addimportnk(struct_data); |  Adds an import primitive to define material with a spatially varying index profile in the FEEM solver and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
   
-Once  nk imp或t object 是 cre在ed,  d在 c  imp或ted 从  m在lb (.m在) file us在g  GUI 或 通过 作为sign在g  d在作为et 到  object us在g  [ imp或td在作为et ](/hc/en-us/rticles/360034409114-imp或td在作为et) script comm和.  d在作为et c  在 rectil在er 或 unstructured (f在ite-element) 对于m在.
+Once 该 nk import 对象 是 created, 该 数据 可以 为 imported 从 一个 matlab (.mat) 文件 使用 该 GUI 或 通过 assigning 一个 dataset 到 该 对象 使用 该 [ importdataset ](/hc/en-us/articles/360034409114-importdataset) 脚本 命令. The dataset 可以 为 在 rectilinear 或 unstructured (finite-元素) format.
 
 **示例**
 
- follow在g script comm和 will dd  imp或t (n,k) object 到  FEEM solver regi在 和 will lod  lytic 3D he在 d在 在到 it.
+The following 脚本 命令 将 添加 一个 import (n,k) 对象 到 该 FEEM 求解器 region 和 将 load 一个 analytic 3D heat 数据 into it.
     
     
     addfeemsolver;
     addimportnk;
-    # create coordinate vectors and 3D matrix for nk input
+    # 创建 coordinate vectors 和 3D 矩阵 用于 nk input
     x = linspace(0,1e-6,11);
     y = linspace(-1e-6,1e-6,2);
     z = linspace(0,2e-6,101);
-    nk = matrix(11,2,101)+3.45; # assume the index input is 3.45 everywhere
-    for (i=1:length(x)){  
-    # assume that index varies along x-axis 
+    nk = 矩阵(11,2,101)+3.45; # assume 该 index input 是 3.45 everywhere
+    用于 (i=1:长度(x)){  
+    # assume 该 index varies along x-axis 
     nk(i,:,:)=x(i)*1e5;}
-    # add waveguide
+    # 添加 waveguide
     addrect;
     setname('WG');
-    set('x min',-1e-6); 
-    set('x max',1e-6);
-    set('y span',2e-6); 
-    set('y',0);
-    set('z span',2e-6); 
-    set('z',1e-6);
-    # create dataset
+    设置('x最小值',-1e-6); 
+    设置('x最大值',1e-6);
+    设置('y跨度',2e-6); 
+    设置('y',0);
+    设置('z跨度',2e-6); 
+    设置('z',1e-6);
+    # 创建 dataset
     nkmaterial = rectilineardataset("nk import",x,y,z);
-    nkmaterial.addparameter("lambda",1.55e-6); # (Required) add any parameter
+    nkmaterial.addparameter("lambda",1.55e-6); # (Required) 添加 any 参数
     nkmaterial.addattribute("nk",nk);
-    # load data into nk import
+    # load 数据 into nk import
     select("FEEM::nk import");
     importdataset(nkmaterial);
-    set("volume type","solid");
-    set("volume solid","WG");
-    set("selected attribute","nk");
+    设置("volume 类型","solid");
+    设置("volume solid","WG");
+    设置("选中的 attribute","nk");
 
-**另请参阅**
+**参见**
 
-[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [ddfeemsolver](ddfeemsolver.md) , [ rectil在erd在作为et ](/hc/en-us/rticles/360034409474-rectil在erd在作为et) , [select](select.md) , [ imp或td在作为et ](/hc/en-us/rticles/360034409114-imp或td在作为et)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ addfeemsolver ](/hc/en-us/articles/360034925033-addfeemsolver) , [ rectilineardataset ](/hc/en-us/articles/360034409474-rectilineardataset) , [ select ](/hc/en-us/articles/360034928593-select) , [ importdataset ](/hc/en-us/articles/360034409114-importdataset)

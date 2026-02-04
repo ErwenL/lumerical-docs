@@ -1,6 +1,6 @@
 <!--
-Translation from English documentation
-Original command: acos
+Translation 从 English documentation
+Original 命令: acos
 Translation date: 2026-02-03
 -->
 
@@ -10,11 +10,11 @@ Translation date: 2026-02-03
 
 $$ \text{acos}(x) = -i\ln(x+i\sqrt{1-x^2}) $$
 
-**Syntax** | **Description**
+**语法** | **描述**
 ---|---
 out = acos(x); | 返回x的复反余弦值。
 
-**Example**
+**示例**
 
 计算 acos( π /4 + i)。
 
@@ -25,5 +25,5 @@ out = acos(x); | 返回x的复反余弦值。
 
 **参见**
 
-- [List of commands](../lsf-script-commands-alphabetical.md)
-- [cos](./cos.md)
+- [List 的 commands](。。/lsf-脚本-commands-alphabetical。md)
+- [cos](。/cos。md)

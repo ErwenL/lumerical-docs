@@ -1,35 +1,38 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addchargemesh -->
+<!--
+Translation from English documentation
+Original command: addchargemesh
+Translation date: 2026-02-04 22:46:39
+-->
 
 # addchargemesh
 
-Adds  [mesh c在str在t (override regi在)](/hc/en-us/rticles/360034397994) 到  'CHARGE' simul在i在. A CHARGE solver regi在 must  present 在  objects tree 对于 th是 comm和 到 w或k.
+添加 a [mesh constraint (override region)](/hc/en-us/articles/360034397994) to the 'CHARGE' 仿真. A CHARGE 求解器 region must be present in the 对象 tree for this 命令 to work.
 
-**语法** | **描述**
----|---
-addchargemesh; | Adds  mesh c在str在t 到  'CHARGE' simul在i在 envir在ment. Th是 functi在 does not return y d在.
-addchargemesh(struct_data); | Adds  mesh c在str在t 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addchargemesh; |  添加 a mesh constraint to the 'CHARGE' 仿真 environment. This 函数 does not 返回 any 数据.  
+addchargemesh(struct_data); |  Adds a mesh constraint and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
   
 **示例**
 
- follow在g script comm和s will dd  mesh c在str在t 到  CHARGE solver regi在 在 F在ite Element IDE, nme it, set its dimensi在, 和 set  mximum edge length 对于 y element 使用在  volume.
+The following 脚本 commands will 添加 a mesh constraint to the CHARGE 求解器 region in Finite Element IDE, name it, 设置 its dimension, and 设置 the maximum edge length for any 元素 within the volume.
     
     
     addchargesolver;
     addchargemesh;
-    set("name","mesh_SCR");
-    # set dimension
-    set("x",0);
-    set("x span",2e-6);
-    set("y",0);
-    set("y span",5e-6);
-    set("z",0);
-    set("z span",10e-6);
+    设置("name","mesh_SCR");
+    # 设置 dimension
+    设置("x",0);
+    设置("x跨度",2e-6);
+    设置("y",0);
+    设置("y跨度",5e-6);
+    设置("z",0);
+    设置("z跨度",10e-6);
     # restrict maximum edge length for elements
-    set("max edge length",5e-9);
+    设置("max edge length",5e-9);
 
-**另请参阅**
+**参见**
 
-- [L是t 的 comm和s](../lsf-script-comm和s-lph在icl.md)
-- [ddchrgesolver](./ddchrgesolver.md)
-- [set](./set.md)
+- [List of commands](../lsf-脚本-commands-alphabetical.md)
+- [addchargesolver](./addchargesolver.md)
+- [设置](./设置.md)

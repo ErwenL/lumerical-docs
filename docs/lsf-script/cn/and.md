@@ -1,37 +1,33 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: and -->
+<!--
+Translation from English documentation
+Original command: and
+Translation date: 2026-02-04 22:49:36
+-->
 
-# and
+# 和
 
-**语法** | **描述**
----|---
-out = y & x; | If the 实部 part of either or both of x,y are 零, then 返回 0. Otherwise 返回 1.
-y and x; | Same as &.
+Is 该 logical AND 函数. Imaginary components 的 x 和 y 是 ignored. 
 
+**语法** |  **描述**  
+---|---  
+out = y & x;  |  If 该 real part 的 either 或 both 的 x,y 是 zero, 那么 返回 0. Otherwise 返回 1.   
+y 和 x;  |  Same as &.   
+  
 **示例**
 
-This 示例 shows the usage of the "&" and AND 函数. 
+This example shows 该 usage 的 该 "&" 和 AND 函数. 
+    
+    
     ? (2) & (4);
     result:
     1
-    ?(3 > 4) and (4 >3);
+    ?(3 > 4) 和 (4 >3);
     result: 
     0 
     ? (0+1i) & (1);
     result:
     0
 
-This 示例 shows the usage of the "&" and AND 函数. 
-    ? (2) & (4);
-    result:
-    1
-    ?(3 > 4) and (4 >3);
-    result: 
-    0 
-    ? (0+1i) & (1);
-    result:
-    0
+**参见**
 
-**另请参阅**
-
-[ List of commands ](/hc/en-us/articles/360037228834) , [ == ](/hc/en-us/articles/360034930893--) , [ != ](/hc/en-us/articles/360034930913--) , [ <= ](/hc/en-us/articles/360034410314--) , [ >= ](/hc/en-us/articles/360034930933--) , [ < ](/hc/en-us/articles/360034410334--) , [ > ](/hc/en-us/articles/360034930953--) , [ & ](/hc/en-us/articles/360034930973--) , [ and ](/hc/en-us/articles/360034410354-and) , [ | ](/hc/en-us/articles/360034410374--) , [ or ](/hc/en-us/articles/360034930993-or) , [ ! ](/hc/en-us/articles/360034931013--) , [ ~ ](/hc/en-us/articles/360034931033--)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ == ](/hc/en-us/articles/360034930893--) , [ != ](/hc/en-us/articles/360034930913--) , [ <= ](/hc/en-us/articles/360034410314--) , [ >= ](/hc/en-us/articles/360034930933--) , [ < ](/hc/en-us/articles/360034410334--) , [ > ](/hc/en-us/articles/360034930953--) , [ & ](/hc/en-us/articles/360034930973--) , [ 和 ](/hc/en-us/articles/360034410354-和) , [ | ](/hc/en-us/articles/360034410374--) , [ 或 ](/hc/en-us/articles/360034930993-或) , [ ! ](/hc/en-us/articles/360034931013--) , [ ~ ](/hc/en-us/articles/360034931033--)

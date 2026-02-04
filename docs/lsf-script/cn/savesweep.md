@@ -1,25 +1,22 @@
-<!-- Translation completed: Tue Feb 03 2026 -->
-<!-- Original: savesweep -->
+<!--
+Translation from English documentation
+Original command: savesweep
+Translation date: 2026-02-04 22:50:14
+-->
 
 # savesweep
 
-创建并将仿真文件保存到工作目录中的文件夹，此脚本命令相当于 GUI 的"保存到文件"操作。
+创建 和 saves 该 simulations files 到 一个 folder 在 该 working directory, 此 脚本 命令 是 equivalent 到 该 GUI "Save 到 files" operation. 
 
 **语法** |  **描述**  
 ---|---  
-savesweep;  |  保存仿真中所有扫描对象的仿真文件。  
-savesweep("name");  |  保存指定扫描对象的仿真文件。  
+savesweep;  |  Saves 该 仿真 files 的 all sweep 对象 在 仿真.   
+savesweep("name");  |  Saves 该 仿真 files 的 该 specified sweep 对象.   
 **示例**
     
     
     savesweep;
 
-**另请参阅**
+**参见**
 
-- [命令列表](./index.md)
-- [getdata](./getdata.md)
-- [runsweep](./runsweep.md)
-- [havesweepdata](./havesweepdata.md)
-- [savedata](./savedata.md)
-- [getsweepresult](./getsweepresult.md)
-- [loadsweep](./loadsweep.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ getdata ](/hc/en-us/articles/360034409834-getdata) , [ runsweep ](/hc/en-us/articles/360034931413-runsweep) , [ havesweepdata ](/hc/en-us/articles/360034409934-havesweepdata) , [ savedata ](/hc/en-us/articles/360034411174-savedata) , [ getsweepresult ](/hc/en-us/articles/360034409814-getsweepresult) , [ loadsweep ](/hc/en-us/articles/360034409994-loadsweep)

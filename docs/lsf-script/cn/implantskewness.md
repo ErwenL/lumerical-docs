@@ -1,50 +1,45 @@
 <!--
 Translation from English documentation
 Original command: implantskewness
-Translation date: 2026-02-03
+Translation date: 2026-02-04 22:50:00
 -->
 
 # implantskewness
 
-计算离子注入的 1D 掺杂分布的"偏度"。脚本命令接受半导体材料名称、掺杂类型和离子能量作为输入参数。
+计算 该 'skewness' 的 该 1D doping profile 从 ion implant. The 脚本 命令 takes 该 semiconductor 材料 name, dopant 类型, 和 ion energy as input 参数. 
 
-**语法** |  **描述**
----|---
-out = implantskewness("dopant", "semiconductor", E)  |  提供离子注入的 1D 掺杂分布的"偏度"。"dopant" 参数是提供掺杂类型的字符串。选项为：(i) "boron"，(ii) "phosphorous"，(iii) "antimony"，和 (iv) "arsenic"。"semiconductor" 参数是提供半导体类型的字符串。唯一可用的选项是 "silicon"。最后一个参数 (E) 是注入的离子能量，单位为 eV。
-
+**语法** |  **描述**  
+---|---  
+out = implantskewness("dopant", "semiconductor", E)  |  Provides 该 'skewness' 的 该 1D doping profile 从 ion implant. The "dopant" 参数 是 一个 字符串 providing 该 dopant 类型. The options 是 (i) "boron", (ii) "phosphorous", (iii) "antimony", 和 (iv) "arsenic". The "semiconductor" 参数 是 一个 字符串 providing 该 semiconductor 类型. The only available option 是 "silicon". The last 参数 (E) 是 该 ion energy 用于 该 implant 在 units 的 eV.   
+  
 **示例**
 
-以下脚本计算在 1 keV 离子注入能量下，'silicon' 中 'boron' 离子注入的范围、离散、偏度、峰度和横向离散。然后脚本计算离子剂量为 2e13 /cm² 的 1D 掺杂分布的峰值浓度，并在 CHARGE 求解器中设置注入掺杂对象以模拟相应的掺杂分布。
-
-    E = 1000;  # eV
-    dose = 2e13 * 1e4;  # /m^2
-    mu = implantrange("boron","silicon",E);  # range in m
-    si = implantstraggle("boron","silicon",E);  # straggle in m
+The following 脚本 计算 该 range, straggle, skewness, kurtosis, 和 lateral scatter 用于 一个 ion implant 在 'silicon' 使用 'boron' 用于 一个 ion implant energy 的 1 keV. The 脚本 那么 计算 该 peak concentration 用于 该 1D doping profile 用于 一个 ion dose 的 2e13 /cm  2  和 设置 up 一个 implant doping 对象 在 该 CHARGE 求解器 到 model 该 对应的 doping profile. 
+    
+    
+    E = 1000;  # eV
+    dose = 2e13 * 1e4;  # /m^2
+    mu = implantrange("boron","silicon",E);  # range 在 m
+    si = implantstraggle("boron","silicon",E);  # straggle 在 m
     gal = implantskewness("boron","silicon",E); # skewness
     be2 = implantkurtosis("boron","silicon",E); # kurtosis
-    si_lat = implantlateralscatter("boron","silicon",E);  # lateral scatter in m
-    # calculate peak doping concentration
+    si_lat = implantlateralscatter("boron","silicon",E);  # lateral scatter 在 m
+    # 计算 peak doping concentration
     x = linspace(0,mu+10*si,1001);
-    y = pearson4pdf(x,mu,si,gal,be2);
-    ion_absorbed = integrate(y,[1],x);
-    peak = max(y)*dose/ion_absorbed;  # peak doping density in /m^3
-    # set up implant doping object (assume doping object is already present in the objects tree)
+    y = pearson4pdf(x,mu,si,gal,be2); 
+    ion_absorbed = integrate(y,[1],x);  
+    peak = max(y)*dose/ion_absorbed;  # peak doping density 在 /m^3
+    # 设置 up implant doping 对象 (assume doping 对象 是 already present 在 该 对象 tree)
     select("CHARGE::implant");
-    set("dopant type","p");
-    set("peak concentration",peak);
-    set("distribution function","pearson4");
-    set("range",mu);
-    set("straggle",si);
-    set("skewness",gal);
-    set("kurtosis",be2);
-    set("lateral scatter",si_lat);
+    设置("dopant 类型","p");
+    设置("peak concentration",peak);
+    设置("distribution 函数","pearson4");
+    设置("range",mu);
+    设置("straggle",si);
+    设置("skewness",gal);
+    设置("kurtosis",be2);
+    设置("lateral scatter",si_lat);
 
-**相关命令**
+**参见**
 
-- [implantrange](./implantrange.md)
-- [implantstraggle](./implantstraggle.md)
-- [implantkurtosis](./implantkurtosis.md)
-- [implantlateralscatter](./implantlateralscatter.md)
-- [fitnormpdf](./fitnormpdf.md)
-- [fitpearson4pdf](./fitpearson4pdf.md)
-- [pearson4pdf](./pearson4pdf.md)
+[ implantrange ](/hc/en-us/articles/360034927033-implantskewness) , [ implantstraggle ](/hc/en-us/articles/360034406854-implantstraggle) , [ implantkurtosis ](/hc/en-us/articles/360034927053-implantkurtosis) , [ implantlateralscatter ](/hc/en-us/articles/360034406874-implantlateralscatter) , [ fitnormpdf ](/hc/en-us/articles/360034926993-fitnormpdf) , [ fitpearson4pdf ](/hc/en-us/articles/360034927013-fitpearson4pdf) , [ pearson4pdf ](/hc/en-us/articles/360034926693-person4pdf)

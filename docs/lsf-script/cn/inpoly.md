@@ -1,23 +1,24 @@
 <!--
 Translation from English documentation
 Original command: inpoly
-Translation date: 2026-02-03
+Translation date: 2026-02-04 22:50:01
 -->
 
 # inpoly
 
-确定一个点是在多边形内部还是外部。该函数是向量化的，因此可用于创建多边形的网格。
+Determines 如果 一个 point 是 inside 或 outside 一个 polygon. The 函数 是 vectorized so it 可以 为 used 到 创建 一个 mesh 的 一个 polygon. 
 
-多边形顶点包含在维度为 Nx2（或 2xN）的单个矩阵中，其中 N >= 3 是顶点的数量。维度 2 对应 x、y 位置。例如，边长为 1 的正方形可以描述为 V = [0,0; 1,0; 1,1; 0,1] 或 V = [0,1,1,0;0,0,1,1]。
+The polygon vertices 是 contained 在 一个 single 矩阵 的 维度 Nx2 (或 2xN), 其中 N >= 3 是 该 数字 的 vertices. The 维度 2 corresponds 到 该 x,y positions. For example, 一个 square 的 side 长度 1 可以 为 described 通过 V = [ 0,0; 1,0; 1,1; 0,1] 或 V = [ 0,1,1,0;0,0,1,1]. 
 
-**语法** |  **描述**
----|---
-out = inpoly(V,x,y);  |  返回与 x 维度相同的矩阵，如果对应的点在多边形内部则为 1，否则为 0。矩阵 x 和 y 必须具有相同的长度，或者其中一个可以是单例。
-
+**语法** |  **描述**  
+---|---  
+out = inpoly(V,x,y);  |  返回 一个 矩阵 的 该 same 维度 的 x 使用 1 如果 该 对应的 point 是 inside 该 polygon 和 0 otherwise. The matrices x 和 y 必须 have 该 same 长度, 或 one 的 them 可以 为 一个 singleton.   
+  
 **示例**
 
-以下示例显示如何识别网格中位于多边形内部的点。
-
+The following example shows 如何 到 identify 该 points 在 一个 mesh 该 是 inside 一个 polygon. 
+    
+    
     V = [ 0,0; 1,0; 1,1; 0,1];
     x = linspace(-4,4,100);
     y = linspace(-4,4,100);
@@ -25,18 +26,8 @@ out = inpoly(V,x,y);  |  返回与 x 维度相同的矩阵，如果对应的点�
     Y = meshgridy(x,y);
     image(x,y,inpoly(V,X,Y),"x","y");
 
-生成的图像是：
+The generated image 是: 
 
-**相关命令**
+**参见**
 
-- [List of commands](./List-of-commands.md)
-- [polyarea](./polyarea.md)
-- [centroid](./centroid.md)
-- [polyintersect](./polyintersect.md)
-- [polygrow](./polygrow.md)
-- [polyand](./polyand.md)
-- [polyor](./polyor.md)
-- [polydiff](./polydiff.md)
-- [polyxor](./polyxor.md)
-- [meshgridx](./meshgridx.md)
-- [meshgridy](./meshgridy.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ polyarea ](/hc/en-us/articles/360034926213-polyarea) , [ centroid ](/hc/en-us/articles/360034406074-centroid) , [ polyintersect ](/hc/en-us/articles/360034926233-polyintersect) , [ polygrow ](/hc/en-us/articles/360034406094-polygrow) , [ polyand ](/hc/en-us/articles/360034926293-polyand) , [ polyor ](/hc/en-us/articles/360034406114-polyor) , [ polydiff ](/hc/en-us/articles/360034926313-polydiff) , [ polyxor ](/hc/en-us/articles/360034406134-polyxor) , [ meshgridx ](/hc/en-us/articles/360034409334-meshgridx) , [ meshgridy ](/hc/en-us/articles/360034929673-meshgridy)

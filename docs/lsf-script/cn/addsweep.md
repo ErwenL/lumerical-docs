@@ -1,29 +1,32 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addsweep -->
+<!--
+Translation from English documentation
+Original command: addsweep
+Translation date: 2026-02-04 22:49:30
+-->
 
 # addsweep
 
-Adds  prmeter sweep/optimiz在i在/M在te Crlo/S-prmeter sweep item 作为  到p-most lys是 item.
+添加 一个 参数 sweep/optimization/Monte Carlo/S-参数 sweep item as 该 top-most 分析 item.
 
-**语法** | **描述**
----|---
-addsweep(type); | dds  prmeter sweep/optimiz在i在/M在te Crlo/S-prmeter sweep item 作为  到p-most lys是 item. 'type' = 0 对于 prmeter sweep 'type' = 1 对于 optimiz在i在 'type' = 2 对于 M在te Crlo lys是 'type' = 3 对于 S-prmeter m在rix sweep 在 FDTD 和 MODE solver 'type' = 4 对于 C或ner sweep lys是 在 INTERCONNECT If type 是 not provided, 通过 defult type 0 will  pplied 到 dd  sweep.
+**语法** |  **描述**  
+---|---  
+addsweep(类型); |  添加 一个 参数 sweep/optimization/Monte Carlo/S-参数 sweep item as 该 top-most 分析 item. '类型' = 0 用于 参数 sweep '类型' = 1 用于 optimization '类型' = 2 用于 Monte Carlo 分析 '类型' = 3 用于 S-参数 矩阵 sweep 在 FDTD 和 MODE 求解器 '类型' = 4 用于 Corner sweep 分析 在 INTERCONNECT If 类型 是 not provided, 通过 default 类型 0 将 为 applied 到 添加 一个 sweep.  
   
 **示例**
 
-Type = 0, 对于 dd在g  **prmeter sweep** lys是:
+Type = 0, 用于 adding 一个 **参数 sweep** 分析:
     
     
     addsweep(0);
     ?setsweep("sweep");
     > Result:
     name
-    type  
-    solver
-    number of points
-    resave files after analysis
+    类型  
+    求解器
+    数字 的 points
+    resave files after 分析
 
-Type = 1, 对于 dd在g  **optimiz在i在** lys是:
+Type = 1, 用于 adding 一个 **optimization** 分析:
     
     
     addsweep(1);
@@ -33,71 +36,71 @@ Type = 1, 对于 dd在g  **optimiz在i在** lys是:
     algorithm  
     maximum generations  
     reset random generator  
-    type  
+    类型  
     generation size  
     tolerance  
-    first generation script  
-    next generation script  
-    use figure of merit script  
-    figure of merit script
+    first generation 脚本  
+    next generation 脚本  
+    use figure 的 merit 脚本  
+    figure 的 merit 脚本
 
-Type = 2, 对于 dd在g  **M在te Crlo** lys是:
+Type = 2, 用于 adding 一个 **Monte Carlo** 分析:
     
     
     addsweep(2);  
-    ?setsweep("Monte Carlo analysis");
+    ?setsweep("Monte Carlo 分析");
     > Result:
     name  
-    number of trials  
+    数字 的 trials  
     variation  
     seed  
-    enable seed  
+    启用 seed  
     individual trial  
-    enable individual trial  
-    enable spatial correlations
+    启用 individual trial  
+    启用 spatial correlations
 
-Type = 3, 对于 dd在g  **S-prmeter sweep** lys是 在 FDTD:
+Type = 3, 用于 adding 一个 **S-参数 sweep** 分析 在 FDTD:
     
     
     addsweep(3);  
-    ?setsweep("s-parameter sweep");
+    ?setsweep("s-参数 sweep");
     > Result:
     name  
     excite all ports  
-    calculate group delay  
+    计算 group delay  
     invert sign  
-    map from  
+    map 从  
     active  
-    port  
+    端口  
     mode  
-    map vector  
+    map 向量  
     auto symmetry  
     export setup
 
-Type = 3, 对于 dd在g  **S-prmeter sweep** lys是 在 MODE:
+Type = 3, 用于 adding 一个 **S-参数 sweep** 分析 在 MODE:
     
     
     addsweep(3);  
-    ?setsweep("s-parameter sweep");
+    ?setsweep("s-参数 sweep");
     > Result:
     name  
-    number of points  
-    calculate group delay  
-    group delay wavelength  
-    parameter label  
-    start wavelength  
-    stop wavelength  
+    数字 的 points  
+    计算 group delay  
+    group delay 波长  
+    参数 label  
+    start 波长  
+    stop 波长  
     include group delay
 
-Type = 4, 对于 dd在g  **C或ner sweep** lys是 在 INTERCONNECT:
+Type = 4, 用于 adding 一个 **Corner sweep** 分析 在 INTERCONNECT:
     
     
     addsweep(4);  
     ?getsweep("Corner sweep");  
     > Result:  
     name  
-    resave files after analysis
+    resave files after 分析
 
-**另请参阅**
+**参见**
 
-[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [deletesweep](deletesweep.md) , [copysweep](copysweep.md) , [ p作为tesweep ](/hc/en-us/rticles/360034930393-p作为tesweep) , [ 在sertsweep ](/hc/en-us/rticles/360034930433-在sertsweep) , [getsweep](getsweep.md) , [setsweep](https://optics.sys.com/hc/en-us/rticles/360034930473-setsweep-Script-comm和)[ ](/hc/en-us/rticles/360034930473-setsweep), [ddsweepprmeter](ddsweepprmeter.md) , [ddsweepresult](ddsweepresult.md) , [removesweepprmeter](removesweepprmeter.md) , [removesweepresult](removesweepresult.md)
+[ List of commands ](/hc/en-us/articles/360037228834) , [ deletesweep ](/hc/en-us/articles/360034930173-deletesweep) , [ copysweep ](/hc/en-us/articles/360034930373-copysweep) , [ pastesweep ](/hc/en-us/articles/360034930393-pastesweep) , [ insertsweep ](/hc/en-us/articles/360034930433-insertsweep) , [ getsweep ](/hc/en-us/articles/360034930453-getsweep) , [setsweep](https://optics.ansys.com/hc/en-us/articles/360034930473-setsweep-Script-command)[ ](/hc/en-us/articles/360034930473-setsweep), [ addsweepparameter ](/hc/en-us/articles/360034930493-addsweepparameter) , [ addsweepresult ](/hc/en-us/articles/360034410034-addsweepresult) , [ removesweepparameter ](/hc/en-us/articles/360034930513-removesweepparameter) , [ removesweepresult ](/hc/en-us/articles/360034930533-removesweepresult)

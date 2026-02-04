@@ -1,31 +1,33 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addfdtd -->
+<!--
+Translation from English documentation
+Original command: addfdtd
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addfdtd
 
-添加FDTD求解器区域到仿真环境。求解器区域的范围决定了FDTD中的仿真体积。
+添加 一个 [FDTD 求解器 region](/hc/en-us/articles/360034382534) 到 该 仿真 环境. The extent 的 该 求解器 region determines 该 simulated volume/area 在 FDTD.
 
-**语法** | **描述**
----|---
-addfdtd; | 添加FDTD求解器区域到仿真环境。此函数不返回任何数据。
-addfdtd(struct_data); | 添加FDTD求解器区域并使用包含"property"和value对的struct设置其属性。有关示例，请参阅[struct](struct.md)脚本命令页面。此函数不返回任何数据。
-
+**语法** |  **描述**  
+---|---  
+addfdtd; |  添加 一个 FDTD 求解器 region 到 该 仿真 环境. This 函数 does not 返回 any 数据.  
+addfdtd(struct_data); |  Adds an FDTD solver region and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
+  
 **示例**
 
-以下脚本命令将添加3D FDTD求解器区域，设置其维度并运行仿真。脚本假设仿真环境已经设置了几何体和光源/监视器。
+The following 脚本 命令 将 添加 一个 3D FDTD 求解器 region, 设置 its 维度, 和 run 该 仿真. The 脚本 assumes 该 该 仿真 环境 already has 该 geometry 和 sources/monitors 设置 up.
+    
+    
+    addfdtd;
+    设置("维度",2);  #  1 = 2D, 2 = 3D
+    设置("x",0);
+    设置("x跨度",2e-6);
+    设置("y",0);
+    设置("y跨度",5e-6);
+    设置("z",0);
+    设置("z跨度",10e-6);
+    run;
 
-```lsf
-addfdtd;
-set("dimension",2);  # 1 = 2D, 2 = 3D
-set("x",0);
-set("x span",2e-6);
-set("y",0);
-set("y span",5e-6);
-set("z",0);
-set("z span",10e-6);
-run;
-```
+**参见**
 
-**另请参阅**
-
-[命令列表](List_of_commands.md)、[set](set.md)、[run](run.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ 设置 ](/hc/en-us/articles/360034928773-设置) , [ run ](/hc/en-us/articles/360034931333-run)

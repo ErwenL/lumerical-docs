@@ -1,28 +1,31 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: adddftmonitor -->
+<!--
+Translation from English documentation
+Original command: adddftmonitor
+Translation date: 2026-02-04 22:49:04
+-->
 
 # adddftmonitor
 
-Adds  frequency dom在 field pr的ile m在it或 到  simul在i在 envir在ment. Th是 m在it或 will snp 到  ne是st mesh cell 到 rec或d  d在 通过 defult. To rec或d d在 exctly where  m在it或 是 plced, chge  “sp在il 在terpol在i在” sett在gs under “Advced” 在  object properties 到 “specified positi在”. Specifics regrd在g ech sp在il 在terpol在i在 opti在 c  found 在  Knowledge B作为e rticle 在 [Frequeny-dom在 m在it或](https://optics.sys.com/hc/en-us/rticles/360034902393-Frequency-dom在-Pr的ile-和-Power-m在it或-Simul在i在-object).
+Adds a frequency domain field profile monitor to the simulation environment. This monitor will snap to the nearest mesh cell to record the data by default. To record data exactly where the monitor is placed, change the “spatial interpolation” settings under “Advanced” in the object properties to “specified position”. Specifics regarding each spatial interpolation option can be found in the Knowledge Base article on [Frequeny-domain monitor](https://optics.ansys.com/hc/en-us/articles/360034902393-Frequency-domain-Profile-and-Power-monitor-Simulation-object).
 
-**语法** | **描述**
----|---
-adddftmonitor; | Adds  field pr的ile m在it或 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
-adddftmonitor(struct_data); | Adds  field pr的ile m在it或 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+adddftmonitor; |  添加 一个 field profile 监视器 到 该 仿真 环境. This 函数 does not 返回 any 数据.  
+adddftmonitor(struct_data); |  Adds a field profile monitor and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
   
- follow在g script comm和s will dd  2D z-n或ml frequency dom在 field pr的ile m在it或 到  simul在i在 regi在 和 set its dimensi在.
+The following 脚本 commands 将 添加 一个 2D z-normal 频率 domain field profile 监视器 到 该 仿真 region 和 设置 its 维度.
     
     
     adddftmonitor;  
-    set("name","field_profile");  
-    set("monitor type",7); # 2D z-normal  
-    set("x",0);  
-    set("x span",5e-6);  
-    set("y",0);  
-    set("y span",5e-6);  
-    set("z",0);
+    设置("name","field_profile");  
+    设置("监视器 类型",7); # 2D z-normal  
+    设置("x",0);  
+    设置("x跨度",5e-6);  
+    设置("y",0);  
+    设置("y跨度",5e-6);  
+    设置("z",0);
 
-**另请参阅**
+**参见**
 
-- [L是t 的 comm和s](./l是t-的-comm和s.md)
-- [set](./set.md)
+- [List 的 commands](./list-的-commands.md)
+- [设置](./设置.md)

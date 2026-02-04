@@ -1,45 +1,45 @@
 <!--
-Translator: Claude
-Translation Date: 2026-02-03
-Status: Completed
+Translation from English documentation
+Original command: simulation
+Translation date: 2026-02-04 22:50:14
 -->
-# simulation
 
-脚本命令simulation返回与带宽相关的仿真属性。时域仿真器将尝试将当前信道容纳到不重叠的仿真带宽中。仿真属性包括中心频率、采样率、样本数、频率网格间距、下限和上限频率。如果列出单个带宽，这意味着所有信道都适合同一带宽，否则需要多个带宽才能以当前采样率容纳所有信道。
+# 仿真
 
-该命令还返回当前仿真中在仿真估计仿真带宽之前的源信道列表。此列表包括重叠的带宽。仿真属性包括中心频率、采样率、样本数、频率网格间距、下限和上限频率。如果列出单个带宽，这意味着所有信道都适合同一带宽，否则需要多个带宽才能以当前采样率容纳所有信道。
+The 脚本 命令 仿真 返回 bandwidth related 仿真 属性. The 时间 domain simulator 将 try 到 accommodate 该 current channels into non-overlapping 仿真 bandwidths. Simulation 属性 include 该 center 频率, sample rate, 数字 的 samples, 频率 grid spacing, lower 和 upper 频率 limits. If 一个 single bandwidth 是 listed, 此 means all channels fit 在 该 same bandwidth, otherwise multiple bandwidths 是 required 到 accommodate all channels 使用 该 current sample rate. 
 
-此函数仅在分析模式或运行模式下有效。
+The 命令 also 返回 该 list 的 源 channels 在 该 current 仿真 before 该 仿真 estimate 该 仿真 bandwidths. This list includes 该 overlapped bandwidths. Simulation 属性 include 该 center 频率, sample rate, 数字 的 samples, 频率 grid spacing, lower 和 upper 频率 limits. If 一个 single bandwidth 是 listed, 此 means all channels fit 在 该 same bandwidth, otherwise multiple bandwidths 是 required 到 accommodate all channels 使用 该 current sample rate. 
 
-**语法** | **描述**
----|---
-out = simulation("bandwidth"); | 返回与带宽相关的仿真属性。
-out = simulation("channels"); | 返回当前仿真中在仿真估计仿真带宽之前的源信道列表。
-out = simulation("single"); | 返回使用单频带（总场）进行仿真的推荐设置，以确保所有信道合并到一个仿真带宽中。
+This 函数 是 valid during 分析 或 run-时间 mode only. 
 
-### 示例
+**语法** |  **描述**  
+---|---  
+out = 仿真(“bandwidth”);  |  返回 bandwidth related 仿真 属性.   
+out = 仿真(“channels”);  |  返回 该 list 的 源 channels 在 该 current 仿真 before 该 仿真 estimate 该 仿真 bandwidths.   
+out = 仿真(“single”);  |  返回 该 recommended setting 用于 仿真 使用 一个 single band (total field) 该 将 make sure all channels 是 merged into one 仿真 bandwidth.   
+  
+###  示例 
 
-在仿真运行时访问仿真属性，电路包含四个激光源。
+Access 仿真 属性 while 该 仿真 是 running, 该 circuit contains four laser sources. 
+    
+    
+    #list 数字 的 simulated channels
+    ?仿真("bandwidth");
+    result: 
+    1.9315e+014 1.6e+011 1024 1.5625e+008 1.9307e+014 1.9323e+014 
+    1.9335e+014 1.6e+011 1024 1.5625e+008 1.9327e+014 1.9343e+01
+    #list 数字 的 available channel sources
+    ?仿真("channels");
+    result: 
+    1.931e+014 1.6e+011 1024 1.5625e+008 1.9302e+014 1.9318e+014 
+    1.932e+014 1.6e+011 1024 1.5625e+008 1.9312e+014 1.9328e+014 
+    1.933e+014 1.6e+011 1024 1.5625e+008 1.9322e+014 1.9338e+014 
+    1.934e+014 1.6e+011 1024 1.5625e+008 1.9332e+014 1.9348e+014
+    #list recommended setting 用于 single bandwidth
+    ?仿真("single");
+    result: 
+    1.9325e+014 3.2e+011 2048 1.5625e+008 1.9309e+014 1.9341e+014
 
-```
-#列出仿真的信道数
-?simulation("bandwidth");
-结果：
-1.9315e+014 1.6e+011 1024 1.5625e+008 1.9307e+014 1.9323e+014 
-1.9335e+014 1.6e+011 1024 1.5625e+008 1.9327e+014 1.9343e+01
-#列出可用信道源数
-?simulation("channels");
-结果：
-1.931e+014 1.6e+011 1024 1.5625e+008 1.9302e+014 1.9318e+014 
-1.932e+014 1.6e+011 1024 1.5625e+008 1.9312e+014 1.9328e+014 
-1.933e+014 1.6e+011 1024 1.5625e+008 1.9322e+014 1.9338e+014 
-1.934e+014 1.6e+011 1024 1.5625e+008 1.9332e+014 1.9348e+014
-#列出单带宽的推荐设置
-?simulation("single");
-结果：
-1.9325e+014 3.2e+011 2048 1.5625e+008 1.9309e+014 1.9341e+014
-```
+**参见**
 
-**另请参阅**
-
-[ 命令列表 ](command-list.html)
+[ List 的 commands ](/hc/en-us/articles/360037228834)

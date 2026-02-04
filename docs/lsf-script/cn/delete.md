@@ -1,24 +1,27 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: delete -->
+<!--
+Translation from English documentation
+Original command: delete
+Translation date: 2026-02-04 22:49:48
+-->
 
 # delete
 
-Deletes selected objects. 
+Deletes 选中的 对象. 
 
-**语法** | **描述**
----|---
-delete; | Deletes selected objects.  Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+delete;  |  Deletes 选中的 对象.  This 函数 does not 返回 any 数据.   
   
 **示例**
 
-Cre在e  object 和 n delete it, just 对于 illustr在i在. 
+创建 一个 对象 和 那么 delete it, just 用于 illustration. 
     
     
     addrect;
-    set("name","substrate");
+    设置("name","substrate");
     select("substrate");
     delete;
 
-**另请参阅**
+**参见**
 
-[ Mipul在在g objects ](/hc/en-us/rticles/360037228834) , [groupscope](groupscope.md)
+[ Manipulating 对象 ](/hc/en-us/articles/360037228834) , [ groupscope ](/hc/en-us/articles/360034928553-groupscope)

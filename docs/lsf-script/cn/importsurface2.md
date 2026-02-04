@@ -1,29 +1,28 @@
 <!--
 Translation from English documentation
 Original command: importsurface2
-Translation date: 2026-02-03
+Translation date: 2026-02-04 22:50:00
 -->
 
 # importsurface2
 
-从脚本变量导入表面数据。此命令仅适用于导入图元。如果数据成功导入，函数返回 1。在线帮助中可以找到显示如何使用这些函数的示例脚本文件。请参见用户指南的结构部分。
+Imports surface 数据 从 脚本 variables. This 命令 only applies 到 import primitives. The 函数 返回 1 如果 该 数据 是 successfully imported. 示例 脚本 files showing 如何 到 use 这些 functions 可以 为 found 在 该 Online Help. See 该 User Guide, Structures section.
 
-**语法** |  **描述**
----|---
-out = importsurface2(Z,x,y,upper_surface); |  在三维模拟中从变量 Z、x 和 y 导入曲面。upper_surface 参数是可选的。
-
-**参数** |  **默认值** |  **类型** |  **描述**
----|---|---|---
-Z  |  必填  |  matrix  |  定义曲面的二维矩阵。
-x  |  必填  |  matrix  |  如果 Z 是 NxM 矩阵，则 x 的维度应为 Nx1。对于二维模拟，如果 Y 是 Nx1 矩阵，则 x 的维度应为 Nx1。
-y  |  必填  |  matrix  |  如果 Z 是 NxM 矩阵，则 y 的维度应为 Mx1。
-upper_surface  |  1  |  number  |  此可选参数应为 1 以导入上表面，0 以导入下表面。
-
+**语法** |  **描述**  
+---|---  
+out = importsurface2(Z,x,y,upper_surface); |  Import 一个 surface 从 该 variables Z, x 和 y 在 three dimensional simulations. The upper_surface 参数 是 optional.  
+  
+**Parameter** |  **Default 值** |  **Type** |  **描述**  
+---|---|---|---  
+Z |  required |  矩阵 |  The two dimensional 矩阵 该 defines 该 surface.  
+x |  required |  矩阵 |  If Z 是 一个 NxM 矩阵, 那么 x 应该 have 维度 Nx1. For two dimensional 仿真, 如果 Y 是 一个 Nx1 矩阵 那么 x 应该 have 维度 Nx1.  
+y |  required |  矩阵 |  If Z 是 一个 NxM 矩阵, 那么 y 应该 have 维度 Mx1.  
+upper_surface |  1 |  数字 |  This optional 参数 应该 为 1 到 import 该 upper surface 和 0 到 import 该 lower surface.  
+  
 **示例**
 
-请参阅完整示例：导入对象 - 曲面
+please refer 一个 complete example: [Import 对象 - Surfaces](/hc/en-us/articles/360034901973)
 
-**相关命令**
+**参见**
 
-- [Manipulating objects](./Manipulating-objects.md)
-- [importsurface](./importsurface.md)
+[Manipulating 对象](/hc/en-us/articles/360037228834), [importsurface](/hc/en-us/articles/360034408654-importsurface)

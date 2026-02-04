@@ -1,59 +1,65 @@
+<!--
+Translation from English documentation
+Original command: mczfit
+Translation date: 2026-02-04 22:50:13
+-->
+
 # mczfit
 
-将可变增益滤波器拟合到一组增益曲线数据，其中曲线组中的每条曲线对应一个载流子密度值，生成增益滤波器系数文件以供 TWLM 元素使用。
+Fits 一个 变量 gain filter 到 一个 family 的 gain curve 数据, 其中 each curve 在 该 family corresponds 到 一个 值 的 carrier density, producing 一个 文件 的 gain filter coefficients 到 为 used 通过 该 TWLM 元素.
 
-**语法** | **描述**
----|---
-out=mczfit(inputfilename, outputfilebase, centrefrequency, samplerate, maxnumcoef, tol, maxiter, rectangular, rolloff); | 将可变增益滤波器拟合到一组增益曲线数据，其中曲线组中的每条曲线对应一个载流子密度值，生成增益滤波器系数文件以供 TWLM 元素使用。" **inputfilename** " 是包含输入数据文件名称的字符串（包括后缀）。输入数据的格式如下所述。" **outputfilename** " 是包含增益滤波器系数文件名称（不包括后缀）的字符串。" **centrefrequency** " 是执行增益拟合的频率带的中心频率。" **samplerate** " 是执行增益拟合的频率带的带宽。" **maxnumcoef** " 是用于拟合数据的最大滤波器系数数量。" **tol** " 是容差 " **rectangular** " 是布尔值，它定义数据格式。"true" 表示 'real' 和 'imaginary' 格式；"false" 表示带有 'amplitude' 和 'phase' 的极坐标格式 " **maxiter** " 是用于拟合数据的最大迭代次数。" **rolloff** " 是输入频率数据滚降到带边缘两个值的平均值的带宽分数。
+**语法** |  **描述**  
+---|---  
+out=mczfit(inputfilename, outputfilebase, centrefrequency, samplerate, maxnumcoef, tol, maxiter, rectangular, rolloff); |  Fits 一个 变量 gain filter 到 一个 family 的 gain curve 数据, 其中 each curve 在 该 family corresponds 到 一个 值 的 carrier density, producing 一个 文件 的 gain filter coefficients 到 为 used 通过 该 TWLM 元素. " **inputfilename** " 是 一个 字符串 containing 该 name 的 该 input 数据 文件 (including 该 suffix). The format 的 该 input 数据 是 specified below. " **outputfilename** " 是 一个 字符串 containing 该 name (excluding 该 suffix) 的 该 文件 containing 该 gain filter coefficients. " **centrefrequency** " 是 该 center 频率 的 该 频率 band 用于 该 该 gain fitting 是 到 为 performed. " **samplerate** " 是 该 bandwidth 的 该 频率 band 用于 该 该 gain fitting 是 到 为 performed. " **maxnumcoef** " 是 该 maximum 数字 的 filter coefficients 到 为 used 到 fit 到 该 数据. " **tol** " 是 该 tolerance " **rectangular** " 是 一个 bool 值, it defines 该 数据 format. "true" represents 'real' 和 'imaginary' format; "false" represents polar coordinate format 使用 'amplitude' 和 'phase' " **maxiter** " 是 该 maximum 数字 的 iterations used 在 fitting 到 该 数据. " **rolloff** " 是 该 fraction 的 该 bandwidth over 该 该 input 频率 数据 是 rolled off 到 该 average 的 该 two 值 at 该 band edges.  
+  
+**Implementation detail**
 
-**实现细节**
+The format 的 该 数据 文件 是 as follows:
+    
+    
+    (1, Nc)
+    carrierdensity_1, carrierdenisty_2, …, carrierdensity_Nc
+    (Ns, Nc+1)
+    freq_1gain_1_1gain_1_2…gain_1_Nc
+    freq_2gain_2_1gain_2_2…gain_2_Nc
+    ……………
+    freq_Nsgain_Ns_1gain_Ns_2…gain_Ns_Nc
 
-数据文件的格式如下：
+其中 该 参数 是 defined 在 该 table below:
 
-```
-(1, Nc)
-carrierdensity_1, carrierdenisty_2, …, carrierdensity_Nc
-(Ns, Nc+1)
-freq_1gain_1_1gain_1_2…gain_1_Nc
-freq_2gain_2_1gain_2_2…gain_2_Nc
-……………
-freq_Nsgain_Ns_1gain_Ns_2…gain_Ns_Nc
-```
+Nc |  The 数字 的 gain curvers  
+---|---  
+Ns |  The 数字 的 频率 samples  
+carrierdensity_j |  The carrier density 对应的 到 该 j-th gain curve  
+freq_i |  The i-th 频率 sample  
+gain_i_j |  The gain 值 用于 该 i-th 频率 sample 在 该 j-th curve  
+  
+注意:
 
-参数定义如下表：
+  1. The frequencies 必须 为 ordered 在 ascending order, such 该 frequency_1 是 该 lowest 和 frequency_Ns 是 该 highest 
+  2. The gain curves 和 carrier densities 必须 为 ordered 在 descending order 的 carrier density. That 是, carrierdensity_1 是 该 largest carrier density 和 carrierdensity_Nc 是 该 lowest carrier density, 和 gain_i_1 是 该 gain 用于 该 largest carrier density 和 i-th 频率 sample 和 gain_i_Nc 是 该 gain 用于 该 lowest carriest density 和 i-th 频率 sample. 
 
-Nc | 增益曲线的数量
----|---
-Ns | 频率样本的数量
-carrierdensity_j | 对应第 j 条增益曲线的载流子密度
-freq_i | 第 i 个频率样本
-gain_i_j | 第 j 条曲线中第 i 个频率样本的增益值
 
-注释：
 
-  1. 频率必须按升序排列，frequency_1 最低，frequency_Ns 最高
-  2. 增益曲线和载流子密度必须按载流子密度降序排列。也就是说，carrierdensity_1 是最大的载流子密度，carrierdensity_Nc 是最低的载流子密度，gain_i_1 是最大载流子密度和第 i 个频率样本的增益，gain_i_Nc 是最低载流子密度和第 i 个频率样本的增益
+The 返回 值 是 listed 在 该 table below:
 
-返回值如下表：
+fit_out |  A 结构体 使用 fields  
+---|---  
+频率 |  A column 向量 的 该 频率 sample points  
+input |  A 矩阵 使用 该 column vectors containing 该 input 频率 response 到 为 fit 用于 each operating point  
+operatingPoint |  A row 向量 containing 该 input operating points 对应的 到 该 input 频率 responses 在 该 columns 的 该 input 矩阵  
+operatingPointInterpolated |  A row 向量 containing 值 的 该 linearly interpolated 值 的 operating points between 该 input 值 的 operating points  
+output |  A 矩阵 使用 该 column vectors containing 该 fit 频率 response 用于 each input operating point  
+outputInterpolated |  A 矩阵 使用 该 column vectors containing 该 fit 频率 response 用于 each linearly interpolated operating point contained 在 row 向量 ‘operatingPointInterpolated’.  
+  
+注意:
 
-fit_out | 包含字段的结构体
----|---
-frequency | 频率样本点的列向量
-input | 矩阵，包含每列向量，用于每个工作点的输入频率响应以进行拟合
-operatingPoint | 行向量，包含与输入矩阵各列中输入频率响应相对应的输入工作点
-operatingPointInterpolated | 行向量，包含工作点输入值之间的线性插值
-output | 矩阵，包含每列向量，用于每个输入工作点的拟合频率响应
-outputInterpolated | 矩阵，包含每列向量，用于行向量 'operatingPointInterpolated' 中包含的每个线性插值工作点的拟合频率响应
-
-注意：
-
-此脚本函数还生成增益滤波器系数以供 TWLM 元素使用。文件名将是 outputfilename.mcfdb。
+This 脚本 函数 also produces 一个 gain filter coefficients 到 为 used 通过 该 TWLM 元素. The name 的 该 文件 将 为 outputfilename.mcfdb. 
 
 **示例**
 
-有关此命令的详细用法，请参阅应用程序示例页面增益拟合。
+Please refer 到 该 application example page [ Gain Fitting ](/hc/en-us/articles/360042820953) 用于 该 detailed usage 的 此 命令.
 
-**另请参阅**
+**参见**
 
-- [命令列表](./命令列表.md)
-- [mcfit](./mcfit.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ mcfit ](/hc/en-us/articles/360034930333-mcfit)

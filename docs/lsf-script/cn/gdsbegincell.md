@@ -1,22 +1,27 @@
+<!--
+Translation from English documentation
+Original command: gdsbegincell
+Translation date: 2026-02-04 22:49:49
+-->
+
 # gdsbegincell
 
-此函数在 GDSII 文件中创建一个单元。所有 GDS 元素（多边形、框、引用、数组引用等）必须放在单元内，因此必须在添加任何元素之前调用此函数。完成添加元素后，可以调用 gdsendcell 来完成单元。单元不能嵌套，因此在调用 gdsbegincell 后，在第一个调用的单元关闭之前不能再次调用新的单元。尽管 GDSII 文件是单元的平面列表，但单元可以引用其他单元，从而创建嵌套层次结构。更多详情请参阅 [gdsaddref](./gdsaddref.md)。GDS "单元" 在导入 FDTD 时作为"结构组"存在，更多详情请参阅 [gdsimport](./gdsimport.md)。
+This 函数 创建 一个 单元格 在 一个 GDSII 文件. All GDS elements (polygons, boxes, references, 数组 references, etc) 必须 为 placed inside 一个 单元格, so 此 函数 必须 为 called before adding any elements. When finished adding elements, gdsendcell 可以 为 called 到 finish 该 单元格. Cells cannot 为 nested, so after calling gdsbegincell, 一个 新的 单元格 cannot 为 called again until 该 first called 单元格 has been closed. Although 该 GDSII 文件 是 一个 flat list 的 cells, cells 可以 reference other cells, thus creating 一个 nested hierarchy. See [gdsaddref](/hc/en-us/articles/360034927173-gdsaddref) 用于 more details. A GDS "单元格" exists as 一个 "结构 group" 当 imported 到 FDTD, see [gdsimport](/hc/en-us/articles/360034406974-gdsimport) 用于 more details.
 
-**语法** | **描述**
----
-gdsbegincell(f, "cellname") | 在 GDSII 文件中创建一个新单元。
-
-**参数** | **类型** | **描述**
----|---|---
-f | 字符串 | 之前用 gdsopen 打开的文件句柄。
-cellname | 字符串 | 单元的名称。
-
+**语法** |  **描述**  
+---|---  
+gdsbegincell(f, "cellname") |  创建 一个 新的 单元格 在 一个 GDSII 文件.  
+**Parameter** |  **Type** |  **描述**  
+---|---|---  
+f |  字符串 |  一个 文件 handle 该 was previously opened 使用 gdsopen.  
+cellname |  字符串 |  name 的 该 单元格.  
+  
 ## 示例
 
-脚本代码示例可在 [gdsopen](./gdsopen.md) 页面上找到。
+An example 的 脚本 code 是 available 在 该 [gdsopen](/hc/en-us/articles/360034927093-gdsopen) page.
 
-注意：需要澄清的是，GDS 单元与 FDTD 中的 [单元数组](../Cell.md) 不同。
+注意: Just 到 clarify, 一个 GDS 单元格 是 different 从 一个 [Cell Array](/hc/en-us/articles/360034929913-单元格) 在 FDTD.
 
-**另请参阅**
+**参见**
 
-[gdsopen](./gdsopen.md)、[gdsclose](./gdsclose.md)、[gdsendcell](./gdsendcell.md)、[gdsaddpoly](./gdsaddpoly.md)、[gdsaddcircle](./gdsaddcircle.md)、[gdsaddrect](./gdsaddrect.md)、[gdsimport](./gdsimport.md)、[gdsaddref](./gdsaddref.md)、[gdsaddpath](./gdsaddpath.md)、[gdsaddtext](./gdsaddtext.md)、[gdsaddstencil](./gdsaddstencil.md)
+[gdsopen](/hc/en-us/articles/360034927093-gdsopen), [gdsclose](/hc/en-us/articles/360034927113-gdsclose), [gdsendcell](/hc/en-us/articles/360034406894-gdsendcell), [gdsaddpoly](/hc/en-us/articles/360034927153-gdsaddpoly), [gdsaddcircle](/hc/en-us/articles/360034406914-gdsaddcircle), [gdsaddrect](/hc/en-us/articles/360034406934-gdsaddrect), [gdsimport](/hc/en-us/articles/360034406974-gdsimport), [gdsaddref](/hc/en-us/articles/360034927173-gdsaddref), [gdsaddpath](/hc/en-us/articles/360034406954-gdsaddpath), [gdsaddtext, ](/hc/en-us/articles/360034927193-gdsaddtext)[gdsaddstencil](https://optics.ansys.com/hc/en-us/articles/43594268925459-gdsaddstencil-Script-command)

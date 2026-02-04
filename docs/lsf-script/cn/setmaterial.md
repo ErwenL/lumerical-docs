@@ -1,103 +1,101 @@
 <!--
----
-title: setmaterial
-command_type: property
----
+Translation from English documentation
+Original command: setmaterial
+Translation date: 2026-02-04 22:50:14
 -->
 
 # setmaterial
 
-设置材料数据库中材料的属性。此命令只能编辑未被写保护的材料属性。
+设置 属性 的 一个 材料 在 该 材料 database. This 命令 可以 only edit 该 属性 的 该 materials 该 是 NOT write protected.
 
-**语法** | **描述**
----|---
-`?setmaterial("materialname");` | 显示可修改的指定材料的属性名称。
-`setmaterial("materialname", "propertyname", newvalue);` | 将名为"**propertyname**"的材料的属性设置为新值。参数newvalue可以是数字或字符串。参数"**propertyname**"和"**materialname**"必须与正确的字符串完全匹配。例如，`setmaterial("Si", "Mesh order", 4);` 会将材料"Si"的"mesh order"属性设置为4。
-`setmaterial("materialname", **_struct_**);` | 使用[struct](struct.md)同时更新多个材料属性。键对应相应的"propertyname"，值设置为新值。
+**语法** |  **描述**  
+---|---  
+?setmaterial("materialname"); |  Displays 该 属性 names 的 该 specified 材料 该 可以 为 modified.  
+setmaterial( "materialname", "propertyname", newvalue); |  设置 该 属性 named "propertyname" 的 该 材料 使用 该 name "materialname" 到 newvalue. The 参数 newvalue 可以 为 一个 数字 或 一个 字符串. The 参数 "propertyname" 和 "materialname" have 到 match correct 字符串 exactly. For example, setmaterial("Si","Mesh order",4); 将 设置 该 属性 "mesh order" 的 该 materials "Si" 到 4.  
+setmaterial( "materialname", **_struct_**); |  Update multiple material properties at the same time using a [struct](https://support.lumerical.com/hc/en-us/articles/360034409574-struct-Script-command) of associated properties. Keys are given the respective "propertyname", and values assigned to the new value.  
+  
+**示例 使用 结构体**
+    
+    
+    # 创建 一个 材料
+    setmaterial(addmaterial("(n,k) Material"), "name", "myMaterial");  
+    
+    # 设置 该 材料 属性
+    setmaterial("myMaterial", {"Refractive Index": 1.3, "Imaginary Refractive Index": 1.5});
 
-**使用结构体的示例**
+**Conductive 材料 example**
 
-```
-# 创建一种材料
-setmaterial(addmaterial("(n,k) Material"), "name", "myMaterial");
+This example 添加 一个 新的 Conductive 材料, 设置 该 name 到 "myMaterial", anisotropy 到 "Diagonal", 和 设置 该 permittivity 和 conductivity 属性 用于 该 材料.
+    
+    
+    A=[4;5;6];
+    B=[1;2;3];
+    temp = addmaterial("Conductive");
+    setmaterial(temp,"name","myMaterial");
+    setmaterial("myMaterial", "Anisotropy", 1); # 启用 diagonal anisotropy
+    setmaterial("myMaterial","Permittivity", A);
+    setmaterial("myMaterial","Conductivity", B);
 
-# 设置材料属性
-setmaterial("myMaterial", {"Refractive Index": 1.3, "Imaginary Refractive Index": 1.5});
-```
+**Sampled 数据 材料 example**
 
-**导电材料示例**
+This example shows 如何 到 创建 一个 新的 Sampled 数据 材料.
 
-此示例添加一种新的导电材料，将名称设置为"myMaterial"，各向异性设置为"Diagonal"，并为材料设置介电常数和电导率属性。
+The sampled 数据 矩阵 必须 have 2 或 4 columns, 用于 isotropic 或 anisotropic materials. The first column 是 该 频率 向量, 在 Hz. The next column(s) 是 该 complex valued permittivity.
 
-```
-A = [4; 5; 6];
-B = [1; 2; 3];
-temp = addmaterial("Conductive");
-setmaterial(temp, "name", "myMaterial");
-setmaterial("myMaterial", "Anisotropy", 1); # 启用对角各向异性
-setmaterial("myMaterial", "Permittivity", A);
-setmaterial("myMaterial", "Conductivity", B);
-```
+If you have refractive index 数据 (rather than permittivity), remember 该 permittivity 是 simply 该 square 的 该 refractive index.
+    
+    
+    f = linspace(1000e12,300e12,30);   # 频率 向量
+    eps = 2 + 1i*(1e6 / (2*pi*f*eps0)); # 创建 example permittivity 向量
+    sampledData = [f,eps];        # collect f 和 eps 在 one 矩阵
+    matName = "My 材料";
+    temp = addmaterial("Sampled 数据");
+    setmaterial(temp,"name",matName);        # rename 材料
+    setmaterial(matName,"max coefficients",2);    # 设置 该 数字 的 coefficients
+    setmaterial(matName,"sampled 数据",sampledData); # load 该 sampled 数据 矩阵
 
-**采样数据材料示例**
+**Index perturbation 材料 example**
 
-此示例演示如何创建新的采样数据材料。
+This example shows 如何 到 创建 一个 新的 Index perturbation 材料.
 
-采样数据矩阵必须有2列（各向同性材料）或4列（各向异性材料）。第一列是频率向量，单位为Hz。接下来的列是复值介电常数。
+The Index perturbation 材料 可以 define index perturbation 用于 "np Density" 和/或 "Temperature". For 一个 "np Density" index perturbation:
 
-如果您有折射率数据（而不是介电常数），请记住介电常数就是折射率的平方。
+  * "np density model": takes 一个 integer 或 字符串 值 的 [0, 1, 2], 'Drude', 'Soref 和 Bennet' 或 'Custom'
+  * 用于 model 类型 "Custom": "n sensitivity table" 和 "p sensitivity table" take 一个 矩阵 参数
 
-```
-f = linspace(1000e12, 300e12, 30);  # 频率向量
-eps = 2 + 1i * (1e6 / (2 * pi * f * eps0)); # 创建示例介电常数向量
-sampledData = [f, eps];  # 将f和eps收集到一个矩阵中
-matName = "My material";
-temp = addmaterial("Sampled data");
-setmaterial(temp, "name", matName);  # 重命名材料
-setmaterial(matName, "max coefficients", 2);  # 设置系数数量
-setmaterial(matName, "sampled data", sampledData); # 加载采样数据矩阵
-```
 
-**折射率扰动材料示例**
 
-此示例演示如何创建新的折射率扰动材料。
+For 一个 "Temperature" index perturbation:
 
-折射率扰动材料可以为"np Density"和/或"Temperature"定义折射率扰动。
+  * 用于 model 类型 "Linear sensitivity": users need 到 设置 individual 值 用于 'Tref', 'dn/dt' 和 'dk/dt'
+  * 用于 model 类型 "Table 的 值": "temperature sensitivity table" takes 一个 矩阵 参数
 
-对于"np Density"折射率扰动：
-* "np density model"：接受整数值或字符串值[0, 1, 2]、'Drude'、'Soref and Bennet'或'Custom'
-* 对于模型类型"Custom"："n sensitivity table"和"p sensitivity table"接受矩阵参数
 
-对于"Temperature"折射率扰动：
-* 对于模型类型"Linear sensitivity"：用户需要为'Tref'、'dn/dt'和'dk/dt'设置单独的值
-* 对于模型类型"Table of values"："temperature sensitivity table"接受矩阵参数
+    
+    
+    nSensitivity = [1.5, 1.5e-3, 1.5e-3;  1.6, 1.6e-3, 1.6e-3; 1.7, 1.7e-3, 1.7e-3];
+    pSensitivity = [1, 1e-3, 1e-3;  1.2, 1.2e-3, 1.2e-3; 1.4, 1.4e-3, 1.4e-3];
+    matName = "May 材料";
+    temp = addmaterial("Index perturbation");
+    setmaterial(temp, "name", matName);
+    setmaterial(matName, "np density model", "Custom"); # use "Custom" model 类型
+    setmaterial(matName, "n sensitivity table", nSensitivity); # 设置 n sensitivity table
+    setmaterial(matName, "p sensitivity table", pSensitivity); # 设置 p sensitivity table
 
-```
-nSensitivity = [1.5, 1.5e-3, 1.5e-3;  1.6, 1.6e-3, 1.6e-3; 1.7, 1.7e-3, 1.7e-3];
-pSensitivity = [1, 1e-3, 1e-3;  1.2, 1.2e-3, 1.2e-3; 1.4, 1.4e-3, 1.4e-3];
-matName = "May material";
-temp = addmaterial("Index perturbation");
-setmaterial(temp, "name", matName);
-setmaterial(matName, "np density model", "Custom"); # 使用"Custom"模型类型
-setmaterial(matName, "n sensitivity table", nSensitivity); # 设置n敏感度表
-setmaterial(matName, "p sensitivity table", pSensitivity); # 设置p敏感度表
-```
+It 是 possible 到 define 该 color 的 该 材料 使用 命令 lines. An example 是 shown below. These 脚本 commands 将 创建 一个 材料, define 该 材料 color, 和 assign 该 材料 到 一个 rectangle 到 show 该 color change.
 
-可以使用命令行定义材料的颜色。下面显示了一个示例。这些脚本命令将创建材料、定义材料颜色，并将该材料分配给矩形以显示颜色变化。
+The 4 elements 在 该 矩阵 用于 该 新的 color 值 是 用于 该 red, green, blue, 和 alpha channels 的 该 color, respectively. These elements 可以 为 设置 between 0 到 1, 该 represents 一个 minimum 的 0 和 maximum 的 255. Alpha defines 该 opacity, setting 到 到 0 means transparent, 1 means 一个 solid color. For example, [1;0;0;1] would 为 solid red, [0;1;0;1] would 为 solid green, 和 [0;0;1;1] would 为 solid blue. More color channel 值 可以 为 found 使用 一个 online color picker tool.
 
-新颜色值矩阵中的4个元素分别代表颜色的红色、绿色、蓝色和alpha通道。这些元素可以设置为0到1之间的值，代表从0到255的最大值。Alpha定义不透明度，设置为0表示透明，1表示纯色。例如，[1;0;0;1]是纯色红色，[0;1;0;1]是纯色绿色，[0;0;1;1]是纯色蓝色。可以使用在线颜色选择工具找到更多的颜色通道值。
+注意 该 该 color opacity 可以 为 also defined 在 该 结构 对象 通过 overriding 该 材料 属性.
+    
+    
+    mymaterial = addmaterial("PEC");
+    setmaterial(mymaterial,"name", "test_material");
+    setmaterial("test_material", "color", [1; 0.6; 0.4; 0.3] ); # R, G, B, alpha channel
+    addrect;
+    设置("材料", "test_material");
+    设置("override color opacity 从 材料 database", 0);
 
-注意，颜色不透明度也可以在结构对象中通过覆盖材料属性来定义。
+**参见**
 
-```
-mymaterial = addmaterial("PEC");
-setmaterial(mymaterial, "name", "test_material");
-setmaterial("test_material", "color", [1; 0.6; 0.4; 0.3]); # R、G、B、alpha通道
-addrect;
-set("material", "test_material");
-set("override color opacity from material database", 0);
-```
-
-**另请参阅**
-
-- [命令列表](list-of-commands.md), [addmaterial](addmaterial.md), [deletematerial](deletematerial.md), [getmaterial](getmaterial.md), [getindex](getindex.md), [getfdtdindex](getfdtdindex.md), [导入任意色散材料](importing-arbitrary-dispersive-material.md)
+[ List of commands ](https://optics.ansys.com/hc/en-us/articles/360037228834) , [ addmaterial ](https://optics.ansys.com/hc/en-us/articles/360034930013-addmaterial) , [ deletematerial ](https://optics.ansys.com/hc/en-us/articles/360034409734-deletematerial) , [ getmaterial ](https://optics.ansys.com/hc/en-us/articles/360034930053-getmaterial) , [ getindex ](https://optics.ansys.com/hc/en-us/articles/360034409674-getindex) , [ getfdtdindex ](https://optics.ansys.com/hc/en-us/articles/360034409694-getfdtdindex) , [ importing arbitrary dispersive material ](**%20to%20be%20defined%20**)

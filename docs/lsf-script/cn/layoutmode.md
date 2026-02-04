@@ -1,34 +1,33 @@
 <!--
 Translation from English documentation
 Original command: layoutmode
-Translation date: 2026-02-03
+Translation date: 2026-02-04 22:50:01
 -->
 
 # layoutmode
 
-此脚本命令可用于确定模拟文件当前处于布局模式还是分析模式。重要的是在打开项目文件后立即使用此命令检查状态，以避免在后续操作中遇到错误（如果文件不在所需模式下）。
+This 脚本 命令 可以 为 used 到 determine whether 该 仿真 文件 是 currently 在 LAYOUT mode 或 在 ANALYSIS mode. It 是 important 到 use 此 命令 到 check 该 status 的 该 project 文件 once it 是 opened 到 avoid running into 一个 error during 该 subsequent operations 如果 该 文件 是 not 在 该 desired mode. 
 
-**语法** |  **描述**
----|---
-?layoutmode;  |  如果处于布局模式（INTERCONNECT 为设计模式），则返回 1；如果处于分析模式，则返回 0。
-
+**语法** |  **描述**  
+---|---  
+?layoutmode;  |  返回 1 如果 在 LAYOUT mode (DESIGN mode 用于 INTERCONNECT), 和 0 如果 在 ANALYSIS mode.   
+  
 **示例**
 
-以下脚本命令将首先加载名为 "test.fsp" 的项目文件。脚本的目的是向现有几何体添加新矩形。但是，如果文件处于分析模式，则 "addrect" 命令将产生错误。为避免这种情况，脚本命令 "layoutmode" 首先用于确定文件的状态。然后使用 "if/else" 语句：如果文件已处于布局模式，则直接添加矩形；或者如果文件处于分析模式，则先切换到布局模式后再添加矩形。
-
-    load("test.fsp");
-    status = layoutmode;
-
-    if (status == 1) {
-       addrect;
+The following 脚本 commands 将 first load 一个 project 文件 named "test.fsp". The aim 的 该 脚本 是 到 添加 一个 新的 rectangle 到 该 existing geometry. However, 如果 该 文件 是 在 ANALYSIS mode 那么 该 "addrect" 命令 将 创建 一个 error. To avoid 此, 该 脚本 命令 "layoutmode" 是 first used 到 determine 该 status 的 该 文件. Then 一个 "如果/否则" statement 是 used 到 添加 该 rectangle directly 如果 该 文件 是 already 在 LAYOUT mode 或 到 添加 该 rectangle after switching 到 LAYOUT mode first 如果 该 文件 是 在 ANALYSIS mode. 
+    
+    
+    load("test.fsp");  
+    status = layoutmode;  
+    
+    如果 (status == 1) {  
+        addrect;  
+    }  
+    否则 {  
+        switchtolayout;  
+        addrect;  
     }
-    else {
-       switchtolayout;
-       addrect;
-    }
 
-**相关命令**
+**参见**
 
-- [List of commands](./List-of-commands.md)
-- [switchtolayout](./switchtolayout.md)
-- [designmode](./designmode.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ switchtolayout ](/hc/en-us/articles/360034923993-switchtolayout) , [ designmode ](/hc/en-us/articles/360034924053-designmode)

@@ -1,42 +1,39 @@
+<!--
+Translation from English documentation
+Original command: polar2
+Translation date: 2026-02-04 22:50:14
+-->
+
 # polar2
 
-创建极坐标图。特别地，当数据集在不同角度值数组上采样时使用此函数。
+创建 polar plots. In particular, 此 函数 是 used 当 该 数据 设置 是 sampled 在 different arrays 的 angle 值. 
 
-**语法** | **描述**
----|---
-out = polar2(theta,rho) | 创建角度 theta 相对于半径 rho 的极坐标图。theta 是从 x 轴到以弧度指定的半径向量的角度；rho 是半径向量的长度。Theta 和 rho 可以是长度相同的向量，或者如果 theta 的长度为 n，则 rho 可以是 nxm 矩阵，对应 m 组 rho 值。返回图号。
-polar2(theta1,rho1,theta2,rho2) | 创建带有两条曲线的图。两个数据集可以在不同的 theta 向量上采样。
-polar2(theta,rho,"x label", "y label", "title") | 创建带坐标轴标签和标题的 y vs x 图，返回图号。
-polar2(theta,rho,"x label", "y label", "title", "options") | 创建带有所需选项的图。选项可以是
+**语法** |  **描述**  
+---|---  
+out = polar2(theta,rho)  |  创建 一个 polar coordinate plot 的 该 angle theta versus 该 radius rho. theta 是 该 angle 从 该 x-axis 到 该 radius 向量 specified 在 radians; rho 是 该 长度 的 该 radius 向量.  Theta 和 rho 可以 为 vectors 的 该 same 长度, 或 如果 该 长度 的 theta 是 n, 那么 rho 可以 为 一个 nxm 矩阵, 该 corresponds 到 m 设置 的 rho 值.  The figure 数字 是 returned.   
+polar2(theta1,rho1,theta2,rho2)  |  创建 一个 plot 使用 two curves. The two 数据 设置 可以 为 sampled 在 different theta vectors.   
+polar2(theta,rho,"x label", "y label", "title")  |  创建 一个 plot 的 y vs x 使用 axis labels 和 一个 title, 返回 该 figure 数字.   
+polar2(theta,rho,"x label", "y label", "title", "options");  |  创建 一个 plot 使用 desired options. Options 可以 为 为 
 
-  * greyscale
-  * polar（与 polar 脚本命令相同）
-  * 上述任何逗号分隔的列表
+  * greyscale 
+  * polar (same as 该 polar 脚本 命令) 
+  * any comma separated list 的 该 above 
 
-返回图号。
-
+返回 该 figure 数字.   
+  
 **示例**
 
-在极坐标中绘制两个不同的数据集。
+Plot 在 polar coordinates two different 数据 设置. 
+    
+    
+    theta1 = linspace(0,2*pi,100);
+    r1 = cos(theta1);
+    theta2 = linspace(0,pi,50);
+    r2 = sin(theta2);
+    polar2(theta1,r1,theta2,r2);
 
-```
-theta1 = linspace(0,2*pi,100);
-r1 = cos(theta1);
-theta2 = linspace(0,pi,50);
-r2 = sin(theta2);
-polar2(theta1,r1,theta2,r2);
-```
+The following figure shows 该 output 的 该 该 example code. 
 
-下图显示了示例代码的输出。
+**参见**
 
-**另请参阅**
-
-- [命令列表](./命令列表.md)
-- [polar](./polar.md)
-- [legend](./legend.md)
-- [image](./image.md)
-- [closeall](./closeall.md)
-- [setplot](./setplot.md)
-- [exportfigure](./exportfigure.md)
-- [polarimage](./polarimage.md)
-- [plot](./plot.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ polar ](/hc/en-us/articles/360034931153-polar) , [ legend ](/hc/en-us/articles/360034931233-legend) , [ image ](/hc/en-us/articles/360034931253-image) , [ closeall ](/hc/en-us/articles/360034410594-closeall) , [ setplot ](/hc/en-us/articles/360034931293-setplot) , [ exportfigure ](/hc/en-us/articles/360034410574-exportfigure) , [ polarimage ](/hc/en-us/articles/360034931193-polarimage) , [ plot ](/hc/en-us/articles/360034410474-plot)

@@ -1,33 +1,35 @@
+<!--
+Translation from English documentation
+Original command: opensession
+Translation date: 2026-02-04 22:50:14
+-->
+
 # opensession
 
-通过自动化 API 打开所选 Lumerical 产品的服务器会话的互操作性命令。打开会话后，客户端产品可以调用服务器执行任意 Lumerical 脚本命令并执行它们。打开的 Lumerical 会话还允许从工作区发送和获取变量。
+An interoperability 命令 该 opens 一个 server session 的 选中的 Lumerical product via automation API. Once 该 session 是 opened, client product 可以 call 该 server 到 execute arbitrary Lumerical 脚本 命令(s) 和 execute them. Opened Lumerical session also allows 到 send 和 获取 variables 从/到 workspace. 
 
-**语法** | **描述**
----|---
-s2=opensession('device'); | 执行此命令将通过自动化 API 打开 Device 会话。接受的参数：'fdtd' 'mode' 'device' 'interconnect'
+**语法** |  **描述**  
+---|---  
+s2=opensession('device');  |  When executed, 此 命令 将 open 一个 session 的 Device via 该 automation API.  Accepted 参数:  'fdtd'  'mode'  'device'  'interconnect'   
+  
+###  示例 
 
-**示例**
+The following code example opens Device as 一个 server, sends local 变量 'x' 到 Device workspace followed 通过 一个 命令 到 manipulate 该 变量 和 该 retrieves 该 result before closing 该 session: 
+    
+    
+    #Opend Device session
+    s2=opensession('device');
+    #Declare local 变量 x
+    x=2;
+    #Send 该 local 变量 到 Device workspace via API
+    putremotedata(s2,'x_device',x);
+    #Send 脚本 命令 到 Device via API andsquare 该 变量
+    evalremote(s2,"y_device=x_device^2;");
+    #获取 该 变量 从 Device worksapace via API 
+    ?y=getremotedata(s2,'y_device');
+    #Close 该 session
+    closesession(s2);
 
-以下代码示例将 Device 打开为服务器，将局部变量 'x' 发送到 Device 工作区，然后发送命令来操作变量并在关闭会话之前检索结果：
+**参见**
 
-```
-# 打开 Device 会话
-s2=opensession('device');
-# 声明局部变量 x
-x=2;
-# 通过 API 将局部变量发送到 Device 工作区
-putremotedata(s2,'x_device',x);
-# 通过 API 向 Device 发送脚本命令并对变量求平方
-evalremote(s2,"y_device=x_device^2;");
-# 通过 API 从 Device 工作区获取变量
-?y=getremotedata(s2,'y_device');
-# 关闭会话
-closesession(s2);
-```
-
-**另请参阅**
-
-- [closesession](./closesession.md)
-- [putremotedata](./putremotedata.md)
-- [getremotedata](./getremotedata.md)
-- [evalremote](./evalremote.md)
+[ closesession ](/hc/en-us/articles/360034407854-closesession) , [ putremotedata ](/hc/en-us/articles/360034928053-putremotedata) , [ getremotedata ](/hc/en-us/articles/360034407874-getremotedata) , [ evalremote ](/hc/en-us/articles/360034407894-evalremote)

@@ -1,31 +1,34 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: adddeltachargesource -->
+<!--
+Translation from English documentation
+Original command: adddeltachargesource
+Translation date: 2026-02-04 22:49:04
+-->
 
 # adddeltachargesource
 
-Adds  [delt opticl gener在i在 source](/hc/en-us/rticles/360034398094) 到  simul在i在 envir在ment. Th是 comm和 requires  CHARGE solver regi在 到  present 在  objects tree.
+添加 一个 [delta optical generation 源](/hc/en-us/articles/360034398094) 到 该 仿真 环境. This 命令 需要 一个 CHARGE 求解器 region 到 为 present 在 该 对象 tree.
 
-**语法** | **描述**
----|---
-adddeltachargesource; | Add  delt opticl gener在i在 source 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
-adddeltachargesource(struct_data); | Adds  delt opticl gener在i在 source 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+adddeltachargesource; |  添加 一个 delta optical generation 源 到 该 仿真 环境. This 函数 does not 返回 any 数据.  
+adddeltachargesource(struct_data); |  Adds a delta optical generation source and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
   
 **示例**
 
- follow在g script comm和s will dd  delt opticl gener在i在 source, set its loc在i在, 和 set  gener在i在 r在e 通过 def在在g  net electr在-hole-pir current (/sec).
+The following 脚本 commands 将 添加 一个 delta optical generation 源, 设置 its location, 和 设置 该 generation rate 通过 defining 一个 net electron-hole-pair current (/sec).
     
     
     adddeltachargesource;
-    set("name","delta");
-    set("x",0);
-    set("y",0);
-    set("z",5e-6);
-    set("source type",2);  #  ehp current
-    set("ehp current",1e12);  # net ehp current I_ehp = e*1e12 Amp
+    设置("name","delta");
+    设置("x",0);
+    设置("y",0);
+    设置("z",5e-6);
+    设置("源 类型",2);  #  ehp current
+    设置("ehp current",1e12);  # net ehp current I_ehp = e*1e12 Amp
 
-**另请参阅**
+**参见**
 
-- [L是t 的 comm和s](./l是t-的-comm和s.md)
-- [set](./set.md)
-- [ddimp或tgen](./ddimp或tgen.md)
-- [ddbulkgen](./ddbulkgen.md)
+- [List 的 commands](./list-的-commands.md)
+- [设置](./设置.md)
+- [addimportgen](./addimportgen.md)
+- [addbulkgen](./addbulkgen.md)

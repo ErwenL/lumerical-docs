@@ -1,33 +1,40 @@
+<!--
+Translation from English documentation
+Original command: polygrow
+Translation date: 2026-02-04 22:50:14
+-->
+
 # polygrow
 
-扩展或收缩多边形。生成的多边形将具有与多边形 V 相同的顶点数和顺序。请考虑在 使用 polygrow 之前使用 polyclean。
+Expand 或 shrink 一个 polygon. Resulting polygons 将 have 该 same 数字 的 vertices 和 该 same order as polygon V. Consider 使用 polyclean before 使用 polygrow.
 
-多边形顶点包含在一个 Nx2（或 2xN）维的矩阵中，其中 N \\(\\ge\\) 3 是顶点的数量。维度 2 对应 x 和 y 位置。例如，边长为 1 的正方形可以描述为 V = [ 0,0; 1,0; 1,1; 0,1] 或 V = [ 0,1,1,0;0,0,1,1]。
+The polygon vertices 是 contained 在 一个 single 矩阵 的 维度 Nx2 (或 2xN), 其中 N \\(\ge\\) 3 是 该 数字 的 vertices. The 维度 2 corresponds 到 该 x 和 y positions. For example, 一个 square 的 side 长度 1 可以 为 described 通过 V = [ 0,0; 1,0; 1,1; 0,1] 或 V = [ 0,1,1,0;0,0,1,1].
 
-**语法** | **描述**
----|---
-polygrow(V, delta, {"tolerance": tol_value, "legacy": true/false}) | 返回按 delta 扩展后的新多边形的顶点。要收缩多边形，请使用 delta < 0。
+**语法** |  **描述**  
+---|---  
+polygrow(V, delta, {"tolerance": tol_value, "legacy": true/false}) |  返回 该 vertices 的 一个 新的 polygon 该 has grown 通过 delta. To shrink 一个 polygon, use delta< 0.
 
-- 对于逆时针顺序的顶点且 delta > 0，边向右移动 delta（正数扩展，负数收缩）
-- 容差用于识别接缝（不扩展）和蝴蝶结顶点（固定不动）。将 legacy 选项设置为 "true" 以跳过此检查。
-- 会尝试防止尖锐角处的自相交。
-- delta 值可以是标量或矩阵（结果将为多边形或多边形单元数组）
+  * For vertices 在 counter-clockwise order 和 delta > 0, edges 是 moved 到 their right 通过 delta (positive 到 expand, negative 到 shrink)
+  * Tolerance 是 used 到 identify seams (该 是 not grown) 和 bowtie-vertices (该 是 pinned 在 place). 设置 该 legacy option 到 'true' 到 skip 此 check.
+  * An attempt 是 made 到 prevent self-intersection at sharp corners.
+  * Value delta 可以 为 either scalar 或 矩阵 (result 将 为 either 一个 polygon 或 一个 单元格-数组 的 polygons)
 
+  
+  
 **示例**
 
-以下示例显示边长为 1 的正方形的顶点在所有边上扩展 0.1 容差为 1e-15 的情况。将 "legacy" 值设置为 "false" 可以识别接缝和蝴蝶结顶点。
+The following example shows 该 vertices 的 一个 square 的 side 长度 1 expanded 通过 0.1 在 all sides 使用 该 tolerance 的 1e-15. Setting 该 'legacy' 值 到 'false' allows identifying seams 和 bowtie-vertices.
+    
+    
+    V = [ 0,0; 1,0; 1,1; 0,1];  
+    ?polygrow(V, 0.1, {"tolerance": 1e-15, "legacy": false});  
+      
+    result:   
+    -0.1 -0.1   
+     1.1 -0.1   
+     1.1  1.1   
+    -0.1  1.1 
 
-```powershell
-V = [ 0,0; 1,0; 1,1; 0,1];
-?polygrow(V, 0.1, {"tolerance": 1e-15, "legacy": false});
+**参见**
 
-结果：
--0.1 -0.1
- 1.1 -0.1
- 1.1  1.1
--0.1  1.1
-```
-
-**另请参阅**
-
-[命令列表](../%E5%91%BD%E4%BB%A4%E5%88%97%E8%A1%A8.md)、[polyclean](./polyclean.md)、[polyarea](./polyarea.md)、[centroid](./centroid.md)、[polyintersect](./polyintersect.md)、[inpoly](./inpoly.md)、[polyand](./polyand.md)、[polyor](./polyor.md)、[polydiff](./polydiff.md)、[polyxor](./polyxor.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [polyclean](/hc/en-us/articles/360046557133) , [polyarea ](/hc/en-us/articles/360034926213-polyarea) , [ centroid ](/hc/en-us/articles/360034406074-centroid) , [ polyintersect ](/hc/en-us/articles/360034926233-polyintersect) , [ inpoly ](/hc/en-us/articles/360034926253-inpoly) , [ polyand ](/hc/en-us/articles/360034926293-polyand) , [ polyor ](/hc/en-us/articles/360034406114-polyor) , [ polydiff ](/hc/en-us/articles/360034926313-polydiff) , [ polyxor ](/hc/en-us/articles/360034406134-polyxor)

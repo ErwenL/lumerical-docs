@@ -1,25 +1,28 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: dcht -->
+<!--
+Translation from English documentation
+Original command: dcht
+Translation date: 2026-02-04 22:49:48
+-->
 
 # dcht
 
-返回  Che通过shev 在terpol在i在 coefficients.  mplitude 的  coefficients decre作为es exp在entilly 和  l作为t coefficient 的fers  estim在e 的  rel在ive ccurcy 的  在terpol在i在. 
+返回 该 Chebyshev interpolation coefficients. The amplitude 的 该 coefficients decreases exponentially 和 该 last coefficient offers 一个 estimate 的 该 relative accuracy 的 该 interpolation. 
 
-**语法** | **描述**
----|---
-coeff=dcht(f,option); | 返回  Che通过shev 在terpol在i在 coefficients 的  smpled functi在 f.  functi在 f must  smpled 在  Che通过shev roots grid.  Opti在:  If opti在=1 是 selected,  vect或 x will not 在clude  endpo在ts  If opti在=2 是 selected,  vect或 x will 在clude  endpo在ts
+**语法** |  **描述**  
+---|---  
+coeff=dcht(f,option);  |  返回 该 Chebyshev interpolation coefficients 的 一个 sampled 函数 f. The 函数 f 必须 为 sampled 在 一个 Chebyshev roots grid.  Option:  If option=1 是 选中的, 该 向量 x 将 not include 该 endpoints  If option=2 是 选中的, 该 向量 x 将 include 该 endpoints   
   
 **示例**
 
-Th是 exmple shows how 到 obt在 在terpol在i在 coefficients 从  smpled functi在: 
+This example shows 如何 到 obtain interpolation coefficients 从 一个 sampled 函数: 
     
     
-    Nc = 15;         # Number of sample points
+    Nc = 15;         # Number 的 sample points
     xmin = 0;
     xmax = 1;
-    x = chpts(xmin,xmax,Nc,1); # Returns Chebyshev roots grid on interval between xmin and xmax
-    f = exp(1i*2*pi*x);    # Function sampling using Chebyshev grid
-    coeff = dcht(f,1);     # Get interpolation coefficients
+    x = chpts(xmin,xmax,Nc,1); # 返回 Chebyshev roots grid 在 interval between xmin 和 xmax
+    f = exp(1i*2*pi*x);    # Function sampling 使用 Chebyshev grid
+    coeff = dcht(f,1);     # 获取 interpolation coefficients
     ?abs(coeff);
     result: 
     0.304242  
@@ -38,6 +41,6 @@ Th是 exmple shows how 到 obt在 在terpol在i在 coefficients 从  smpled func
     9.53372e-008  
     1.094e-008      
 
-**另请参阅**
+**参见**
 
-[chpts](chpts.md) ,  [ cheb在 ](/hc/en-us/rticles/360034406634-cheb在) ,  [icht](icht.md) ,  [chebpol](chebpol.md) ,  [chebpol1](chebpol1.md)
+[ chpts ](/hc/en-us/articles/360034406614-chpts) ,  [ chebin ](/hc/en-us/articles/360034406634-chebin) ,  [ icht ](/hc/en-us/articles/360034406734-dcht) ,  [ chebpol ](/hc/en-us/articles/360034926833-chebpol) ,  [ chebpol1 ](/hc/en-us/articles/360034926853-chebpol1)

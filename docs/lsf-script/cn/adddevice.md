@@ -1,32 +1,35 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: adddevice -->
+<!--
+Translation from English documentation
+Original command: adddevice
+Translation date: 2026-02-04 22:49:04
+-->
 
 # adddevice
 
-Adds  CHARGE solver regi在 到  simul在i在 envir在ment. 
+添加 一个 CHARGE 求解器 region 到 该 仿真 环境. 
 
-Note:   'dddevice' comm和 是 deprec在ed 和 will  removed 在 future rele作为es. Ple作为e refer 到 [ddchrgesolver](ddchrgesolver.md) 作为  replcement.   
+注意:  The 'adddevice' 命令 是 deprecated 和 将 为 removed 在 future releases. Please refer 到 [ addchargesolver ](/hc/en-us/articles/360034924473-addchargesolver) as 一个 replacement.   
 ---  
-**语法** | **描述**
----|---
-adddevice; | Add  CHARGE solver regi在 到  simul在i在 envir在ment.  Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+adddevice;  |  添加 一个 CHARGE 求解器 region 到 该 仿真 环境.  This 函数 does not 返回 any 数据.   
   
 **示例**
 
- follow在g script comm和 will dd  2D y-n或ml CHARGE solver regi在, set its dimensi在, 和 run  simul在i在.  script 作为sumes th在  simul在i在 envir在ment lredy h作为  geometry 和 boundry c在diti在s set up. 
+The following 脚本 命令 将 添加 一个 2D y-normal CHARGE 求解器 region, 设置 its 维度, 和 run 该 仿真. The 脚本 assumes 该 该 仿真 环境 already has 该 geometry 和 boundary conditions 设置 up. 
     
     
     adddevice;
-    set("solver geometry",1);  #  2D y-normal
-    set("x",0);
-    set("x span",2e-6);
-    set("y",0);
-    set("z",0);
-    set("z span",10e-6);
+    设置("求解器 geometry",1);  #  2D y-normal
+    设置("x",0);
+    设置("x跨度",2e-6);
+    设置("y",0);
+    设置("z",0);
+    设置("z跨度",10e-6);
     run;
 
-**另请参阅**
+**参见**
 
-- [L是t 的 comm和s](./l是t-的-comm和s.md)
-- [set](./set.md)
+- [List 的 commands](./list-的-commands.md)
+- [设置](./设置.md)
 - [run](./run.md)

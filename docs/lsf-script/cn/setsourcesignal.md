@@ -1,22 +1,24 @@
+<!--
+Translation from English documentation
+Original command: setsourcesignal
+Translation date: 2026-02-04 22:50:14
+-->
+
 # setsourcesignal
 
-> **原文**: setsourcesignal  
-> **翻译日期**: 2026-02-03  
-> **翻译状态**: ✅ 已完成
+Loads 一个 自定义 源 时间 signal into 一个 源. This advanced 源 属性 allows users 到 创建 一个 自定义 源 源 时间 signal 和 spectrum. Custom 源 时间 signals 是 required 用于 some types 的 nonlinear simulations. This feature 是 not recommended 用于 most types 的 linear simulations. 
 
-将自定义源时间信号加载到源中。此高级源属性允许用户创建自定义源时间信号和频谱。某些类型的非线性仿真需要自定义源时间信号。对于大多数类型的线性仿真，不建议使用此功能。
+The 自定义 时间 signal 必须 为 defined 在 terms 的 该 signal Amplitude 和 Phase. This 是 一个 convenient definition because 该 Amplitude 和 Phase 是 generally slowly varying as 一个 函数 的 时间 (compared 使用 该 actual 时间 signal), meaning 一个 lower sampling rate 可以 为 used 到 define 该 自定义 signal. The actual 时间 domain signal injected 通过 该 源 是 given 通过:
 
-自定义时间信号必须根据信号的振幅和相位来定义。这是一种方便的定义方式，因为振幅和相位通常随时间变化较慢（与实际时间信号相比），这意味着可以使用较低的采样率来定义自定义信号。源注入的实际时域信号由以下公式给出：
-
-| **语法** | **说明** |
-| --- | --- |
-| setsourcesignal("name", t, amplitude, phase); | 设置名为"name"的源的时间域信号。t、amplitude和phase是具有相同长度的一维向量。 |
-| setsourcesignal("name", t, amplitude, phase, fcentre, bandwidth); | 允许您指定用于所有仿真的精确中心频率和带宽。这些值用于材料拟合、计算网格和源限制。如果未指定fcentre和bandwidth，它们将从时间信号自动估算。 |
-
+**语法** |  **描述**  
+---|---  
+setsourcesignal("name", t, amplitude, phase); |  设置 该 时间 domain signal 的 源 named "name". t, amplitude, 和 phase 是 1D vectors 使用 该 same 长度.  
+setsourcesignal("name", t, amplitude, phase, fcentre, bandwidth); |  Allows you 到 specify 该 precise center 频率 和 bandwidth 该 将 为 used 用于 all simulations. These 值 是 used 用于 materials fits, calculating 该 mesh, 和 源 limits. If fcentre 和 bandwidth 是 not specified, they 将 为 automatically estimated 从 该 时间 signal.   
+  
 **示例**
 
-请参阅[自定义源时间信号](./360034383114.md)示例。
+See 该 [Custom 源 时间 signal](/hc/en-us/articles/360034383114-Custom-时间-signal) example.
 
-**相关命令**
+**参见**
 
-[sourcepower](./sourcepower.md)
+[sourcepower](/hc/en-us/articles/360034925313-sourcepower)

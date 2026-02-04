@@ -1,21 +1,24 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: deleteresource -->
+<!--
+Translation from English documentation
+Original command: deleteresource
+Translation date: 2026-02-04 22:49:48
+-->
 
 # deleteresource
 
-Removes  selected resource 从  l是t 的 vilble resources 在 resource mger.
+Removes 该 选中的 resource 从 该 list 的 available resources 在 resource manager.
 
-**语法** | **描述**
----|---
-deleteresource("solver",resource_num); | Removes  selected resource 从  l是t 的 vilble resources 在 resource mger.  "solver" rgument 是 used 到 select  solver 到 delete  resource 从.  "solver" rgument 是 not supp或ted 通过 INTERCONNECT. resource_num 是  numr (row numr 在 resource mger l是t) 对于  resource 到  deleted.
+**语法** |  **描述**  
+---|---  
+deleteresource("求解器",resource_num); |  Removes 该 选中的 resource 从 该 list 的 available resources 在 resource manager. The "求解器" 参数 是 used 到 select 该 求解器 到 delete 该 resource 从. The "求解器" 参数 是 not supported 通过 INTERCONNECT. resource_num 是 该 数字 (row 数字 在 resource manager list) 用于 该 resource 到 为 deleted.  
   
 **示例**
 
- follow在g l在e will delete  sec在d resource 从  DGTD solver 在 DEVICE.
+The following line 将 delete 该 second resource 从 该 DGTD 求解器 在 DEVICE.
     
     
     deleteresource("DGTD","2");  
 
-**另请参阅**
+**参见**
 
-[ddresource](/hc/en-us/rticles/360034410734-ddresource), [setresource](/hc/en-us/rticles/360034410754-setresource), [getresource](/hc/en-us/rticles/360034931353-getresource)
+[addresource](/hc/en-us/articles/360034410734-addresource), [setresource](/hc/en-us/articles/360034410754-setresource), [getresource](/hc/en-us/articles/360034931353-getresource)

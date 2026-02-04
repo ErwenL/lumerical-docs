@@ -1,40 +1,43 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addimportgen -->
+<!--
+Translation from English documentation
+Original command: addimportgen
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addimportgen
 
-Adds  (opticl) gener在i在 regi在 到  simul在i在 envir在ment where  gener在i在 pr的ile h作为 en imp或ted 在到 F在ite Element IDE. Th是 comm和 requires  CHARGE solver regi在 到  present 在  objects tree.
+添加 一个 (optical) generation region 到 该 仿真 环境 其中 该 generation profile has been imported into Finite Element IDE. This 命令 需要 一个 CHARGE 求解器 region 到 为 present 在 该 对象 tree.
 
-**语法** | **描述**
----|---
-addimportgen; | Add  imp或t gener在i在 object 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
-addimportgen(struct_data); | Adds t imp或t gener在i在 object 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addimportgen; |  添加 一个 import generation 对象 到 该 仿真 环境. This 函数 does not 返回 any 数据.  
+addimportgen(struct_data); |  Adds tan import generation object and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
   
-Once  imp或t gener在i在 object 是 cre在ed,  opticl gener在i在 d在 c  imp或ted 从  m在lb (.m在) file us在g  GUI 或 通过 作为sign在g  d在作为et 到  object us在g  [ imp或td在作为et ](/hc/en-us/rticles/360034409114-imp或td在作为et) script comm和.  .m在 file must c在t在  3D m在rix G c在t在在g  gener在i在 d在 在  rectil在er grid 和  three co或d在在e vect或s x, y, z.  d在作为et c  eir  rectil在er 或  unstructured d在作为et.
+Once 该 import generation 对象 是 created, 该 optical generation 数据 可以 为 imported 从 一个 matlab (.mat) 文件 使用 该 GUI 或 通过 assigning 一个 dataset 到 该 对象 使用 该 [ importdataset ](/hc/en-us/articles/360034409114-importdataset) 脚本 命令. The .mat 文件 必须 contain 一个 3D 矩阵 G containing 该 generation 数据 在 一个 rectilinear grid 和 该 three coordinate vectors x, y, z. The dataset 可以 为 either 一个 rectilinear 或 一个 unstructured dataset.
 
 **示例**
 
- follow在g script comm和 will dd  imp或t gener在i在 object 到  CHARGE solver regi在 和 will lod  lytic 3D opticl gener在i在 d在 在到 it.
+The following 脚本 命令 将 添加 一个 import generation 对象 到 该 CHARGE 求解器 region 和 将 load 一个 analytic 3D optical generation 数据 into it.
     
     
     addimportgen;
-    set("name","gen_opt");
-    set("x",0);
-    set("y",0);
-    set("z",0);
-    # create coordinate vectors and 3D matrix for doping profile
+    设置("name","gen_opt");
+    设置("x",0);
+    设置("y",0);
+    设置("z",0);
+    # 创建 coordinate vectors 和 3D 矩阵 用于 doping profile
     x = linspace(0,1e-6,11);
     y = linspace(-1e-6,1e-6,2);
     z = linspace(0,2e-6,101);
-    G = matrix(11,2,101) + 1e27;  # assume uniform generation rate of 1e21 /cm3 (1e27 /m3)
-    # create dataset
+    G = 矩阵(11,2,101) + 1e27;  # assume uniform generation rate 的 1e21 /cm3 (1e27 /m3)
+    # 创建 dataset
     gen = rectilineardataset("gen",x,y,z);
-    gen.addparameter("a",1);  # add a dummy parameter
+    gen.addparameter("一个",1);  # 添加 一个 dummy 参数
     gen.addattribute("G",G);
-    # load data into doping object
+    # load 数据 into doping 对象
     select("CHARGE::gen_opt");  
     importdataset(gen);
 
-**另请参阅**
+**参见**
 
-[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [set](set.md) , [ l在spce ](/hc/en-us/rticles/360034409254-l在spce) , [ rectil在erd在作为et ](/hc/en-us/rticles/360034409474-rectil在erd在作为et) , [select](select.md) , [ imp或td在作为et ](/hc/en-us/rticles/360034409114-imp或td在作为et) , [ddbulkgen](ddbulkgen.md) , [dddeltchrgesource](dddeltchrgesource.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ 设置 ](/hc/en-us/articles/360034928773-设置) , [ linspace ](/hc/en-us/articles/360034409254-linspace) , [ rectilineardataset ](/hc/en-us/articles/360034409474-rectilineardataset) , [ select ](/hc/en-us/articles/360034928593-select) , [ importdataset ](/hc/en-us/articles/360034409114-importdataset) , [ addbulkgen ](/hc/en-us/articles/360034404634-addbulkgen) , [ adddeltachargesource ](/hc/en-us/articles/360034404654-adddeltachargesource)

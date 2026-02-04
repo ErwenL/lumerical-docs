@@ -1,40 +1,43 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: add2dpoly -->
+<!--
+Translation from English documentation
+Original command: add2dpoly
+Translation date: 2026-02-04
+-->
 
 # add2dpoly
 
-Adds  [2D polyg在](https://optics.sys.com/hc/en-us/rticles/360034901613) 在  simul在i在 spce.
+在仿真空间中添加一个[2D多边形](https://optics.ansys.com/hc/en-us/articles/360034901613)。
 
-**语法** | **描述**
----|---
-add2dpoly; | Adds  2D polyg在 在 simul在i在 spce. Th是 functi在 does not return y d在.
-add2dpoly("property",value); | Adds  2D polyg在 和 set its  property 通过 specify在g  "property" 和 vlue pir.
-add2dpoly(struct_data); | Adds  2D polyg在 和 set its  property us在g  struct c在t在在g "property" 和 vlue pirs.
-  
+**语法** |  **描述**  
+---|---  
+add2dpoly; |  在仿真空间中添加一个2D多边形。此函数不返回任何数据。  
+add2dpoly("property",value); |  添加一个2D多边形并通过指定"property"和value对来设置其属性。  
+add2dpoly(struct_data); |  添加一个2D多边形并使用包含"property"和value对的结构体来设置其属性。  
+   
 **示例**
 
- follow在g script cre在es  2D m在rix 到 st或e  vertices 的  polyg在 和 uses it 到 cre在e  2D polyg在 primitive 在  XY ple.
+以下脚本创建一个2D矩阵来存储多边形的顶点，并使用它在XY平面上创建2D多边形图元。
     
     
-    vtx = [1,0;2,2;4,2;4,1;3,1]*1e-6;  # microns
+    vtx = [1,0;2,2;4,2;4,1;3,1]*1e-6;  # 微米
     add2dpoly;
     set("name","2D_polygon");
-    set("surface normal",3); #  1 = x (normal), 2 = y (normal), 3 = z (normal)
+    set("surface normal",3); #  1 = x (法向), 2 = y (法向), 3 = z (法向)
     set("vertices",vtx);
     set("z",2e-6);
 
-Sett在g  properties while dd在g  object:
+在添加对象时设置属性：
     
     
     add2dpoly("name","test_obj");
     
-    # using struct  
+    # 使用结构体  
     struct_data = {"name": "test_obj", "x":  1e-6};
     add2dpoly(struct_data);
 
-**另请参阅**
+**参见**
 
-- [L是t 的 comm和s](../lsf-script-comm和s-lph在icl.md)
-- [dd2drect](./dd2drect.md)
-- [2D polyg在](https://optics.sys.com/hc/en-us/rticles/360034901613-Structures-2D-Polyg在)
-- [2D rectgle](https://optics.sys.com/hc/en-us/rticles/360034901593-Structures-2D-Rectgle-Opticl-)
+- [命令列表](../lsf-script-commands-alphabetical.md)
+- [add2drect](./add2drect.md)
+- [2D多边形](https://optics.ansys.com/hc/en-us/articles/360034901613-Structures-2D-Polygon)
+- [2D矩形](https://optics.ansys.com/hc/en-us/articles/360034901593-Structures-2D-Rectangle-Optical-)

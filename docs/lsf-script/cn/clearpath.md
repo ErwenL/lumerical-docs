@@ -1,18 +1,21 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: clearpath -->
+<!--
+Translation from English documentation
+Original command: clearpath
+Translation date: 2026-02-04 22:49:48
+-->
 
 # clearpath
 
-**语法** | **描述**
----|---
-clearpath("directory"); | Remove"目录" from the 脚本 路径 if it is there.
+Removes all directories 从 该 脚本 path, except "./".
 
+**语法** |  **描述**  
+---|---  
+clearpath("directory"); |  Remove"directory" 从 该 脚本 path 如果 it 是 there.  
+  
 **示例**
 
 See addpath.
 
-See addpath.
+**参见**
 
-**另请参阅**
-
-[getpath](/hc/en-us/articles/360034411054-getpath), [which](/hc/en-us/articles/360034411094-which), [pwd](/hc/en-us/articles/360034931773-pwd), [addpath](/hc/en-us/articles/360034931833-addpath)
+[getpath](/hc/en-us/articles/360034411054-getpath), [该](/hc/en-us/articles/360034411094-该), [pwd](/hc/en-us/articles/360034931773-pwd), [addpath](/hc/en-us/articles/360034931833-addpath)

@@ -1,32 +1,35 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: adddgtdsolver -->
+<!--
+Translation from English documentation
+Original command: adddgtdsolver
+Translation date: 2026-02-04 22:49:04
+-->
 
 # adddgtdsolver
 
-Adds  [DGTD solver regi在](/hc/en-us/rticles/360034397874) 到  simul在i在 envir在ment.
+添加 一个 [DGTD 求解器 region](/hc/en-us/articles/360034397874) 到 该 仿真 环境.
 
-**语法** | **描述**
----|---
-adddgtdsolver; | Adds  DGTD solver regi在 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
-adddgtdsolver(struct_data); | Adds  DGTD solver regi在 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+adddgtdsolver; |  添加 一个 DGTD 求解器 region 到 该 仿真 环境. This 函数 does not 返回 any 数据.  
+adddgtdsolver(struct_data); |  Adds a DGTD solver region and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
   
-**Exmple 1**
+**示例 1**
 
- follow在g script comm和s will dd  DGTD solver 到  objects tree 和 pr在t  nme 的 ll 的 its properties.
+The following 脚本 commands 将 添加 一个 DGTD 求解器 到 该 对象 tree 和 print 该 name 的 all 的 its 属性.
     
     
     adddgtdsolver;
-    ?set;
+    ?设置;
 
-**Exmple 2**
+**示例 2**
 
- follow在g script comm和 will dd  DGTD solver regi在, 作为sign it 到  simul在i在 regi在, 和 set  simul在i在 time.
+The following 脚本 命令 将 添加 一个 DGTD 求解器 region, assign it 到 一个 仿真 region, 和 设置 该 仿真 时间.
     
     
     adddgtdsolver;
-    set("solver geometry","simulation region 1"); 
-    set("simulation time",100e-15);  # 100 fs
+    设置("求解器 geometry","仿真 region 1"); 
+    设置("仿真 时间",100e-15);  # 100 fs
 
-**另请参阅**
+**参见**
 
-[dddgtdmesh](dddgtdmesh.md)
+[ adddgtdmesh ](/hc/en-us/articles/360034924993-adddgtdmesh)

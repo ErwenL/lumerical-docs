@@ -1,49 +1,46 @@
 <!--
 Translation from English documentation
 Original command: addmode
-Translation date: 2026-02-04 01:05:20
+Translation date: 2026-02-04 22:49:29
 -->
 
 # addmode
 
-为FDTD向仿真环境中添加模式源。对于MODE，向仿真环境中添加本征模（FDE）求解器区域。
+添加 一个 mode 源 到 该 仿真 环境 用于 FDTD. For MODE, 添加 一个 eigenmode (FDE) 求解器 region 到 该 仿真 环境.
 
-**注意**：'addmode'命令在MODE中已弃用，将在未来版本中移除。请参考[addfde](https://optics.ansys.com/hc/en-us/articles/360034404294-addfde)作为替代。  
+注意:  The 'addmode' 命令 是 deprecated 在 MODE 和 将 为 removed 在 future releases. Please refer 到 [ addfde ](/hc/en-us/articles/360034404294-addfde) as 一个 replacement.  
 ---  
 **语法** |  **描述**  
 ---|---  
-addmode; |  对于FDTD：向仿真环境中添加模式源。此函数不返回任何数据。  
-addmode; |  对于MODE：向仿真环境中添加本征模求解器。  
-addmode(struct_data); |  添加模式源（在FDTD中使用）或本征模求解器（在MODE中使用），并使用包含"属性"和值对的struct设置其属性。有关示例，请参见[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。  
-   
+addmode; |  For FDTD: 添加 一个 mode 源 到 该 仿真 环境. This 函数 does not 返回 any 数据.  
+addmode; |  For MODE: 添加 一个 eigenmode 求解器 到 该 仿真 环境.  
+addmode(struct_data); |  Adds a mode source (when used in FDTD) or an eigenmode solver (when used in MODE) and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
+  
 **示例**
 
-以下脚本命令将在FDTD中添加模式源并设置其尺寸和注入轴。
+The following 脚本 commands 将 添加 一个 mode 源 在 FDTD 和 设置 its 维度 和 injection axis.
     
     
     addmode;
-    set("injection axis","x");
-    set("x",0);
-    set("y",0);
-    set("y span",5e-6);
-    set("z",0);
-    set("z span",10e-6);
+    设置("injection axis","x");
+    设置("x",0);
+    设置("y",0);
+    设置("y跨度",5e-6);
+    设置("z",0);
+    设置("z跨度",10e-6);
 
-以下脚本命令将在MODE中的XY平面上添加本征模（FDE）求解器区域并计算本征模。
+The following 脚本 commands 将 添加 一个 eigenmode (FDE) 求解器 region 在 MODE 在 该 XY plane 和 计算 该 eigen modes.
     
     
     addmode;
-    set("solver type",3);
-    set("x",0);
-    set("x span",2e-6);
-    set("y",0);
-    set("y span",5e-6);
-    set("z",0);
+    设置("求解器 类型",3);
+    设置("x",0);
+    设置("x跨度",2e-6);
+    设置("y",0);
+    设置("y跨度",5e-6);
+    设置("z",0);
     findmodes;
 
 **参见**
 
-* [命令列表](https://optics.ansys.com/hc/en-us/articles/360037228834)
-* [set](https://optics.ansys.com/hc/en-us/articles/360034928773-set)
-* [updatesourcemode](https://optics.ansys.com/hc/en-us/articles/360034408754-updatesourcemode)
-* [findmodes](https://optics.ansys.com/hc/en-us/articles/360034405214-findmodes)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ 设置 ](/hc/en-us/articles/360034928773-设置) , [ updatesourcemode ](/hc/en-us/articles/360034408754-updatesourcemode) , [ findmodes ](/hc/en-us/articles/360034405214-findmodes)

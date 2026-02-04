@@ -1,51 +1,59 @@
+<!--
+Translation from English documentation
+Original command: propagate
+Translation date: 2026-02-04 22:50:14
+-->
+
 # propagate
 
-计算任意模式在波导中传播一定距离后的最终模式分布。这是通过将模式分解为波导支持的模式来完成的。然后每个支持的模式通过波导传播。最终的模式相干叠加给出最终模式分布。此计算中使用的模式来自一个或多个 FDE 模拟。
+计算 该 resulting mode profile 的 一个 arbitrary mode after it has propagated through 一个 waveguide 用于 some distance. This 是 done 通过 decomposing 该 mode into modes supported 通过 该 waveguide. Each supported mode 是 那么 propagated through 该 waveguide. The resulting modes 是 那么 added coherently 到 give 该 final mode profile. The modes used 在 此 calculation 是 obtained 从 one 或 more FDE simulations.
 
-有关重叠和耦合计算的更多详情，请参阅 [overlap](./overlap.md) 函数。
+See 该 [ overlap ](/hc/en-us/articles/360034405254-overlap) 函数 用于 more details about overlap 和 coupling calculations.
 
-**语法** | **描述**
----|---
-out = propagate(mode, d, n1, n2); |
+**语法** | **描述**  
+---|---  
+out = propagate(mode, d, n1, n2); | 
 
-- mode：包含要传播模式的监视器名称
-- d：传播距离
-- n1：最小折射率
-- n2：最大折射率
-- out：propagate 命令创建的结果数据集名称
+  * mode: 该 name 的 该 监视器 containing 该 mode 到 propagate
+  * d: distance 到 propagate
+  * n1: minimum index
+  * n2: maximum index
+  * out: 该 name 的 该 resulting dataset created 通过 该 propagate 命令
 
-out = propagate(mode, d, n1, n2, x, y); | 可以在计算 propagate 之前调整模式对齐方式。
+  
+out = propagate(mode, d, n1, n2, x, y); |  Mode alignment 可以 为 adjusted before propagate 是 calculated.
 
-- x 偏移量
-- y 偏移量
+  * x offset
+  * y offset
 
+  
+  
 **示例**
 
-此示例改编自 [偏振旋转](https://optics.ansys.com/hc/en-us/articles/360042799593) 中的 polarization_rotator.lsf。您可以从 [偏振旋转](https://optics.ansys.com/hc/en-us/articles/360042799593) 页面下载 waveguideA.lms 和 waveguideB.lms。
+This example 是 adapted 从 该  polarization_rotator.lsf  从 [ polarization rotation](/hc/en-us/articles/360042799593). You 可以 download  waveguideA.lms  和  waveguideB.lms  从 该 [ polarization rotation](/hc/en-us/articles/360042799593) page.
 
-以下脚本从波导 A 的模式列表中获取第一个模式，并在波导 B 中将此模式传播距离 L_rotation。它生成波导 A 的模式的 |E|² 以及在波导 B 中传播后的模式的图。
+The following 脚本 takes 该 first mode 在 该 mode list 从 waveguide A 和 propagates 此 mode 在 waveguide B 一个 distance 的 L_rotation. It generates 一个 plot 的 |E|^2 用于 该 mode 从 waveguide A 和 该 mode after propagation 在 waveguide B.
+    
+    
+    # find 该 indices 的 该 top 2 modes 的 waveguide B  
+    n1 = getdata("mode1","neff");  
+    n2 = getdata("mode2","neff");  
+    lambda_0 = c/getdata("mode1","f");  
+    
+    # estimate 该 propagation 长度 required 到 rotate polarization  
+    L_rotation = lambda_0/2/real(n1-n2);  
+    
+    # propagate 通过 L_rotation  
+    mode_L = propagate("TE_A",L_rotation,n1,n2);  
+    
+    ?getdata(mode_L,"accounted_transmission");  
+    result:   
+    0.845998   
+    
+    ?getdata(mode_L); # 到 see 一个 list 的 该 available 数据  
+    f x y z num_modes Ex Ey Ez Hx  
+    Hy Hz accounted_transmission accounted_reflection 
 
-```powershell
-# 找到波导 B 的前 2 个模式的索引
-n1 = getdata("mode1","neff");
-n2 = getdata("mode2","neff");
-lambda_0 = c/getdata("mode1","f");
+**参见**
 
-# 估计偏振旋转所需的传播长度
-L_rotation = lambda_0/2/real(n1-n2);
-
-# 传播距离 L_rotation
-mode_L = propagate("TE_A",L_rotation,n1,n2);
-
-?getdata(mode_L,"accounted_transmission");
-结果：
-0.845998
-
-?getdata(mode_L); # 查看可用数据列表
-f x y z num_modes Ex Ey Ez Hx
-Hy Hz accounted_transmission accounted_reflection
-```
-
-**另请参阅**
-
-[命令列表](../%E5%91%BD%E4%BB%A4%E5%88%97%E8%A1%A8.md)、[copydcard](./copydcard.md)、[findmodes](./findmodes.md)、[coupling](./coupling.md)、[overlap](./overlap.md)、[bestoverlap](./bestoverlap.md)、[expand](./expand.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ copydcard ](/hc/en-us/articles/360034930233-copydcard) , [ findmodes ](/hc/en-us/articles/360034405214-findmodes) , [ coupling ](/hc/en-us/articles/360034925173-coupling) , [ overlap ](/hc/en-us/articles/360034405254-overlap) , [ bestoverlap ](/hc/en-us/articles/360034405274-bestoverlap) , [ expand ](/hc/en-us/articles/360034926653-expand)

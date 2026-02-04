@@ -1,71 +1,73 @@
 <!--
 Translation from English documentation
 Original command: interptri
-Translation date: 2026-02-03
+Translation date: 2026-02-04 22:50:01
 -->
 
 # interptri
 
-将数据集从三角形网格插值到另一个三角形或规则网格。数据可以是复数。
+Interpolates 一个 2D dataset 从 一个 triangular grid 到 another triangular 或 一个 rectilinear grid. The 数据 可以 为 complex.
 
-此函数通常用于对最初在有限元网格中评估的数据（例如来自 DGTD 的监视器数据）重新采样到新的规则网格。
+This 函数 是 typically used 用于 resampling 数据 evaluated originally 在 一个 finite 元素 mesh (监视器 数据 从 DGTD, 用于 example) 到 一个 新的 rectilinear grid.
 
-**注意：** 一种特殊情况涉及在元素和顶点之间转换数据。这需要额外的处理，超出了 interptri 的范围，在以下文章中有详细介绍 - 有限元数据集中元素和顶点数据点之间的插值
+[[注意:]] A special case involves converting 数据 从 elements 到 vertices 和 vice-versa. This require additional processing, beyond interptri 和 是 covered 在 该 following article - [Interpolating Between Element 和 Vertex Datapoints 在 Finite-元素 Datasets](/hc/en-us/articles/14259382364563)  
+---  
+[[注意:]] Since 2020a R7, [[interptri]] 可以 interpolate 一个 数据 设置 从 一个 triangular 到 一个 rectangular grid 或 到 一个 list 的 points. The 数据 可以 为 vectorial.  
+---  
+**语法** |  **描述**  
+---|---  
+out = interptri(tri, vtx, u, xi, yi, extrap_val); out = interptri(tri, vtx, u, xi, yi, extrap_val, "rectilinear"); |  Does 一个 triangular 到 rectilinear grid interpolation 的 一个 函数 和 outputs 一个 PxQxS 数组 的 interpolated 值, z(xi,yi,p).
 
-**注意：** 自 2020a R7 起，interptri 可以将数据集从三角形插值到矩形网格或点列表。数据可以是矢量的。
+  * u 是 existing 数据 的 该 finite 元素 mesh (size NxS)
+  * xi 和 yi 是 arrays 使用 长度 P 和 Q, respectively. They specify 该 points 其中 u 是 到 为 sampled 在 该 rectilinear mesh, 在 该 x-direction 和 y-direction
+  * tri 是 该 connectivity 数组, Mx3, containing row entries 该 index 该 three vertices 的 M triangles. Taken 从 该 仿真 region
+  * vtx 是 一个 矩阵 使用 该 vertices 的 该 triangular mesh, Nx2, containing row entries 的 (x,y) pairs. Taken 从 该 仿真 region
+  * extrap_val(optional): 如果 一个 interpolation point 是 outside 的 该 finite 元素 mesh, 该 point 将 为 assigned 此 值 (default 是 Inf)
 
-**语法** |  **描述**
----|---
-out = interptri(tri, vtx, u, xi, yi, extrap_val); out = interptri(tri, vtx, u, xi, yi, extrap_val, "rectilinear");  |  对函数进行三角形到规则网格插值，并输出 PxQxS 数组的插值 z(xi,yi,p)。
+  
+out = interptri(tri, vtx, u, xi, yi, extrap_val, "unstructured"); |  Does 一个 triangular 到 point cloud interpolation 的 一个 函数 和 outputs 一个 PxS 数组 的 interpolated 值.
 
-  * u 是有限元网格的现有数据（大小 NxS）
-  * xi 和 yi 分别是长度 P 和 Q 的数组。它们指定在规则网格上在 x 方向和 y 方向上对 u 进行采样的点
-  * tri 是连通数组 Mx3，包含索引 M 个三角形三个顶点的行条目。取自模拟区域
-  * vtx 是具有三角形网格顶点的矩阵 Nx2，包含 (x,y) 对的行条目。取自模拟区域
-  * extrap_val（可选）：如果插值点在有限元网格之外，该点将被分配此值（默认为 Inf）
+  * u 是 existing 数据 的 该 finite 元素 mesh (size NxS)
+  * xi 和 yi 是 arrays 使用 长度 P. They specify 该 points 其中 u 是 到 为 sampled 在
+  * tri 是 该 connectivity 数组, Mx3, containing row entries 该 index 该 three vertices 的 M triangles. Taken 从 该 仿真 region
+  * vtx 是 一个 矩阵 使用 该 vertices 的 该 triangular mesh, Nx2, containing row entries 的 (x,y) pairs. Taken 从 该 仿真 region
+  * extrap_val(optional): 如果 一个 interpolation point 是 outside 的 该 finite 元素 mesh, 该 point 将 为 assigned 此 值 (default 是 Inf)
 
-out = interptri(tri, vtx, u, xi, yi, extrap_val, "unstructured");  |  对函数进行三角形到点云插值，并输出 PxS 数组的插值。
-
-  * u 是有限元网格的现有数据（大小 NxS）
-  * xi 和 yi 是长度为 P 的数组。它们指定要对其采样的点
-  * tri 是连通数组 Mx3，包含索引 M 个三角形三个顶点的行条目。取自模拟区域
-  * vtx 是具有三角形网格顶点的矩阵 Nx2，包含 (x,y) 对的行条目。取自模拟区域
-  * extrap_val（可选）：如果插值点在有限元网格之外，该点将被分配此值（默认为 Inf）
-
+  
+  
 **示例**
 
-这是一个用于 CHARGE 的脚本示例，将电荷 "n" 在规则网格上重新采样。该示例假设已在 CHARGE 中运行了具有多个偏置电压的模拟。模拟域在 XZ 平面上。脚本将为第一个偏置电压选择电荷数据，并将 XZ 平面上的电荷信息重新采样到由 xrect 和 zrect 定义的新规则网格。这只是为了展示如何使用 interptri 命令。除非您尝试使用已运行的模拟运行类似的命令集，否则它不会实际绘制结果。
-
-    # Read the charge data
-    N = getdata("CHARGE","charge","n");# The dimension of N is [L, 1, bb, 1].
-      # "L" is the number of vertices, "bb" is the number of bias points.
+This 是 一个 example 的 一个 脚本 用于 CHARGE 该 将 resample 电荷 "n" 在 一个 rectilinear grid. The example assumes 该 一个 仿真 has been run 在 CHARGE 使用 multiple bias voltages. The 仿真 domain 是 在 该 XZ plane. The 脚本 将 select 该 电荷 数据 用于 该 first bias voltage 和 resample 该 电荷 information 在 该 XZ plane 到 一个 新的 rectilinear grid defined 通过 xrect 和 zrect. This 是 just 到 show 如何 该 interptri 命令 将 获取 used. It 将 not actually plot 该 results unless you try 一个 similar 设置 的 commands 使用 一个 仿真 该 has already been run.
+    
+    
+    # Read 该 电荷 数据
+    N = getdata("CHARGE","电荷","n");# The 维度 的 N 是 [L, 1, bb, 1].
+      # "L" 是 该 数字 的 vertices, "bb" 是 该 数字 的 bias points.
     temp = size(N);
-    L = temp(1); # get the length of N (this is basically the number of vertices).
-    vtx = getdata("CHARGE","charge","vertices"); # dimension is [L, 3]. It stores the x, y, z coordinates of all the vertices.
-    tri = getdata("CHARGE","charge","elements");# dimension is [ee, 3]. It stores the index of the 3 vertices for all elements.
-    # "ee" is the total number of triangular elements.
-    # Set the array with the x coordinates of the new rectilinear grid:
+    L = temp(1); # 获取 该 长度 的 N (此 是 basically 该 数字 的 vertices).
+    vtx = getdata("CHARGE","电荷","vertices"); # 维度 是 [L, 3]. It stores 该 x, y, z coordinates 的 all 该 vertices.
+    tri = getdata("CHARGE","电荷","elements");# 维度 是 [ee, 3]. It stores 该 index 的 该 3 vertices 用于 all elements. 
+    # "ee" 是 该 total 数字 的 triangular elements.
+    # 设置 该 数组 使用 该 x coordinates 的 该 新的 rectilinear grid:
     xmin = -.1e-6;
     xmax = .1e-6;
     xstep = .001e-6;
     xrect = xmin:xstep:xmax;
-    # Set the array with the z coordinates of the new rectilinear grid:
+    # 设置 该 数组 使用 该 z coordinates 的 该 新的 rectilinear grid:
     zmin = -0.8e-6;
     zmax = 0;
     zstep = .001e-6;
-    zrect = zmin:zstep:zmax;
-    # Prepare the N array to be used in the interptri command. N should have a dimension of L x 1.
+    zrect = zmin:zstep:zmax; 
+    # Prepare 该 N 数组 到 为 used 在 该 interptri 命令. N 应该 have 一个 维度 的 L x 1.
     N = pinch(N); # Removing singleton dimensions.
-    N = pinch(N(1:L,1)); # Getting data for just one bias voltage (the first one).
-    # Prepare the vtx array to be used in the interptri command. vtx should have a dimension of L x 2.
-    vtx = vtx(1:L,[1,3]); # getting only x and z axis information (removing the y data).
-    # Creating the rectilinear data using interptri
-    N_rect = interptri(tri,vtx,N,xrect,zrect);
-    # Plot data
+    N = pinch(N(1:L,1)); # Getting 数据 用于 just one bias voltage (该 first one).
+    # Prepare 该 vtx 数组 到 为 used 在 该 interptri 命令. vtx 应该 have 一个 维度 的 L x 2.
+    vtx = vtx(1:L,[1,3]); # getting only x 和 z axis information (removing 该 y 数据).
+    # Creating 该 rectilinear 数据 使用 interptri
+    N_rect = interptri(tri,vtx,N,xrect,zrect); 
+    # Plot 数据
     image(xrect,zrect,N_rect);
 
-**相关命令**
+**参见**
 
-- [quadtri](./quadtri.md)
-- [interptet](./interptet.md)
-- [quadtet](./quadtet.md)
+[ quadtri ](/hc/en-us/articles/360034406394-quadtri) , [ interptet ](/hc/en-us/articles/360034926673-interptet) , [ quadtet ](/hc/en-us/articles/360034926633-quadtet)

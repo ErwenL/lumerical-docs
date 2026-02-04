@@ -1,61 +1,64 @@
+<!--
+Translation from English documentation
+Original command: matlabsave
+Translation date: 2026-02-04 22:50:13
+-->
+
 # matlabsave
 
-## 注释
+## 注意
 
-  * 从 Lumerical 2024 R1 开始，MATLAB Linux 库不再随 Lumerical 应用程序打包
-  * 我们仍然支持 7 及更高版本的 MATLAB 文件加载和保存
-  * 有关更多信息，请参阅此知识库文章。
+  * Starting 使用 Lumerical 2024 R1, MATLAB Linux libraries 是 no longer packaged 使用 该 Lumerical Applications
+  * We still support MATLAB 文件 load 和 save 用于 versions 7 和 greater
+  * See this [KB for more information](https://optics.ansys.com/hc/en-us/articles/360026142074#toc_3). 
 
-将 Lumerical 工作区变量保存到 MATLAB .mat 数据文件。
 
-**语法** | **描述**
----|---
-matlabsave(""); | 将所有工作区变量保存到与模拟文件同名的 .mat 文件。此函数不返回任何数据。
-matlabsave("filename"); | 将所有工作区变量保存到指定的 .mat 文件。
-matlabsave("filename", var1, ..., varN); | 将指定的工作区变量保存到 .mat 文件。
 
+Save Lumerical workspace variables 到 MATLAB .mat 数据 files.
+
+**语法** |  **描述**  
+---|---  
+matlabsave(""); |  Save all workspace variables 到 一个 .mat 文件 该 has 该 same name as 该 仿真 文件. This 函数 does not 返回 any 数据.  
+matlabsave("文件名"); |  Saves all workspace variables 到 该 specified .mat 文件.  
+matlabsave("文件名", var1, ..., varN); |  Saves 该 specified workspace variables 到 该 .mat 文件.  
+  
 **示例**
 
-简单示例：
+Simple example:
+    
+    
+    x=1:10;
+    y=x^2;
+    matlabsave("x_squared_data", x, y);
 
-```
-x=1:10;
-y=x^2;
-matlabsave("x_squared_data", x, y);
-```
+Save 数据 从 一个 监视器 named xy_monitor. The 数据 是 first obtained 使用 脚本 functions such as getdata 和 transmission. These workspace variables 是 那么 saved 使用 该 matlabsave 函数. 注意 该 complex 文件 names 可以 为 created 使用 该 num2str 命令. This 是 useful 当 doing 参数 sweeps 其中 一个 unique 文件 name 是 required 用于 each point 在 该 sweep.
+    
+    
+    # 获取 raw 矩阵 数据 从 该 仿真
+    mname="xy_monitor";       # 监视器 name
+    x=getdata(mname,"x");      # position vectors associated 使用 Ex fields
+    y=getdata(mname,"y");      # position vectors associated 使用 Ex fields
+    Ex=getdata(mname,"Ex");     # Ex fields at 监视器
+    T=transmission(mname);     # Power transmission through 监视器
+     
+    # save 矩阵 variables x, y, Ex, T 和 i 到 一个 数据 文件
+    i=1;
+    文件名="results_"+num2str(i); # 设置 文件名. i could 为 一个 loop counter 变量.
+    matlabsave(文件名, x,y,Ex,T,i); 
 
-保存来自名为 xy_monitor 的监视器的数据。数据首先使用 getdata 和 transmission 等脚本函数获取。然后使用 matlabsave 函数保存这些工作区变量。可以使用 num2str 命令创建复杂的文件名。当执行参数扫描时这很有用，因为扫描中的每个点都需要唯一的文件名。
+Save 一个 Lumerical dataset (eg. Electric field vs x,y,z,f) 到 一个 .mat 文件. Lumerical data设置将 为 imported into Matlab 使用 该 结构体 数据 类型。
+    
+    
+    # 获取 electric field dataset 从 该 仿真
+    mname="xy_monitor";       # 监视器 name
+    E=getresult(mname,"E");     # E fields at 监视器
+     
+    # save dataset 到 mat 文件
+    文件名="ElectricField";
+    matlabsave(文件名, E); 
 
-```
-# 从模拟获取原始矩阵数据
-mname="xy_monitor";       # 监视器名称
-x=getdata(mname,"x");      # 与 Ex 场相关的位置向量
-y=getdata(mname,"y");      # 与 Ex 场相关的位置向量
-Ex=getdata(mname,"Ex");     # 监视器处的 Ex 场
-T=transmission(mname);     # 通过监视器的功率传输
+**参见**
 
-# 将矩阵变量 x、y、Ex、T 和 i 保存到数据文件
-i=1;
-filename="results_"+num2str(i); # 设置文件名。i 可以是循环计数器变量。
-matlabsave(filename, x,y,Ex,T,i);
-```
+[MATLAB](https://optics.ansys.com/hc/en-us/articles/360034923913-MATLAB-script-integration)[ script integration – Ansys Optics](https://optics.ansys.com/hc/en-us/articles/360034923913-MATLAB-script-integration)
 
-将 Lumerical 数据集（如 Electric field vs x,y,z,f）保存到 .mat 文件。Lumerical 数据集将使用 struct 数据类型导入 Matlab。
-
-```
-# 从模拟获取电场数据集
-mname="xy_monitor";       # 监视器名称
-E=getresult(mname,"E");     # 监视器处的 E 场
-
-# 将数据集保存到 mat 文件
-filename="ElectricField";
-matlabsave(filename, E);
-```
-
-**另请参阅**
-
-- [MATLAB 脚本集成 – Ansys Optics](./MATLAB%20脚本集成.md)
-- [matlabput](./matlabput.md)
-- [matlabsavelegacy](./matlabsavelegacy.md)
-- [matlabload](./matlabload.md)
-- [vtksave](./vtksave.md)
+[matlabput](https://optics.ansys.com/hc/en-us/articles/360034408014-matlabput), [matlabsavelegacy](https://optics.ansys.com/hc/en-us/articles/360034928133-matlabsavelegacy), [matlabload](https://optics.ansys.com/hc/en-us/articles/360034408034-matlabload), [vtksave](https://optics.ansys.com/hc/en-us/articles/360034411354-vtksave)

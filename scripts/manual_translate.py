@@ -11,11 +11,11 @@ EN_DIR = BASE_DIR / "docs" / "lsf-script" / "en"
 
 def translate_batch(start_idx=0, batch_size=10):
     """批量翻译文档"""
-    # 找到所有含"[待翻译]"标记的文件
+    # 找到所有含"待翻译文档"标记的文件
     pending_files = []
     for f in sorted(CN_DIR.glob("*.md")):
         content = f.read_text(encoding='utf-8')
-        if "[待翻译]" in content:
+        if "待翻译文档" in content:
             pending_files.append(f)
     
     total_pending = len(pending_files)

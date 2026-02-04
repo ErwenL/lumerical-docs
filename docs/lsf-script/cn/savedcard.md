@@ -1,34 +1,33 @@
-<!-- Translation completed: Tue Feb 03 2026 -->
-<!-- Original: savedcard -->
+<!--
+Translation from English documentation
+Original command: savedcard
+Translation date: 2026-02-04 22:50:14
+-->
 
 # savedcard
 
-将 D-card 数据保存到 Lumerical 数据文件（ldf）中。D-card 通常用于存储监视器数据，但也可用于存储求解器对象的数据。
+Saves d-card 数据 到 一个 Lumerical 数据 文件 (ldf) 文件. D-cards 是 generally used 到 store 监视器 数据, but 可以 also 为 used 到 store 数据 从 求解器 对象.
 
-数据以非归一化状态保存。有关详细信息，请参阅参考指南中的[单位和归一化](https://optics.ansys.com/hc/en-us/articles/360034397034)部分。
+Data is saved in the nonorm state. See the [ units and normalization ](https://optics.ansys.com/hc/en-us/articles/360034397034) section of the reference guide for more information.
 
 **语法** |  **描述**  
 ---|---  
-savedcard("filename"); |  将所有当前 D-card（本地和全局）保存到指定的 ldf 文件。此函数不返回任何数据。  
-savedcard("filename", "name1", "name2",...); |  仅保存具有指定名称 "name1"、"name2" 等的 D-card。  
+savedcard("文件名"); |  Saves all current d-cards (local 和 global) 到 该 specified ldf 文件. This 函数 does not 返回 any 数据.  
+savedcard("文件名", "name1", "name2",...); |  Saves only 该 d-cards 使用 该 specified names, "name1", "name2", etc.  
   
 **示例**
 
-此示例显示如何保存名为 xy_monitor 的监视器的所有数据。
+This example shows 如何 到 save all 数据 从 该 监视器 named xy_monitor.
     
     
     ?getdata; # view all d-cards
     savedcard("monitor_data","::model::xy_monitor");
 
-此示例显示如何在 MODE 中进行频率扫描后保存所需数据。这相当于 GUI 选项"导出到 Interconnect"。
+This example shows 如何 到 save 该 required 数据 after performing 一个 频率 sweep 在 MODE. This 是 equivalent 到 该 GUI option "Export 用于 Interconnect".
     
     
-    savedcard("FileName", "::model::FDE::data::frequencysweep");
+    savedcard("FileName", "::model::FDE::数据::frequencysweep");
 
-**另请参阅**
+**参见**
 
-- [命令列表](./index.md)
-- [copydcard](./copydcard.md)
-- [savedata](./savedata.md)
-- [loaddata](./loaddata.md)
-- [matlabsave](./matlabsave.md)
+[ List of commands ](https://optics.ansys.com/hc/en-us/articles/360037228834) , [ copydcard ](https://optics.ansys.com/hc/en-us/articles/360034930233-copydcard) , [ savedata ](https://optics.ansys.com/hc/en-us/articles/360034411174-savedata) , [ loaddata ](https://optics.ansys.com/hc/en-us/articles/360034411214-loaddata) , [ matlabsave ](https://optics.ansys.com/hc/en-us/articles/360034928113-matlabsave)

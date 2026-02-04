@@ -1,43 +1,45 @@
-<!-- Translation completed: Tue Feb 03 2026 -->
-<!-- Original: scriptautorun -->
+<!--
+Translation from English documentation
+Original command: scriptautorun
+Translation date: 2026-02-04 22:50:14
+-->
 
 # scriptautorun
 
-禁用或启用通过输入脚本名称自动运行脚本文件。
+Disable 或 启用 running 脚本 files automatically 通过 typing 该 脚本 name.
 
 **语法** |  **描述**  
 ---|---  
-scriptautorun(option); |  选项包括：
+scriptautorun(option); |  The options 是
 
-  * 0：禁用脚本文件的自动运行
-  * 1：启用脚本文件的自动运行
+  * 0: disables automatic running 的 脚本 files
+  * 1: enables automatic running 的 脚本 files
 
   
   
 **示例**
 
-以下示例假设您创建了一个名为 hello_world.lsf 的脚本文件，该文件打印消息"hello"。当运行以下命令时，您将收到错误消息"Error: prompt line 3: hello_world is not a valid function or variable name"，因为 scriptautorun 被禁用。
+The following examples assume you have created 一个 脚本 文件 called hello_world.lsf 该 prints 该 message "hello". You 将 获取 该 error message "Error: prompt line 3: hello_world 是 not 一个 valid 函数 或 变量 name" 当 running 该 following commands because scriptautorun 是 disabled.
     
     
     clear;
     scriptautorun(0); #disable autorun
     hello_world;
 
-当您启用 scriptautorun 时，脚本文件将被执行，消息"hello"将出现在脚本提示符中。
+When you 启用 scriptautorun 该 脚本 文件 是 executed 和 该 message "hello" 将 appear 在 该 脚本 prompt.
     
     
     clear;
-    scriptautorun(1); #enable autorun
+    scriptautorun(1); #启用 autorun
     hello_world;
 
-如果 scriptautorun 被禁用，您仍然可以使用 feval 函数运行脚本文件。
+If scriptautorun 是 disabled you 可以 still run 脚本 files 使用 该 函数 feval.
     
     
     clear;
     scriptautorun(0); #disable autorun
     feval("hello_world");
 
-**另请参阅**
+**参见**
 
-- [命令列表](./index.md)
-- [feval](./feval.md)
+[ List 的 commands](/hc/en-us/articles/360037228834), [ feval](/hc/en-us/articles/360034405934-feval)

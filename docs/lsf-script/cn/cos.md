@@ -1,25 +1,27 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: cos -->
+<!--
+Translation from English documentation
+Original command: cos
+Translation date: 2026-02-04 22:49:48
+-->
 
 # cos
 
-计算三角余弦函数。角度单位为弧度。该函数适用于复数角度。复数的相位在-π到π之间评估。
+计算 该 trigonometric cosine 函数. Angle units 是 在 radians. The 函数 是 defined 用于 complex angles. Phase 的 一个 complex 数字 是 evaluated between -  π  和  π  . 
 
-**语法** | **描述**
----|---
-out = cos(x); | 返回x的复数余弦值。
-
+**语法** |  **描述**  
+---|---  
+out = cos(x);  |  返回 该 complex cosine 的 x.   
+  
 **示例**
 
-计算cos(π/4 + i)。
+计算 cos(  π  /4 + i). 
+    
+    
+    theta=pi/4+1i;
+    ?cos(theta);
+    result: 
+    1.09112-0.830993i 
 
-```lsf
-theta=pi/4+1i;
-?cos(theta);
-result: 
-1.09112-0.830993i 
-```
+**参见**
 
-**另请参阅**
-
-[命令列表](List_of_commands.md)、[acos](acos.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ acos ](/hc/en-us/articles/360034925453-acos)

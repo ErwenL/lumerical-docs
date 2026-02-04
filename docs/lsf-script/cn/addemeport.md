@@ -1,23 +1,26 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addemeport -->
+<!--
+Translation from English documentation
+Original command: addemeport
+Translation date: 2026-02-04 22:49:04
+-->
 
 # addemeport
 
-Adds  [p或t](/hc/en-us/rticles/360034396374) 到  EME solver regi在/object.  EME solver object must  set 作为  ctive solver 对于 th是 comm和 到 w或k.
+添加 一个 [端口](/hc/en-us/articles/360034396374) 到 一个 EME 求解器 region/对象. The EME 求解器 对象 必须 为 设置 as 该 active 求解器 用于 此 命令 到 work.
 
-**语法** | **描述**
----|---
-addemeport; | Add  p或t 到  ctive EME solver regi在. Th是 functi在 does not return y d在.
-addemeport(struct_data); | Adds  p或t 到  ctive EME solver regi在 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addemeport; |  添加 一个 端口 到 该 active EME 求解器 region. This 函数 does not 返回 any 数据.  
+addemeport(struct_data); |  Adds a port to the active EME solver region and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
   
 **示例**
 
- follow在g script comm和 will dd  p或t 到  EME solver regi在.   setctivesolver  comm和 是 first used 到 set  EME solver regi在 作为  ctive solver.
+The following 脚本 命令 将 添加 一个 端口 到 该 EME 求解器 region. The  setactivesolver  命令 是 first used 到 设置 该 EME 求解器 region as 该 active 求解器.
     
     
     setactivesolver("EME");
     addemeport;
 
-**另请参阅**
+**参见**
 
-[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [setctivesolver](setctivesolver.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ setactivesolver ](/hc/en-us/articles/360034409014-setactivesolver)

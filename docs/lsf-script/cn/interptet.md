@@ -1,41 +1,42 @@
 <!--
 Translation from English documentation
 Original command: interptet
-Translation date: 2026-02-03
+Translation date: 2026-02-04 22:50:01
 -->
 
 # interptet
 
-将数据集从四面体网格插值到另一个四面体或规则网格。数据可以是复数。
+Interpolates 一个 3D dataset 从 一个 tetrahedral grid 到 another tetrahedral 或 一个 rectilinear grid. The 数据 可以 为 complex.
 
-此函数通常用于对最初在有限元网格中评估的数据（例如来自 CHARGE 的监视器数据）重新采样到新的规则网格。
+This 函数 是 typically used 用于 resampling 数据 evaluated originally 在 一个 finite 元素 mesh (监视器 数据 从 CHARGE, 用于 example) 到 一个 新的 rectilinear grid.
 
-**注意：** 自 2020a R7 起，interptet 可以将数据集从四面体插值到矩形网格或点列表。数据可以是矢量的。
+[[注意:]] Since 2020a R7, [[interptet]] 可以 interpolate 一个 数据 设置 从 一个 tetrahedral 到 一个 rectangular grid 或 到 一个 list 的 points. The 数据 可以 为 vectorial.  
+---  
+**语法** |  **描述**  
+---|---  
+out = interptet(tet, vtx, u, xi, yi, zi, extrap_val); out = interptet(tet, vtx, u, xi, yi, zi, extrap_val, "rectilinear"); |  Does 一个 tetrahedral 到 rectilinear interpolation 的 一个 函数 和 outputs 一个 PxQxRxS 数组 的 interpolated 值, f(xi,yi,zi,p).
 
-**语法** |  **描述**
----|---
-out = interptet(tet, vtx, u, xi, yi, zi, extrap_val); out = interptet(tet, vtx, u, xi, yi, zi, extrap_val, "rectilinear");  |  对函数进行四面体到规则插值，并输出 PxQxRxS 数组的插值 f(xi,yi,zi,p)。
+  * u 是 existing 数据 的 该 finite 元素 mesh (NxS)
+  * xi, yi 和 zi 是 arrays 使用 长度 P, Q 和 R, respectively. They specify 该 points 其中 u 是 到 为 sampled 在 该 rectilinear mesh, 在 该 x-direction, y-direction 和 z-direction
+  * tet 是 该 connectivity 数组, Mx4, containing row entries 该 index 该 4 vertices 的 M tetrahedra. Taken 从 该 仿真 region
+  * vtx 是 一个 矩阵 使用 该 vertices 的 该 tetrahedral mesh, Nx3, containing row entries 的 (x,y,z) pairs. Taken 从 该 仿真 region
+  * extrap_val(optional): 如果 一个 interpolation point 是 outside 的 该 finite 元素 mesh, 该 point 将 为 assigned 此 值 (default 是 Inf)
 
-  * u 是有限元网格的现有数据 (NxS)
-  * xi、yi 和 zi 分别是长度 P、Q 和 R 的数组。它们指定在规则网格上在 x 方向、y 方向和 z 方向上对 u 进行采样的点
-  * tet 是连通数组 Mx4，包含索引 4 个四面体顶点的行条目。取自模拟区域
-  * vtx 是具有四面体网格顶点的矩阵 Nx3，包含 (x,y,z) 对的行条目。取自模拟区域
-  * extrap_val（可选）：如果插值点在有限元网格之外，该点将被分配此值（默认为 Inf）
+  
+out = interptet(tet, vtx, u, xi, yi, zi, extrap_val, "unstructured");  |  Does 一个 tetrahedral 到 point cloud interpolation 的 一个 函数 和 outputs 一个 PxS 数组 的 interpolated 值.
 
-out = interptet(tet, vtx, u, xi, yi, zi, extrap_val, "unstructured");  |  对函数进行四面体到点云插值，并输出 PxS 数组的插值。
+  * u 是 existing 数据 的 该 finite 元素 mesh (NxS)
+  * xi, yi 和 zi 是 arrays 使用 长度 P. They specify 该 P points 其中 u 是 到 为 sampled 在
+  * tet 是 该 connectivity 数组, Mx4, containing row entries 该 index 该 4 vertices 的 M tetrahedra. Taken 从 该 仿真 region
+  * vtx 是 一个 矩阵 使用 该 vertices 的 该 tetrahedral mesh, Nx3, containing row entries 的 (x,y,z) pairs. Taken 从 该 仿真 region
+  * extrap_val(optional): 如果 一个 interpolation point 是 outside 的 该 finite 元素 mesh, 该 point 将 为 assigned 此 值 (default 是 Inf)
 
-  * u 是有限元网格的现有数据 (NxS)
-  * xi、yi 和 zi 是长度为 P 的数组。它们指定要对其采样的 P 个点
-  * tet 是连通数组 Mx4，包含索引 4 个四面体顶点的行条目。取自模拟区域
-  * vtx 是具有四面体网格顶点的矩阵 Nx3，包含 (x,y,z) 对的行条目。取自模拟区域
-  * extrap_val（可选）：如果插值点在有限元网格之外，该点将被分配此值（默认为 Inf）
-
+  
+  
 **示例**
 
-请参阅 interptri 脚本函数的示例。
+See 该 example 用于 该 interptri 脚本 函数.
 
-**相关命令**
+**参见**
 
-- [quadtet](./quadtet.md)
-- [quadtri](./quadtri.md)
-- [interptri](./interptri.md)
+[quadtet](/hc/en-us/articles/360034926633-quadtet), [quadtri](/hc/en-us/articles/360034406394-quadtri), [interptri](/hc/en-us/articles/360034405774-interptri)

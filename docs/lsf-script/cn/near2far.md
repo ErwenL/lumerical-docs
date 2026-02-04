@@ -1,35 +1,40 @@
+<!--
+Translation from English documentation
+Original command: near2far
+Translation date: 2026-02-04 22:50:14
+-->
+
 # near2far
 
-使用提供的近场监视器数据计算指定点的远场。
+计算 该 far field at 该 specified points 使用 该 provided near field 监视器 数据. 
 
-**语法** | **描述**
----|---
-out = near2far(nearfield, farfield, n); | 使用提供的近场监视器数据在指定的远场点计算远场。输入的非结构化数据集必须包含一个按参数化频率的名为 'E' 的属性。输出是一个非结构化数据集，其中包含一个名为 'E' 的属性，包含远场。远场频率由近场频率决定，而远场点、连接矩阵和与输出数据集关联的表面法线来自指定远场点的非结构化数据集。
-
-**参数** |  | **默认值** | **类型** | **描述**
----|---|---|---|---
-nearfield | 必填 |  | 非结构化数据集 | 以 DFT 监视器返回格式的近场数据。电场可以在分段线上采样，也可以在三角化表面上采样。如果在分段线上采样，假设电场来自 2D 模拟，使用 2D 积分核进行远场投影。类似地，如果在三角化表面上采样，假设电场来自 3D 模拟，使用 3D 积分核进行投影（见提供的参考）。
-farfield | 必填 |  | 非结构化数据集 | 用于投影的远场点。如果近场在分段线上采样，远场点必须使用分段线指定。类似地，如果近场在三角化表面上采样，远场点必须在三角化表面上采样。可以使用 createsphericalsurface 命令轻松创建包含分段线或三角化曲面的非结构化数据集。
-n | 可选 | 1.0 | 数字或向量 | 远场介质的背景折射率。可以是单一数字，也可以是与近场频率参数长度相同的向量。
-
-注意：有关远场角度范围的积分，可以使用脚本命令 quadtri。更多信息请参阅 quadtri。
-
+**语法** |  **描述**  
+---|---  
+out = near2far(nearfield, farfield, n);  |  计算 该 far field 使用 该 provided near field 监视器 数据 at 该 specified far field points. The input unstructured 数据 设置 specifying 该 near fields 必须 contain 一个 attribute named 'E' parametrized 通过 频率. The output 是 一个 unstructured 数据 设置 使用 一个 attribute named 'E' containing 该 far field. The far field frequencies 是 determined 通过 该 near field frequencies while 该 far field points, connectivity 矩阵 和 surface normals associated 使用 该 output 数据 设置 是 taken 从 该 unstructured 数据 设置 specifying 该 far field points.   
+  
+**Parameter** |  |  **Default 值** |  **Type** |  **描述**  
+---|---|---|---|---  
+nearfield  |  required  |  |  unstructured 数据 设置  |  Near field 数据 在 该 format returned 通过 DFT monitors. The electric field 可以 为 sampled 在 一个 segmented line 或 在 一个 triangulated surface. If sampled 在 一个 segmented line, 该 electric field 是 assumed 到 come 从 一个 2D 仿真 和 该 2D integral kernel 是 used 用于 该 far field projection. Similarly, 如果 该 electric field 是 sampled 在 一个 triangulated surface, it 是 assumed 到 come 从 一个 3D 仿真 和 该 3D integral kernel 是 used 用于 该 projection (see 该 provided reference).   
+farfield  |  required  |  |  unstructured 数据 设置  |  Far field points 到 为 used 在 该 projection. If 该 near fields 是 sampled 在 segmented line, 该 far field points 必须 为 specified 使用 一个 segmented line. Similarly, 如果 该 near fields 是 sampled 在 一个 triangulated surface, 该 far field points 必须 为 sampled 在 一个 triangulated surface. The 命令  createsphericalsurface  可以 为 used 到 easily 创建 一个 unstructured 数据 设置 使用 一个 segmented line 或 一个 triangulated surface.   
+n  |  optional  |  1.0  |  数字 或 向量  |  Background refractive index 的 该 far field medium. It 可以 为 一个 single 数字 或 一个 向量 使用 该 same 长度 as 该 near field 频率 参数.   
+  
+注意: Far field integration  For integration 的 far field over 一个 range 的 angles, 该 脚本 命令  quadtri  可以 为 used. See [ quadtri ](/hc/en-us/articles/360034406394-quadtri) 用于 more information.   
+---  
+  
 **示例**
 
-此示例使用从名为 "monitor" 的监视器收集的近场数据在球体上执行远场投影。
+This example performs 一个 far field projection 在 一个 sphere 使用 该 near field 数据 collected 从 一个 监视器 named "监视器". 
+    
+    
+    surf = createsphericalsurface;
+    E_near = getresult("DGTD::监视器","fields");
+    E_far = near2far(E_near,surf);
+    visualize(E_far); 
 
-```
-surf = createsphericalsurface;
-E_near = getresult("DGTD::monitor","fields");
-E_far = near2far(E_near,surf);
-visualize(E_far);
-```
+For more information 在 如何 far field projections 是 computed please refer 到: 
 
-有关如何计算远场投影的更多信息，请参阅：
+John B. Schneider, Understanding the Finite-Difference Time-Domain Method, Chapter 14: Near-to-Far-Field Transformation, 2010 Available at: [ http://www.eecs.wsu.edu/~schneidj/ufdtd/ ](http://www.eecs.wsu.edu/~schneidj/ufdtd/)
 
-John B. Schneider，了解时域有限差分法，第 14 章：近场到远场变换，2010 可在以下网址获取：http://www.eecs.wsu.edu/~schneidj/ufdtd/
+**参见**
 
-**另请参阅**
-
-- [createsphericalsurface](./createsphericalsurface.md)
-- [命令列表](./命令列表.md)
+[ createsphericalsurface ](/hc/en-us/articles/360034930773-createsphericalsurface) , [ List 的 commands ](/hc/en-us/articles/360037228834) , 

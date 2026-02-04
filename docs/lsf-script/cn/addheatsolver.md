@@ -1,29 +1,32 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addheatsolver -->
+<!--
+Translation from English documentation
+Original command: addheatsolver
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addheatsolver
 
-Adds  [rml (HEAT) solver regi在](/hc/en-us/rticles/360034398234) 到  simul在i在 envir在ment.
+添加 一个 [thermal (HEAT) 求解器 region](/hc/en-us/articles/360034398234) 到 该 仿真 环境.
 
-**语法** | **描述**
----|---
-addheatsolver; | Adds  rml (HEAT) solver regi在 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
-addheatsolver(struct_data); | Adds  rml (HEAT) solver regi在 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addheatsolver; |  添加 一个 thermal (HEAT) 求解器 region 到 该 仿真 环境. This 函数 does not 返回 any 数据.  
+addheatsolver(struct_data); |  Adds a thermal (HEAT) solver region and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
   
 **示例**
 
- follow在g script comm和 will dd  2D y-n或ml HEAT solver regi在, set its dimensi在, 和 run  simul在i在.  script 作为sumes th在  simul在i在 envir在ment lredy h作为  geometry 和 boundry c在diti在s set up.
+The following 脚本 命令 将 添加 一个 2D y-normal HEAT 求解器 region, 设置 its 维度, 和 run 该 仿真. The 脚本 assumes 该 该 仿真 环境 already has 该 geometry 和 boundary conditions 设置 up.
     
     
     addheatsolver;
-    set("solver geometry",1);  #  2D y-normal
-    set("x",0);
-    set("x span",2e-6);
-    set("y",0);
-    set("z",0);
-    set("z span",10e-6);
+    设置("求解器 geometry",1);  #  2D y-normal
+    设置("x",0);
+    设置("x跨度",2e-6);
+    设置("y",0);
+    设置("z",0);
+    设置("z跨度",10e-6);
     run;
 
-**另请参阅**
+**参见**
 
-[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [set](set.md) , [run](run.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ 设置 ](/hc/en-us/articles/360034928773-设置) , [ run ](/hc/en-us/articles/360034931333-run)

@@ -1,12 +1,17 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: copymaterial -->
+<!--
+Translation from English documentation
+Original command: copymaterial
+Translation date: 2026-02-04 22:49:48
+-->
 
 # copymaterial
 
-**语法** | **描述**
----|---
-out = copymaterial("materialname"); | Creates a copy of the material "materialname". The new name is returned.
+Makes 一个 copy 的 一个 材料 在 该 材料 database. 
 
-**另请参阅**
+**语法** |  **描述**  
+---|---  
+out = copymaterial("materialname");  |  创建 一个 copy 的 该 材料 "materialname". The 新的 name 是 returned.   
+  
+**参见**
 
-[ List of commands ](/hc/en-us/articles/360037228834) , [ addmaterial ](/hc/en-us/articles/360034930013-addmaterial) , [ deletematerial ](/hc/en-us/articles/360034409734-deletematerial) , [ setmaterial ](/hc/en-us/articles/360034409654-setmaterial) , [ getmaterial ](/hc/en-us/articles/360034930053-getmaterial)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ addmaterial ](/hc/en-us/articles/360034930013-addmaterial) , [ deletematerial ](/hc/en-us/articles/360034409734-deletematerial) , [ setmaterial ](/hc/en-us/articles/360034409654-setmaterial) , [ getmaterial ](/hc/en-us/articles/360034930053-getmaterial)

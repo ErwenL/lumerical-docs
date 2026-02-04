@@ -1,33 +1,29 @@
 <!--
 Translation from English documentation
 Original command: importbinary2
-Translation date: 2026-02-03
+Translation date: 2026-02-04 22:50:00
 -->
 
 # importbinary2
 
-从脚本变量导入整个体素的二进制数据（1 和 0）。对象将存在于二进制数据为 1 的任何地方，在为 0 时则不存在。此命令仅适用于导入图元。如果数据成功导入，函数返回 1。在线帮助中可以找到显示如何使用这些函数的示例脚本文件。请参见用户指南的结构部分。
+Import binary 数据 (1s 和 0s) over 一个 entire volume 从 脚本 variables. The 对象 将 为 present wherever 该 binary 数据 是 1 和 not 当 it 是 0. This 命令 only applies 到 import primitives. The 函数 返回 1 如果 该 数据 是 successfully imported. 示例 脚本 files showing 如何 到 use 这些 functions 可以 为 found 在 该 Online Help. See 该 User Guide, Structures section.
 
-**语法** |  **描述**
----|---
-out = importbinary2(binary,x,y,z); |  在三维模拟中从脚本变量导入二进制数据。所有参数都是必填的。
-
-**参数** |  **默认值** |  **类型** |  **描述**
----|---|---|---
-binary  |  必填  |  matrix  |  二维数据。这应该是三维情况下的 NxMxP 矩阵，或二维情况下的 NxM 矩阵。它应该只包含 0 或 1 的值。如果存在其他值，所有非零值都将被解释为 1。
-x  |  必填  |  matrix  |  如果 n 是 NxMxP 矩阵，则 x 的维度应为 Nx1。对于二维模拟，如果 n 是 NxM 矩阵，则 x 的维度应为 Nx1。x 的值必须均匀分布。
-y  |  必填  |  matrix  |  如果 n 是 NxMxP 矩阵，则 y 的维度应为 Mx1。对于二维模拟，如果 n 是 NxM 矩阵，则 y 的维度应为 Mx1。y 的值必须均匀分布。
-z  |  1  |  number  |  如果 n 是 NxMxP 矩阵，则 z 的维度应为 Px1。z 的值必须均匀分布。
-
-注意：导入的二进制对象边界。导入的二进制对象的边界位于存在材料的顶点与不存在材料的顶点之间。此隐含边界的形状可能很复杂，视口不会显示全部细节。可以通过增加导入对象的"二进制阈值"属性将边界移动到更靠近存在材料的顶点。要确认求解器在模拟中使用的边界，请使用折射率监视器。
-
----
-
+**语法** |  **描述**  
+---|---  
+out = importbinary2(binary,x,y,z); |  Import binary 数据 从 脚本 variables 在 three dimensional simulations. All 参数 是 required.  
+**Parameter** |  **Default 值** |  **Type** |  **描述**  
+---|---|---|---  
+binary |  required |  矩阵 |  The binary 数据 This 应该 为 一个 NxMxP 矩阵 在 three dimensions 和 一个 NxM 矩阵 在 two dimensions. It 应该 have only 值 的 0 或 1. If other 值 是 present, all non-zero 值 将 为 interpreted as 1.  
+x |  required |  矩阵 |  If n 是 一个 NxMxP 矩阵, 那么 x 应该 have 维度 Nx1. For two dimensional 仿真, 如果 n 是 一个 NxM 矩阵 那么 x 应该 have 维度 Nx1. Values 的 x 必须 为 uniformly spaced.  
+y |  required |  矩阵 |  If n 是 一个 NxMxP 矩阵, 那么 y 应该 have 维度 Mx1. For two dimensional 仿真, 如果 n 是 一个 NxM 矩阵 那么 y 应该 have 维度 Mx1. Values 的 y 必须 为 uniformly spaced.  
+z |  1 |  数字 |  If n 是 一个 NxMxP 矩阵, 那么 z 应该 have 维度 Px1. Values 的 z 必须 为 uniformly spaced.  
+注意: Imported binary 对象 boundaries The boundary 的 该 import binary 对象 是 positioned between 该 vertices 其中 该 材料 是 present 和 该 vertices 其中 该 材料 是 not present. The shape 的 此 implied boundary 可以 为 complex, 和 该 viewport does not show 该 full detail. The boundary 可以 为 moved closer 到 vertices 其中 该 材料 是 present 通过 increasing 该 "binary threshold" 属性 的 该 import 对象. To confirm 该 boundary 该 将 为 used 在 该 仿真 通过 该 求解器, use 一个 index 监视器.  
+---  
+  
 **示例**
 
-有关详细信息，请参阅导入空间二进制示例。
+Please refer 到 该 [importing spatial binary example](/hc/en-us/articles/360034382754-Import-对象-Binary-spatial-数据) 用于 details.
 
-**相关命令**
+**参见**
 
-- [Manipulating objects](./Manipulating-objects.md)
-- [importbinary](./importbinary.md)
+[Manipulating 对象](/hc/en-us/articles/360037228834), [importbinary](/hc/en-us/articles/360034408734-importbinary)

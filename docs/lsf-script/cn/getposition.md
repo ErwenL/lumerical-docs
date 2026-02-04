@@ -1,25 +1,27 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: getposition -->
+<!--
+Translation from English documentation
+Original command: getposition
+Translation date: 2026-02-04 22:50:00
+-->
 
 # getposition
 
-**语法** | **描述**
----|---
-out=getposition("element",”x”); | 返回 the current horizontal position of an 元素.
-out=getposition("element",”y”); | 返回 the current vertical position of an 元素.
+获取 该 current horizontal 或 vertical position 的 一个 元素. 
 
+**语法** |  **描述**  
+---|---  
+out=getposition("元素",”x”);  |  返回 该 current horizontal position 的 一个 元素.   
+out=getposition("元素",”y”);  |  返回 该 current vertical position 的 一个 元素.   
+  
 **示例**
 
-This 示例 is to get the x position of an 元素 named "Waveguide Coupler_1" 
+This example 是 到 获取 该 x position 的 一个 元素 named "Waveguide Coupler_1" 
+    
+    
     ?getposition("Waveguide Coupler_1","x");
     result: 
     1e-006  
 
-This 示例 is to get the x position of an 元素 named "Waveguide Coupler_1" 
-    ?getposition("Waveguide Coupler_1","x");
-    result: 
-    1e-006  
+**参见**
 
-**另请参阅**
-
-[ Manipulating objects ](/hc/en-us/articles/360037228834) , [ setposition ](/hc/en-us/articles/360034408534-setposition) , [ getrectangle ](/hc/en-us/articles/360034408554-getrectangle)
+[ Manipulating 对象 ](/hc/en-us/articles/360037228834) , [ setposition ](/hc/en-us/articles/360034408534-setposition) , [ getrectangle ](/hc/en-us/articles/360034408554-getrectangle)

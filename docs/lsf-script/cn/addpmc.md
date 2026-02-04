@@ -1,41 +1,37 @@
 <!--
 Translation from English documentation
 Original command: addpmc
-Translation date: 2026-02-04 09:11:33
+Translation date: 2026-02-04 22:49:29
 -->
 
 # addpmc
 
-向有限元IDE中的DGTD或FEEM求解器添加PMC（完美磁导体）边界条件。此命令要求对象树中存在DGTD或FEEM求解器区域。如果两个求解器都存在，则必须将目标求解器的名称作为脚本命令的参数提供。
+添加 一个 PMC (perfect electrical conductor) 边界条件 到 该 DGTD 或 FEEM 求解器 在 Finite Element IDE. A DGTD 或 FEEM 求解器 region 必须 为 present 在 该 对象 tree 用于 此 命令 到 work. If both solvers 是 present 那么 该 intended 求解器's name 必须 为 provided as 一个 参数 到 该 脚本 命令.
 
 **语法** |  **描述**  
 ---|---  
-addpmc; |  向对象树中存在的DGTD或FEEM求解器添加PMC边界条件。此函数不返回任何数据。  
-addpmc("solver_name"); |  向参数"solver_name"定义的所需求解器添加PMC边界条件。选项为"DGTD"和"FEEM"。此函数不返回任何数据。  
-   
-**示例1**
+addpmc; |  添加 一个 PMC 边界条件 到 该 DGTD 或 FEEM 求解器 (whichever 是 present 在 该 对象 tree). This 函数 does not 返回 any 数据.  
+addpmc("solver_name"); |  添加 一个 PMC 边界条件 到 该 desired 求解器 defined 通过 该 参数 "solver_name". The options 是 "DGTD" 和 "FEEM". This 函数 does not 返回 any 数据.  
+  
+**示例 1**
 
-以下脚本命令将向对象树中已存在的求解器添加PMC边界条件，并打印边界条件的所有可用属性。
+The following 脚本 commands 将 添加 一个 PMC 边界条件 到 该 求解器 already present 在 该 对象 tree 和 print all available 属性 的 该 边界条件.
     
     
     addpmc;
-    ?set;
+    ?设置;
 
-**示例2**
+**示例 2**
 
-以下脚本命令将向DGTD求解器添加PMC边界条件，为其命名，并将其分配给仿真区域的-y和+y边界。
+The following 脚本 commands 将 添加 一个 PMC 边界条件 到 该 DGTD 求解器, name it, 和 assign it 到 该 -y 和 +y boundaries 的 该 仿真 region.
     
     
     addpmc("DGTD"); 
-    set("name","PMC_y");
-    set("surface type","simulation region");
-    set("y min",1);
-    set("y max",1);
+    设置("name","PMC_y");
+    设置("surface 类型","仿真 region");
+    设置("y最小值",1);
+    设置("y最大值",1);
 
 **参见**
 
-* [adddgtdsolver](https://optics.ansys.com/hc/en-us/articles/360034925013-adddgtdsolver)
-* [addpml](https://optics.ansys.com/hc/en-us/articles/360034924913-addpmc)
-* [addpec](https://optics.ansys.com/hc/en-us/articles/360034924893-addpec)
-* [addperiodic](https://optics.ansys.com/hc/en-us/articles/360034404934-addperiodic)
-* [addabsorbing](https://optics.ansys.com/hc/en-us/articles/360034924873-addabsorbing)
+[ adddgtdsolver ](/hc/en-us/articles/360034925013-adddgtdsolver) , [ addpml ](/hc/en-us/articles/360034924913-addpmc) , [ addpec ](/hc/en-us/articles/360034924893-addpec) , [ addperiodic ](/hc/en-us/articles/360034404934-addperiodic) , [ addabsorbing ](/hc/en-us/articles/360034924873-addabsorbing)

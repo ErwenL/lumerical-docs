@@ -1,33 +1,36 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addheatmesh -->
+<!--
+Translation from English documentation
+Original command: addheatmesh
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addheatmesh
 
-Adds  [mesh c在str在t (override regi在)](/hc/en-us/rticles/360034397994) 到  'HEAT' simul在i在. A HEAT solver regi在 must  present 在  objects tree 对于 th是 comm和 到 w或k.
+添加 一个 [mesh constraint (override region)](/hc/en-us/articles/360034397994) 到 一个 'HEAT' 仿真. A HEAT 求解器 region 必须 为 present 在 该 对象 tree 用于 此 命令 到 work.
 
-**语法** | **描述**
----|---
-addheatmesh; | Adds  mesh c在str在t 到  'HEAT' simul在i在 envir在ment. Th是 functi在 does not return y d在.
-addheatmesh(struct_data); | Adds  mesh c在str在t 到  'HEAT' simul在i在 envir在ment 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addheatmesh; |  添加 一个 mesh constraint 到 该 'HEAT' 仿真 环境. This 函数 does not 返回 any 数据.  
+addheatmesh(struct_data); |  Adds a mesh constraint to the 'HEAT' simulation environment and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
   
 **示例**
 
- follow在g script comm和s will dd  mesh c在str在t 到  HEAT solver regi在 在 F在ite Element IDE, nme it, set its dimensi在, 和 set  mximum edge length 对于 y element 使用在  volume.
+The following 脚本 commands 将 添加 一个 mesh constraint 到 该 HEAT 求解器 region 在 Finite Element IDE, name it, 设置 its 维度, 和 设置 该 maximum edge 长度 用于 any 元素 within 该 volume.
     
     
     addheatsolver;
     addheatmesh;
-    set("name","mesh_SCR");
-    # set dimension
-    set("x",0);
-    set("x span",2e-6);
-    set("y",0);
-    set("y span",5e-6);
-    set("z",0);
-    set("z span",10e-6);
-    # restrict maximum edge length for elements
-    set("max edge length",5e-9);
+    设置("name","mesh_SCR");
+    # 设置 维度
+    设置("x",0);
+    设置("x跨度",2e-6);
+    设置("y",0);
+    设置("y跨度",5e-6);
+    设置("z",0);
+    设置("z跨度",10e-6);
+    # restrict maximum edge 长度 用于 elements
+    设置("max edge 长度",5e-9);
 
-**另请参阅**
+**参见**
 
-[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [ ddhe在solver ](/hc/en-us/rticles/360034924493-ddhe在solver) , [set](set.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ addheatsolver ](/hc/en-us/articles/360034924493-addheatsolver) , [ 设置 ](/hc/en-us/articles/360034928773-设置)

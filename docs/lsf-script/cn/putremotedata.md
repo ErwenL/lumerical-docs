@@ -1,30 +1,35 @@
+<!--
+Translation from English documentation
+Original command: putremotedata
+Translation date: 2026-02-04 22:50:14
+-->
+
 # putremotedata
 
-一种互操作性命令，通过活动会话将变量从客户端工作区发送到服务器工作区。这适用于矩阵和字符串（不适用于结构和单元数组）。
+An interoperability 命令 该 将 send 一个 变量 从 该 client workspace into 该 server workspace via 一个 active session. This works 用于 matrices 和 strings (和 not 用于 structs 和 单元格 arrays).
 
-**语法** | **描述**
----|---
-putremotedata(s,'y',x); | 通过活动会话 s，在服务器工作区中创建变量 y，其值为客户端工作区中的 x。
-
+**语法** |  **描述**  
+---|---  
+putremotedata(s,'y',x); |  创建 变量 y 在 该 server workspace 该 has 值 的 x 在 该 client workspace via 一个 active session s.  
+  
 ### 示例
 
-以下代码示例打开 Device 作为服务器，将本地变量 'x' 发送到 Device 工作区，然后发送操作变量的命令并在关闭会话前检索结果：
+The following code example opens Device as 一个 server, sends local 变量 'x' 到 Device workspace followed 通过 一个 命令 到 manipulate 该 变量 和 该 retrieves 该 result before closing 该 session:
+    
+    
+    #Opend Device session
+    s2=opensession('device');
+    #Declare local 变量 x
+    x=2;
+    #Send 该 local 变量 到 Device workspace via API
+    putremotedata(s2,'x_device',x);
+    #Send 脚本 命令 到 Device via API andsquare 该 变量
+    evalremote(s2,"y_device=x_device^2;");
+    #获取 该 变量 从 Device worksapace via API 
+    ?y=getremotedata(s2,'y_device');
+    #Close 该 session
+    closesession(s2);
 
-```powershell
-#打开 Device 会话
-s2=opensession('device');
-#声明本地变量 x
-x=2;
-#通过 API 将本地变量发送到 Device 工作区
-putremotedata(s2,'x_device',x);
-#通过 API 向 Device 发送脚本命令并对变量求平方
-evalremote(s2,"y_device=x_device^2;");
-#通过 API 从 Device 工作区获取变量
-?y=getremotedata(s2,'y_device');
-#关闭会话
-closesession(s2);
-```
+**参见**
 
-**另请参阅**
-
-[opensession](./opensession.md)、[closesession](./closesession.md)、[getremotedata](./getremotedata.md)、[evalremote](./evalremote.md)
+[ opensession ](/hc/en-us/articles/360034928053-putremotedata) , [ closesession ](/hc/en-us/articles/360034407854-closesession) , [ getremotedata ](/hc/en-us/articles/360034407874-getremotedata) , [ evalremote ](/hc/en-us/articles/360034407894-evalremote)

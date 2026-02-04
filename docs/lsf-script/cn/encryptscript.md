@@ -1,29 +1,29 @@
 <!--
 Translation from English documentation
 Original command: encryptscript
-Translation date: 2026-02-03 23:52:55
+Translation date: 2026-02-04 22:49:48
 -->
 
 # encryptscript
 
-将指定脚本文件的副本保存为加密格式。新文件将具有.lsfx文件扩展名。对脚本进行加密允许与他人共享脚本，但不允许他们查看脚本内容。
+Save 一个 copy 的 该 specified 脚本 文件 在 一个 encrypted format. The 新的 文件 将 have 一个 .lsfx 文件 extension. Encrypting 一个 脚本 allows 一个 脚本 到 为 shared 使用 others, without allowing them 到 see 该 contents 的 该 脚本.
 
-**Syntax** |  **Description**  
+**语法** |  **描述**  
 ---|---  
-encryptscript("filename.lsf"); |  推荐：加密脚本副本，与早期版本不兼容。新文件将命名为"filename.lsfx"。  
-encryptscript("filename.lsf", 1); |  传统方式：加密脚本副本，与早期版本兼容。  
-encryptscript("filename.lsf", "new_filename"); |  指定备用文件名，与早期版本不兼容。新文件将命名为"filename.lsfx"。  
-encryptscript("filename.lsf", "new_filename", 1); |  指定备用文件名，与早期版本兼容。新文件将命名为"filename.lsfx"。  
+encryptscript("文件名.lsf"); |  Recommended: Encrypt 一个 copy 的 该 脚本, not compatible 使用 earlier versions. The 新的 文件 将 为 named "文件名.lsfx".  
+encryptscript("文件名.lsf", 1); |  Legacy: Encrypt 一个 copy 的 该 脚本, compatible 使用 earlier versions.  
+encryptscript("文件名.lsf", "new_filename"); |  Specify 一个 alternate 文件 name, not compatible 使用 earlier versions. The 新的 文件 将 为 named "文件名.lsfx".  
+encryptscript("文件名.lsf", "new_filename", 1); |  Specify 一个 alternate 文件 name, compatible 使用 earlier versions. The 新的 文件 将 为 named "文件名.lsfx".  
   
-2020B版本加密的脚本将与2020A及更早版本不兼容，除非向encryptscript传递额外参数(1)以指定传统兼容性。2020A及更早版本加密的脚本将继续与后续版本兼容。
+Scripts encrypted 使用 2020B 将 not 为 compatible 使用 2020A 和 earlier, unless 该 additional 参数 (1) 是 passed 到 encryptscript specifying legacy compatibility. Scripts encrypted 使用 2020A 和 earlier 将 continue 到 为 compatible 使用 later versions.
 
 ### 示例
 
-如果脚本文件已加密，用户可以通过在脚本提示中输入文件名来运行脚本文件。但是，用户将无法看到文件的内容。
+If 该 脚本 文件 是 already encrypted, 用户 可以 run 该 脚本 文件 通过 entering 该 name 的 该 文件 在 该 Script Prompt. However, 用户 将 not 为 able 到 see 该 content 的 该 文件.
     
     
-     filename #它将运行加密的脚本文件filename.lsfx
+    文件名 # it 将 run 该 encrypted 脚本 文件 文件名.lsfx
 
- **参见**
+**参见**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834)

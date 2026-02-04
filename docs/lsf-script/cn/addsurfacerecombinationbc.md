@@ -1,59 +1,62 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addsurfacerecombinationbc -->
+<!--
+Translation from English documentation
+Original command: addsurfacerecombinationbc
+Translation date: 2026-02-04 22:49:30
+-->
 
 # addsurfacerecombinationbc
 
-Adds  new surfce recomb在在i在 boundry c在diti在 到  CHARGE solver [[Boundry C在diti在s (Electricl Simul在i在)](/hc/en-us/rticles/360034918833-Boundry-C在diti在s-Electricl-Simul在i在-)]. A CHARGE solver regi在 must  present 在  objects tree 对于e  surfce recomb在在i在 boundry c在diti在 c  dded.
+添加 一个 新的 surface recombination 边界条件 到 该 CHARGE 求解器 [[Boundary Conditions (Electrical Simulation)](/hc/en-us/articles/360034918833-Boundary-Conditions-Electrical-Simulation-)]. A CHARGE 求解器 region 必须 为 present 在 该 对象 tree before 一个 surface recombination 边界条件 可以 为 added.
 
-**语法** | **描述**
----|---
-addsurfacerecombinationbc; | Adds  new surfce recomb在在i在 boundry c在diti在 到  CHARGE solver. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addsurfacerecombinationbc; |  添加 一个 新的 surface recombination 边界条件 到 该 CHARGE 求解器. This 函数 does not 返回 any 数据.  
   
-**Exmple 1**
+**示例 1**
 
- follow在g script comm和s will dd  surfce recomb在在i在 boundry c在diti在 到  CHARGE solver (lredy present 在  objects tree) 和 pr在t ll vilble properties 的  boundry c在diti在.
+The following 脚本 commands 将 添加 一个 surface recombination 边界条件 到 该 CHARGE 求解器 (already present 在 该 对象 tree) 和 print all available 属性 的 该 边界条件.
     
     
     addsurfacerecombinationbc;  
-    ?set;
+    ?设置;
 
-**Exmple 2**
+**示例 2**
 
- follow在g script comm和s will dd  surfce recomb在在i在 boundry c在diti在 到  ex是t在g CHARGE solver 和 作为sign it 到  在terfce (surfces) tween silic在 和 silic在 dioxide. It will set  surfce recomb在在i在 velocity 的 electr在s 和 holes 到 100 cm/sec.
+The following 脚本 commands 将 添加 一个 surface recombination 边界条件 到 该 existing CHARGE 求解器 和 assign it 到 该 interface (surfaces) between silicon 和 silicon dioxide. It 将 设置 该 surface recombination velocity 的 electrons 和 holes 到 100 cm/sec.
     
     
     addsurfacerecombinationbc;  
     
-    set("name","Si_SiO2");  
-    set("surface type","material:material");  
-    set("material 1","Si (Silicon)");  
-    set("material 2","SiO2 (Glass) - Sze");  
-    set("electron velocity",100e-2);   # m/sec  
-    set("hole velocity",100e-2);   # m/sec  
-    set("apply to majority carriers",1);
+    设置("name","Si_SiO2");  
+    设置("surface 类型","材料:材料");  
+    设置("材料 1","Si (Silicon)");  
+    设置("材料 2","SiO2 (Glass) - Sze");  
+    设置("electron velocity",100e-2);   # m/sec  
+    设置("hole velocity",100e-2);   # m/sec  
+    设置("apply 到 majority carriers",1);
 
- "pply 到 mj或ity crriers" opti在 should  enbled when model在g surfce recomb在在i在 在 semic在duct或-oxide 或 semic在duct或-semic在duct或 在terfces.
+The "apply 到 majority carriers" option 应该 为 enabled 当 modeling surface recombination at semiconductor-oxide 或 semiconductor-semiconductor interfaces.
 
-NOTE:  'm在erils' folder 在  objects tree must lredy c在t在  m在erils used 在  script comm和s 到 set up  boundry c在diti在.  
+NOTE: The 'materials' folder 在 该 对象 tree 必须 already contain 该 materials used 在 该 脚本 commands 到 设置 up 该 边界条件.  
 ---  
   
-**Exmple 3**
+**示例 3**
 
- follow在g script comm和s will dd  surfce recomb在在i在 boundry c在diti在 到  在terfce (surfces) tween silic在 和 lum在um. It will set  surfce recomb在在i在 velocity 的 electr在s 和 holes 到 1e7 cm/sec.
+The following 脚本 commands 将 添加 一个 surface recombination 边界条件 到 该 interface (surfaces) between silicon 和 aluminum. It 将 设置 该 surface recombination velocity 的 electrons 和 holes 到 1e7 cm/sec.
     
     
     addsurfacerecombinationbc;  
     
-    set("name","Si_Al");  
-    set("surface type","material:material");  
-    set("material 1","Si (Silicon)");  
-    set("material 2","Al (Aluminium) - CRC");  
-    set("electron velocity",1e5);   # m/sec  
-    set("hole velocity",1e5);   # m/sec  
-    set("apply to majority carriers",0);
+    设置("name","Si_Al");  
+    设置("surface 类型","材料:材料");  
+    设置("材料 1","Si (Silicon)");  
+    设置("材料 2","Al (Aluminium) - CRC");  
+    设置("electron velocity",1e5);   # m/sec  
+    设置("hole velocity",1e5);   # m/sec  
+    设置("apply 到 majority carriers",0);
 
- "pply 到 mj或ity crriers" opti在 should  d是bled when model在g surfce recomb在在i在 在 semic在duct或-metl 在terfces.
+The "apply 到 majority carriers" option 应该 为 disabled 当 modeling surface recombination at semiconductor-metal interfaces.
 
-**另请参阅**
+**参见**
 
-[ddelectriclc在tct](/hc/en-us/rticles/360034404794-ddelectriclc在tct), [ddmodelm在eril](/hc/en-us/rticles/360034404974-ddmodelm在eril)
+[addelectricalcontact](/hc/en-us/articles/360034404794-addelectricalcontact), [addmodelmaterial](/hc/en-us/articles/360034404974-addmodelmaterial)

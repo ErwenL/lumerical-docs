@@ -1,59 +1,74 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addvoltagebc -->
+<!--
+Translation from English documentation
+Original command: addvoltagebc
+Translation date: 2026-02-04 22:49:36
+-->
 
 # addvoltagebc
 
-**语法** | **描述**
----|---
-addvoltagebc; | Adds a voltage 边界 条件 to the HEAT 求解器. This 函数 does not 返回 any data.
+添加 一个 新的 voltage 边界条件 到 该 HEAT 求解器 [[Boundary Conditions (Thermal Simulation)](/hc/en-us/articles/360034398314-Boundary-Conditions-Thermal-Simulation-)]. A HEAT 求解器 region 必须 为 present 在 该 对象 tree before 一个 electrical contact 边界条件 可以 为 added.
 
-**示例**
+**语法** |  **描述**  
+---|---  
+addvoltagebc; |  添加 一个 voltage 边界条件 到 该 HEAT 求解器. This 函数 does not 返回 any 数据.  
+  
+**示例 1**
 
-The following 脚本 commands will add a voltage 边界 条件 to the CHARGE 求解器 already present in the objects tree and print all available properties of the 边界 条件.
+The following 脚本 commands 将 添加 一个 voltage 边界条件 到 该 CHARGE 求解器 already present 在 该 对象 tree 和 print all available 属性 的 该 边界条件.
+    
+    
     addvoltagebc;  
-    ?set;
+    ?设置;
 
-The following 脚本 commands will create a voltage 边界 条件 with a fixed steady state voltage assigned to a solid named cathode. The objects tree must already have a HEAT 求解器 and a geometry named 'cathode' present.
-    addvoltagebc;  
-    set("name","cathode");  
-    set("bc 模式","steady state");  
-    set("sweep type","single");  
-    set("voltage",0.2);  # setting the voltage to 0.2 V  
-    set("surface type","solid");  
-    set("solid","cathode");
+**示例 2**
 
-The following 脚本 commands will create a steady state voltage 边界 条件 named cathode and apply a voltage sweep over a predefined set of voltages. The objects tree must already have a HEAT 求解器 and a geometry named 'cathode' present.
+The following 脚本 commands 将 创建 一个 voltage 边界条件 使用 一个 fixed steady state voltage assigned 到 一个 solid named cathode. The 对象 tree 必须 already have 一个 HEAT 求解器 和 一个 geometry named 'cathode' present.
+    
+    
     addvoltagebc;  
-    set("name","cathode");  
-    set("bc 模式","steady state");  
-    set("sweep type","值");  
+    
+    设置("name","cathode");  
+    设置("bc mode","steady state");  
+    设置("sweep 类型","single");  
+    设置("voltage",0.2);  # setting 该 voltage 到 0.2 V  
+    设置("surface 类型","solid");  
+    设置("solid","cathode");
+
+**示例 3**
+
+The following 脚本 commands 将 创建 一个 steady state voltage 边界条件 named cathode 和 apply 一个 voltage sweep over 一个 predefined 设置 的 voltages. The 对象 tree 必须 already have 一个 HEAT 求解器 和 一个 geometry named 'cathode' present.
+    
+    
+    addvoltagebc;  
+    
+    设置("name","cathode");  
+    设置("bc mode","steady state");  
+    设置("sweep 类型","值");  
+    
     V = [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.55, 0.56, 0.57, 0.58, 0.59, 0.6];  
-    set("值 table",V);  
-    set("surface type","solid");  
-    set("solid","cathode");
+    设置("值 table",V);  
+    
+    设置("surface 类型","solid");  
+    设置("solid","cathode");
 
-The following 脚本 commands will set up a transient voltage 边界 条件 where the voltage is 0 V at t = 0, steps to 1 V between t = 1 us and 1.001 us (tslew = 1 ns), and remains at 1 V until t = 10 us. The 边界 条件 is assigned to a solid named cathode.
+**示例 4**
+
+The following 脚本 commands 将 设置 up 一个 transient voltage 边界条件 其中 该 voltage 是 0 V at t = 0, steps 到 1 V between t = 1 us 和 1.001 us (tslew = 1 ns), 和 remains at 1 V until t = 10 us. The 边界条件 是 assigned 到 一个 solid named cathode.
+    
+    
     addvoltagebc;  
-    set("name","cathode_trans");  
-    set("bc 模式","transient");  
+    
+    设置("name","cathode_trans");  
+    设置("bc mode","transient");  
+    
     tstep = [0, 1e-6, 1.001e-6, 10e-6];  
     V = [0, 0, 1, 1];  
-    set("transient time steps",tstep);  
-    set("transient 值 table",V);  
-    set("surface type","solid");  
-    set("solid","cathode");
+    
+    设置("transient 时间 steps",tstep);  
+    设置("transient 值 table",V);  
+    设置("surface 类型","solid");  
+    设置("solid","cathode");
 
-The following 脚本 commands will set up a transient voltage 边界 条件 where the voltage is 0 V at t = 0, steps to 1 V between t = 1 us and 1.001 us (tslew = 1 ns), and remains at 1 V until t = 10 us. The 边界 条件 is assigned to a solid named cathode.
-    addvoltagebc;  
-    set("name","cathode_trans");  
-    set("bc 模式","transient");  
-    tstep = [0, 1e-6, 1.001e-6, 10e-6];  
-    V = [0, 0, 1, 1];  
-    set("transient time steps",tstep);  
-    set("transient 值 table",V);  
-    set("surface type","solid");  
-    set("solid","cathode");
-
-**另请参阅**
+**参见**
 
 [addconvectionbc](/hc/en-us/articles/360034404854-addconvectionbc), [addradiationbc](/hc/en-us/articles/360034924813-addradiationbc), [addthermalpowerbc](/hc/en-us/articles/360034404874-addthermalpowerbc), [addheatfluxbc](/hc/en-us/articles/360034404894-addheatfluxbc), [addvoltagebc](/hc/en-us/articles/360034404914-addvoltagebc)

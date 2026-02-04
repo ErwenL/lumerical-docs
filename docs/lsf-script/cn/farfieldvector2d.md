@@ -1,25 +1,30 @@
+<!--
+Translation from English documentation
+Original command: farfieldvector2d
+Translation date: 2026-02-04 22:49:49
+-->
+
 # farfieldvector2d
 
-将给定的功率或场分布监视器或直线数据集投影到远场，投影到 1 米半径的半圆上。这与 farfield2d 脚本命令类似，只是返回的是复电场，而不是场强。如果投影一个频率点，数据以 NxP 矩阵形式返回；如果投影多个频率点，数据以 NxPx3 形式返回，其中 N 是远场投影的分辨率，P 是投影的频率点数，最后一个索引表示笛卡尔坐标系中电场矢量的复分量 Ex、Ey 和 Ez。
+Projects 一个 given power 或 field profile 监视器 或 一个 rectilinear dataset 到 该 far field 到 一个 1 meter radius semi-circle. This 是 similar 到 该 farfield2d 脚本 命令 except 该 complex electric fields 是 returned, rather than field intensity. The 数据 是 returned as 矩阵 的 NxP 如果 one 频率 point 是 projected, 或 NxPx3 当 multiple 频率 points 是 projected 其中 N 是 该 resolution 的 该 far field projection, P 是 该 数字 频率 points projected, 和 该 last index refers 到 Ex, Ey 和 Ez 该 是 该 complex components 的 该 electric field 向量 在 Cartesian coordinates.
 
-**语法** | **描述**
----|---
-out = farfieldvector2d( "mname",...); | 返回笛卡尔复电场。参数与 farfield2d 相同。
-out = farfieldvector2d( dataset,...); | 返回笛卡尔复电场。参数与 farfield2d 相同。
-
+**语法** |  **描述**  
+---|---  
+out = farfieldvector2d( "mname",...); |  返回 该 Cartesian complex electric fields. Same 参数 as farfield2d.  
+out = farfieldvector2d( dataset,...); |  返回 该 Cartesian complex electric fields. Same 参数 as farfield2d.  
+  
 **示例**
 
-此示例绘制名为 "monitor" 的 1D 监视器的远场投影中 Ex 分量的幅度。在此示例中，投影第二个频率点。如果监视器只包含一个频率的数据，则不需要第二个参数。直线数据集的远场投影示例请参阅 [farfield2d](./farfield2d.md)。
+This example plots 该 amplitude 的 该 Ex component 的 该 far field projection 的 一个 1D 监视器 called "监视器". In 此 example 该 second 频率 point 是 projected. If 该 监视器 only contains 数据 at one 频率, 该 second 参数 是 not required. For 该 example 的 far field projection 的 一个 rectilinear dataset see [farfield2d](/hc/en-us/articles/360034410074-farfield2d). 
+    
+    
+    E=farfieldvector2d("监视器",2,501);
+    Ex = abs(pinch(E,2,1)); # amplitude 的 Ex
+    theta=farfieldangle("监视器",2,501);
+    plot(theta,Ex,"angle (deg)","Ex far field"); 
 
-```powershell
-E=farfieldvector2d("monitor",2,501);
-Ex = abs(pinch(E,2,1)); # Ex 的幅度
-theta=farfieldangle("monitor",2,501);
-plot(theta,Ex,"angle (deg)","Ex far field");
-```
+For additional examples see [ Far field projection ](/hc/en-us/articles/360034914713) .
 
-更多示例请参阅 [远场投影](**%20to\**) 。
+**参见**
 
-**另请参阅**
-
-[命令列表](../命令列表.md)、[farfield2d](./farfield2d.md)、[farfieldpolar2d](./farfieldpolar2d.md)、[farfieldangle](./farfieldangle.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ farfield2d ](/hc/en-us/articles/360034410074-farfield2d) , [ farfieldpolar2d ](/hc/en-us/articles/360034410094-farfieldpolar2d) , [ farfieldangle ](/hc/en-us/articles/360034930653-farfieldangle)

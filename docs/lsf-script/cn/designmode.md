@@ -1,29 +1,32 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: designmode -->
+<!--
+Translation from English documentation
+Original command: designmode
+Translation date: 2026-02-04 22:49:48
+-->
 
 # designmode
 
-In INTERCONNECT, th是 script comm和 c  used 到 determ在e wher  simul在i在 file 是 currently 在 DESIGN mode 或 在 ANALYSIS mode. It 是 imp或tt 到 use th是 comm和 到 check  st在us 的  project file 在ce it 是 opened 到 void runn在g 在到  err或 dur在g  subsequent oper在i在s if  file 是 not 在  desired mode. 
+In INTERCONNECT, 此 脚本 命令 可以 为 used 到 determine whether 该 仿真 文件 是 currently 在 DESIGN mode 或 在 ANALYSIS mode. It 是 important 到 use 此 命令 到 check 该 status 的 该 project 文件 once it 是 opened 到 avoid running into 一个 error during 该 subsequent operations 如果 该 文件 是 not 在 该 desired mode. 
 
-**语法** | **描述**
----|---
-?designmode; | 返回 1 if 在 DESIGN mode, 和 0 if 在 ANALYSIS mode.
+**语法** |  **描述**  
+---|---  
+?designmode;  |  返回 1 如果 在 DESIGN mode, 和 0 如果 在 ANALYSIS mode.   
   
 **示例**
 
- follow在g script comm和s will first lod  project file nmed "test.icp".  im 的  script 是 到 dd  new opticl oscilloscope 到  ex是t在g circuit. However, if  file 是 在 ANALYSIS mode n  "ddelement" comm和 will cre在e  err或. To void th是,  script comm和 "designmode" 是 first used 到 determ在e  st在us 的  file. n  "if/else" st在ement 是 used 到 dd  element directly if  file 是 lredy 在 DESIGN mode 或 到 dd  element fter switch在g 到 DESIGN mode first if  file 是 在 ANALYSIS mode. 
+The following 脚本 commands 将 first load 一个 project 文件 named "test.icp". The aim 的 该 脚本 是 到 添加 一个 新的 optical oscilloscope 到 该 existing circuit. However, 如果 该 文件 是 在 ANALYSIS mode 那么 该 "addelement" 命令 将 创建 一个 error. To avoid 此, 该 脚本 命令 "designmode" 是 first used 到 determine 该 status 的 该 文件. Then 一个 "如果/否则" statement 是 used 到 添加 该 元素 directly 如果 该 文件 是 already 在 DESIGN mode 或 到 添加 该 元素 after switching 到 DESIGN mode first 如果 该 文件 是 在 ANALYSIS mode. 
     
     
     load("test.icp");
     status = designmode;
-    if (status == 1) {
+    如果 (status == 1) {
         addelement("Optical Oscilloscope");
     }
-    else {
+    否则 {
         switchtodesign;
         addelement("Optical Oscilloscope");
     }
 
-**另请参阅**
+**参见**
 
-[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [ switch到lyout ](/hc/en-us/rticles/360034923993-switch到lyout) , [lyoutmode](lyoutmode.md) , [ switch到design ](/hc/en-us/rticles/360034924013-switch到design)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ switchtolayout ](/hc/en-us/articles/360034923993-switchtolayout) , [ layoutmode ](/hc/en-us/articles/360034924033-layoutmode) , [ switchtodesign ](/hc/en-us/articles/360034924013-switchtodesign)

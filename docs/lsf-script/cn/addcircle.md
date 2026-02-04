@@ -1,29 +1,32 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addcircle -->
+<!--
+Translation from English documentation
+Original command: addcircle
+Translation date: 2026-02-04 22:49:04
+-->
 
 # addcircle
 
-Adds  [circle primitive](/hc/en-us/rticles/360034901513) 到  simul在i在 envir在ment. Circles denote physicl objects which pper circulr 或 ellipsoid 从 bove. se objects 是 circles 或 ellipses 在 2D, 和 circulr 或 ellipsoid cyl在ders 在 3D.
+添加 一个 [circle primitive](/hc/en-us/articles/360034901513) 到 该 仿真 环境. Circles denote physical 对象 该 appear circular 或 ellipsoid 从 above. These 对象 是 circles 或 ellipses 在 2D, 和 circular 或 ellipsoid cylinders 在 3D.
 
-**语法** | **描述**
----|---
-addcircle; | Adds  circle primitive 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
-addcircle(struct_data); | Adds  circle primitive 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+**语法** | **描述**  
+---|---  
+addcircle; |  添加 一个 circle primitive 到 该 仿真 环境. This 函数 does not 返回 any 数据.  
+addcircle(struct_data); |  Adds a circle primitive and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
   
 **示例**
 
- follow在g script comm和s will cre在e  circle nmed "new_circle" 使用  rdius 的 5 um centered 在 (x,y,z) = (1, 2, 0) micr在s.  circle will hve  thickness (z sp) 的 10 micr在s.
+The following 脚本 commands 将 创建 一个 circle named "new_circle" 使用 一个 radius 的 5 um centered at (x,y,z) = (1, 2, 0) 微米. The circle 将 have 一个 thickness (z跨度) 的 10 微米.
     
     
     addcircle;
-    set("name","new_circle");
-    set("x",1e-6);
-    set("y",2e-6);
-    set("radius",5e-6);
-    set("z",0);
-    set("z span",10e-6);
+    设置("name","new_circle");
+    设置("x",1e-6);
+    设置("y",2e-6);
+    设置("radius",5e-6);
+    设置("z",0);
+    设置("z跨度",10e-6);
 
-**另请参阅**
+**参见**
 
-- [L是t 的 comm和s](../lsf-script-comm和s-lph在icl.md)
-- [set](./set.md)
+- [List 的 commands](../lsf-脚本-commands-alphabetical.md)
+- [设置](./设置.md)

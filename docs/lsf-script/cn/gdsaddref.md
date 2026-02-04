@@ -1,23 +1,29 @@
+<!--
+Translation from English documentation
+Original command: gdsaddref
+Translation date: 2026-02-04 22:49:49
+-->
+
 # gdsaddref
 
-此函数向 GDSII 文件流的当前单元中添加对另一个单元的引用。此函数将引用的单元（必须之前已打开并完成）复制到当前单元，并创建嵌套层次结构。复制结构的层号遵循引用的单元。引用只能添加到 GDSII 单元中，因此只有在已创建当前单元后才能调用此命令，例如使用 [gdsbegincell](./gdsbegincell.md)。此外，被引用的单元必须在其被引用之前存在。
+This function adds a reference to another cell to the current cell in the GDSII file stream. This function replicates the referenced cell (has to be previously opened and finished) to the current cell and creates a nested hierarchy. The layer numbers of the replicated structures follow the referenced cell. References can only be added in a GDSII cell, so this command can be called only if a current cell has been created, for example, using [gdsbegincell](https://optics.ansys.com/hc/en-us/articles/360034927133-gdsbegincell-Script-command). In addition, the cell to be replicated has to exist before it is referenced.
 
-**语法** | **描述**
----|---
-gdsaddref(f, "cellname", dx, dy, angle_in_deg) | 向当前单元添加对另一个单元（"cellname"）的引用，并指定 dx 和 dy 的移动。
-
-**参数** | **类型** | **描述**
----|---|---
-f | 字符串 | 之前用 gdsopen 打开的文件句柄。
-cellname | 字符串 | 被引用单元的名称。
-dx | 数字 | 复制单元在当前单元中的 X 移动。
-dy | 数字 | 复制单元在当前单元中的 Y 移动。
-angle_in_deg | 数字 | 可选，复制单元的旋转角度（度）。对于此操作，**复制**的单元相对于**其自己的**原点旋转，然后将该单元放置在参数 dx 和 dy 指定的坐标处。
-
+**语法** |  **描述**  
+---|---  
+gdsaddref(f, "cellname", dx, dy, angle_in_deg) |  添加 一个 reference 到 another 单元格 ("cellname") 到 该 current 单元格, 使用 一个 specified move 的 dx 和 dy.  
+  
+**Parameter** |  **Type** |  **描述**  
+---|---|---  
+f |  字符串 |  A 文件 handle 该 was previously opened 使用 gdsopen.  
+cellname |  字符串 |  Name 的 该 referenced 单元格.  
+dx |  数字 |  X-movement 的 该 replicated 单元格 在 该 current 单元格.  
+dy |  数字 |  Y-movement 的 该 replicated 单元格 在 该 current 单元格.  
+angle_in_deg |  数字 |  Optional, angle 的 rotation 在 degrees 的 该 replicated 单元格. For 此 operation, 该 **replicated** 单元格 是 rotated 使用 respect 到 **its** **own** origin, 和 该 单元格 是 placed at 该 coordinates specified 通过 参数 dx 和 dy.  
+  
 ## 示例
 
-脚本代码示例可在 [gdsopen](./gdsopen.md) 页面上找到。
+An example 的 脚本 code 是 available 在 该 [gdsopen](/hc/en-us/articles/360034927093-gdsopen) page.
 
-**另请参阅**
+**参见**
 
-[gdsopen](./gdsopen.md)、[gdsclose](./gdsclose.md)、[gdsbegincell](./gdsbegincell.md)、[gdsendcell](./gdsendcell.md)、[gdsaddpoly](./gdsaddpoly.md)、[gdsaddcircle](./gdsaddcircle.md)、[gdsaddrect](./gdsaddrect.md)、[gdsimport](./gdsimport.md)、[gdsaddpath](./gdsaddpath.md)、[gdsaddtext](./gdsaddtext.md)、[gdsaddstencil](./gdsaddstencil.md)
+[gdsopen](/hc/en-us/articles/360034927093-gdsopen), [gdsclose](/hc/en-us/articles/360034927113-gdsclose), [gdsbegincell](/hc/en-us/articles/360034927133-gdsbegincell), [gdsendcell](/hc/en-us/articles/360034406894-gdsendcell), [gdsaddpoly](/hc/en-us/articles/360034927153-gdsaddpoly), [gdsaddcircle](/hc/en-us/articles/360034406914-gdsaddcircle), [gdsaddrect](/hc/en-us/articles/360034406934-gdsaddrect), [gdsimport](/hc/en-us/articles/360034406974-gdsimport), [gdsaddpath](/hc/en-us/articles/360034406954-gdsaddpath), [gdsaddtext, ](/hc/en-us/articles/360034927193-gdsaddtext)[gdsaddstencil](https://optics.ansys.com/hc/en-us/articles/43594268925459-gdsaddstencil-Script-command)

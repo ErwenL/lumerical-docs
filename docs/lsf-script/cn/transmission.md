@@ -1,40 +1,42 @@
-<!-- Translated: 2026-02-03 -->
-<!-- Original: transmission -->
+<!--
+Translation from English documentation
+Original command: transmission
+Translation date: 2026-02-04 22:50:15
+-->
 
 # transmission
 
-返回通过功率监视器和剖面监视器的传输功率量，归一化到源功率。值为 0.3 表示源注入的光功率有 30% 通过了监视器。负值表示功率沿负方向流动。
+返回 该 amount 的 power transmitted through power monitors 和 profile monitors, normalized 到 该 源 power. A 值 的 0.3 means 该 30% 该 optical power injected 通过 该 源 passed through 该 监视器. Negative 值 mean 该 power 是 flowing 在 该 negative direction.
 
-频域功率传输使用以下公式计算。
+The 频率 domain power transmission 是 calculated 使用 该 following formula.
 
-$$ T(f) = \frac{ \frac{1}{2} \int_{\text{monitor}} \mathbf{Re} (\mathbf{P}(f)) \cdot d\mathbf{S} }{\text{ sourcepower(f)} } $$
+$$ T(f) = \frac{ \frac{1}{2} \int_{\text{监视器}} \mathbf{Re} (\mathbf{P}(f)) \cdot d\mathbf{S} }{\text{ sourcepower(f)} } $$
 
 其中
 
-\(T(f)\) 是作为频率函数的归一化传输
+\\(T(f)\\) 是 该 normalized transmission as 一个 函数 的 频率
 
-\(\mathbf{P}(f)\) 是坡印廷矢量
+\\(\mathbf{P}(f)\\) 是 该 Poynting 向量
 
-\(d\mathbf{S}\) 是表面法线
+\\(d\mathbf{S}\\) 是 该 surface normal
 
-归一化状态（cwnorm 或 nonorm）不影响结果，因为有源功率归一化。
+The normalization state (cwnorm 或 nonorm) does not affect 该 result because 的 该 源 power normalization.
 
-**语法** | **描述**
----| ---
-out = transmission("mname"); | 通过监视器 mname 的传输。从监视器的形状必须能明显看出哪个轴垂直于监视器表面。
-out = transmission("mname", option); | 附加参数 option 的值可以为 1 或 2。如果是 2，则根据对称或反对称边界尽可能展开数据，前提是数据来自在 x min、y min 或 z min 处与这些边界相交的监视器。option 的默认值为 2。
-
+**语法** |  **描述**  
+---|---  
+out = transmission("mname"); |  Transmission through 监视器 mname. It 必须 为 obvious 从 该 shape 的 该 监视器 该 axis 是 normal 到 该 监视器 surface.  
+out = transmission("mname", option); |  The additional 参数, option, 可以 have 一个 值 的 1 或 2. If it 是 2, 该 数据 是 unfolded 其中 possible according 到 该 symmetry 或 anti-symmetric boundaries 如果 it comes 从 一个 监视器 该 intersect such 一个 boundary at x最小值, y最小值 或 z最小值. The default 值 的 option 是 2.  
+  
 **示例**
 
-此示例展示了如何绘制通过监视器的功率传输。
+This example shows 如何 到 plot 该 power transmission through 一个 监视器.
+    
+    
+    m="x2";    # 监视器 name  
+    f=getdata(m,"f");  
+    T=transmission(m);
+    plot(c/f*1e6,T,"波长(um)","transmission");  
 
-```lsf
-m="x2";   # monitor name
-f=getdata(m,"f");
-T=transmission(m);
-plot(c/f*1e6,T,"wavelength(um)","transmission");
-```
+**参见**
 
-**另见**
-
-[sourcepower](./sourcepower.md)、[dipolepower](./dipolepower.md)、[transmission_avg](./transmission_avg.md)、[transmission_pavg](./transmission_pavg.md)、[Integrating Poynting vector](https://kx.lumerical.com/t/integrating-the-poynting-vector/33595)
+[ sourcepower ](/hc/en-us/articles/360034925313-sourcepower) , [ dipolepower ](/hc/en-us/articles/360034925293-dipolepower) , [ transmission_avg ](/hc/en-us/articles/360034405374-transmission-avg) , [ transmission_pavg ](/hc/en-us/articles/360034405414-transmission-pavg) , [ Integrating Poynting vector ](https://kx.lumerical.com/t/integrating-the-poynting-vector/33595)

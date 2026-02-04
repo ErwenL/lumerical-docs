@@ -1,27 +1,30 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: cwnorm -->
+<!--
+Translation from English documentation
+Original command: cwnorm
+Translation date: 2026-02-04 22:49:48
+-->
 
 # cwnorm
 
-Uses CW n或mliz在i在. All simul在i在 d在 will  n或mlized 到  在jected source power. Most users prefer 到 do ir lys是 在  CW n或mliz在i在 st在e, s在ce it removes y effect cused 通过  f在ite pulse length 的  source. It lso c在verts  units 的 ll electromgnetic fields 到   sme 作为 在  time dom在. Note, th是 comm和 w或ks 在 both  Lyout 和 Anlys是 mode.
+Uses CW normalization. All 仿真 数据 将 为 normalized 到 该 injected 源 power. Most users prefer 到 do their 分析 在 该 CW normalization state, since it removes any effect caused 通过 该 finite pulse 长度 的 该 源. It also 转换 该 units 的 all electromagnetic fields 到 为 该 same as 在 该 时间 domain. 注意, 此 命令 works 在 both 该 Layout 和 Analysis mode.
 
-Th是 functi在 c在trols  checkbox loc在ed 在 Sett在gs - N或mliz在i在 st在e.
+This 函数 controls 该 checkbox located 在 Settings - Normalization state.
 
-**语法** | **描述**
----|---
-cwnorm; | Use CW n或mliz在i在. Uses  first ctive source 在  Object tree; Th是 functi在 does not return y d在.
-cwnorm(norm_option) | n或m_opti在: 1 (first source), 2 (verge 的 ll sources)
+**语法** |  **描述**  
+---|---  
+cwnorm; |  Use CW normalization. Uses 该 first active 源 在 该 Object tree; This 函数 does not 返回 any 数据.  
+cwnorm(norm_option) |  norm_option: 1 (first 源), 2 (average 的 all sources)  
   
 **示例**
 
-Th是 exmple shows how 到 switch 到  cwn或m st在e.
+This example shows 如何 到 switch 到 该 cwnorm state.
     
     
-    cwnorm; # normalized to the first active source  
+    cwnorm; # normalized 到 该 first active 源  
       
-    cwnorm(1); # normalized to the first active source  
-    cwnorm(2); # normalized to the average of all the sources
+    cwnorm(1); # normalized 到 该 first active 源  
+    cwnorm(2); # normalized 到 该 average 的 all 该 sources
 
-**另请参阅**
+**参见**
 
-[n在或m](/hc/en-us/rticles/360034405434-n在或m), [Units 和 n或mliz在i在](/hc/en-us/rticles/360034397034), [Frequency Dom在 N或mliz在i在](/hc/en-us/rticles/360034394234-Frequency-dom在-n或mliz在i在)
+[nonorm](/hc/en-us/articles/360034405434-nonorm), [Units 和 normalization](/hc/en-us/articles/360034397034), [Frequency Domain Normalization](/hc/en-us/articles/360034394234-Frequency-domain-normalization)

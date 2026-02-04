@@ -236,7 +236,7 @@ def show_statistics() -> None:
         print("2. 运行 'python scripts/translation_helper.py --prepare <command>' 创建翻译模板")
         print("3. 编辑生成的中文文档文件进行翻译")
     else:
-        print("🎉 所有命令已完成翻译！")
+        print("所有命令已完成翻译！")
     
     print("=" * 50)
 

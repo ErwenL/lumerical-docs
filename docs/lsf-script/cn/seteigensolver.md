@@ -1,51 +1,42 @@
 <!--
 Translation from English documentation
 Original command: seteigensolver
-Translation date: 2026-02-03
+Translation date: 2026-02-04 22:50:14
 -->
 
 # seteigensolver
 
-FDTD 和 MODE 中的模式光源、模式扩展监视器和端口，以及 EME 中的每个独立单元都有嵌入式本征求解器。此脚本命令可以在不使用图形界面的情况下设置本征求解器的属性。
+Mode sources, mode expansion monitors, 和 ports 在 FDTD 和 MODE, 和 each individual 单元格 在 EME have embedded eigensolvers. This 脚本 命令 makes it possible 到 设置 该 属性 的 该 eigensolver without 使用 该 GUI.
 
-使用此命令更改嵌入式本征求解器的任何值将自动使任何现有的模式数据失效。这意味着在使用此命令后，基于与前一个模式的重叠计算的新更新将失败。因此，请在调用 updatesourcemode 或 updatemodes 之前先调用此命令。
+Changing any 值 的 该 embedded eigensolver 使用 此 命令 将 automatically invalidate any existing mode 数据. This means 该 新的 updates based 在 overlap calculations 使用 previous modes 将 fail after 使用 此 命令. Therefore please call 此 命令 before making any calls 到 updatesourcemode 或 updatemodes.
 
-**语法** | **描述**
----|----
-?seteigensolver; | 返回嵌入式本征求解器属性的列表。
-seteigensolver("property",value); | 这将设置当前选中对象的本征求解器属性。Value 可以是数字或字符串。此函数不返回任何数据。
-
+**语法** |  **描述**  
+---|---  
+?seteigensolver; |  返回 一个 list 的 该 属性 的 该 embedded eigensolver  
+seteigensolver("属性",值); |  This 将 设置 该 eigensolver 属性 的 该 currently 选中的 对象. Value 可以 为 一个 数字 或 字符串. This 函数 does not 返回 any 数据.  
+  
 **示例**
 
-1. 更改模式扩展计算的曲率半径，并计算前 10 个模式，这些模式随后可用于模式扩展。请在 MODE 中使用 varFDTD 求解器打开环形谐振器示例中的 ring_resonator2.lms：
+  1. Change 该 radius 的 curvature 用于 一个 mode expansion calculation, 和 计算 该 first 10 modes 该 可以 为 subsequently used 用于 mode expansion. Please open  ring_resonator2.lms  从 该 [ ring resonator example ](**%20to%20be%20defined%20**) 使用 该 varFDTD 求解器 在 MODE:
 
-```lsf
-select("expansion");
 
-seteigensolver("bent waveguide",true);
-seteigensolver("bend radius",10e-6);
-updatemodes(1:10);
-```
+    
+    
+    select("expansion");
+    
+    
+    seteigensolver("bent waveguide",true);
+    seteigensolver("bend radius",10e-6);
+    updatemodes(1:10);
 
-2. 在 EME 中更改单元 1 的试探模式数量：
+2\. Change 该 数字 的 trial modes 用于 单元格 1 在 EME:
+    
+    
+    select("EME::Cells::cell_1");  
+    seteigensolver("数字 的 trial modes",25);
 
-```lsf
-select("EME::Cells::cell_1");
-seteigensolver("number of trial modes",25);
-```
+Also see 该 examples 在 该 [ addmodeexpansion ](/hc/en-us/articles/360034924573-addmodeexpansion) , 和 [ addport ](/hc/en-us/articles/360034924793-addport) 脚本 functions.
 
-另请参见 addmodeexpansion 和 addport 脚本函数中的示例。
+**参见**
 
-**另请参见**
-
-- [addmode](./addmode.md)
-- [addmodeexpansion](./addmodeexpansion.md)
-- [addport](./addport.md)
-- [clearsourcedata](./clearsourcedata.md)
-- [clearmodedata](./clearmodedata.md)
-- [clearportmodedata](./clearportmodedata.md)
-- [expand](./expand.md)
-- [geteigensolver](./geteigensolver.md)
-- [updatemodes](./updatemodes.md)
-- [updatesourcemode](./updatesourcemode.md)
-- [updateportmodes](./updateportmodes.md)
+[ Manipulating 对象 ](/hc/en-us/articles/360037228834) , [ addmode ](/hc/en-us/articles/360034924353-addmode) , [ addmodeexpansion ](/hc/en-us/articles/360034924573-addmodeexpansion) , [ addport ](/hc/en-us/articles/360034924793-addport) , [ clearsourcedata ](/hc/en-us/articles/360034929093-clearsourcedata) , [ clearmodedata ](/hc/en-us/articles/360034408774-clearmodedata) , [ clearportmodedata ](/hc/en-us/articles/360034409194-clearportmodedata) , [ expand ](/hc/en-us/articles/360034926653-expand) , [ geteigensolver ](/hc/en-us/articles/360034408794-geteigensolver) , [ updatemodes ](/hc/en-us/articles/360034929073-updatemodes) , [ updatesourcemode ](/hc/en-us/articles/360034408754-updatesourcemode) , [ updateportmodes ](/hc/en-us/articles/360034409174-updateportmodes)

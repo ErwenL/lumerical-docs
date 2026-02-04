@@ -1,31 +1,33 @@
-<!-- Translation completed: 2026-02-03 -->
-<!-- Original command: stlimport -->
+<!--
+Translation from English documentation
+Original command: stlimport
+Translation date: 2026-02-04 22:50:15
+-->
 
 # stlimport
 
-从指定的STL文件加载几何结构，添加一个结构到仿真环境中。
+添加 一个 结构 到 该 仿真 环境 使用 结构 geometry loaded 从 specified STL 文件.
 
-**语法** | **描述**
----|---
-`stlimport(filename,scalingFactor, vertexRadius,debugFlag);` | 从指定的STL类型CAD文件添加一个新结构。此函数不返回任何数据。
-
-| 参数 | | 默认值 | 类型 | 描述
-|---|---|---|---|---
-| `filename` | 必需 | | 字符串 | STL CAD文件的名称。
-| `scalingFactor` | 可选 | `1e-6` | 数值 | STL文件不包含单位。导入到Lumerical软件时，默认单位为微米。如需使用纳米单位，将scaling_factor设为1e-9。
-| `vertexRadius` | 可选 | `1e-12` | 长度(单位:m) | 顶点可能由多个三角形共享，因此同一个顶点可能因不同三角形而被多次加载。vertexRadius是两个顶点被认为不同顶点的最小距离。
-| `debugFlag` | 可选 | `false` | 布尔值 | 如果为true，以下数据将输出到脚本提示符：-输入顶点数(文件中顶点总数) -三角形数(三角形总数) -过滤后的顶点数(唯一顶点数) -顶点碰撞数(输入顶点数减去过滤后的顶点数) -无效三角形数 -预期顶点碰撞数。如果无效三角形数大于0，尝试调整vertexRadius参数后重新导入对象。注意：如果STL文件中有大量三角形，当debugFlag设为true时，脚本函数运行时间可能更长。
-
+**语法** |  **描述**  
+---|---  
+stlimport(文件名,scalingFactor, vertexRadius,debugFlag); |  添加 一个 新的 结构 从 specified STL 类型 CAD 文件. This 函数 does not 返回 any 数据.  
+  
+Parameter |  | Default 值 | Type | 描述  
+---|---|---|---|---  
+文件名 |  required |  |  字符串 |  Name 的 该 STL CAD 文件.  
+scalingFactor |  optional |  1e-6 |  数字 |  An STL 文件 does not contain 一个 unit. When imported 到 Lumerical's software, 该 unit 是 micron 通过 default. To have 该 unit 在 nanometer, 设置 scaling_factor 1e-9.  
+vertexRadius |  optional |  1e-12 |  长度 (在 m) |  Vertices 可能 为 shared 通过 multiple triangles so 该 same vertex 可能 为 loaded multiple times 用于 different triangles. The vertexRadius 是 该 minimum distance between two vertices so 该 they 是 considered 到 为 distinct vertices.  
+debugFlag |  optional |  false |  boolean |  If true, 该 following 数据 将 为 printed 到 该 脚本 prompt: -Input Vertex Count (total 数字 的 vertices 在 该 文件) -Triangles (total 数字 的 triangles) -Filtered Vertices (数字 的 unique vertices) -Vertex Collisions (Input Vertex Count minus Filtered Vertices) -Invalid Triangles -Expected Vertex Collisions If 该 数字 的 invalid triangles 是 larger than 0, try adjusting 该 vertexRadius 参数 和 importing 该 对象 again. 注意:  If there 是 一个 large 数字 的 triangles 在 该 STL 文件, 该 脚本 函数 可以 take longer 到 run 当 debugFlag 是 设置 到 true.  
+  
 **示例**
 
-以下脚本命令可用于基于本KB页面提供的.stl文件创建3D几何结构：[ Import - STL ](Import-STL.md)。
-
-```
-filename = "stlimport_assembly.stl";
-stlimport(filename);
-set("material","Si (Silicon)");
-```
+The following 脚本 commands 可以 为 used 到 创建 一个 3D geometry based 在 该 .stl 文件 provided 在 此 KB page: [ Import - STL ](/hc/en-us/articles/360034901953-Import-STL) .
+    
+    
+    文件名 = "stlimport_assembly.stl";
+    stlimport(文件名);
+    设置("材料","Si (Silicon)");
 
 **参见**
 
-[命令列表](List_of_commands.md), [set](set.md), [readstltriangles](readstltriangles.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ 设置 ](/hc/en-us/articles/360034928773-设置) , [ readstltriangles ](/hc/en-us/articles/360034932233-readstltriangles)

@@ -1,55 +1,29 @@
 <!--
 Translation from English documentation
 Original command: replace
-Translation date: 2026-02-03
+Translation date: 2026-02-04 22:50:14
 -->
 
 # replace
 
-用新字符串替换字符串的子字符串。必须指定子字符串的起始位置。此函数也可用于在给定位置向字符串添加子字符串。
+Replaces 一个 substring 的 一个 字符串 使用 一个 新的 字符串. The start position 的 该 substring 必须 为 specified. This 函数 可以 also 为 used 到 添加 一个 substring 到 一个 字符串 at 一个 given position. 
 
-**语法** | **描述**
----|---
-snew = replace(s,pos,len,s1); | 用 s1 中的字符串替换 s 中从位置 pos 开始的 len 个字符。如果 len 为 0，将在 pos-1 和 pos 之间插入字符串 s1。如果 len 为 -1（或任何小于 0 的值），将用 s1 替换 s 中从 pos 开始的所有剩余字符。位置 pos 可以是 1 到 length(s)。
-
+**语法** |  **描述**  
+---|---  
+snew = replace(s,pos,len,s1);  |  Replaces len characters 的 s, starting at position pos, 使用 该 字符串 在 s1. If len 是 0, it 将 insert 该 字符串 s1 between pos-1 和 pos. If len 是 -1 (或 any 值 less than 0) it 将 replace all remaining characters 在 s 使用 s1, starting at pos. The position pos 可以 为 1 到 长度(s).   
+  
 **示例**
 
-这些示例展示了如何替换字符串中的子字符串或在字符串的特定位置插入子字符串。
+These examples show 如何 到 replace substrings 在 一个 字符串 或 insert 一个 substring at 一个 specific location 在 一个 字符串. 
+    
+    
+    ?replace("1234567",3,1,"aa");
+    12aa4567
+    ?replace("1234567",3,0,"aa"); #insert 一个 字符串
+    12aa34567
+    ?replace("1234567",3,-1,"aa");
+    12aa
 
-```lsf
-?replace("1234567",3,1,"aa");
-```
-结果：
-```
-12aa4567
-```
+**参见**
 
-```lsf
-?replace("1234567",3,0,"aa"); #插入字符串
-```
-结果：
-```
-12aa34567
-```
-
-```lsf
-?replace("1234567",3,-1,"aa");
-```
-结果：
-```
-12aa
-```
-
-**另请参见**
-
-- [命令列表](./command_list.md)
-- [length](./length.md)
-- [substring](./substring.md)
-- [findstring](./findstring.md)
-- [replacestring](./replacestring.md)
-- [str2num](./str2num.md)
-- [num2str](./num2str.md)
-- [splitstring](./splitstring.md)
-- [lower](./lower.md)
-- [upper](./upper.md)
-- [toscript](./toscript.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ 长度 ](/hc/en-us/articles/360034925653-长度) , [ substring ](/hc/en-us/articles/360034926033-substring) , [ findstring ](/hc/en-us/articles/360034405954-findstring) , [ replacestring ](/hc/en-us/articles/360034926073-replacestring) , [ str2num ](/hc/en-us/articles/360034405914-str2num) , [ num2str ](/hc/en-us/articles/360034925993-num2str) , [ splitstring ](/hc/en-us/articles/360034926093-splitstring) , [ lower ](/hc/en-us/articles/360034405974-lower) , [ upper ](/hc/en-us/articles/360034926113-upper) , [ toscript ](/hc/en-us/articles/360034405994-toscript)

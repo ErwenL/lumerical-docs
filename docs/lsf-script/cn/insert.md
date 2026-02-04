@@ -1,142 +1,140 @@
 <!--
 Translation from English documentation
 Original command: insert
-Translation date: 2026-02-03
+Translation date: 2026-02-04 22:50:01
 -->
 
 # insert
 
-将对象插入查找表中的现有单元格。
+Inserts 一个 对象 into 一个 existing 单元格 在 一个 lookup table. 
 
-**语法** |  **描述**
----|---
-out{1}.association = insert( out{1}.association, association, cell number );  |  将对象插入到现有单元格中。
-
+**语法** |  **描述**  
+---|---  
+out{1}.association = insert( out{1}.association, association, 单元格 数字 );  |  Inserts 一个 对象 into 一个 existing 单元格.   
+  
 **示例**
 
-加载查找表 "coupler_map.ixml" 并打印包含 .ixml 文件所有内容的单元格数组
-
+Loads 该 lookup table "coupler_map.ixml" 和 prints 该 单元格 数组 该 containing all 该 contents 的 该 .ixml 文件 
+    
+    
     clear;
     tabCoupler = lookupread( "coupler_map.ixml" );
     ?toscript( tabCoupler );
 
-其中 "coupler_map.ixml" 是包含耦合器参数与不同 S 参数之间映射的查找表：
-
-    tabCoupler=cell(1);
-    tabCoupler{1}=struct;
-    tabCoupler{1}.association=cell(1);
-    tabCoupler{1}.association{1}=struct;
-    tabCoupler{1}.association{1}.design=cell(1);
-    tabCoupler{1}.association{1}.design{1}=struct;
+其中 “coupler_map.ixml” 是 一个 lookup table containing 一个 map between coupler 参数 和 different s-参数: 
+    
+    
+    tabCoupler=单元格(1);
+    tabCoupler{1}=结构体;
+    tabCoupler{1}.association=单元格(1);
+    tabCoupler{1}.association{1}=结构体;
+    tabCoupler{1}.association{1}.design=单元格(1);
+    tabCoupler{1}.association{1}.design{1}=结构体;
     tabCoupler{1}.association{1}.design{1}.name='gap';
-    tabCoupler{1}.association{1}.design{1}.value=3.5e-007;
-    tabCoupler{1}.association{1}.extracted=cell(1);
-    tabCoupler{1}.association{1}.extracted{1}=struct;
+    tabCoupler{1}.association{1}.design{1}.值=3.5e-007;
+    tabCoupler{1}.association{1}.extracted=单元格(1);
+    tabCoupler{1}.association{1}.extracted{1}=结构体;
     tabCoupler{1}.association{1}.extracted{1}.name='coupling_length';
-    tabCoupler{1}.association{1}.extracted{1}.value=7.18624e-006;
+    tabCoupler{1}.association{1}.extracted{1}.值=7.18624e-006;
     tabCoupler{1}.name='coupler_extracted';
 
-以下命令将对象插入到现有的查找表中
-
-    association=struct;
-    association.design=cell(1);
-    association.design{1}=struct;
+The following commands insert  一个  对象 into 该 existing lookup table 
+    
+    
+    association=结构体;
+    association.design=单元格(1);
+    association.design{1}=结构体;
     association.design{1}.name='gap';
-    association.design{1}.value=5e-007;
-    association.extracted=cell(1);
-    association.extracted{1}=struct;
+    association.design{1}.值=5e-007;
+    association.extracted=单元格(1);
+    association.extracted{1}=结构体;
     association.extracted{1}.name='coupling_length';
-    association.extracted{1}.value=9e-006;
+    association.extracted{1}.值=9e-006;
     # insert association at last position
     tabCoupler{1}.association = insert( tabCoupler{1}.association, association, 2 );
-    # print updated values
+    # print updated 值
     ?toscript(tabCoupler);
     lookupwrite( "coupler_map.ixml", tabCoupler );
 
-现在表格打印如下：
-
-    tabCoupler=cell(1);
-    tabCoupler{1}=struct;
-    tabCoupler{1}.association=cell(2);
-    tabCoupler{1}.association{1}=struct;
-    tabCoupler{1}.association{1}.design=cell(1);
-    tabCoupler{1}.association{1}.design{1}=struct;
+now 该 table prints as below: 
+    
+    
+    tabCoupler=单元格(1);
+    tabCoupler{1}=结构体;
+    tabCoupler{1}.association=单元格(2);
+    tabCoupler{1}.association{1}=结构体;
+    tabCoupler{1}.association{1}.design=单元格(1);
+    tabCoupler{1}.association{1}.design{1}=结构体;
     tabCoupler{1}.association{1}.design{1}.name='gap';
-    tabCoupler{1}.association{1}.design{1}.value=3.5e-007;
-    tabCoupler{1}.association{1}.extracted=cell(1);
-    tabCoupler{1}.association{1}.extracted{1}=struct;
+    tabCoupler{1}.association{1}.design{1}.值=3.5e-007;
+    tabCoupler{1}.association{1}.extracted=单元格(1);
+    tabCoupler{1}.association{1}.extracted{1}=结构体;
     tabCoupler{1}.association{1}.extracted{1}.name='coupling_length';
-    tabCoupler{1}.association{1}.extracted{1}.value=7.18624e-006;
-    tabCoupler{1}.association{2}=struct;
-    tabCoupler{1}.association{2}.design=cell(1);
-    tabCoupler{1}.association{2}.design{1}=struct;
+    tabCoupler{1}.association{1}.extracted{1}.值=7.18624e-006;
+    tabCoupler{1}.association{2}=结构体;
+    tabCoupler{1}.association{2}.design=单元格(1);
+    tabCoupler{1}.association{2}.design{1}=结构体;
     tabCoupler{1}.association{2}.design{1}.name='gap';
-    tabCoupler{1}.association{2}.design{1}.value=5e-007;
-    tabCoupler{1}.association{2}.extracted=cell(1);
-    tabCoupler{1}.association{2}.extracted{1}=struct;
+    tabCoupler{1}.association{2}.design{1}.值=5e-007;
+    tabCoupler{1}.association{2}.extracted=单元格(1);
+    tabCoupler{1}.association{2}.extracted{1}=结构体;
     tabCoupler{1}.association{2}.extracted{1}.name='coupling_length';
-    tabCoupler{1}.association{2}.extracted{1}.value=9e-006;
+    tabCoupler{1}.association{2}.extracted{1}.值=9e-006;
     tabCoupler{1}.name='coupler_extracted';
 
-以下命令将新的关联附加到现有的表中：
-
+The following commands append 一个 新的 association into 该 existing table: 
+    
+    
     clear;
-    design=cell(1);
-    design{1}=struct;
+    design=单元格(1);
+    design{1}=结构体;
     design{1}.name='gap';
-    design{1}.value=6e-007;
-    # create extracted parameter
-    extracted=cell(1);
-    extracted{1}=struct;
+    design{1}.值=6e-007;
+    # 创建 extracted 参数
+    extracted=单元格(1);
+    extracted{1}=结构体;
     extracted{1}.name='coupling_length';
-    extracted{1}.value=9.9e-006;
-    # append to existing table
+    extracted{1}.值=9.9e-006;
+    # append 到 existing table
     lookupappend( "coupler_map.ixml", "coupler_extracted", design, extracted );
     # print contents
     ?toscript( lookupread( "coupler_map.ixml" ) );
 
-现在查找表打印如下：
+Now 该 lookup table prints as below: 
+    
+    
+    值=单元格(1);
+    值{1}=结构体;
+    值{1}.association=单元格(3);
+    值{1}.association{1}=结构体;
+    值{1}.association{1}.design=单元格(1);
+    值{1}.association{1}.design{1}=结构体;
+    值{1}.association{1}.design{1}.name='gap';
+    值{1}.association{1}.design{1}.值=3.5e-007;
+    值{1}.association{1}.extracted=单元格(1);
+    值{1}.association{1}.extracted{1}=结构体;
+    值{1}.association{1}.extracted{1}.name='coupling_length';
+    值{1}.association{1}.extracted{1}.值=7.18624e-006;
+    值{1}.association{2}=结构体;
+    值{1}.association{2}.design=单元格(1);
+    值{1}.association{2}.design{1}=结构体;
+    值{1}.association{2}.design{1}.name='gap';
+    值{1}.association{2}.design{1}.值=5e-007;
+    值{1}.association{2}.extracted=单元格(1);
+    值{1}.association{2}.extracted{1}=结构体;
+    值{1}.association{2}.extracted{1}.name='coupling_length';
+    值{1}.association{2}.extracted{1}.值=9e-006;
+    值{1}.association{3}=结构体;
+    值{1}.association{3}.design=单元格(1);
+    值{1}.association{3}.design{1}=结构体;
+    值{1}.association{3}.design{1}.name='gap';
+    值{1}.association{3}.design{1}.值=6e-007;
+    值{1}.association{3}.extracted=单元格(1);
+    值{1}.association{3}.extracted{1}=结构体;
+    值{1}.association{3}.extracted{1}.name='coupling_length';
+    值{1}.association{3}.extracted{1}.值=9.9e-006;
+    值{1}.name='coupler_extracted';
 
-    value=cell(1);
-    value{1}=struct;
-    value{1}.association=cell(3);
-    value{1}.association{1}=struct;
-    value{1}.association{1}.design=cell(1);
-    value{1}.association{1}.design{1}=struct;
-    value{1}.association{1}.design{1}.name='gap';
-    value{1}.association{1}.design{1}.value=3.5e-007;
-    value{1}.association{1}.extracted=cell(1);
-    value{1}.association{1}.extracted{1}=struct;
-    value{1}.association{1}.extracted{1}.name='coupling_length';
-    value{1}.association{1}.extracted{1}.value=7.18624e-006;
-    value{1}.association{2}=struct;
-    value{1}.association{2}.design=cell(1);
-    value{1}.association{2}.design{1}=struct;
-    value{1}.association{2}.design{1}.name='gap';
-    value{1}.association{2}.design{1}.value=5e-007;
-    value{1}.association{2}.extracted=cell(1);
-    value{1}.association{2}.extracted{1}=struct;
-    value{1}.association{2}.extracted{1}.name='coupling_length';
-    value{1}.association{2}.extracted{1}.value=9e-006;
-    value{1}.association{3}=struct;
-    value{1}.association{3}.design=cell(1);
-    value{1}.association{3}.design{1}=struct;
-    value{1}.association{3}.design{1}.name='gap';
-    value{1}.association{3}.design{1}.value=6e-007;
-    value{1}.association{3}.extracted=cell(1);
-    value{1}.association{3}.extracted{1}=struct;
-    value{1}.association{3}.extracted{1}.name='coupling_length';
-    value{1}.association{3}.extracted{1}.value=9.9e-006;
-    value{1}.name='coupler_extracted';
+**参见**
 
-**相关命令**
-
-- [List of commands](./List-of-commands.md)
-- [lookupopen](./lookupopen.md)
-- [lookupread](./lookupread.md)
-- [lookupwrite](./lookupwrite.md)
-- [lookupclose](./lookupclose.md)
-- [lookupreadtable](./lookupreadtable.md)
-- [lookupreadvalue](./lookupreadvalue.md)
-- [lookupreadnportsparameter](./lookupreadnportsparameter.md)
-- [lookupappend](./lookupappend.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ lookupopen ](/hc/en-us/articles/360034408254-lookupopen) , [ lookupread ](/hc/en-us/articles/360034928333-lookupread) , [ lookupwrite ](/hc/en-us/articles/360034928353-lookupwrite) , [ lookupclose ](/hc/en-us/articles/360034408234-lookupclose) , [ lookupreadtable ](/hc/en-us/articles/360034928393-lookupreadtable) , [ lookupreadvalue ](/hc/en-us/articles/360034928413-lookupreadvalue) , [ lookupreadnportsparameter ](/hc/en-us/articles/360034408274-lookupreadnportsparameter) , [ lookupappend ](/hc/en-us/articles/360034928433-lookupappend)

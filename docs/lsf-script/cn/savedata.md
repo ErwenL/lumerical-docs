@@ -1,44 +1,43 @@
-<!-- Translation completed: Tue Feb 03 2026 -->
-<!-- Original: savedata -->
+<!--
+Translation from English documentation
+Original command: savedata
+Translation date: 2026-02-04 22:50:14
+-->
 
 # savedata
 
-将工作区变量保存到 Lumerical 数据文件（ldf）中。要将监视器（D-card）数据保存到 ldf 文件，请参阅 savedcard 函数。
+Saves workspace variables 到 一个 Lumerical 数据 文件 (ldf) 文件. To save 监视器 (D-card) 数据 到 一个 ldf 文件, see 该 savedcard 函数. 
 
 **语法** |  **描述**  
 ---|---  
-savedata("filename");  |  将所有当前变量保存到指定文件。此函数不返回任何数据。  
-savedata("filename", var1, var2,...);  |  仅将指定名称的变量保存到文件。  
+savedata("文件名");  |  Saves all current variables 到 该 specified 文件.  This 函数 does not 返回 any 数据.   
+savedata("文件名", var1, var2,...);  |  Saves only variables 使用 该 specified names 到 文件.   
   
 **示例**
 
-这是一个简单示例，显示如何将两个工作区变量保存到 .ldf 数据文件。
+This 是 一个 simple example 该 shows 如何 到 save two workspace variables 到 一个 .ldf 数据 文件. 
     
     
     x=1:10;
     y=x^2;
     savedata("x_squared_data", x, y);
 
-此示例显示可用于保存名为 xy_monitor 的监视器中某些特定数据的代码段。数据首先通过 getdata 和 transmission 等脚本函数获取。然后使用 savedata 函数保存这些工作区变量。
+This example shows 一个 section 的 code 该 could 为 used 到 save some specific 数据 从 一个 监视器 named xy_monitor. The 数据 是 first obtained 使用 脚本 functions such as getdata 和 transmission. These workspace variables 是 那么 saved 使用 该 savedata 函数. 
 
-注意，可以使用 num2str 命令创建复杂的文件名。这在进行参数扫描时很有用，因为扫描中的每个点都需要唯一的文件名。
+注意 该 该 complex 文件 names 可以 为 created 使用 该 num2str 命令. This 是 useful 当 doing 参数 sweeps 其中 一个 unique 文件 name 是 required 用于 each point 在 该 sweep. 
     
     
-    # get data from the simulation to be saved
-    mname="xy_monitor";       # monitor name
-    x=getdata(mname,"x");      # position vectors associated with Ex fields
-    y=getdata(mname,"y");      # position vectors associated with Ex fields
-    Ex=getdata(mname,"Ex");     # Ex fields at monitor
-    T=transmission(mname);     # Power transmission through monitor
+    # 获取 数据 从 该 仿真 到 为 saved
+    mname="xy_monitor";       # 监视器 name
+    x=getdata(mname,"x");      # position vectors associated 使用 Ex fields
+    y=getdata(mname,"y");      # position vectors associated 使用 Ex fields
+    Ex=getdata(mname,"Ex");     # Ex fields at 监视器
+    T=transmission(mname);     # Power transmission through 监视器
      
-    # save variables x, y, Ex, T and i to a data file
-    filename="results_"+num2str(i); # set filename. i could be a loop counter variable.
-    savedata(filename, x,y,Ex,T,i); 
+    # save variables x, y, Ex, T 和 i 到 一个 数据 文件
+    文件名="results_"+num2str(i); # 设置 文件名. i could 为 一个 loop counter 变量.
+    savedata(文件名, x,y,Ex,T,i); 
 
-**另请参阅**
+**参见**
 
-- [命令列表](./index.md)
-- [savedcard](./savedcard.md)
-- [loaddata](./loaddata.md)
-- [workspace](./workspace.md)
-- [matlabsave](./matlabsave.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ savedcard ](/hc/en-us/articles/360034411154-savedcard) , [ loaddata ](/hc/en-us/articles/360034411214-loaddata) , [ workspace ](/hc/en-us/articles/360034409394-workspace) , [ matlabsave ](/hc/en-us/articles/360034928113-matlabsave)

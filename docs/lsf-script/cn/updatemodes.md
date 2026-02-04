@@ -1,24 +1,28 @@
-<!-- Translation: updatemodes -->
-<!-- Date: 2026-02-03 -->
-<!-- Original: updatemodes -->
+<!--
+Translation from English documentation
+Original command: updatemodes
+Translation date: 2026-02-04 22:50:15
+-->
 
 # updatemodes
 
-更新所选模式展开监视器的模式分布。如果模式展开监视器中没有存储模式分布，则将选择具有最高有效折射率的模式。如果模式展开监视器中已存储模式分布，则将选择与旧模式重叠最佳的模式。注意，在运行此命令之前必须先选择模式展开监视器。
+Updates 该 mode profile(s) 的 选中的 mode expansion 监视器 If there 是 no mode profiles stored 在 该 mode expansion 监视器, 那么 该 mode 使用 该 highest effective index 将 为 选中的. If mode profiles 是 already stored 在 该 mode expansion 监视器, 那么 该 modes 使用 该 best overlap 使用 该 old modes 将 为 选中的. 注意 该 该 mode expansion 监视器 必须 为 选中的 before running 此 命令.
 
-**语法** | **说明**
----|---
-updatemodes; | 更新所选模式展开监视器的模式分布。如果更新成功则返回1，否则返回-1。
-updatemodes(mode_number); | 更新模式展开监视器并选择所需的模式编号。例如，updatemodes(1:10);将计算具有最高折射率的10个模式。请注意，进行此调用将强制重新计算模式，即使之前已计算过相同的模式。此外，进行此调用将强制模式选择方法变为"用户选择"。此可选参数在FDTD 8.6.3和MODE 6.5.3中引入。
-
-注意：在使用updatesourcemode之前保存仿真文件 如果您有一个更新仿真网格的脚本文件，那么应该在更新源模式之前使用[save脚本命令](./save.md)。这将确保在计算新模式之前已更新网格。
-
-注意：重叠 两个模式之间的电磁场重叠分数由下面的表达式给出。它也是mode2的功率可以在mode1中传播的比例。有关更多信息，请参见[overlap脚本命令](./overlap.md)。
-
+**语法** |  **描述**  
+---|---  
+updatemodes; |  Updates mode profile 的 该 选中的 mode expansion 监视器.  返回 1 如果 该 update was successful 和 -1 如果 not.  
+updatemodes(mode_number); |  Updates 该 mode expansion 监视器 和 selects 该 desired mode numbers. For example, updatemodes(1:10); 将 计算 该 10 modes 使用 该 highest refractive index. Please note 该 making 此 call 将 force 一个 recalculation 的 一个 modes, even 如果 该 same modes have previously been calculated. In addition, making 此 call 将 force 该 mode selection method 到 become "用户 select". This optional 参数 was introduced 在 FDTD 8.6.3 和 MODE 6.5.3.  
+  
+NOTE: Saving 仿真 files before 使用 updatesourcemode If you have 一个 脚本 文件 该 updates 该 仿真 mesh, 那么 you 应该 use 该 [save 脚本 命令](/hc/en-us/articles/360034410814-save) before updating 该 源 mode. This 将 ensure 该 该 mesh has been updated before 该 新的 mode 是 calculated.  
+---  
+  
+NOTE: overlap The fraction 的 electromagnetic fields 该 overlap between 该 two modes 是 given 通过 该 expression below. It 是 also 该 fraction 的 power 从 mode2 该 可以 propagate 在 mode1. For more information, please see [overlap 脚本 命令](/hc/en-us/articles/360034405254-overlap).  $$ \text { overlap }=\operatorname{Re}\left[\frac{\left(\int \vec{E}_{1} \times \vec{H}_{2}^{*} \cdot d \vec{S}\right)\left(\int \vec{E}_{2} \times \vec{H}_{1}^{*} \cdot d \vec{S}\right)}{\int \vec{E}_{1} \times \vec{H}_{1}^{*} \cdot d \vec{S}}\right] \frac{1}{\operatorname{Re}\left(\int \vec{E}_{2} \times \vec{H}_{2}^{*} \cdot d \vec{S}\right)} $$  
+---  
+  
 **示例**
 
-请参见[addmodeexpansion](./addmodeexpansion.md)脚本函数中的示例
+See 该 example 在 该 [addmodeexpansion](/hc/en-us/articles/360034924573-addmodeexpansion) 脚本 函数
 
 **参见**
 
-[操作对象](./360037228834.md), [addmode](./addmode.md), [addmodeexpansion](./addmodeexpansion.md), [clearsourcedata](./clearsourcedata.md), [clearmodedata](./clearmodedata.md), [getresult](./getresult.md), [overlap](./overlap.md), [expand](./expand.md), [seteigensolver](./seteigensolver.md), [geteigensolver](./geteigensolver.md), [updatesourcemode](./updatesourcemode.md)
+[Manipulating 对象](/hc/en-us/articles/360037228834), [addmode](/hc/en-us/articles/360034924353-addmode), [addmodeexpansion](/hc/en-us/articles/360034924573-addmodeexpansion), [clearsourcedata](/hc/en-us/articles/360034929093-clearsourcedata), [clearmodedata](/hc/en-us/articles/360034408774-clearmodedata), [getresult](/hc/en-us/articles/360034409854-getresult), [overlap](/hc/en-us/articles/360034405254-overlap), [expand](/hc/en-us/articles/360034926653-expand), [seteigensolver](/hc/en-us/articles/360034929113-seteigensolver), [geteigensolver](/hc/en-us/articles/360034408794-geteigensolver), [updatesourcemode](/hc/en-us/articles/360034408754-updatesourcemode)

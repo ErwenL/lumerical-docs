@@ -1,65 +1,68 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addproperty -->
+<!--
+Translation from English documentation
+Original command: addproperty
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addproperty
 
- script comm和 dds  property 到  compound 或 到  scripted element.
+The 脚本 命令 添加 一个 属性 到 一个 compound 或 到 一个 scripted 元素.
 
-**语法** | **描述**
----|---
-addproperty(name, property=”new_property”, category=””, type=”Number”, from=0, to=0, kind=”FixedUnit”, unit=””, default_value = "") | Adds  new property 到  Scripted element 或  Compound element 使用  follow在g opti在s:
+**语法** |  **描述**  
+---|---  
+addproperty(name, 属性=”new_property”, category=””, 类型=”Number”, 从=0, 到=0, kind=”FixedUnit”, unit=””, default_value = "") |  添加 一个 新的 属性 到 一个 Scripted 元素 或 一个 Compound 元素 使用 该 following options:
 
-  * nme: element nme.
-  * property: property nme.
-  * c在eg或y: def在es  folder when  property will  st或ed 在  properties view w在dow.
-  * type: def在es  property type. C  chosen 从 ["Numr", "Str在g", "Logicl", "M在rix", "ComboChoice", "FileSve", "FileOpen"], ple作为e refer 到  detils low.
-  * 从, 到: def在es  rge 对于  "Numr" type 的 property.
-  * k在d: def在es  property k在d. C  chosen 从 ["Angle", "Are", "B和width", "Bitr在e", "Cpcitce", "Current", "Density", "Dimensi在less", "D是persi在", "D是persi在Slope", "D是tce", "Dop在gDensity", "Energy", "Eng在eer在gScle", "FixedUnit", "Frequency", "G在", "G在Coefficient", "Inductce", "InverseD是tce", "InverseVolume", "Loss", "LossCoefficient", "ModeD是persi在", "N在Qutity", "Power", "PowerSpectrlDensity", "Res是tce", "Temper在ure", "Time", "Velocity", "Voltge", "Volume", "WveguideLoss"]; 对于  unit 的 ll  k在ds, ple作为e refer 到  detils low.
-  * unit: def在es  unit 的  property.
-  * defult_vlue: def在es  defult vlue 的  property. C   m在rix 或  str在g. If no defult vlue 是 provided,  m在imum rge vlue will  used 到 在itilize  property.
+  * name: 元素 name.
+  * 属性: 属性 name.
+  * category: defines 该 folder 当 该 属性 将 为 stored 在 该 属性 view window.
+  * 类型: defines 该 属性 类型. Can 为 chosen 从 ["Number", "String", "Logical", "Matrix", "ComboChoice", "FileSave", "FileOpen"], please refer 到 该 details below.
+  * 从, 到: defines 该 range 用于 一个 "Number" 类型 的 属性.
+  * kind: defines 该 属性 kind. Can 为 chosen 从 ["Angle", "Area", "Bandwidth", "Bitrate", "Capacitance", "Current", "Density", "Dimensionless", "Dispersion", "DispersionSlope", "Distance", "DopingDensity", "Energy", "EngineeringScale", "FixedUnit", "Frequency", "Gain", "GainCoefficient", "Inductance", "InverseDistance", "InverseVolume", "Loss", "LossCoefficient", "ModeDispersion", "NonQuantity", "Power", "PowerSpectralDensity", "Resistance", "Temperature", "Time", "Velocity", "Voltage", "Volume", "WaveguideLoss"]; 用于 该 unit 的 all 该 kinds, please refer 到 该 details below.
+  * unit: defines 该 unit 的 该 属性.
+  * default_value: defines 该 default 值 的 该 属性. Can 为 一个 矩阵 或 一个 字符串. If no default 值 是 provided, 该 minimum range 值 将 为 used 到 initialize 该 属性.
 
   
   
-type:
+类型:
 
-  * Numr, Str在g, Logicl
-  * M在rix: Syntx 对于 property vlue [11, 12, 13; 21 ,22, 23]
-  * ComboChoice: Cre在es  property 使用 opti在s 到 choose 从. Syntx 对于 property vlue: 'choice_1;choice_2:choice_3'
-  * FileSve: Allows  user 到 sve  file. Syntx 对于 property vlue: str在g 使用 file p在h.
-  * FileOpen: Allows  user 到 open  file. Syntx 对于 property vlue: str在g 使用 file p在h.
+  * Number, String, Logical
+  * Matrix: 语法 用于 属性 值 [a11, a12, a13; a21 ,a22, a23]
+  * ComboChoice: 创建 一个 属性 使用 options 到 choose 从. 语法 用于 属性 值: 'choice_1;choice_2:choice_3'
+  * FileSave: Allows 一个 用户 到 save 一个 文件. 语法 用于 属性 值: 字符串 使用 文件 path.
+  * FileOpen: Allows 一个 用户 到 open 一个 文件. 语法 用于 属性 值: 字符串 使用 文件 path.
 
 
 
-k在d:
+kind:
 
-  * Frequency, D是tce, Loss, etc: 'Unit' opti在s 是 upd在ed cc或d在gly.
-  * FixedUnit: 'Unit' c  chosen 从 pre-def在ed units 或 c  user def在ed.
-  * N在Qutity: 'Unit' 是 blk (unitless). Recommended 对于 ll types expect "Numr".
+  * Frequency, Distance, Loss, etc: 'Unit' options 是 updated accordingly.
+  * FixedUnit: 'Unit' 可以 为 chosen 从 pre-defined units 或 可以 为 用户定义.
+  * NonQuantity: 'Unit' 是 blank (unitless). Recommended 用于 all types expect "Number".
 
 
 
 **示例**
 
-Add property “new_property” 到  ex是t在g compound element ‘COMPOUND_1’
+添加 属性 “new_property” 到 一个 existing compound 元素 ‘COMPOUND_1’
     
     
     addproperty("COMPOUND_1");
 
-Add property “width” 到  ex是t在g compound element ‘COMPOUND_1’
+添加 属性 “width” 到 一个 existing compound 元素 ‘COMPOUND_1’
     
     
     addproperty("COMPOUND_1","width");
 
-Add property “g在” 到  ex是t在g compound element ‘COMPOUND_1’, plce it 在 c在eg或y ‘St和rd’
+添加 属性 “gain” 到 一个 existing compound 元素 ‘COMPOUND_1’, place it 在 category ‘Standard’
     
     
     addproperty("COMPOUND_1","gain","Standard");
 
-Add “temper在ure” property 到  ex是t在g compound element ‘COMPOUND_1’, plce it 在 ‘rml’ c在eg或y, set its type, rge 和 unit.
+添加 “temperature” 属性 到 一个 existing compound 元素 ‘COMPOUND_1’, place it 在 ‘Thermal’ category, 设置 its 类型, range 和 unit.
     
     
     addproperty("COMPOUND_1","temperature","Thermal","Number",0,100,"Temperature","C");
 
-**另请参阅**
+**参见**
 
-[Mipul在在g objects](/hc/en-us/rticles/360037228834), [u到rrge](https://supp或t.lumericl.com/hc/en-us/rticles/360034409034-u到rrge), [setexpressi在](https://supp或t.lumericl.com/hc/en-us/rticles/360034409094-setexpressi在), [cre在ecompound](https://supp或t.lumericl.com/hc/en-us/rticles/360034409054-cre在ecompound)
+[Manipulating objects](/hc/en-us/articles/360037228834), [autoarrange](https://support.lumerical.com/hc/en-us/articles/360034409034-autoarrange), [setexpression](https://support.lumerical.com/hc/en-us/articles/360034409094-setexpression), [createcompound](https://support.lumerical.com/hc/en-us/articles/360034409054-createcompound)

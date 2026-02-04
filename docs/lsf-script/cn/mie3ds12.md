@@ -1,55 +1,58 @@
+<!--
+Translation from English documentation
+Original command: mie3ds12
+Translation date: 2026-02-04 22:50:13
+-->
+
 # mie3ds12
 
-mie3ds12 函数可用于计算嵌入在任何环境电介质材料中的任何（非磁性）材料的散射远场。函数返回散射函数 S1 和 S2。散射远场可以通过以下公式计算：
+The 函数 mie3ds12 可以 为 used 到 计算 该 scattered far field 的 any (non-magnetic) 材料 embedded 在 any ambient dielectric 材料. The 函数 返回 该 scattering functions S1 和 S2. The scattered far field 可以 为 calculated 通过 
 
-$$ \begin{array}{l}{E_{||}=\frac{e^{i k r}}{-i k r} \cos \varphi \cdot S_{2}(\cos \theta)} \\ {E_{\perp}=\frac{e^{i k r}}{i k r} \sin \varphi \cdot S_{1}(\cos \theta)}\end{array} $$
+$$\begin{数组}{l}{E_{1}=\frac{e^{i i v}}{-i k r} \cos \varphi \cdot S_{2}(\cos \theta)} \\\ {E_{\perp}=\frac{e^{i k r}}{i k r} \sin \varphi \cdot S_{1}(\cos \theta)}\end{数组} $$ 
 
-其中 E|| 是散射平面内的场，E⊥ 是垂直于散射平面的场。散射平面由入射和散射方向定义。θ 是散射平面内的角度（相对于入射角），φ 是入射电场与散射平面之间的角度。
+Where E  ||  是 该 field 在 该 scattering plane 和 E  ⊥  是 该 field orthogonal 到 该 scattering plane. The scattering plane 是 defined 通过 该 incident 和 scattered directions. The angle θ 是 该 angle within 该 scattering plane (使用 respect 到 该 incident angle) 和 该 angle φ 是 该 angle between 该 incident electric field 和 该 scattering plane. 
 
-### 参考文献：
+###  References: 
 
-[1] Bohren C.F. 和 D.R. Huffman，"小颗粒的光吸收和散射"，John Wiley，纽约，NY，1983。
+[1] Bohren C.F. 和 D.R. Huffman, “Absorption 和 Scattering 的 Light 通过 Small Particles”, John Wiley, New York, NY, 1983. 
 
-[2] Mätzler C. 文档，"Mie 散射和吸收的 MATLAB 函数，版本 2"，IAP Res. Rep. No. 2002-11，2002年8月。
+[2] Documentation 的 Mätzler C. “MATLAB Functions 用于 Mie Scattering 和 Absorption, Version 2”, IAP Res. Rep. No. 2002-11, August, 2002. 
 
-**语法** | **描述**
----|---
-S = mie3ds12(u,m,x); | 结果 Q 是一个结构体，包含 S1、S2，其维度为 NxM，其中 N 是 u 的长度，M 是 x 的长度。参数为：u：这是 cos(θ) m：球体折射率与环境电介质折射率的比值。该量可以是复数值，因为球体的折射率可能是复数的。对于色散介质，该量应该具有单一值，或与 x 相同长度。x：尺寸参数，定义为 2*pi*r/lambda0*n1，其中 lambda0 是自由空间波长，r 是球体半径，n1 是环境介质的实值折射率。
-S = mie3ds12(u,m,x,nmax); | nmax：要计算的 Mie 系数最高阶数。默认值为 0，此时 nmax = ceil(x+4*x^(1/3))+2。通常无需修改默认值。
-
+**语法** |  **描述**  
+---|---  
+S = mie3ds12(u,m,x);  |  The result Q 是 一个 结构体 该 contains quantities S1, S2 该 has dimensions NxM 其中 N 是 该 长度 的 u 和 M 是 该 长度 的 x.  The 参数 是:  u: 此 是 cos(q)  m: 该 ratio 的 该 refractive index 的 该 sphere 到 该 refractive index 的 该 ambient dielectric medium. This quantity 可能 为 complex-valued because 该 refractive index 的 该 sphere 可能 为 complex. This quantity 应该 either have 一个 singleton 值, 或 为 该 same 长度 的 x 用于 dispersive media.  x: 该 size 参数 该 是 defined as 2*pi*r/lambda0*n1 其中 lambda0 是 该 free space 波长, r 是 该 sphere radius 和 n1 是 该 real-valued refractive index 的 该 ambient medium.   
+S = mie3ds12(u,m,x,nmax);  |  nmax : 该 maximum 数字 的 orders 到 计算 用于 该 mie coefficients. The default 值 是 0, 和 在 此 case 该 nmax = ceil(x+4*x^(1/3))+2. There 是 typically no need 到 modify 该 default 值.   
+  
 **示例**
 
-例如，让我们计算沿 y 轴入射、偏振沿 z 轴的 500nm 光在 XY 和 YZ 平面中的场。
+For example, lets 计算 field 在 XY 和 YZ planes 用于 500nm light 该 是 incident along 该 y axis, polarized along 该 z axis. 
+    
+    
+    # input 参数
+    n1 = 1;
+    n2 = 1.5;
+    lambda0 = 500e-9;
+    radius = 500e-9;
+    # 计算 m,x 和 call mie3ds12
+    m = n2/n1;
+    x = 2*pi*radius/lambda0*n1;
+    theta = linspace(0,2*pi,1000);
+    S = mie3ds12(cos(theta),m,x);
+    k = 2*pi/lambda0 * n1;
+    R = 1; # radius 的 1m
+    # XY plane: phi = 90, Etang = EP, Eperp = Ez = ES
+    phi = 90*pi/180;
+    Etang = exp(1i*k*R)/(-1i*k*R)*cos(phi)*S.S2;
+    Eperp = exp(1i*k*R)/(1i*k*R)*sin(phi)*S.S1;
+    polar(theta,abs(Etang),abs(Eperp),"","","XY plane");
+    legend("|EP|","|ES|");
+    # YZ plane: phi = 0, Etang = EP, Eperp = Ex = ES
+    phi = 0;
+    Etang = exp(1i*k*R)/(-1i*k*R)*cos(phi)*S.S2;
+    Eperp = exp(1i*k*R)/(1i*k*R)*sin(phi)*S.S1;
+    polar(theta,abs(Etang),abs(Eperp),"","","YZ plane");
+    legend("|EP|","|ES|");
 
-```
-# 输入参数
-n1 = 1;
-n2 = 1.5;
-lambda0 = 500e-9;
-radius = 500e-9;
-# 计算 m、x 并调用 mie3ds12
-m = n2/n1;
-x = 2*pi*radius/lambda0*n1;
-theta = linspace(0,2*pi,1000);
-S = mie3ds12(cos(theta),m,x);
-k = 2*pi/lambda0 * n1;
-R = 1; # 半径为 1m
-# XY 平面：phi = 90，Etang = EP，Eperp = Ez = ES
-phi = 90*pi/180;
-Etang = exp(1i*k*R)/(-1i*k*R)*cos(phi)*S.S2;
-Eperp = exp(1i*k*R)/(1i*k*R)*sin(phi)*S.S1;
-polar(theta,abs(Etang),abs(Eperp),"","","XY plane");
-legend("|EP|","|ES|");
-# YZ 平面：phi = 0，Etang = EP，Eperp = Ex = ES
-phi = 0;
-Etang = exp(1i*k*R)/(-1i*k*R)*cos(phi)*S.S2;
-Eperp = exp(1i*k*R)/(1i*k*R)*sin(phi)*S.S1;
-polar(theta,abs(Etang),abs(Eperp),"","","YZ plane");
-legend("|EP|","|ES|");
-```
+**参见**
 
-**另请参阅**
-
-- [mie3d](./mie3d.md)
-- [Mie3D 示例 (FDTD)](https://apps.lumerical.com/mie-scattering-fdtd.html)
-- [Mie3D 示例 (DGTD)](https://apps.lumerical.com/mie-scattering-dgtd.html)
+[ mie3d ](/hc/en-us/articles/360034406794-mie3d) , [ Mie3D example(FDTD) ](https://apps.lumerical.com/mie-scattering-fdtd.html) , [ Mie3D example(DGTD) ](https://apps.lumerical.com/mie-scattering-dgtd.html)

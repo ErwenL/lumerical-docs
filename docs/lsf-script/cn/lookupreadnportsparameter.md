@@ -1,120 +1,119 @@
+<!--
+Translation from English documentation
+Original command: lookupreadnportsparameter
+Translation date: 2026-02-04 22:50:01
+-->
+
 # lookupreadnportsparameter
 
-从包含设计查找表的 xml 文件中返回特定设计参数的插值 s 参数单元。
+Returns an interpolated s-parameter cell for specific design parameters from an [xml file containing a lookup table of design](https://optics.ansys.com/hc/en-us/articles/360034416634-INTERCONNECT-XML-lookup-tables-for-element-data).
 
-xml 文件应具有将 s 参数数据文件与设计参数关联的查找表。表关联的每个 s 参数文件应与 Optical N Port S-Parameter 元素兼容，格式完全相同，且不应包含任何标头。
+The xml file should have a lookup table associating s-parameter data files with design parameters. Each s-parameter file associated by the table should be compatible with the [Optical N Port S-Parameter element](https://optics.ansys.com/hc/en-us/articles/360036107914-Optical-N-Port-S-Parameter-SPAR-INTERCONNECT-Element), in the exact same format, and should not contain any header.
 
-**语法** | **描述**
----|---
-out = lookupreadnportsparameter ("filename","table",design,"extracted"); | 从包含设计查找表的 xml 文件返回插值 s 参数单元：
+**语法** |  **描述**  
+---|---  
+out = lookupreadnportsparameter ("文件名","table",design,"extracted"); |  返回 一个 interpolated s-参数 单元格 从 一个 xml 文件 containing 一个 lookup table 的 design:
 
-  * filename：xml 文件的名称。
-  * table：xml 文件内查找表的名称。
-  * design：包含多个结构的单元，定义要提取的目标设计。
-  * extracted：查找表内参数的名称，该参数保存每个设计对应的 s 参数数据文件名。
+  * 文件名: Name 的 该 xml 文件.
+  * table: Name 的 该 lookup table located inside 该 xml 文件.
+  * design: Cell containing multiple structures defining 该 target design 到 extract.
+  * extracted: Name 的 该 参数 inside 该 lookup table 该 holds names 的 该 s-参数 数据 文件 用于 each design.
 
-out = lookupreadnportsparameter ("filename","table",design,"extracted", opt); | 从包含设计查找表的 xml 文件返回插值 s 参数单元，并在结构 opt 中提供插值选项：
+  
+out = lookupreadnportsparameter ("文件名","table",design,"extracted", opt); |  返回 一个 interpolated s-参数 单元格 从 一个 xml 文件 containing 一个 lookup table 的 design 使用 interpolation options 在 该 结构 opt:
 
-  * filename：xml 文件的名称。
-  * table：xml 文件内查找表的名称。
-  * design：包含多个结构的单元，定义要提取的目标设计。
-  * extracted：查找表内参数的名称，该参数保存每个设计对应的 s 参数数据文件名。
-  * opt：设置插值选项的结构。下表描述了结构字段。
+  * 文件名: Name 的 该 xml 文件.
+  * table: Name 的 该 lookup table located inside 该 xml 文件.
+  * design: Cell containing multiple structures defining 该 target design 到 extract.
+  * extracted: Name 的 该 参数 inside 该 lookup table 该 holds names 的 该 s-参数 数据 文件 用于 each design.
+  * opt: Structure setting interpolation options. The 结构 fields 是 described 在 该 table below.
 
-选项结构具有以下字段，每个字段的拼写区分大小写。
+  
+  
+The option 结构 has 该 following fields, 该 spelling 的 each field 是 case-sensitive.
 
-**字段** | **描述**
----|---
-method | 用于插值的方法。支持以下选项：
+**Field** |  **描述**  
+---|---  
+method |  The method used 用于 interpolation. The following options 是 supported:
 
-  * spline：样条插值方法，这是默认方法。
-  * Geodesic：测地线插值方法，确保平滑过渡。选择测地线插值时，会对用于插值的原始数据点附近的点进行相似性检查，如果这些点不够相似，则数据粗糙，并显示警告。此方法不能用于外推。
+  * spline: Spline interpolation method, 此 是 该 default method.
+  * Geodesic: Geodesic interpolation method 该 ensures smooth transitions. When geodesic interpolation 是 选中的, 一个 similarity check 是 performed 在 original 数据 points near 该 interpolated point used 用于 该 interpolation, 如果 这些 points 是 not sufficiently similar, 该 数据 是 coarse, 和 一个 warning 是 displayed. This method cannot 为 used 用于 extrapolation.
 
-passivity | 是否在插值前对 s 参数数据强制执行无源性。此字段仅在选择 "geodesic" 作为插值方法时影响结果。当数据为有源性时，测地线插值始终显示警告消息。支持以下选项：
+  
+passivity |  Whether passivity 是 enforced 用于 该 s-参数 数据 prior 到 interpolation. This field only affects results 当 “geodesic” 是 选中的 as 该 interpolation method. When 数据 是 non-passive, 一个 warning message 是 always displayed 用于 geodesic interpolation. The following options 是 supported:
 
-  * enforce：确保 S 矩阵无源性，确保 s 参数的诱导 2 范数小于 1。这是默认方法。
-  * ignore：忽略 s 参数的无源性并按原样进行插值。
+  * enforce: Ensures S-矩阵 是 passive 通过 making sure 该 该 induced 2-norm 的 该 s-参数 是 less than 1. This 是 该 default method.
+  * ignore: Ignores passivity 的 该 s-参数 和 interpolates as-是.
 
-**注意**：有关如何强制执行无源性的更多信息，请参阅此知识库文章。
+  
+  
+**Note** : For more information on how passivity is enforced, see this [Knowledge Base](https://optics.ansys.com/hc/en-us/articles/360059772393-S-parameter-passive-workflow-guide#toc_4) article.
 
 **示例**
 
-根据用户定义的设计参数加载耦合器的 s 参数，设置插值目标：
+Loads 该 s-参数 的 一个 coupler depending 在 用户定义 design 参数 设置 up target 用于 interpolation:
+    
+    
+    文件名 = "coupler.ixml";
+    table = "coupler";
+    radius = 3e-06;
+    gap = 3e-07;
+    design = 单元格(2);
+    #design (input 参数)
+    design{1} = 结构体;
+    design{1}.name = "radius";
+    design{1}.值 = radius;
+    design{2} = 结构体;
+    design{2}.name = "gap";
+    design{2}.值 = gap; 
 
-```
-filename = "coupler.ixml";
-table = "coupler";
-radius = 3e-06;
-gap = 3e-07;
-design = cell(2);
-# design（输入参数）
-design{1} = struct;
-design{1}.name = "radius";
-design{1}.value = radius;
-design{2} = struct;
-design{2}.name = "gap";
-design{2}.value = gap;
-```
+Interpolate 参数 和 load into S-参数 单元格 数组 使用 spline interpolation
+    
+    
+    ?M = lookupreadnportsparameter( 文件名, table, design, "out_filename" ); 
 
-使用样条插值插值参数并加载到 S 参数单元数组：
+Interpolate 参数 和 load into S-参数 单元格 数组 使用 geodesic interpolation, ignoring passivity 的 该 元素
+    
+    
+    ?M = lookupreadnportsparameter( 文件名, table, design, "out_filename", {"method":"geodesic","passivity":"ignore" ); 
 
-```
-?M = lookupreadnportsparameter( filename, table, design, "out_filename" );
-```
+设置 参数 到 元素
+    
+    
+    addelement("Optical N Port S-Parameter");  
+    setvalue('SPAR_1','s 参数',M);
 
-使用测地线插值插值参数并加载到 S 参数单元数组，忽略元素的无源性：
+“coupler.ixml” 是 一个 lookup table containing 一个 map between coupler 参数 和 different s-参数:
+    
+    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <lumerical_lookup_table version="1.0" name = "coupler">
+      <association>
+        <design>
+          <值 name="radius" 类型="double">3e-06</值>
+          <值 name="gap" 类型="double">3e-07</值>
+        </design>
+        <extracted>
+          <值 name="out_filename" 类型="字符串">radius_3_gap_3.txt</值>
+        </extracted>
+      </association>
+    </lumerical_lookup_table>
+    
 
-```
-?M = lookupreadnportsparameter( filename, table, design, "out_filename", {"method":"geodesic","passivity":"ignore" );
-```
+For example “radius_3_gap_3.txt” 文件 contains s-参数 用于 该 ‘Optical N Port S-Parameter’ 元素
+    
+    
+    ("端口 1","TE",1,"端口 1",1,"transmission")
+    (3,3)
+     2.262580000000e+014 1.034036580296e-002 -2.629253819969e+000
+     2.275690000000e+014 9.716591457652e-003 -2.734774978072e+000
+     2.288790000000e+014 6.884340821788e-003 -2.838683842048e+000
+    ("端口 1","TE",1,"端口 2",1,"transmission")
+    (3,3)
+     2.262580000000e+014 9.847090174703e-001 1.376105202083e-001
+     2.275690000000e+014 9.959778891317e-001 1.450376288706e-001
+     2.288790000000e+014 1.002869828593e+000 1.483183421805e-001
 
-设置参数到元素：
+**参见**
 
-```
-addelement("Optical N Port S-Parameter");
-setvalue('SPAR_1','s parameters',M);
-```
-
-"coupler.ixml" 是包含耦合器参数与不同 s 参数之间映射的查找表：
-
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<lumerical_lookup_table version="1.0" name = "coupler">
-  <association>
-    <design>
-      <value name="radius" type="double">3e-06</value>
-      <value name="gap" type="double">3e-07</value>
-    </design>
-    <extracted>
-      <value name="out_filename" type="string">radius_3_gap_3.txt</value>
-    </extracted>
-  </association>
-</lumerical_lookup_table>
-```
-
-例如 "radius_3_gap_3.txt" 文件包含 'Optical N Port S-Parameter' 元素的 s 参数：
-
-```
-("port 1","TE",1,"port 1",1,"transmission")
-(3,3)
- 2.262580000000e+014 1.034036580296e-002 -2.629253819969e+000
- 2.275690000000e+014 9.716591457652e-003 -2.734774978072e+000
- 2.288790000000e+014 6.884340821788e-003 -2.838683842048e+000
-("port 1","TE",1,"port 2",1,"transmission")
-(3,3)
- 2.262580000000e+014 9.847090174703e-001 1.376105202083e-001
- 2.275690000000e+014 9.959778891317e-001 1.450376288706e-001
- 2.288790000000e+014 1.002869828593e+000 1.483183421805e-001
-```
-
-**另请参阅**
-
-- [命令列表](./命令列表.md)
-- [lookupopen](./lookupopen.md)
-- [lookupread](./lookupread.md)
-- [lookupwrite](./lookupwrite.md)
-- [lookupclose](./lookupclose.md)
-- [lookupreadtable](./lookupreadtable.md)
-- [lookupreadvalue](./lookupreadvalue.md)
-- [lookupappend](./lookupappend.md)
-- [insert](./insert.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ lookupopen ](/hc/en-us/articles/360034408254-lookupopen) , [ lookupread ](/hc/en-us/articles/360034928333-lookupread) , [ lookupwrite ](/hc/en-us/articles/360034928353-lookupwrite) , [ lookupclose ](/hc/en-us/articles/360034408234-lookupclose) , [ lookupreadtable ](/hc/en-us/articles/360034928393-lookupreadtable) , [ lookupreadvalue ](/hc/en-us/articles/360034928413-lookupreadvalue) , [ lookupappend ](/hc/en-us/articles/360034928433-lookupappend) , [ insert ](/hc/en-us/articles/360034928453-insert)

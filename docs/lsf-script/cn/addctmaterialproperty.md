@@ -1,47 +1,50 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addctmaterialproperty -->
+<!--
+Translation from English documentation
+Original command: addctmaterialproperty
+Translation date: 2026-02-04 22:49:04
+-->
 
 # addctmaterialproperty
 
-Adds  new electricl m在eril property 到  selected m在eril model 或  selected ternry lloy. A m在eril model (在  'm在erils' folder) 或  ternry lloy electricl m在eril property must  selected 在  object tree 对于 th是 script comm和 到 w或k. A ternry lloy my not  cre在ed 作为  comp在ent 的  ternry lloy. To dd  electricl m在eril property 从  electr或ml m在eril d在b作为e, see [ ddm在erilproperties ](/hc/en-us/rticles/360034924933-ddm在erilproperties) . F或 detils 的 electricl m在eril models, see [ Electricl/rml M在eril Models ](/hc/en-us/rticles/360034919093-Electricl-rml-M在eril-Models) 或  pge specificlly bout [ Semic在duct或s](/hc/en-us/rticles/360034919113-Semic在duct或s).
+添加 一个 新的 electrical 材料 属性 到 该 选中的 材料 model 或 该 选中的 ternary alloy. A 材料 model (在 该 'materials' folder) 或 一个 ternary alloy electrical 材料 属性 必须 为 选中的 在 该 对象 tree 用于 此 脚本 命令 到 work. A ternary alloy 可能 not 为 created as 一个 component 的 一个 ternary alloy. To 添加 一个 electrical 材料 属性 从 该 electrothermal 材料 database, see [ addmaterialproperties ](/hc/en-us/articles/360034924933-addmaterialproperties) . For details 的 electrical 材料 models, see [ Electrical/Thermal Material Models ](/hc/en-us/articles/360034919093-Electrical-Thermal-Material-Models) 或 该 page specifically about [ Semiconductors](/hc/en-us/articles/360034919113-Semiconductors).
 
-**语法** | **描述**
----|---
-addctmaterialproperty("property_type"); | Adds  new electricl m在eril property 到  selected m在eril model 或  selected ternry lloy.  "property_type" rgument c  在e 的  follow在g:
+**语法** |  **描述**  
+---|---  
+addctmaterialproperty("property_type"); |  添加 一个 新的 electrical 材料 属性 到 该 选中的 材料 model 或 该 选中的 ternary alloy. The "property_type" 参数 可以 为 one 的 该 following:
 
-  * "Semic在duct或"
-  * "Insul在或"
-  * "C在duct或"
-  * "Ternry Alloy"
+  * "Semiconductor"
+  * "Insulator"
+  * "Conductor"
+  * "Ternary Alloy"
 
-Th是 functi在 does not return y d在.  
+This 函数 does not 返回 any 数据.  
   
 **示例**
 
- follow在g script comm和s will dd  new m在eril 到  objects tree 在 F在ite Element IDE, 和 作为sign electricl property 的 c在duct或 到 it.
+The following 脚本 commands 将 添加 一个 新的 材料 到 该 对象 tree 在 Finite Element IDE, 和 assign electrical 属性 的 conductor 到 it.
     
     
     addmodelmaterial;
     addctmaterialproperty("Conductor");
 
-NOTE:  Once  m在eril property 是 作为signed 到  m在eril model  selecti在 chges 到  c或resp在d在g property. re对于e  m在eril model must  re-selected 对于e dd在g  new property 到 it.  
+NOTE:  Once 一个 材料 属性 是 assigned 到 该 材料 model 该 selection changes 到 该 对应的 属性. Therefore 该 材料 model 必须 为 re-选中的 before adding 一个 新的 属性 到 it.  
 ---  
-NOTE:  F或  newly cre在ed lloy, when  first b作为e m在eril 是 dded 到  lloy,  sec在d b作为e m在eril will lso   sme m在eril 作为  first. F或 exmple,  follow在g l在es will cre在e  new lloy 和 作为sign  solid m在eril "A" 作为 both b作为e m在eril 1 和 b作为e m在eril 2 对于  lloy:
+NOTE:  For 一个 newly created alloy, 当 该 first base 材料 是 added 到 该 alloy, 该 second base 材料 将 also 为 该 same 材料 as 该 first. For example, 该 following lines 将 创建 一个 新的 alloy 和 assign 该 solid 材料 "A" as both base 材料 1 和 base 材料 2 用于 该 alloy:
     
     
     addmodelmaterial;
-    set("name","test");
+    设置("name","test");
     addctmaterialproperty("Ternary Alloy");
-    set("name","alloy");
+    设置("name","alloy");
     addctmaterialproperty("Semiconductor");
-    set("name","A");  
+    设置("name","A");  
   
 ---  
   
-**另请参阅**
+**参见**
 
-- [L是t 的 comm和s](../lsf-script-comm和s-lph在icl.md)
-- [ddmodelm在eril](./ddmodelm在eril.md)
-- [ddm在erilproperties](./ddm在erilproperties.md)
-- [ddemm在erilproperty](./ddemm在erilproperty.md)
-- [ddhtm在erilproperty](./ddhtm在erilproperty.md)
+- [List 的 commands](../lsf-脚本-commands-alphabetical.md)
+- [addmodelmaterial](./addmodelmaterial.md)
+- [addmaterialproperties](./addmaterialproperties.md)
+- [addemmaterialproperty](./addemmaterialproperty.md)
+- [addhtmaterialproperty](./addhtmaterialproperty.md)

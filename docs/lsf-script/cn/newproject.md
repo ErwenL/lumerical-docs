@@ -1,60 +1,61 @@
+<!--
+Translation from English documentation
+Original command: newproject
+Translation date: 2026-02-04 22:50:14
+-->
+
 # newproject
 
-创建新的模拟项目文件。如果 GUI 中存在现有项目文件，旧的将不会被保存。
+创建 一个 新的 仿真 project 文件. If there 是 一个 existing project 文件 在 该 GUI, 该 old project 文件 将 not 为 saved. 
 
-**语法** | **描述**
----|---
-newproject; | 创建新的布局环境。此函数不返回任何数据。
-
+**语法** |  **描述**  
+---|---  
+newproject;  |  创建 一个 新的 layout 环境.  This 函数 does not 返回 any 数据.   
+  
 **示例**
 
-使用 newproject 命令创建新项目。
+创建 一个 新的 project 使用 该 newproject 命令. 
+    
+    
+    newproject;
 
-```
-newproject;
-```
+However, 用于 FDTD 和 MODE, users 可以 have more choices: 
 
-但是，对于 FDTD 和 MODE，用户可以有更多选择：
+For MODE, it 可以 have numerical variables: 
 
-对于 MODE，它可以有数值变量：
+**语法** |  **描述**  
+---|---  
+newproject(option);  |  The options 是 
 
-**语法** | **描述**
----|---
-newproject(option); | 选项为：
+  1. use default 文件 和 材料 database as template 
+  2. use current 文件 和 材料 database as template 
+  3. open 一个 文件 browser 到 select 和 existing 文件 as 一个 template 
 
-  1. 使用默认文件和材料数据库作为模板
-  2. 使用当前文件和材料数据库作为模板
-  3. 打开文件浏览器选择现有文件作为模板
-
-默认选项是 1。
-
+The default option 是 1.   
+  
 **示例**
 
-使用 newproject 命令创建新项目。
+创建 一个 新的 project 使用 该 newproject 命令. 
+    
+    
+    newproject; 
+    newproject(2); # open 一个 template 使用 current 文件 和 材料 database
 
-```
-newproject;
-newproject(2); # 使用当前文件和材料数据库打开模板
-```
+For FDTD, 该 variables 可以 为 either numerical, 或 字符串: 
 
-对于 FDTD，变量可以是数值或字符串：
-
-**语法** | **描述**
----|---
-newproject(option); | 选项可以是数字或字符串：1 或 'default'：使用默认文件和材料数据库作为模板 2 或 'RF'：使用默认 RF 模板 3 或 'current'：使用当前文件和材料数据库作为模板 4 或 'existing'：打开文件浏览器选择现有文件作为模板 默认选项是 1。由于材料数据库中的大多数材料数据用于光学频率，打开 RF 项目不会修改材料数据库中的原始材料数据。
-
+**语法** |  **描述**  
+---|---  
+newproject(option);  |  The options 可以 为 数字 或 字符串:  1 或 'default': use default 文件 和 材料 database as template  2 或 'RF': use default RF template  3 或 'current': use current 文件 和 材料 database as template  4 或 'existing': open 一个 文件 browser 到 select 和 existing 文件 as 一个 template  The default option 是 1. Since most 材料 数据 在 该 Material Database 是 用于 optical frequencies, open 一个 RF project 将 not modify 该 original 材料 数据 在 该 材料 database.   
+  
 **示例**
 
-使用 newproject 命令创建新项目。
+创建 一个 新的 project 使用 该 newproject 命令. 
+    
+    
+    newproject; # open 一个 template 用于 optical 频率 仿真 
+    newproject('RF');# open 一个 template 用于 RF 仿真 
+    newproject(2); # open 一个 template 用于 RF 仿真
 
-```
-newproject; # 为光学频率模拟打开模板
-newproject('RF');# 为 RF 模拟打开模板
-newproject(2); # 为 RF 模拟打开模板
-```
+**参见**
 
-**另请参阅**
-
-- [命令列表](./命令列表.md)
-- [new](./new.md)
-- [exit](./exit.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ 新的 ](/hc/en-us/articles/360034931493-新的) , [ exit ](/hc/en-us/articles/360034931613-exit)

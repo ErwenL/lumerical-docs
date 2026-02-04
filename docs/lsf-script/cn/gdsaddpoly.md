@@ -1,23 +1,29 @@
+<!--
+Translation from English documentation
+Original command: gdsaddpoly
+Translation date: 2026-02-04 22:49:49
+-->
+
 # gdsaddpoly
 
-此函数向 GDSII 文件流中添加多边形元素。在 GDS 术语中，多边形也称为边界元素。只有在已创建单元后才能调用此命令。由于 GDSII 边界中顶点数量的[限制](https://www.artwork.com/gdsii/max_vertex.htm)，单个多边形可以添加的最大顶点数为 8190。
+This function adds a polygon element to a GDSII file stream. Polygons are also known as boundary elements in GDS terminology. This command can be called only if a cell has been created.The maximum number of vertices that can be added in a single polygon is 8190 due to [limitations](https://www.artwork.com/gdsii/max_vertex.htm) in the maximum number of vertices in a gdsii boundary. You can only use this command if a gds cell has already been created, for example, using [gdsbegincell](https://optics.ansys.com/hc/en-us/articles/360034927133-gdsbegincell-Script-command).
 
-对于需要更多顶点的复杂几何形状，请使用 [gdsaddstencil](./gdsaddstencil.md)。
+For complex geometries requiring more vertices, use [gdsaddstencil](https://optics.ansys.com/hc/en-us/articles/43594268925459-gdsaddstencil-Script-command).
 
-**语法** | **描述**
----|---
-gdsaddpoly(f, layer, [vertices]) | 在具有顶点的层上添加多边形元素。
-
-**参数** | **类型** | **描述**
----|---|---
-f | 字符串 | 之前用 [gdsopen](./gdsopen.md) 打开的文件句柄。
-layer | 字符串或数字 | 字符串：形式为 "layer:datatype" 的字符串（例如 "6:2"）可用于定义要从导入的 GDSII 文件中该结构的层号和数据类型。层和数据类型是整数。数字：定义层号并将数据类型设置为零。
-vertices | 矩阵 | 多边形的顶点，在 Nx2 矩阵中，其中第一列表示 x，第二列表示 y，例如 [x1,y1; x2,y2;...xn,yn]。值以米为单位。第一个和最后一个值不应该相同，多边形将自动闭合。
-
+**语法** |  **描述**  
+---|---  
+gdsaddpoly(f, layer, [vertices]) |  添加 一个 polygon 元素 在 一个 layer 使用 vertices.  
+  
+**Parameter** |  **Type** |  **描述**  
+---|---|---  
+f |  string |  A file handle that was previously opened with [gdsopen](https://optics.ansys.com/hc/en-us/articles/360034927093-gdsopen-Script-command).  
+layer |  字符串 或 数字 |  String: 一个 字符串 的 该 form "layer:datatype" (用于 example "6:2") 可以 为 used 到 define 该 layer 数字 和 datatype 用于 此 结构 从 该 GDSII 文件 到 import. Layer 和 datatype 是 integers. Number: defines 该 layer 数字 和 设置 该 datatype 到 为 zero.  
+vertices |  矩阵 |  Vertices 的 该 polygon, 在 一个 Nx2 矩阵 其中 该 first column represents x 和 该 second column represents y, e.g., [x1,y1; x2,y2;...xn,yn]. The 值 是 在 米. The first 和 last 值 应该 not 为 该 same, 该 polygon 将 为 automatically closed.  
+  
 ## 示例
 
-脚本代码示例可在 [gdsopen](./gdsopen.md) 页面上找到。
+An example 的 脚本 code 是 available 在 该 [gdsopen](/hc/en-us/articles/360034927093-gdsopen) page.
 
-**另请参阅**
+**参见**
 
-[gdsopen](./gdsopen.md)、[gdsclose](./gdsclose.md)、[gdsbegincell](./gdsbegincell.md)、[gdsendcell](./gdsendcell.md)、[gdsaddcircle](./gdsaddcircle.md)、[gdsaddref](./gdsaddref.md)、[gdsimport](./gdsimport.md)、[gdsaddpath](./gdsaddpath.md)、[gdsaddtext](./gdsaddtext.md)、[gdsaddstencil](./gdsaddstencil.md)
+[gdsopen](/hc/en-us/articles/360034927093-gdsopen), [gdsclose](/hc/en-us/articles/360034927113-gdsclose), [gdsbegincell](/hc/en-us/articles/360034927133-gdsbegincell), [gdsendcell](/hc/en-us/articles/360034406894-gdsendcell), [gdsaddcircle](/hc/en-us/articles/360034406914-gdsaddcircle), [gdsaddref](/hc/en-us/articles/360034927173-gdsaddref), [gdsimport](/hc/en-us/articles/360034406974-gdsimport), [gdsaddpath](/hc/en-us/articles/360034406954-gdsaddpath), [gdsaddtext,](/hc/en-us/articles/360034927193-gdsaddtext) [gdsaddstencil](https://optics.ansys.com/hc/en-us/articles/43594268925459-gdsaddstencil-Script-command)

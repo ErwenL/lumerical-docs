@@ -1,37 +1,34 @@
 <!--
 Translation from English documentation
 Original command: addmaterialproperties
-Translation date: 2026-02-04 01:03:13
+Translation date: 2026-02-04 22:49:29
 -->
 
 # addmaterialproperties
 
-向选中的材料模型添加材料属性。此脚本命令要求对象树中选中一个材料模型（在'materials'文件夹中）。
+添加 一个 (材料) 属性 到 该 选中的 材料 model. A 材料 model (在 该 'materials' folder) 必须 为 选中的 在 该 对象 tree 用于 此 脚本 命令 到 work.
 
 **语法** |  **描述**  
 ---|---  
-addmaterialproperties("material_type","material_name"); |  向有限元IDE对象树中选中的材料模型添加材料属性。属性来自有限元IDE中的材料数据库之一。"material_type"参数选择要添加的材料属性类型。选项包括："CT"表示电学属性，"HT"表示热学属性，"EM"表示光学属性。"material_name"参数定义相应材料数据库中材料的名称，其属性将被导入。此函数不返回任何数据。  
-addmaterialproperties("material_type"); |  "material_type"参数选择要添加的材料属性类型。选项包括："CT"表示电学属性，"HT"表示热学属性，"EM"表示光学属性。此函数以字符串形式返回可用材料名称列表。  
-   
+addmaterialproperties("material_type","material_name"); |  添加 一个 (材料) 属性 到 该 选中的 材料 model 在 该 对象 tree 在 Finite Element IDE. The 属性 comes 从 one 的 该 材料 databases 在 Finite Element IDE. The "material_type" 参数 selects 该 类型 的 材料 属性 到 为 added. The options 是 "CT" 用于 electrical 属性, "HT" 用于 thermal 属性, 和 "EM" 用于 optical 属性. The "material_name" 参数 defines 该 name 的 该 材料 在 该 appropriate 材料 database whose 属性 将 为 imported. The 函数 does not 返回 any 数据.  
+addmaterialproperties("material_type"); |  The "material_type" 参数 selects 该 类型 的 材料 属性 到 为 added. The options 是 "CT" 用于 electrical 属性, "HT" 用于 thermal 属性, 和 "EM" 用于 optical 属性. The 函数 返回 一个 list 的 available 材料 names as 一个 字符串.  
+  
 **示例**
 
-以下脚本命令将向有限元IDE的对象树中添加新材料，为其命名，并使用光学材料数据库中的材料模型为其分配光学属性。然后，脚本将使用电学/热学材料数据库中的适当材料模型向同一材料添加电学和热学属性。
+The following 脚本 commands 将 添加 一个 新的 材料 到 该 对象 tree 在 Finite Element IDE name it, 和 assign optical 属性 到 it 使用 一个 材料 model 在 该 optical 材料 database. The 脚本 将 那么 添加 electrical 和 thermal 属性 到 该 same 材料 使用 一个 appropriate 材料 model 在 该 electrical/thermal 材料 database.
     
     
     addmodelmaterial;
-    set("name","silicon");
-    addmaterialproperties("EM","Si (Silicon) - Palik");  # 从光学材料数据库导入
+    设置("name","silicon");
+    addmaterialproperties("EM","Si (Silicon) - Palik");  # importing 从 optical 材料 database
     select("materials::silicon");
-    addmaterialproperties("CT","Si (Silicon)");  # 从电学材料数据库导入
+    addmaterialproperties("CT","Si (Silicon)");  # importing 从 electrical 材料 database
     select("materials::silicon");
-    addmaterialproperties("HT","Si (Silicon)");  # 从热学材料数据库导入
+    addmaterialproperties("HT","Si (Silicon)");  # importing 从 thermal 材料 database
 
-**注意**：一旦将材料属性分配给材料模型，选择将更改为相应的属性。因此，在向材料模型添加新属性之前，必须重新选择该材料模型。  
+NOTE:  Once 一个 材料 属性 是 assigned 到 该 材料 model 该 selection changes 到 该 对应的 属性. Therefore 该 材料 model 必须 为 re-选中的 before adding 一个 新的 属性 到 it.  
 ---  
-   
+  
 **参见**
 
-* [addmodelmaterial](https://optics.ansys.com/hc/en-us/articles/360034404974-addmodelmaterial)
-* [addemmaterialproperty](https://optics.ansys.com/hc/en-us/articles/360034924953-addemmaterialproperty)
-* [addctmaterialproperty](https://optics.ansys.com/hc/en-us/articles/360034404994-addctmaterialproperty)
-* [addhtmaterialproperty](https://optics.ansys.com/hc/en-us/articles/360034924973-addhtmaterialproperty)
+[ addmodelmaterial ](/hc/en-us/articles/360034404974-addmodelmaterial) , [ addemmaterialproperty ](/hc/en-us/articles/360034924953-addemmaterialproperty) , [ addctmaterialproperty ](/hc/en-us/articles/360034404994-addctmaterialproperty) , [ addhtmaterialproperty ](/hc/en-us/articles/360034924973-addhtmaterialproperty)

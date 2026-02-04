@@ -1,142 +1,154 @@
+<!--
+Translation from English documentation
+Original command: setsweep
+Translation date: 2026-02-04 22:50:14
+-->
+
 # setsweep
 
-> **原文**: setsweep  
-> **翻译日期**: 2026-02-03  
-> **翻译状态**: ✅ 已完成
+设置 一个 属性 在 一个 参数 sweep/optimization/Monte Carlo/S-参数 sweep item.
 
-在参数扫描/优化/蒙特卡洛/S参数扫描项中设置属性。
+**语法** |  **描述**  
+---|---  
+setsweep("name", "property_name", property_value); |  设置 一个 属性 在 一个 sweep/optimization/Monte Carlo/S-参数 item. "name" 是 该 absolute name 的 一个 分析 item. "property_name" 是 该 属性 showed 在 该 edit window.  
+?setsweep(“name”); |  View 该 editable 属性 的 该 分析 item.  
+“name” 是 该 absolute name 的 该 分析 item.  
+  
+For a [**parameter sweep**](https://optics.ansys.com/hc/en-us/articles/360034922873-Parameter-sweep-utility)analysis:
 
-| **语法** | **说明** |
-| --- | --- |
-| setsweep("name", "property_name", property_value); | 在扫描/优化/蒙特卡洛/S参数项中设置属性。"name"是分析项的绝对名称。"property_name"是在编辑窗口中显示的属性。 |
-| ?setsweep("name"); | 查看分析项的可编辑属性。"name"是分析项的绝对名称。 |
+**Argument** |  **描述**  
+---|---  
+property_name = "name" |  设置 该 name 的 该 sweep.  
+property_name = "求解器" |  设置 该 求解器 used 用于 sweep.  
+property_name = "类型" |  设置 该 类型 的 该 sweep. The 值 的 "类型" could 为 "Ranges" 或 "Values"  
+property_name = "数字 的 points" |  设置 该 数字 的 points 的 该 sweep. The default 数字 的 points 是 10.  
+property_name = "resave files after 分析" |  Defines whether 或 not 到 re-save 该 文件 after 分析.  
+  
+For an **[optimization](https://optics.ansys.com/hc/en-us/articles/360034922953-Optimization-utility) ** analysis:
 
-对于[参数扫描](./360034922873.md)分析：
+**Argument** |  **描述**  
+---|---  
+property_name = "name" |  设置 该 name 的 该 optimization.  
+property_name = "algorithm" |  "algorithm" = "Particle Swarm", "User Defined"  
+property_name = "maximum generations" |  设置 该 maximum generation 数字.  
+property_name = "reset random generator" |  Checks 该 box 的 "Reset random generation".  
+property_name = "类型" |  "Type" = "Maximum", "Minimum"  
+property_name = "generation size" |  The 数字 的 simulations per generation.  
+property_name = "tolerance" |  设置 该 tolerance 值.  
+property_name = "first generation 脚本" |  设置 该 "first generation 脚本" 在 该 "Advanced" tab.  
+property_name = "next generation 脚本" |  设置 该 "next generation 脚本" 在 该 "Advanced" tab.  
+property_name = "use figure 的 merit 脚本" |  Checks 该 box 的 "use figure 的 merit" 在 该 "Figure 的 merit 脚本" tab.  
+property_name = "figure 的 merit 脚本" |  设置 该 "figure 的 merit 脚本" 在 该 "Figure 的 merit 脚本" tab.  
+  
+For a [**Monte Carlo**](https://optics.ansys.com/hc/en-us/articles/360034403194-Monte-Carlo-analysis-utility) analysis:
 
-| **参数** | **说明** |
-| --- | --- |
-| property_name = "name" | 设置扫描的名称。 |
-| property_name = "solver" | 设置用于扫描的求解器。 |
-| property_name = "type" | 设置扫描的类型。"type"的值可以是"Ranges"或"Values" |
-| property_name = "number of points" | 设置扫描的点数。默认点数为10。 |
-| property_name = "resave files after analysis" | 定义分析后是否重新保存文件。 |
+**Argument** |  **描述**  
+---|---  
+property_name = "name" |  设置 该 name 的 该 Monte Carlo.  
+property_name = "数字 的 trials" |  设置 该 数字 的 trials 用于 该 Monte Carlo. The default 数字 的 trials 是 10.  
+property_name = "variation" |  设置 该 variation 用于 "Process" 或 "Mismatch" 或 "Both". The default variation 是 "Both".  
+property_name = "seed" |  设置 该 seed.  
+property_name = "启用 seed" |  设置 whether 或 not 到 启用 该 seed.  
+property_name = "individual trial" |  设置 该 individual trial 数字.  
+property_name = "启用 individual trail" |  设置 whether 或 not 到 启用 individual trials.  
+property_name = “启用 spatial correlations” |  设置 whether spatial correlation 是 enabled.  
+  
+For an [**S-parameter matrix sweep**](https://optics.ansys.com/hc/en-us/articles/360034403214-S-parameter-matrix-sweep-utility) analysis:
 
-对于[优化](./360034922953.md)分析：
+**Argument** |  **描述**  
+---|---  
+property_name = "name" |  设置 该 name 的 该 S-参数 矩阵 sweep.  
+property_name = "excite all ports" |  If property_value = "true", 该 sweep 将 run as many simulations as there 是 defined rows 在 该 S-Matrix Setup table. If property_value = "false", simulations 将 为 run only 用于 该 选中的 rows 在 该 S-Matrix Setup table. The default 是 "true".  
+property_name = "计算 group delay" |  When enabled, 该 group delay 的 该 device 是 calculated numerically 使用 一个 finite difference approximation, 使用 该 derivative 的 phase 使用 respect 到 频率.  
+property_name = "invert sign" property_name = "map from" property_name = "active" property_name = "port" property_name = "mode" property_name = "map vector" |  These properties are set for each row of the S-Matrix Setup table tab. To set them manually, the command [addsweepparameter](https://optics.ansys.com/hc/en-us/articles/360034930493-addsweepparameter-Script-command) should be used. The meaning of each parameter can be found in the Knowledge Base Article on S-parameter sweeps. Once added, the rows cannot be changed and must be removed using [removesweepparameter](https://optics.ansys.com/hc/en-us/articles/360034930513-removesweepparameter-Script-command) first.  
+property_name = "auto symmetry" |  If property_value = "true", auto symmetry 是 calculated 和 applied 当 possible (see [ S-参数 矩阵 sweep ](/hc/en-us/articles/360034403214-S-参数-矩阵-sweep) ). If property_value = "false", no changes 是 applied 到 该 S-参数 sweep. The default 是 "false". **注意:** The changes made 到 该 S-参数 sweep cannot 为 undone 通过 setting property_value = "false". When property_value = "false", no settings change 在 该 current sweep.  
+property_name = "export setup" |  This 属性 设置 up 该 layout 的 该 export 文件 用于 export 的 数据 在 either Lumerical 或 Touchstone format. There 是 two possible 参数:
 
-| **参数** | **说明** |
-| --- | --- |
-| property_name = "name" | 设置优化的名称。 |
-| property_name = "algorithm" | "algorithm" = "Particle Swarm", "User Defined" |
-| property_name = "maximum generations" | 设置最大代数。 |
-| property_name = "reset random generator" | 勾选"重置随机生成"框。 |
-| property_name = "type" | "Type" = "Maximum", "Minimum" |
-| property_name = "generation size" | 每代的仿真数量。 |
-| property_name = "tolerance" | 设置容差值。 |
-| property_name = "first generation script" | 在"高级"选项卡中设置"第一代脚本"。 |
-| property_name = "next generation script" | 在"高级"选项卡中设置"下一代脚本"。 |
-| property_name = "use figure of merit script" | 在"品质因数脚本"选项卡中勾选"使用品质因数"框。 |
-| property_name = "figure of merit script" | 在"品质因数脚本"选项卡中设置"品质因数脚本"。 |
+  * “auto”: Uses automatic definition 用于 该 export table.
+  * A 自定义 结构 defining each 端口, see 该 example below 在 如何 该 结构 应该 为 formatted.
 
-对于[蒙特卡洛](./360034403194.md)分析：
-| **参数** | **说明** |
-| --- | --- |
-| property_name = "name" | 设置蒙特卡洛的名称。 |
-| property_name = "number of trials" | 设置蒙特卡洛的试验次数。默认试验次数为10。 |
-| property_name = "variation" | 设置"Process"或"Mismatch"或"Both"的变化。默认变化为"Both"。 |
-| property_name = "seed" | 设置种子。 |
-| property_name = "enable seed" | 设置是否启用种子。 |
-| property_name = "individual trial" | 设置单个试验号。 |
-| property_name = "enable individual trail" | 设置是否启用单个试验。 |
-| property_name = "enable spatial correlations" | 设置是否启用空间相关性。 |
+  
+  
+For an [S-parameter matrix sweep](https://optics.ansys.com/hc/en-us/articles/360034403214-S-parameter-matrix-sweep-utility) analysis in MODE:
 
-对于[S参数矩阵扫描](./360034403214.md)分析：
-| **参数** | **说明** |
-| --- | --- |
-| property_name = "name" | 设置S参数矩阵扫描的名称。 |
-| property_name = "excite all ports" | 如果property_value = "true"，扫描将运行与S矩阵设置表中定义的行数一样多的仿真。如果property_value = "false"，则只对S矩阵设置表中选定的行运行仿真。默认值为"true"。 |
-| property_name = "calculate group delay" | 启用时，使用相位的导数对频率的有限差分近似数值计算器件的群延迟。 |
-| property_name = "invert sign" property_name = "map from" property_name = "active" property_name = "port" property_name = "mode" property_name = "map vector" | 这些属性是为S矩阵设置表选项卡的每一行设置的。要手动设置它们，应该使用[addsweepparameter](./360034930493.md)命令。每个参数的含义可以在关于S参数扫描的知识库文章中找到。一旦添加，行不能被更改，必须先使用[removesweepparameter](./360034930513.md)删除。 |
-| property_name = "auto symmetry" | 如果property_value = "true"，则计算并尽可能应用自动对称（参见[S参数矩阵扫描](./360034403214.md)）。如果property_value = "false"，则不更改S参数扫描中的设置。默认值为"false"。注意：对S参数扫描所做的更改不能通过设置property_value = "false"来撤消。当property_value = "false"时，当前扫描中的设置不会改变。 |
-| property_name = "export setup" | 此属性设置导出文件的布局，以Lumerical或Touchstone格式导出数据。有两个可能的参数： |
+**Argument** |  **描述**  
+---|---  
+property_name = "name" |  设置 该 name 的 该 S-参数 矩阵 sweep.  
+property_name = "数字 的 points" |  设置 该 数字 的 points 在 该 sweep.  
+property_name = "calculated group delay" |  设置 whether 该 group delay 是 calculated.  
+property_name = "group delay 波长" |  设置 该 波长 到 计算 group delay. This option has no effect unless “calculated group delay” 是 enabled. But 如果 设置 prior 到 enabling 该 calculation, 该 设置 值 将 为 automatically applied 当 该 option 是 enabled.  
+property_name = "参数 label" |  设置 该 name 的 该 参数 的 该 sweep.  
+property_name = "start 波长" |  设置 该 start 波长 的 该 sweep.  
+property_name = "stop 波长" |  设置 该 stop 波长 的 该 sweep.  
+property_name = "include group delay" |  This 属性 设置 up 该 layout 的 该 export 文件 用于 export 的 数据 在 either Lumerical 或 Touchstone format. There 是 two possible 参数:
 
-* "auto"：使用自动定义导出表。
-* 定义每个端口的自定义结构，请参见下面的示例了解结构应该如何格式化。
+  * “auto”: Uses automatic definition 用于 该 export table.
+  * A 自定义 结构 defining each 端口, see 该 example below 在 如何 该 结构 应该 为 formatted.
 
-对于MODE中的[S参数矩阵扫描](./360034403214.md)分析：
-| **参数** | **说明** |
-| --- | --- |
-| property_name = "name" | 设置S参数矩阵扫描的名称。 |
-| property_name = "number of points" | 设置扫描中的点数。 |
-| property_name = "calculated group delay" | 设置是否计算群延迟。 |
-| property_name = "group delay wavelength" | 设置计算群延迟的波长。除非启用了"计算群延迟"，否则此选项无效。但如果在启用计算之前设置，则在启用选项时将自动应用设置的值。 |
-| property_name = "parameter label" | 设置扫描参数的名称。 |
-| property_name = "start wavelength" | 设置扫描的起始波长。 |
-| property_name = "stop wavelength" | 设置扫描的终止波长。 |
-| property_name = "include group delay" | 此属性设置导出文件的布局，以Lumerical或Touchstone格式导出数据。有两个可能的参数： |
-
-* "auto"：使用自动定义导出表。
-* 定义每个端口的自定义结构，请参见下面的示例了解结构应该如何格式化。
-
-编辑添加的扫描参数：除了列出的扫描/优化/蒙特卡洛/S参数的默认属性外，任何添加的扫描参数都可以通过将"property_name"设置为参数名来通过setsweep命令编辑。
-
+  
+Editing added sweep 参数:  In addition 到 该 listed default 属性 的 该 sweep/optimization/Monte Carlo/S-参数, any added sweep 参数 可以 为 edited 通过 该 setsweep 命令 通过 setting 该 "property_name" 到 该 参数 name.  
+---  
+  
 **示例**
 
-这些示例分别展示了如何设置扫描/优化/蒙特卡洛/S参数的属性。有关详细信息，请参阅应用示例页面[扫描脚本命令](./360034922893.md)。
+This examples show 如何 到 设置 一个 sweep/optimization/Monte Carlo/S-参数's 属性 respectively. Please refer 到 该 application example page [ Sweep scripting commands ](/hc/en-us/articles/360034922893-Sweep-scripting-commands) 用于 detailed information.
 
-扫描：
-```
-addsweep(0);
-setsweep("sweep", "name", "thickness_sweep_script");
-setsweep("thickness_sweep_script", "type", "Ranges");
-setsweep("thickness_sweep_script", "number of points", 10);
-```
+Sweep:
+    
+    
+    addsweep(0);
+    setsweep("sweep", "name", "thickness_sweep_script");
+    setsweep("thickness_sweep_script", "类型", "Ranges");
+    setsweep("thickness_sweep_script", "数字 的 points", 10); 
 
-优化：
-```
-addsweep(1);
-setsweep("optimization", "name", "thickness_optimization_script");
-setsweep("thickness_optimization_script", "Type", "Minimize");
-setsweep("thickness_optimization_script", "algorithm", "Particle Swarm");
-setsweep("thickness_optimization_script", "maximum generations", 20);
-setsweep("thickness_optimization_script", "generation size", 10);
-setsweep("thickness_optimization_script", "tolerance", 0);
-```
+Optimization:
+    
+    
+    addsweep(1);
+    setsweep("optimization", "name", "thickness_optimization_script");
+    setsweep("thickness_optimization_script", "Type", "Minimize");
+    setsweep("thickness_optimization_script", "algorithm", "Particle Swarm");
+    setsweep("thickness_optimization_script", "maximum generations", 20);
+    setsweep("thickness_optimization_script", "generation size", 10);
+    setsweep("thickness_optimization_script", "tolerance", 0);
 
-蒙特卡洛：
-```
-addsweep(2);
-MC_name = "MC_script";
-setsweep("Monte Carlo analysis", "name", MC_name);
-setsweep(MC_name, "number of trials", 50);
-setsweep(MC_name, "enable seed", 1);
-setsweep(MC_name, "seed", 1);
-setsweep(MC_name, "Variation", "Both");
-```
+Monte Carlo:
+    
+    
+    addsweep(2);
+    MC_name = "MC_script";
+    setsweep("Monte Carlo 分析", "name", MC_name);
+    setsweep(MC_name, "数字 的 trials", 50);
+    setsweep(MC_name, "启用 seed", 1);
+    setsweep(MC_name, "seed", 1);
+    setsweep(MC_name, "Variation", "Both");
 
-S参数扫描：
-```
-addsweep(3);
-setsweep("s-parameter sweep", "name", "S sweep");
-setsweep("s-parameter sweep", "Excite all ports", 0);
-setsweep("S sweep", "auto symmetry", true);
-```
+S-参数 sweep:
+    
+    
+    addsweep(3);
+    setsweep("s-参数 sweep", "name", "S sweep");
+    setsweep("s-参数 sweep", "Excite all ports", 0);
+    setsweep("S sweep", "auto symmetry", true);
 
-此示例在FDTD中定义并设置下图所示设置的导出设置。除"Mode label"、"Mode ID"和"Port location"之外的列不能更改。
-```
-modestruct = {"label": "mode 1", "id" : 1};
-rowstruct = {"mode 1": modestruct, "location": "LEFT"};
-portstruct = {"port 2": rowstruct};
-setsweep("s-parameter sweep", "export setup", portstruct);
-```
+This example defines 和 设置 该 export setup 在 FDTD 用于 该 setting shown 在 该 figure below. Columns other than “Mode label” , “Mode ID”, 和 “Port location” cannot 为 changed.
+    
+    
+    modestruct = {"label": "mode 1", "id" : 1};  
+    rowstruct = {"mode 1": modestruct, "location": "LEFT"};  
+    portstruct = {"端口 2": rowstruct};   
+    setsweep("s-参数 sweep", "export setup", portstruct);
 
-此示例在MODE中设置下图所示**第二行**的导出设置。表中的其他行根据仿真域中端口对象的位置自动填充。除"Mode label"和"Mode ID"之外的列不能更改。
-```
-modestruct = {"label": "my mode 2", "id" : 2};
-rowstruct = {"mode 1": modestruct};
-portstruct = {"port 2": rowstruct};
-setsweep("s-parameter sweep", "export setup", portstruct);
-```
+This example 设置 该 export setup 在 MODE 用于 该 **second** row 在 该 figure below. Other rows 在 该 table 是 automatically filled based 在 该 placement 的 Port 对象 在 该 仿真 domain. Columns other than “Mode label” 和 “Mode ID” cannot 为 changed.
 
-**相关命令**
+****
+    
+    
+    modestruct = {"label": "my mode 2", "id" : 2};  
+    rowstruct = {"mode 1": modestruct};  
+    portstruct = {"端口 2": rowstruct};   
+    setsweep("s-参数 sweep", "export setup", portstruct);
 
-[命令列表](./360037228834.md), [deletesweep](./deletesweep.md), [copysweep](./copysweep.md), [pastesweep](./pastesweep.md), [addsweep](./addsweep.md), [insertsweep](./insertsweep.md), [getsweep](./getsweep.md), [addsweepparameter](./360034930493.md), [addsweepresult](./addsweepresult.md), [removesweepparameter](./360034930513.md), [removesweepresult](./removesweepresult.md), [扫描脚本命令](./360034922893.md), [优化脚本命令](./360034922973.md), [蒙特卡洛脚本命令](./360034922993.md)
+**参见**
+
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ deletesweep ](/hc/en-us/articles/360034930173-deletesweep) , [ copysweep ](/hc/en-us/articles/360034930373-copysweep) , [ pastesweep ](/hc/en-us/articles/360034930393-pastesweep) , [ addsweep ](/hc/en-us/articles/360034930413-addsweep) , [ insertsweep ](/hc/en-us/articles/360034930433-insertsweep) , [ getsweep ](/hc/en-us/articles/360034930453-getsweep) , [ addsweepparameter ](/hc/en-us/articles/360034930493-addsweepparameter) , [ addsweepresult ](/hc/en-us/articles/360034410034-addsweepresult) , [ removesweepparameter ](/hc/en-us/articles/360034930513-removesweepparameter) , [ removesweepresult ](/hc/en-us/articles/360034930533-removesweepresult) , [ Sweep scripting commands ](/hc/en-us/articles/360034922893-Sweep-scripting-commands) , [ Optimization scripting commands ](/hc/en-us/articles/360034922973-Optimization-scripting-commands) , [ Monte Carlo scripting commands ](/hc/en-us/articles/360034922993-Monte-Carlo-scripting-commands)

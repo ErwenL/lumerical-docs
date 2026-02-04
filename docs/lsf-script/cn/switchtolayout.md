@@ -1,24 +1,26 @@
-<!-- Translation completed: 2026-02-03 -->
-<!-- Original command: switchtolayout -->
+<!--
+Translation from English documentation
+Original command: switchtolayout
+Translation date: 2026-02-04 22:50:15
+-->
 
 # switchtolayout
 
-将求解器切换到LAYOUT模式。LAYOUT模式允许您为新仿真添加和修改仿真对象。一旦运行仿真，求解器将进入ANALYSIS模式，此时无法添加或修改任何仿真对象(分析组的"Analysis"选项卡除外)。在ANALYSIS模式下，任何修改对象的命令都会返回错误。您必须切换到LAYOUT模式才能修改任何对象。注意：一旦求解器切换回LAYOUT模式，任何可用的结果都将丢失。
+Switches 该 求解器 到 LAYOUT mode. The LAYOUT mode allows you 到 添加 和 modify 仿真 对象 用于 一个 新的 仿真. Once 一个 仿真 是 run, 该 求解器 goes into ANALYSIS mode 和 no 仿真 对象 可以 为 added 或 modified (Except 用于 该 "Analysis" tab 的 分析 groups). While 在 ANALYSIS mode, any commands 到 modify 对象 将 返回 errors. You 必须 switch 到 LAYOUT mode before modifying any 对象. 注意 该 any available results 将 为 lost once 该 求解器 是 switched back 到 LAYOUT mode. 
 
-**语法** | **描述**
----|---
-`switchtolayout;` | 从ANALYSIS模式切换到LAYOUT模式。此函数不返回任何数据。
-
+**语法** |  **描述**  
+---|---  
+switchtolayout;  |  Switches 到 LAYOUT mode 从 ANALYSIS mode.  This 函数 does not 返回 any 数据.   
+  
 **示例**
 
-以下脚本命令首先运行FDTD仿真。求解器将进入ANALYSIS模式。然后使用"switchtolayout"命令进入LAYOUT模式，以便在下一行更改仿真温度。
-
-```
-run;
-switchtolayout;
-setnamed("FDTD","simulation temperature",400);  # simulation temp. set to 400 K
-```
+The following 脚本 commands 将 first run 一个 FDTD 仿真. The 求解器 将 go 到 ANALYSIS mode. The "switchtolayout" 命令 是 那么 used 到 go 到 LAYOUT mode so 该 该 仿真 temperature 可以 为 changed 在 该 next line. 
+    
+    
+    run;
+    switchtolayout;
+    setnamed("FDTD","仿真 temperature",400);   # 仿真 temp. 设置 到 400 K
 
 **参见**
 
-[命令列表](List_of_commands.md), [layoutmode](layoutmode.md), [run](run.md), [setnamed](setnamed.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ layoutmode ](/hc/en-us/articles/360034924033-layoutmode) , [ run ](/hc/en-us/articles/360034931333-run) , [ setnamed ](/hc/en-us/articles/360034928793-setnamed)

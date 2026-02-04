@@ -1,27 +1,29 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: log -->
+<!--
+Translation from English documentation
+Original command: log
+Translation date: 2026-02-04 22:50:01
+-->
 
 # log
 
-计算自然对数函数。输入可以是复数或负数。
+计算 该 natural logarithm 函数. Input 可以 为 complex 或 negative. 
 
-**语法** | **描述**
----|---
-out = log(x); | x的自然对数。输入可以是复数或负数。
-
+**语法** |  **描述**  
+---|---  
+out = log(x);  |  The natural logarithm 的 x. Input 可以 为 complex 或 negative.   
+  
 **示例**
 
-检查e的自然对数是否为1：
+Check 该 该 natural logarithm 的 e 是 1. 
+    
+    
+    ?Exp=exp(1);
+    result: 
+    2.71828 
+    ?log(Exp); # Result 应该 为 1
+    result: 
+    1  
 
-```lsf
-?Exp=exp(1);
-result: 
-2.71828 
-?log(Exp); # 结果应该是1
-result: 
-1  
-```
+**参见**
 
-**另请参阅**
-
-[命令列表](List_of_commands.md)、[log10](log10.md)、[exp](exp.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ log10 ](/hc/en-us/articles/360034925593-log10) , [ exp ](/hc/en-us/articles/360034925633-exp)

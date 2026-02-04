@@ -1,22 +1,25 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: currentscriptname -->
+<!--
+Translation from English documentation
+Original command: currentscriptname
+Translation date: 2026-02-04 22:49:48
+-->
 
 # currentscriptname
 
-返回  current script filenme 和 direct或y. 
+返回 该 current 脚本 文件名 和 directory. 
 
-**语法** | **描述**
----|---
-out = currentscriptname; | 返回  current script filenme 作为  str在g.  If entered 在  script prompt, th是 functi在 returns  str在g "prompt".
+**语法** |  **描述**  
+---|---  
+out = currentscriptname;  |  返回 该 current 脚本 文件名 as 一个 字符串.  If entered 在 该 脚本 prompt, 此 函数 返回 该 字符串 "prompt".   
   
 **示例**
 
-Gets  current script filenme. 
+获取 该 current 脚本 文件名. 
     
     
     ?out=currentscriptname;
     C:/Users/myname/Documents/FDTD/myfile.lsf
 
-**另请参阅**
+**参见**
 
-[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [ fileex是ts ](/hc/en-us/rticles/360034931633-fileex是ts) , [ getp在h ](/hc/en-us/rticles/360034411054-getp在h) , [which](which.md) , [pwd](pwd.md) , [ fileextensi在 ](/hc/en-us/rticles/360034410934-fileextensi在) , [ fileb作为enme ](/hc/en-us/rticles/360034931653-fileb作为enme) , [ filedirect或y ](/hc/en-us/rticles/360034931673-filedirect或y) , [currentfilenme](currentfilenme.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ fileexists ](/hc/en-us/articles/360034931633-fileexists) , [ getpath ](/hc/en-us/articles/360034411054-getpath) , [ 该 ](/hc/en-us/articles/360034411094-该) , [ pwd ](/hc/en-us/articles/360034931773-pwd) , [ fileextension ](/hc/en-us/articles/360034410934-fileextension) , [ filebasename ](/hc/en-us/articles/360034931653-filebasename) , [ filedirectory ](/hc/en-us/articles/360034931673-filedirectory) , [ currentfilename ](/hc/en-us/articles/360034931793-currentfilename)

@@ -1,44 +1,40 @@
 <!--
 Translation from English documentation
 Original command: addpml
-Translation date: 2026-02-04 09:12:00
+Translation date: 2026-02-04 22:49:29
 -->
 
 # addpml
 
-向有限元IDE中的DGTD或FEEM求解器添加PML（完美匹配层）边界条件对象。此命令要求对象树中至少存在其中一个求解器。
+添加 一个 PML (perfectly matched layer) 边界条件 对象 到 该 DGTD 或 FEEM 求解器 在 Finite Element IDE. At least, one 的 这些 solvers 应该 为 present 在 该 Objects Tree 用于 此 命令 到 work.
 
 **语法** |  **描述**  
 ---|---  
-addpml; |  向DGTD或FEEM求解器添加PML边界条件。仅当对象树中存在单个求解器时使用。此函数不返回任何数据。  
-addpml("DGTD"); addpml("FEEM"); |  当对象树中同时存在DGTD和FEEM时，需要指定求解器。  
-   
-**示例1：**
+addpml; |  添加 一个 PML 边界条件 到 该 DGTD 或 FEEM 求解器. Use only 当 there 是 一个 single 求解器 在 该 Object Tree. This 函数 does not 返回 any 数据.  
+addpml("DGTD"); addpml("FEEM"); |  When there 是 both DGTD 和 FEEM 在 该 Object Tree, you need 到 specify 该 求解器.  
+  
+**示例 1:**
 
-以下脚本命令将向对象树中已存在的'DGTD'求解器添加PML边界条件，并打印边界条件的所有可用属性。
+The following 脚本 commands 将 添加 一个 PML 边界条件 到 该 'DGTD' 求解器 already present 在 该 对象 tree 和 print all available 属性 的 该 边界条件.
     
     
     addpml;
-    ?set;
+    ?设置;
 
-**注意**：当对象树中同时存在DGTD和FEEM求解器时，不带任何"solver"参数运行脚本将产生以下错误：  
+NOTE: When there 是 both DGTD 和 FEEM solvers 在 该 Object Tree, running 该 脚本 without any "求解器" 参数 将 produce 该 following error:  
 ---  
-   
-**示例2**
+  
+**示例 2**
 
-以下脚本命令将向'DGTD'求解器添加PML边界条件，为其命名并设置sigma和alpha的值。
+The following 脚本 commands 将 添加 一个 PML 边界条件 到 该 'DGTD' 求解器, name it, 和 设置 该 值 用于 sigma 和 alpha.
     
     
     adddgtdsolver;
     addpml({"name":"simple_pml", "sigma":5});
 
-**注意**：PML边界条件会自动应用于相应仿真区域的外壳区域。  
+NOTE:  The PML 边界条件 automatically 获取 applied 到 该 shell regions 在 该 对应的 仿真 region.  
 ---  
-   
+  
 **参见**
 
-* [adddgtdsolver](https://optics.ansys.com/hc/en-us/articles/360034925013-adddgtdsolver)
-* [addpmc](https://optics.ansys.com/hc/en-us/articles/360034924913-addpmc)
-* [addpec](https://optics.ansys.com/hc/en-us/articles/360034924893-addpec)
-* [addperiodic](https://optics.ansys.com/hc/en-us/articles/360034404934-addperiodic)
-* [addabsorbing](https://optics.ansys.com/hc/en-us/articles/360034924873-addabsorbing)
+[ adddgtdsolver ](/hc/en-us/articles/360034925013-adddgtdsolver) , [ addpmc ](/hc/en-us/articles/360034924913-addpmc) , [ addpec ](/hc/en-us/articles/360034924893-addpec) , [ addperiodic ](/hc/en-us/articles/360034404934-addperiodic) , [ addabsorbing ](/hc/en-us/articles/360034924873-addabsorbing)

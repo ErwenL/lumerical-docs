@@ -1,15 +1,18 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addfieldregion -->
+<!--
+Translation from English documentation
+Original command: addfieldregion
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addfieldregion
 
-Adds  [field regi在 object](https://optics.sys.com/hc/en-us/rticles/36967414684947-Field-Regi在-Simul在i在-object) 到  simul在i在 envir在ment.  field regi在 object 是 used 使用 lumopt, see  Knowledge B作为e rticle 在 [Gett在g strted 使用 lumopt](https://optics.sys.com/hc/en-us/rticles/360050995394-Gett在g-Strted-使用-lumopt-Pyth在-API) 对于 m或e 在对于m在i在.
+Adds a [field region object](https://optics.ansys.com/hc/en-us/articles/36967414684947-Field-Region-Simulation-object) to the simulation environment. The field region object is used with lumopt, see the Knowledge Base article on [Getting started with lumopt](https://optics.ansys.com/hc/en-us/articles/360050995394-Getting-Started-with-lumopt-Python-API) for more information.
 
-**语法** | **描述**
----|---
-addfieldregion; | Adds  field regi在 object 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
-addfieldregion(struct_data); | Adds  field regi在 object 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple.  Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addfieldregion; |  添加 一个 field region 对象 到 该 仿真 环境. This 函数 does not 返回 any 数据.  
+addfieldregion(struct_data); |  Adds a field region object and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example.  This function does not return any data.  
   
-**另请参阅**
+**参见**
 
-[L是t 的 comm和s ](https://optics.sys.com/hc/en-us/rticles/360037228834), [set ](https://optics.sys.com/hc/en-us/rticles/360034928773-set), [ddple ](https://optics.sys.com/hc/en-us/rticles/360034924413-ddple), [ddgussi ](https://optics.sys.com/hc/en-us/rticles/360034404434-ddgussi), [ddtfsf](https://optics.sys.com/hc/en-us/rticles/360034404454-ddtfsf), [dddipole](https://optics.sys.com/hc/en-us/rticles/360034924393-dddipole-Script-comm和), [dddftm在it或](https://optics.sys.com/hc/en-us/rticles/36957320687763-dddftm在it或-Script-comm和)
+[List of commands ](https://optics.ansys.com/hc/en-us/articles/360037228834), [set ](https://optics.ansys.com/hc/en-us/articles/360034928773-set), [addplane ](https://optics.ansys.com/hc/en-us/articles/360034924413-addplane), [addgaussian ](https://optics.ansys.com/hc/en-us/articles/360034404434-addgaussian), [addtfsf](https://optics.ansys.com/hc/en-us/articles/360034404454-addtfsf), [adddipole](https://optics.ansys.com/hc/en-us/articles/360034924393-adddipole-Script-command), [adddftmonitor](https://optics.ansys.com/hc/en-us/articles/36957320687763-adddftmonitor-Script-command)

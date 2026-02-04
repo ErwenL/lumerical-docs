@@ -1,20 +1,27 @@
+<!--
+Translation from English documentation
+Original command: farfieldfilter
+Translation date: 2026-02-04 22:49:48
+-->
+
 # farfieldfilter
 
-设置或获取用于远场滤波器的滤波器宽度，该滤波器用于消除由于近场剪切导致的远场投影中的波纹。当监视器边缘的近场较小但不完全为零时，应使用此功能。
+设置 或 获取 该 filter width 用于 far field filter 该 是 used 到 remove ripples 在 该 far field projection due 到 clipping 的 该 near fields. It 应该 为 used 当 该 near fields at 该 edge 的 该 监视器 是 small but not precisely zero. 
 
-图中波浪形蓝线显示将用于远场投影的近场电场。在这种情况下，场在监视器边缘没有趋近于零，这将在远场投影中导致波纹。绿线显示将应用于场的空间滤波器，确保它们趋近于零。滤波器参数通过以下公式定义滤波器宽度：α=(a)/(a+b)。
+The bumpy blue line 的 该 figure shows 该 near field electric field 该 将 为 used 用于 一个 far field projection. In 此 case, 该 field does not go 到 zero at 该 edge 的 该 监视器, 该 将 lead 到 ripples 在 该 far field projection. The green line shows 该 spatial filter 该 将 为 applied 到 该 fields, ensuring they go 到 zero. The filter 参数 defines 该 width 的 该 filter 通过 该 following formula: α=(一个)/(一个+b). 
 
-**语法** | **描述**
----|---
-out = farfieldfilter; | 获取当前远场滤波器设置。
-farfieldfilter(α); | 设置当前远场滤波器设置。α=(a)/(a+b)。远场滤波器有一个输入参数，即 0 到 1 之间的数字。默认值为 0，表示关闭滤波器。此滤波器应用于所有远场投影。
-
-注意：周期性结构 远场滤波器选项不应用于周期性结构。使用"假设周期性"选项时，应将其设置为零。
-
+**语法** |  **描述**  
+---|---  
+out = farfieldfilter;  |  获取 该 current far field filter setting.   
+farfieldfilter(α);  |  设置 该 current far field filter setting. α=(一个)/(一个+b). The far field filter has 一个 single input 参数, 该 是 一个 数字 between 0 和 1. By default, it 是 0, 该 turns 该 filter off. This filter 是 applied 到 all far field projections.   
+  
+注意: Periodic structures  The far field filter option 应该 not 为 used 用于 periodic structures. 设置 it 到 zero 当 使用 该 'assume periodic' option.   
+---  
+  
 **示例**
 
-[远场投影 - 空间滤波](**%20to%20be\**)
+[ Far field projection - spatial filtering ](/hc/en-us/articles/360034394314-FFP-Spatial-filtering)
 
-**另请参阅**
+**参见**
 
-[命令列表](../命令列表.md)、[farfield2d](./farfield2d.md)、[farfield3d](./farfield3d.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ farfield2d ](/hc/en-us/articles/360034410074-farfield2d) , [ farfield3d ](/hc/en-us/articles/360034930693-farfield3d)

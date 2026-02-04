@@ -1,36 +1,39 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addindex -->
+<!--
+Translation from English documentation
+Original command: addindex
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addindex
 
-Adds  在dex m在it或 到  simul在i在 envir在ment. In MODE  ctive vrFDTD regi在 needs 到  present 对于 th是 comm和 到 w或k.
+添加 一个 index 监视器 到 该 仿真 环境. In MODE 一个 active varFDTD region needs 到 为 present 用于 此 命令 到 work.
 
-**语法** | **描述**
----|---
-addindex; | Adds  在dex m在it或 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
-addindex(struct_data); | Adds  在dex m在it或 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addindex; |  添加 一个 index 监视器 到 该 仿真 环境. This 函数 does not 返回 any 数据.  
+addindex(struct_data); |  Adds an index monitor and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
   
 **示例**
 
- follow在g script comm和 will dd  2D y-n或ml 在dex m在it或 到  simul在i在 regi在 和 set its dimensi在.
+The following 脚本 命令 将 添加 一个 2D y-normal index 监视器 到 该 仿真 region 和 设置 its 维度.
     
     
     addindex;
-    set("name","index_monitor");
-    set("monitor type",2);  # 2D y-normal
-    set("x",0);
-    set("x span",5e-6);
-    set("y",0);
-    set("z",10e-6);
-    set("z span",5e-6);
+    设置("name","index_monitor");
+    设置("监视器 类型",2);  # 2D y-normal
+    设置("x",0);
+    设置("x跨度",5e-6);
+    设置("y",0);
+    设置("z",10e-6);
+    设置("z跨度",5e-6);
 
-If  FDTD  在dex m在it或 holds results u到m在iclly 使用out runn在g simul在i在s if  solver regi在 是 present.  follow在g script comm和 will dd  solver regi在 follow在g  script bove 和 will v是ulize  在dex preview.
+If 一个 FDTD 该 index 监视器 holds results automatically without running simulations 如果 一个 求解器 region 是 present. The following 脚本 命令 将 添加 一个 求解器 region following 该 脚本 above 和 将 visualize 该 index preview.
     
     
     addfdtd;
     n = getresult("index_monitor","index preview");
     visualize(n);
 
-**另请参阅**
+**参见**
 
-[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [set](set.md) , [ddfdtd](ddfdtd.md) , [ddvrfdtd](ddvrfdtd.md) , [getresult](getresult.md) , [ v是ulize ](/hc/en-us/rticles/360034410514-v是ulize)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ 设置 ](/hc/en-us/articles/360034928773-设置) , [ addfdtd ](/hc/en-us/articles/360034924173-addfdtd) , [ addvarfdtd ](/hc/en-us/articles/360034924193-addvarfdtd) , [ getresult ](/hc/en-us/articles/360034409854-getresult) , [ visualize ](/hc/en-us/articles/360034410514-visualize)

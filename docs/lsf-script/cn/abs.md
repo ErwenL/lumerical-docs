@@ -1,18 +1,18 @@
 <!--
 Translation from English documentation
 Original command: abs
-Translation date: 2026-02-03
+Translation date: 2026-02-04
 -->
 
 # abs
 
 返回数字或矩阵的绝对值。
 
-**Syntax** | **Description**
----|---
+**语法** | **描述**
+---|---  
 out = abs(x); | 返回x的绝对值。
 
-**Example**
+**示例**
 
 计算数组中数字的绝对值。
 

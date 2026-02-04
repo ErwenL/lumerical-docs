@@ -1,28 +1,28 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: getnumber -->
+<!--
+Translation from English documentation
+Original command: getnumber
+Translation date: 2026-02-04 22:50:00
+-->
 
 # getnumber
 
-**语法** | **描述**
----|---
-out = getnumber; | 返回 the 数字 of objects that are selected;
+获取 该 数字 的 对象 该 是 选中的. 
 
+**语法** |  **描述**  
+---|---  
+out = getnumber;  |  返回 该 数字 的 对象 该 是 选中的;   
+  
 **示例**
 
-Add 2 microns to the radius of all objects named "circle". 
+添加 2 微米 到 该 radius 的 all 对象 named "circle". 
+    
+    
     select("circle");
-    for (i=1:getnumber) {
-     rad=get("radius",i);
-     set("radius",rad+2e-6,i);
+    用于 (i=1:getnumber) {
+     rad=获取("radius",i);
+     设置("radius",rad+2e-6,i);
     }
 
-Add 2 microns to the radius of all objects named "circle". 
-    select("circle");
-    for (i=1:getnumber) {
-     rad=get("radius",i);
-     set("radius",rad+2e-6,i);
-    }
+**参见**
 
-**另请参阅**
-
-[ Manipulating objects ](/hc/en-us/articles/360037228834) , [ get ](/hc/en-us/articles/360034928873-get) , [ getnamed ](/hc/en-us/articles/360034408574-getnamed) , [ getnamednumber ](/hc/en-us/articles/360034408594-getnamednumber) , [ set ](/hc/en-us/articles/360034928773-set)
+[ Manipulating 对象 ](/hc/en-us/articles/360037228834) , [ 获取 ](/hc/en-us/articles/360034928873-获取) , [ getnamed ](/hc/en-us/articles/360034408574-getnamed) , [ getnamednumber ](/hc/en-us/articles/360034408594-getnamednumber) , [ 设置 ](/hc/en-us/articles/360034928773-设置)

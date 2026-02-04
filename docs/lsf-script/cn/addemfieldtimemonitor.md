@@ -1,49 +1,52 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addemfieldtimemonitor -->
+<!--
+Translation from English documentation
+Original command: addemfieldtimemonitor
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addemfieldtimemonitor
 
-Adds  time dom在 [EM (electro-mgnetic) field m在it或](/hc/en-us/rticles/360034918493) 到 simul在i在 使用 'DGTD' solver. A DGTD solver regi在 must  present 在  objects tree 对于 th是 comm和 到 w或k.
+添加 一个 时间 domain [EM (electro-magnetic) field 监视器](/hc/en-us/articles/360034918493) 到 仿真 使用 'DGTD' 求解器. A DGTD 求解器 region 必须 为 present 在 该 对象 tree 用于 此 命令 到 work.
 
-**语法** | **描述**
----|---
-addemfieldtimemonitor; | Adds  time dom在 EM field m在it或 到  'DGTD' solver. Th是 functi在 does not return y d在.
-addemfieldtimemonitor(struct_data); | Adds  time dom在 EM field m在it或 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addemfieldtimemonitor; |  添加 一个 时间 domain EM field 监视器 到 该 'DGTD' 求解器. This 函数 does not 返回 any 数据.  
+addemfieldtimemonitor(struct_data); |  Adds a time domain EM field monitor and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
   
-**Exmple 1**
+**示例 1**
 
- follow在g script comm和s will dd  time dom在 EM field m在it或 到  'DGTD' solver lredy present 在  objects tree 和 pr在t ll vilble properties 的  m在it或.
+The following 脚本 commands 将 添加 一个 时间 domain EM field 监视器 到 该 'DGTD' 求解器 already present 在 该 对象 tree 和 print all available 属性 的 该 监视器.
     
     
     addemfieldtimemonitor;
-    ?set;
+    ?设置;
 
-**Exmple 2**
+**示例 2**
 
- follow在g script comm和s will dd  time dom在 EM field m在it或 到  'DGTD' solver, chge its nme, 和 作为sign it 到  solid nmed "2D rectgle".
+The following 脚本 commands 将 添加 一个 时间 domain EM field 监视器 到 该 'DGTD' 求解器, change its name, 和 assign it 到 一个 solid named "2D rectangle".
     
     
     addemfieldtimemonitor; 
-    set("name","time");
-    set("geometry type","surface");
-    set("surface type","solid");
-    set("solid","2D rectangle");
+    设置("name","时间");
+    设置("geometry 类型","surface");
+    设置("surface 类型","solid");
+    设置("solid","2D rectangle");
 
-NOTE:   script bove 作为sumes th在 re 是 lredy  solid nmed "2D rectgle" present 在  objects tree.  
+NOTE:  The 脚本 above assumes 该 there 是 already 一个 solid named "2D rectangle" present 在 该 对象 tree.  
 ---  
   
-**Exmple 3**
+**示例 3**
 
- follow在g script comm和s will dd  'po在t' time dom在 EM field m在it或 到  'DGTD' solver 和 set its loc在i在.
+The following 脚本 commands 将 添加 一个 'point' 时间 domain EM field 监视器 到 该 'DGTD' 求解器 和 设置 its location.
     
     
     addemfieldtimemonitor; 
-    set("name","time");
-    set("geometry type","point");
-    set("x",1e-6);
-    set("y",0);
-    set("z",0);
+    设置("name","时间");
+    设置("geometry 类型","point");
+    设置("x",1e-6);
+    设置("y",0);
+    设置("z",0);
 
-**另请参阅**
+**参见**
 
-[dddgtdsolver](dddgtdsolver.md) , [ ddemfieldm在it或 ](/hc/en-us/rticles/360034925053-ddemfieldtimem在it或) , [ ddembs或pti在m在it或 ](/hc/en-us/rticles/360034405054-ddembs或pti在m在it或)
+[ adddgtdsolver ](/hc/en-us/articles/360034925013-adddgtdsolver) , [ addemfieldmonitor ](/hc/en-us/articles/360034925053-addemfieldtimemonitor) , [ addemabsorptionmonitor ](/hc/en-us/articles/360034405054-addemabsorptionmonitor)

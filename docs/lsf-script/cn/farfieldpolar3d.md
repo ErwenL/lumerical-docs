@@ -1,18 +1,24 @@
+<!--
+Translation from English documentation
+Original command: farfieldpolar3d
+Translation date: 2026-02-04 22:49:48
+-->
+
 # farfieldpolar3d
 
-farfieldpolar3d 函数类似于 farfield3d，但它返回的是复电场，而不是场强。如果投影一个频率点，数据以 NxMx3 矩阵形式返回；如果投影多个频率点，数据以 NxMx3xP 形式返回，其中 N 和 M 是空间索引，第三个索引表示球面坐标系中的 E_r、E_θ 和 E_φ，P 是频率点数。E_r、E_θ 和 E_φ 是电场矢量的复分量。请参阅 farfield3d 文档以获取有关各种监视器方向的 ux、uy、na、nb 解释信息。
+The 函数 farfieldpolar3d 是 similar 到 farfield3d, but it 返回 该 complex electric fields, rather than field intensity. The 数据 是 returned as 矩阵 的 NxMx3 (如果 one 频率 point 是 projected) 或 NxMx3xP (如果 more than 1 频率 point 是 projected), 其中 N 和 M 是 spatial indices, 该 third index refers 到 E  r  , E  θ  和 E  φ  , 在 spherical coordinates, 和 P 是 该 数字 的 频率 points. The components E  r  , E  θ  和 E  φ  是 该 complex components 的 该 electric field 向量. See 该 farfield3d documentation 用于 information 在 interpreting ux, uy, na, nb 用于 various 监视器 orientations.
 
-注意：从 GUI 使用可视化器查看远场时，有三个属性可用：E2、Ep、Es。E2 对应 |E|^2，Ep 对应 Etheta，Es 对应 Ephi。
+注意: When viewing far fields 从 该 GUI 使用 该 visualizer, three Attributes 是 available: E2, Ep, Es. E2 corresponds 到 |E|^2, Ep 到 Etheta, 和 Es 到 Ephi.
 
-**语法** | **描述**
----|---
-out = farfieldpolar3d( "mname",...); | 返回球面复电场。参数与 farfield3d 相同。
-out = farfieldpolar3d( dataset,...); | 返回球面复电场。参数与 farfield3d 相同。
-
+**语法** |  **描述**  
+---|---  
+out = farfieldpolar3d( "mname",...); |  返回 该 spherical complex electric fields. Same 参数 as farfield3d.  
+out = farfieldpolar3d( dataset,...); |  返回 该 spherical complex electric fields. Same 参数 as farfield3d.  
+  
 **示例**
 
-请参阅 [farfield3d](./farfield3d.md) 函数描述中的示例。
+See example in the [farfield3d ](https://optics.ansys.com/hc/en-us/articles/360034930693-farfield3d) function description.
 
-**另请参阅**
+**参见**
 
-[命令列表](../命令列表.md)、[farfield3d](./farfield3d.md)、[farfieldvector3d](./farfieldvector3d.md)、[远场投影 - 场极化](**%20to%20be\**)
+[ List of commands ](https://optics.ansys.com/hc/en-us/articles/360037228834) , [ farfield3d ](https://optics.ansys.com/hc/en-us/articles/360034930693-farfield3d) , [ farfieldvector3d ](https://optics.ansys.com/hc/en-us/articles/360034410114-farfieldvector3d) , [ Far field projections - Field polarization ](https://optics.ansys.com/hc/en-us/articles/360034914753-FFP-Field-polarization)

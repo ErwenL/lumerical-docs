@@ -1,141 +1,86 @@
 <!--
 Translation from English documentation
 Original command: quote
-Translation date: 2026-02-03
+Translation date: 2026-02-04 22:50:14
 -->
 
 # "
 
-" 和 ' 是字符串操作符。字符串可以用单引号或双引号创建。
+" 和 ' 是 字符串 operators. Strings 可以 为 created 使用 single 或 double quotes.
 
-使用双引号创建字符串时，支持以下转义序列：
+The following escape sequences 是 recognized 当 creating strings 使用 double quotes:
 
-| 转义序列 | 描述 |
-|---------|------|
-| \" | 字符串中的双引号 |
-| \n | 字符串中的换行符 |
-| \\ | 字符串中的反斜杠 |
+\" |  double quotes 在 字符串  
+---|---  
+\n |  newline (linefeed) character 在 字符串  
+\\\ |  backslash 在 字符串  
+**语法** |  **描述**  
+---|---  
+out="my 字符串"; |  use double quotes 到 创建 strings  
+  
+_ NOTE: Literal backslashes 和 double quotes  _
 
-**语法** | **描述**
----|---
-out="my string"; | 使用双引号创建字符串
+It 是 always possible 到 创建 一个 literal backslash 在 一个 字符串 使用 \\\\. However, \ also results 在 一个 literal backslash, IF it it 将 not 为 interpreted as part 的 一个 escape sequence (\n, \", \\\\). This note 是 important 当 storing paths 在 strings.
 
-**注意：字面量反斜杠和双引号**
+Suppose we want 到 创建 该 字符串  C:\Program Files\Lumerical  . The following three commands 是 valid 和 equivalent:
+    
+    
+    mystring = 'C:\Program Files\Lumerical';  # use single quotes
+    mystring = "C:\Program Files\Lumerical";  # use double quotes
+    mystring = "C:\\Program Files\\Lumerical"; # use double quotes 和 \\ escape character
 
-在字符串中创建字面量反斜杠时，总是可以使用 \\\\。然而，如果 \ 不会被解释为转义序列的一部分（\n、\"、\\\\），那么 \ 也会产生一个字面量反斜杠。这个注意事项在将路径存储到字符串中时尤为重要。
+However, suppose we want 到 创建 该 字符串  C:\Program Files\Lumerical\  . The only difference 是 该 additional backslash at 该 end 的 该 字符串. The following two commands 是 valid 和 equivalent:
+    
+    
+    mystring = 'C:\Program Files\Lumerical\';   # use single quotes
+    mystring = "C:\\Program Files\\Lumerical\\"; # use double quotes 和 \\ escape character
 
-假设我们要创建字符串 `C:\Program Files\Lumerical`。以下三个命令都是有效且等效的：
+The other potential 命令, 其中 we use 一个 single backslash, 是 not valid syntax 和 将 result 在 一个 error.
+    
+    
+    mystring = "C:\Program Files\Lumerical\";  # use double quotes
 
-```lsf
-mystring = 'C:\Program Files\Lumerical';  # 使用单引号
-mystring = "C:\Program Files\Lumerical";  # 使用双引号
-mystring = "C:\\Program Files\\Lumerical"; # 使用双引号和 \\ 转义字符
-```
-
-然而，假设我们要创建字符串 `C:\Program Files\Lumerical\`（唯一的区别是末尾多了一个反斜杠）。以下两个命令是有效且等效的：
-
-```lsf
-mystring = 'C:\Program Files\Lumerical\';   # 使用单引号
-mystring = "C:\\Program Files\\Lumerical\\"; # 使用双引号和 \\ 转义字符
-```
-
-其他可能的命令（使用单个反斜杠）不是有效的语法，会导致错误。
-
-```lsf
-mystring = "C:\Program Files\Lumerical\";  # 使用双引号 - 错误！
-```
-
-问题在于脚本解释器会将末尾的 \" 解释为字面量双引号的转义字符，而不是单个反斜杠和结束双引号。当以这种方式解释时，该命令会导致语法错误，因为没有双引号字符来闭合字符串。
+The problem 是 该 该 脚本 interpreter 将 interpret 该 final \" as 一个 escape character 用于 一个 literal double quote, rather than as 一个 single backslash 和 一个 closing double quote. When interpreted 此 way, 该 命令 results 在 一个 syntax error because there 是 no double quote character closing 该 字符串.
 
 **示例**
 
-将监视器名称存储在字符串中。
+Store 一个 监视器 name 在 一个 字符串.
+    
+    
+    m="time_monitor";
+    t=getdata(m,"t");
+    Ex=getdata(m,'Ex');
 
-```lsf
-m="time_monitor";
-t=getdata(m,"t");
-Ex=getdata(m,'Ex');
-```
+Single 和 Double quotes within strings
+    
+    
+    ?"This 是 如何 you \"double quote\" 一个 word";
+    This 是 如何 you "double quote" 一个 word
+    ?"This 是 如何 you 'single quote' 一个 word";
+    This 是 如何 you 'single quote' 一个 word 
 
-**字符串中的单引号和双引号**
+This 是 如何 you 添加 一个 backslash 到 一个 字符串. If 该 backslash 是 在 该 middle 的 一个 字符串, you 可以 use \ 或 \\\ 到 创建 一个 backslash. However, 当 该 backslash 是 at 该 end 的 一个 字符串, you MUST use \\\ 到 创建 该 backslash. A single backslash 将 cause 一个 syntax error because 该 backslash 和 该 closing quote (i.e. \") 将 为 interpreted as 一个 literal double quote within 该 字符串, rather than as 一个 backslash 和 一个 closing quote.
+    
+    
+    ?"Backslash 在 该 middle \ 的 一个 字符串";
+    Backslash 在 该 middle \ 的 一个 字符串
+    ?"Backslash 在 该 middle \\ 的 一个 字符串";
+    Backslash 在 该 middle \ 的 一个 字符串
+    ?"Backslash 在 该 end 的 一个 字符串\\";
+    Backslash 在 该 end 的 一个 字符串\
+     ?"Backslash 在 该 end 的 一个 字符串\";
+    syntax error: prompt line: 1
 
-```lsf
-?"This is how you \"double quote\" a word";
-```
-输出：
-```
-This is how you "double quote" a word
-```
+This 是 如何 users 可以 创建 multi-line strings 使用 double quote strings. Users 可以 use 该  endl  special character between strings, 或 该 \n escape character within strings.
+    
+    
+    ?"This 是 如何 you 创建" + endl + "multi-line strings";
+    This 是 如何 you 创建
+    multi-line strings
+    ?"This 是 如何 you 创建 \nmulti-line strings";
+    This 是 如何 you 创建 
+    multi-line strings 
 
-```lsf
-?"This is how you 'single quote' a word";
-```
-输出：
-```
-This is how you 'single quote' a word
-```
+**参见**
 
-以下是在字符串中添加反斜杠的方法。如果反斜杠在字符串中间，可以使用 \ 或 \\\\ 来创建反斜杠。然而，当反斜杠在字符串末尾时，必须使用 \\\\ 来创建反斜杠。单个反斜杠会导致语法错误，因为反斜杠和结束引号（即 \"）会被解释为字符串内的字面量双引号，而不是反斜杠和结束引号。
-
-```lsf
-?"Backslash in the middle \ of a string";
-```
-输出：
-```
-Backslash in the middle \ of a string
-```
-
-```lsf
-?"Backslash in the middle \\ of a string";
-```
-输出：
-```
-Backslash in the middle \ of a string
-```
-
-```lsf
-?"Backslash in the end of a string\\";
-```
-输出：
-```
-Backslash in the end of a string\
-```
-
-```lsf
-?"Backslash in the end of a string\";
-```
-输出：
-```
-syntax error: prompt line: 1
-```
-
-这是用户如何使用双引号字符串创建多行字符串的方法。用户可以在字符串之间使用 `endl` 特殊字符，或在字符串内使用 \n 转义字符。
-
-```lsf
-?"This is how you create" + endl + "multi-line strings";
-```
-输出：
-```
-This is how you create
-multi-line strings
-```
-
-```lsf
-?"This is how you create \nmulti-line strings";
-```
-输出：
-```
-This is how you create
-multi-line strings
-```
-
-**另请参见**
-
-- [命令列表](./command_list.md)
-- [单引号](./single_quote.md)
-- [num2str](./num2str.md)
-- [+](./plus.md)
-- [endl](./endl.md)
-- [write](./write.md)
-- [eval](./eval.md)
-- [system](./system.md)
+[ List 的 commands](/hc/en-us/articles/360037228834), ['](/hc/en-us/articles/360034931053--), [num2str](/hc/en-us/articles/360034925993-num2str), [+](/hc/en-us/articles/360034410254--), [endl](/hc/en-us/articles/360034410414-endl), [write](/hc/en-us/articles/360034411134-write), [eval](/hc/en-us/articles/360034926013-eval), [system](/hc/en-us/articles/360034410894-system)

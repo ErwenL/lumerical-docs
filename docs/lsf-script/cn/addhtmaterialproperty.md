@@ -1,42 +1,45 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addhtmaterialproperty -->
+<!--
+Translation from English documentation
+Original command: addhtmaterialproperty
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addhtmaterialproperty
 
-Adds  new rml m在eril property 到  selected m在eril model 或  selected solid lloy. A m在eril model (在  'm在erils' folder) 或  solid lloy rml m在eril property must  selected 在  object tree 对于 th是 script comm和 到 w或k. A solid lloy my not  cre在ed 作为  comp在ent 的  solid lloy. To dd  rml m在eril property 从  electr或ml m在eril d在b作为e, see [ ddm在erilproperties ](/hc/en-us/rticles/360034924933-ddm在erilproperties) . F或 detils 的 rml m在eril models, see [ Electricl/rml M在eril Models ](/hc/en-us/rticles/360034919093-Electricl-rml-M在eril-Models) .
+添加 一个 新的 thermal 材料 属性 到 该 选中的 材料 model 或 该 选中的 solid alloy. A 材料 model (在 该 'materials' folder) 或 一个 solid alloy thermal 材料 属性 必须 为 选中的 在 该 对象 tree 用于 此 脚本 命令 到 work. A solid alloy 可能 not 为 created as 一个 component 的 一个 solid alloy. To 添加 一个 thermal 材料 属性 从 该 electrothermal 材料 database, see [ addmaterialproperties ](/hc/en-us/articles/360034924933-addmaterialproperties) . For details 的 thermal 材料 models, see [ Electrical/Thermal Material Models ](/hc/en-us/articles/360034919093-Electrical-Thermal-Material-Models) .
 
-**语法** | **描述**
----|---
-addhtmaterialproperty("property_type"); | Adds  new rml m在eril property 到  selected m在eril model 或  selected solid lloy.  "property_type" rgument c  在e 的  follow在g:
+**语法** |  **描述**  
+---|---  
+addhtmaterialproperty("property_type"); |  添加 一个 新的 thermal 材料 属性 到 该 选中的 材料 model 或 该 选中的 solid alloy. The "property_type" 参数 可以 为 one 的 该 following:
 
   * "Solid"
   * "Solid Alloy"
   * "Fluid"
 
-Th是 functi在 does not return y d在.  
+This 函数 does not 返回 any 数据.  
   
 **示例**
 
- follow在g script comm和s will dd  new m在eril 到  objects tree 在 F在ite Element IDE, 和 作为sign rml property 的 fluid 到 it.
+The following 脚本 commands 将 添加 一个 新的 材料 到 该 对象 tree 在 Finite Element IDE, 和 assign thermal 属性 的 fluid 到 it.
     
     
     addmodelmaterial;
     addhtmaterialproperty("Fluid");
 
-NOTE:  Once  m在eril property 是 作为signed 到  m在eril model  selecti在 chges 到  c或resp在d在g property. re对于e  m在eril model must  re-selected 对于e dd在g  new property 到 it.  
+NOTE:  Once 一个 材料 属性 是 assigned 到 该 材料 model 该 selection changes 到 该 对应的 属性. Therefore 该 材料 model 必须 为 re-选中的 before adding 一个 新的 属性 到 it.  
 ---  
-NOTE:  F或  newly cre在ed lloy, when  first b作为e m在eril 是 dded 到  lloy,  sec在d b作为e m在eril will lso   sme m在eril 作为  first. F或 exmple,  follow在g l在es will cre在e  new lloy 和 作为sign  solid m在eril "A" 作为 both b作为e m在eril 1 和 b作为e m在eril 2 对于  lloy:
+NOTE:  For 一个 newly created alloy, 当 该 first base 材料 是 added 到 该 alloy, 该 second base 材料 将 also 为 该 same 材料 as 该 first. For example, 该 following lines 将 创建 一个 新的 alloy 和 assign 该 solid 材料 "A" as both base 材料 1 和 base 材料 2 用于 该 alloy:
     
     
     addmodelmaterial;
-    set("name","test");
+    设置("name","test");
     addhtmaterialproperty("Solid Alloy");
-    set("name","alloy");
+    设置("name","alloy");
     addhtmaterialproperty("Solid");
-    set("name","A");  
+    设置("name","A");  
   
 ---  
   
-**另请参阅**
+**参见**
 
-[ ddmodelm在eril ](/hc/en-us/rticles/360034404974-ddmodelm在eril) , [ ddm在erilproperties ](/hc/en-us/rticles/360034924933-ddm在erilproperties) , [ ddemm在erilproperty ](/hc/en-us/rticles/360034924953-ddemm在erilproperty) , [ ddctm在erilproperty ](/hc/en-us/rticles/360034404994-ddctm在erilproperty)
+[ addmodelmaterial ](/hc/en-us/articles/360034404974-addmodelmaterial) , [ addmaterialproperties ](/hc/en-us/articles/360034924933-addmaterialproperties) , [ addemmaterialproperty ](/hc/en-us/articles/360034924953-addemmaterialproperty) , [ addctmaterialproperty ](/hc/en-us/articles/360034404994-addctmaterialproperty)

@@ -1,46 +1,49 @@
+<!--
+Translation from English documentation
+Original command: mie3d
+Translation date: 2026-02-04 22:50:13
+-->
+
 # mie3d
 
-mie3d 函数可用于计算由任何（非磁性）材料制成的嵌入在任何环境电介质材料中的球形颗粒的散射、吸收和消光效率。效率只是归一化到颗粒几何横截面积（πr²）的横截面积。
+The 函数 mie3d 可以 为 used 到 计算 该 scattering, absorption, 和 extinction efficiencies 的 一个 spherical particle made 的 any (non-magnetic) 材料 embedded 在 any ambient dielectric 材料. The efficiencies 是 simply 该 cross sections normalized 到 该 geometric cross section 的 该 particle (\\(\pi r^2\\)). 
 
-### 参考文献：
+###  References: 
 
-[1] Bohren C.F. 和 D.R. Huffman，"小颗粒的光吸收和散射"，John Wiley，纽约，NY，1983。
+[1] Bohren C.F. 和 D.R. Huffman, “Absorption 和 Scattering 的 Light 通过 Small Particles”, John Wiley, New York, NY, 1983. 
 
-[2] Mätzler C. 文档，"Mie 散射和吸收的 MATLAB 函数，版本 2"，IAP Res. Rep. No. 2002-11，2002年8月。
+[2] Documentation 的 Mätzler C. “MATLAB Functions 用于 Mie Scattering 和 Absorption, Version 2”, IAP Res. Rep. No. 2002-11, August, 2002. 
 
-**语法** | **描述**
----|---
-Q = mie3d(m,x); | 结果 Q 是一个结构体，包含 Qext、Qabs 和 Qscat（Qext = Qabs+Qscat）。这些将与 x 具有相同长度。参数为：m：球体折射率与环境电介质折射率的比值。该量可以是复数值，因为球体的折射率可能是复数的。对于色散介质，该量应该具有单一值，或与 x 相同长度。x：尺寸参数，定义为 2*pi*r/lambda0*n1，其中 lambda0 是自由空间波长，r 是球体半径，n1 是环境介质的实值折射率。
-Q = mie3d(m,x,nmax); | nmax：要计算的 Mie 系数最高阶数。默认值为 0，此时 nmax = ceil(x+4*x^(1/3))+2。通常无需修改默认值。
-
+**语法** |  **描述**  
+---|---  
+Q = mie3d(m,x);  |  The result Q 是 一个 结构体 该 contains quantities Qext, Qabs 和 Qscat (Qext = Qabs+Qscat). These 将 have 该 same 长度 as x.  The 参数 是:  m: 该 ratio 的 该 refractive index 的 该 sphere 到 该 refractive index 的 该 ambient dielectric medium. This quantity 可能 为 complex-valued because 该 refractive index 的 该 sphere 可能 为 complex. This quantity 应该 either have 一个 singleton 值, 或 为 该 same 长度 的 x 用于 dispersive media.  x: 该 size 参数 该 是 defined as 2*pi*r/lambda0*n1 其中 lambda0 是 该 free space 波长, r 是 该 sphere radius, 和 n1 是 该 real-valued refractive index 的 该 ambient medium.   
+Q = mie3d(m,x,nmax);  |  nmax : 该 maximum 数字 的 orders 到 计算 用于 该 mie coefficients. The default 值 是 0, 和 在 此 case 该 nmax = ceil(x+4*x^(1/3))+2. There 是 typically no need 到 modify 该 default 值.   
+  
 **示例**
 
-在此示例中，我们将计算并比较可见光谱范围内 n=1.5、色散玻璃和金 1 微米球的消光效率。
+In 此 example we 将 计算 和 compare 该 extinction efficiencies 用于 1 micron spheres 的 n=1.5, dispersive glass 和 gold over 该 visible spectrum. 
+    
+    
+    # input 参数
+    n1 = 1;
+    n2 = 1.5;
+    lambda0 = linspace(400e-9,700e-9,10000);
+    radius = 1000e-9;
+    # 计算 m,x 和 call mie3d
+    m = n2/n1;
+    x = 2*pi*radius/lambda0*n1;
+    Q1 = mie3d(m,x);
+    # recalculate 使用 dispersive glass
+    n2 = getindex("SiO2 (Glass) - Palik",c/lambda0);
+    m = n2/n1;
+    Q2 = mie3d(m,x);
+    # recalculate 使用 Al
+    n2 = getindex("Au (Gold) - Palik",c/lambda0);
+    m = n2/n1;
+    Q3 = mie3d(m,x);
+    plot(lambda0*1e9,Q1.Qext,Q2.Qext,Q3.Qext,"波长 (nm)","Q extinction");
+    legend("n = 1.5","Glass (Palik)","Gold (Palik)");
 
-```
-# 输入参数
-n1 = 1;
-n2 = 1.5;
-lambda0 = linspace(400e-9,700e-9,10000);
-radius = 1000e-9;
-# 计算 m、x 并调用 mie3d
-m = n2/n1;
-x = 2*pi*radius/lambda0*n1;
-Q1 = mie3d(m,x);
-# 用色散玻璃重新计算
-n2 = getindex("SiO2 (Glass) - Palik",c/lambda0);
-m = n2/n1;
-Q2 = mie3d(m,x);
-# 用 Al 重新计算
-n2 = getindex("Au (Gold) - Palik",c/lambda0);
-m = n2/n1;
-Q3 = mie3d(m,x);
-plot(lambda0*1e9,Q1.Qext,Q2.Qext,Q3.Qext,"wavelength (nm)","Q extinction");
-legend("n = 1.5","Glass (Palik)","Gold (Palik)");
-```
+**参见**
 
-**另请参阅**
-
-- [mie3ds12](./mie3ds12.md)
-- [Mie3D 示例 (FDTD)](https://apps.lumerical.com/mie-scattering-fdtd.html)
-- [Mie3D 示例 (DGTD)](https://apps.lumerical.com/mie-scattering-dgtd.html)
+[ mie3ds12 ](/hc/en-us/articles/360034406814-mie3ds12) , [ Mie3D example (FDTD) ](https://apps.lumerical.com/mie-scattering-fdtd.html) , [ Mie3D example (DGTD) ](https://apps.lumerical.com/mie-scattering-dgtd.html)

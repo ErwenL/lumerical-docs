@@ -1,32 +1,35 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: dot -->
+<!--
+Translation from English documentation
+Original command: dot
+Translation date: 2026-02-04 22:49:48
+-->
 
 # .
 
-Retrieves  prmeters 和 在tributes 的 d在作为ets. Th是 是 not  m在h dot product functi在, see  [ dot](/hc/en-us/rticles/360034925773-dot) comm和.
+Retrieves 该 参数 和 attributes 的 datasets. This 是 not 该 math dot product 函数, see 该 [ dot](/hc/en-us/articles/360034925773-dot) 命令.
 
-**语法** | **描述**
----|---
-result = A.result; | Retrieves  prmeter 或 在tribute "result" 从  ex是t在g d在作为et A.  result 是  sclr m在rix.
+**语法** |  **描述**  
+---|---  
+result = A.result; |  Retrieves 该 参数 或 attribute "result" 从 该 existing dataset A. The result 是 一个 scalar 矩阵.  
   
 **示例**
 
-Th是 exmple retrieves  d在作为et results "E" 从  pr的ile m在it或, 和 n uses  [getprmeter](getprmeter.md) comm和 到 get  "f" prmeter, 和  [ get在tribute ](/hc/en-us/rticles/360034409534-get在tribute) comm和 到 get  "Ex" 和 "E2" 在tributes 从  d在作为et. Note th在 f, Ex 和 E2 是 ll sclr m在rices, like  results 在e would get 使用  [ getd在 ](/hc/en-us/rticles/360034409834-getd在) comm和.
+This example retrieves 该 dataset results "E" 从 一个 profile 监视器, 和 那么 uses 该 [ getparameter ](/hc/en-us/articles/360034409514-getparameter) 命令 到 获取 该 "f" 参数, 和 该 [ getattribute ](/hc/en-us/articles/360034409534-getattribute) 命令 到 获取 该 "Ex" 和 "E2" attributes 从 该 dataset. 注意 该 f, Ex 和 E2 是 all scalar matrices, like 该 results one would 获取 使用 该 [ getdata ](/hc/en-us/articles/360034409834-getdata) 命令.
     
     
     E = getresult("profile","E");
-    f = E.getparameter("f");  # the parameter f
-    Ex = E.getattribute("Ex"); # the x component of the electric field
-    E2 = E.getattribute("E2"); # the electric field intensity, note that this only works if E is a vector
+    f = E.getparameter("f");  # 该 参数 f
+    Ex = E.getattribute("Ex"); # 该 x component 的 该 electric field
+    E2 = E.getattribute("E2"); # 该 electric field intensity, note 该 此 only works 如果 E 是 一个 向量
 
-Note th在 在e c lso use  "." oper在或 到 retrieve  prmeters 和 在tributes directly. F或 exmple:
+注意 该 one 可以 also use 该 "." operator 到 retrieve 该 参数 和 attributes directly. For example:
     
     
     E = getresult("profile","E");
-    f = E.f;  # the parameter f
-    Ex = E.Ex; # the x component of the electric field
-    E2 = E.E2; # the electric field intensity, note that this only works if E is a vector
+    f = E.f;  # 该 参数 f
+    Ex = E.Ex; # 该 x component 的 该 electric field
+    E2 = E.E2; # 该 electric field intensity, note 该 此 only works 如果 E 是 一个 向量
 
-**另请参阅**
+**参见**
 
-[ m在rixd在作为et ](/hc/en-us/rticles/360034409454-m在rixd在作为et) , [ rectil在erd在作为et ](/hc/en-us/rticles/360034409474-rectil在erd在作为et) , [getprmeter](getprmeter.md) , [ get在tribute ](/hc/en-us/rticles/360034409534-get在tribute) , [ v是ulize ](/hc/en-us/rticles/360034410514-v是ulize) , [getelectric](getelectric.md) , [getmgnetic](getmgnetic.md)
+[ matrixdataset ](/hc/en-us/articles/360034409454-matrixdataset) , [ rectilineardataset ](/hc/en-us/articles/360034409474-rectilineardataset) , [ getparameter ](/hc/en-us/articles/360034409514-getparameter) , [ getattribute ](/hc/en-us/articles/360034409534-getattribute) , [ visualize ](/hc/en-us/articles/360034410514-visualize) , [ getelectric ](/hc/en-us/articles/360034409974-getelectric) , [ getmagnetic ](/hc/en-us/articles/360034930293-getmagnetic)

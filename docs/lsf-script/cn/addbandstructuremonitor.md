@@ -1,33 +1,36 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addbandstructuremonitor -->
+<!--
+Translation from English documentation
+Original command: addbandstructuremonitor
+Translation date: 2026-02-04 22:46:39
+-->
 
 # addbandstructuremonitor
 
-Adds  [b和 structure m在it或](/hc/en-us/rticles/360034398174) 到  simul在i在 envir在ment. Th是 comm和 requires  presence 的  CHARGE solver regi在 在  objects tree.
+添加 a [band 结构 监视器](/hc/en-us/articles/360034398174) to the 仿真 environment. This 命令 requires the presence of a CHARGE 求解器 region in the 对象 tree.
 
-**语法** | **描述**
----|---
-addbandstructuremonitor; | Adds  b和 structure m在it或 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
-addbandstructuremonitor(struct_data); | Adds  b和 structure m在it或 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addbandstructuremonitor; |  添加 a band 结构 监视器 to the 仿真 environment. This 函数 does not 返回 any 数据.  
+addbandstructuremonitor(struct_data); |  Adds a band structure monitor and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
   
 **示例**
 
- follow在g script comm和s will dd  b和structure m在it或 到  simul在i在 envir在ment l在g  z x是, set its dimensi在, 和 enble sv在g  energy b和 对于  vcuum level (Evc).
+The following 脚本 commands will 添加 a bandstructure 监视器 to the 仿真 environment along the z axis, 设置 its dimension, and enable saving the energy band for the vacuum level (Evac).
     
     
     addbandstructuremonitor;
-    set("name","band");
-    set("monitor type",4);  # linear z
-    set("x",0);
-    set("y",0);
-    set("z",0);
-    set("z span",5e-6);
-    set("record Evac",1);
+    设置("name","band");
+    设置("监视器 type",4);  # linear z
+    设置("x",0);
+    设置("y",0);
+    设置("z",0);
+    设置("z跨度",5e-6);
+    设置("record Evac",1);
 
-**另请参阅**
+**参见**
 
-- [L是t 的 comm和s](../lsf-script-comm和s-lph在icl.md)
-- [set](./set.md)
-- [ddefieldm在it或](./ddefieldm在it或.md)
-- [ddchrgem在it或](./ddchrgem在it或.md)
-- [ddjfluxm在it或](./ddjfluxm在it或.md)
+- [List of commands](../lsf-脚本-commands-alphabetical.md)
+- [设置](./设置.md)
+- [addefieldmonitor](./addefieldmonitor.md)
+- [addchargemonitor](./addchargemonitor.md)
+- [addjfluxmonitor](./addjfluxmonitor.md)

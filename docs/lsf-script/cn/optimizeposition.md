@@ -1,47 +1,45 @@
+<!--
+Translation from English documentation
+Original command: optimizeposition
+Translation date: 2026-02-04 22:50:14
+-->
+
 # optimizeposition
 
-optimizeposition 命令计算在使用 FDE 求解器时导致指定模式与 d-card 之间最大重叠的 x 偏移、y 偏移和 z 偏移。
+The optimizeposition 命令 计算 该 x shift, y shift, 和 z shift resulting 在 maximum overlap between 该 specified mode 和 d-card 当 使用 该 FDE 求解器. 
 
-x 偏移、y 偏移和 z 偏移对应于 d-card 配置文件中的 x、y 和 z 偏移。
+The x shift, y shift, 和 z shift correspond 到 该 offset 在 该 d-card profile 在 x, y, 和 z. 
 
-此函数还填充重叠和功率耦合，以及 x 偏移、y 偏移和 z 偏移位置，类似于在 GUI 中单击 "Optimize position" 按钮时，在特征求解器分析窗口的重叠分析选项卡中。
+This 函数 also populates 该 overlap 和 power coupling as well as 该 x shift, y shift, 和 z shift positions 在 该 Overlap 分析 tab 的 该 Eigensolver Analysis window, similarly 到 当 you click 在 该 "Optimize position" button 在 该 GUI. 
 
-有关重叠和耦合计算的更多详细信息，请参阅 overlap 函数。
+See 该 [ overlap ](/hc/en-us/articles/360034405254-overlap) 函数 用于 more details about overlap 和 coupling calculations. 
 
-**语法** | **描述**
----|---
-out = optimizeposition(mode number, d-card number); | 
+**语法** |  **描述**  
+---|---  
+out = optimizeposition(mode 数字, d-card 数字);  | 
 
-  * mode number：模式列表中的模式编号
-  * d-card number：d-card 在 deck 中的编号
+  * mode 数字: 该 mode 数字 在 该 mode list 
+  * d-card 数字: 该 数字 的 该 d-card 在 该 deck 
 
-请注意，必须选择 "shift d-card center" 选项才能使用此函数。
-
+注意 该 该 "shift d-card center" option 必须 为 选中的 在 order 到 use 此 函数.   
+  
 **示例**
 
-此示例演示如何使用 optimizeposition 命令计算指定模式与 d-card 之间导致最大重叠的 x 偏移、y 偏移和 z 偏移，打印偏移值以及应用偏移后的最优重叠和功率耦合。
+This example shows 如何 到 use 该 optimizeposition 命令 到 计算 该 x shift, y shift, 和 z shift between 一个 specified mode 和 d-card resulting 在 maximum overlap, print out 该 shift 值 和 该 optimal overlap 和 power coupling 使用 该 applied shift. 
+    
+    
+    setanalysis("shift d-card center",1);  
+    shift = optimizeposition(4,1); # find x, y, z shift resulting 在 optimal overlap between  
+                                   # 该 4th mode 在 该 mode list 和 该 1st mode 在 该 deck  
+    
+    ?"x shift:"+num2str(shift(1));  
+    ?"y shift:"+num2str(shift(2));  
+    ?"z shift:"+num2str(shift(3));  
+    
+    out = overlap("mode4","global_mode1",shift(1),shift(2),shift(3));  
+    ?"maximum overlap:"+num2str(out(1));  
+    ?"maximum power coupling:"+num2str(out(2));
 
-```
-setanalysis("shift d-card center",1);
-shift = optimizeposition(4,1); # 找到 x、y、z 偏移，使模式列表中的第 4 个模式与 deck 中的第 1 个模式之间达到最优重叠
+**参见**
 
-?"x shift:"+num2str(shift(1));
-?"y shift:"+num2str(shift(2));
-?"z shift:"+num2str(shift(3));
-
-out = overlap("mode4","global_mode1",shift(1),shift(2),shift(3));
-?"maximum overlap:"+num2str(out(1));
-?"maximum power coupling:"+num2str(out(2));
-```
-
-**另请参阅**
-
-- [命令列表](./命令列表.md)
-- [copydcard](./copydcard.md)
-- [findmodes](./findmodes.md)
-- [coupling](./coupling.md)
-- [overlap](./overlap.md)
-- [bestoverlap](./bestoverlap.md)
-- [propagate](./propagate.md)
-- [expand](./expand.md)
-- [setanalysis](./setanalysis.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ copydcard ](/hc/en-us/articles/360034930233-copydcard) , [ findmodes ](/hc/en-us/articles/360034405214-findmodes) , [ coupling ](/hc/en-us/articles/360034925173-coupling) , [ overlap ](/hc/en-us/articles/360034405254-overlap) , [ bestoverlap ](/hc/en-us/articles/360034405274-bestoverlap) , [ propagate ](/hc/en-us/articles/360034925213-propagate) , [ expand ](/hc/en-us/articles/360034926653-expand) , [ setanalysis ](/hc/en-us/articles/360034925113-setanalysis)

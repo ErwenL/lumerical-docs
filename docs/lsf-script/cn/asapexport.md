@@ -1,24 +1,27 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: asapexport -->
+<!--
+Translation from English documentation
+Original command: asapexport
+Translation date: 2026-02-04 22:49:36
+-->
 
 # asapexport
 
-**语法** | **描述**
----|---
-asapexport( "monitorname"); | 导出 data from monitorname. By default, the first 频率 point is exported.  This 函数 does not 返回 any data.
-asapexport( "monitorname", f); | Exports the 频率 point specified by the index f.
-asapexport( "monitorname", f, "filename"); | Exports to the specified "文件名" without opening a 文件 browser window.
+Exports 该 desired 监视器 到 一个 文件 用于 interfacing 使用 BRO's ASAP. These files have 该 .fld extension. The 监视器 必须 为 一个 频率 power 或 一个 频率 profile 监视器. 
 
+**语法** |  **描述**  
+---|---  
+asapexport( "monitorname");  |  Export 数据 从 monitorname. By default, 该 first 频率 point 是 exported.  This 函数 does not 返回 any 数据.   
+asapexport( "monitorname", f);  |  Exports 该 频率 point specified 通过 该 index f.   
+asapexport( "monitorname", f, "文件名");  |  Exports 到 该 specified "文件名" without opening 一个 文件 browser window.   
+  
 **示例**
 
-导出 data from 监视器 透射 to a .fld 文件 for ASAP. The 监视器 had more than one 频率 point, so the first point was exported by default. 
-    asapexport("透射");
-    警告: prompt line 1: in asapexport: no 频率 point was specified and the d-card has more than one. The first is used by default.
+Export 数据 从 监视器 transmission 到 一个 .fld 文件 用于 ASAP. The 监视器 had more than one 频率 point, so 该 first point was exported 通过 default. 
+    
+    
+    asapexport("transmission");
+    警告: prompt line 1: 在 asapexport: no 频率 point was specified 和 该 d-card has more than one. The first 是 used 通过 default.
 
-导出 data from 监视器 透射 to a .fld 文件 for ASAP. The 监视器 had more than one 频率 point, so the first point was exported by default. 
-    asapexport("透射");
-    警告: prompt line 1: in asapexport: no 频率 point was specified and the d-card has more than one. The first is used by default.
+**参见**
 
-**另请参阅**
-
-[ List of commands ](/hc/en-us/articles/360037228834) , [ asapload ](/hc/en-us/articles/360034931973-asapload) , [ asapimport ](/hc/en-us/articles/360034411274-asapimport) , [ addimportedsource ](/hc/en-us/articles/360034924433-addimportedsource)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ asapload ](/hc/en-us/articles/360034931973-asapload) , [ asapimport ](/hc/en-us/articles/360034411274-asapimport) , [ addimportedsource ](/hc/en-us/articles/360034924433-addimportedsource)

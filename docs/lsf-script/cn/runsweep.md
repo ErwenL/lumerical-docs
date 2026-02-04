@@ -1,40 +1,44 @@
-<!-- Translated: 2024-01-XX by AI Assistant -->
-<!-- Status: Initial translation -->
-<!-- Review needed: Technical terms, consistency check -->
+<!--
+Translation from English documentation
+Original command: runsweep
+Translation date: 2026-02-04 22:50:14
+-->
 
 # runsweep
 
-运行参数扫描或优化任务。
+Runs 一个 参数 sweep 或 optimization task.
 
-**语法** | **描述**  
+**语法** |  **描述**  
 ---|---  
-runsweep; | 运行所有扫描和优化任务。在 FDTD 中，这将使用 CPU 模式运行任务。  
-runsweep("taskname"); | 仅运行名为 taskname 的扫描或优化。在 FDTD 中，这将使用 CPU 模式运行扫描或优化。  
-runsweep("resource_type"); | 仅限 FDTD，使用指定的 resource_type 运行所有扫描和优化任务，"GPU" 或 "CPU"  
-runsweep("taskname","resource_type"); | 仅限 FDTD，使用指定的 resource_type 运行名为 taskname 的扫描或优化，"CPU" 或 "GPU"。  
+runsweep; |  Runs all sweeps 和 optimization tasks. In FDTD, 此 将 run tasks 在 CPU mode.  
+runsweep("taskname"); |  Runs only 该 sweep 或 optimization named taskname. In FDTD, 此 将 run 该 sweep 或 optimization 在 CPU mode.  
+runsweep(“resource_type”); |  FDTD only, runs all sweeps 和 optimization tasks 使用 一个 specified resource_type, either “GPU” 或 “CPU”  
+runsweep("taskname",”resource_type”); |  FDTD only, runs 该 sweep 或 optimization named taskname 使用 一个 specified resource_type, either “CPU” 或 “GPU”.  
+  
+When using [Ansys Cloud Burst Compute™ for Lumerical](https://optics.ansys.com/hc/en-us/articles/39824576734867-Ansys-Cloud-Burst-Compute-for-Lumerical),
 
-使用 [Ansys Cloud Burst Compute™ for Lumerical](https://optics.ansys.com/hc/en-us/articles/39824576734867-Ansys-Cloud-Burst-Compute-for-Lumerical) 时，
-
-**语法** | **描述**  
+**语法** |  **描述**  
 ---|---  
-runsweep("taskname","resource_type", "burst", burst_settings); | 使用特定类型的资源运行单个参数扫描。如果扫描使用的求解器不支持 Ansys Cloud Burst Compute，则返回错误：
+runsweep(“taskname”,”resource_type”, “burst”, burst_settings); |  Run 一个 single 参数 sweep 使用 一个 specific 类型 的 resource. An error 是 returned 在 该 sweep uses 一个 求解器 该 does not support Ansys Cloud Burst Compute:
 
-- taskname：要运行的扫描名称
-- resource_type：要运行的资源类型，"CPU" 或 "GPU"
-- burst_settings：可选，用于当前任务提交的设置结构。结构字段应与从 [getresource](https://optics.ansys.com/hc/en-us/articles/360034931353-getresource-Script-command) 获得的结果相匹配。如果留空，使用默认设置。
+  * taskname: Name 的 sweep 到 run
+  * resource_type: Type 的 resource 到 run, either “CPU” 或 “GPU”
+  * burst_settings: Optional, settings structure to use for the current job submission. The structure fields should match the results obtained from [getresource](https://optics.ansys.com/hc/en-us/articles/360034931353-getresource-Script-command). If left empty, default settings are used.
 
-runsweep("type","burst", burst_settings); | 使用指定的资源类型运行所有扫描。设置将应用于所有扫描。如果列表中的扫描不支持 Ansys Cloud Burst Compute，则返回错误：
+  
+runsweep(“类型”,”burst”, burst_settings); |  Run all sweeps 使用 该 specified resource 类型. The settings 是 applied 到 all sweeps. An error 是 returned 如果 一个 sweep 在 该 list does not support Ansys Cloud Burst Compute:
 
-- type：要运行的资源类型，"CPU" 或 "GPU"
-- burst_settings：可选，用于当前任务提交的设置结构。结构字段应与从 [getresource](https://optics.ansys.com/hc/en-us/articles/360034931353-getresource-Script-command) 获得的结果相匹配。如果留空，使用默认设置。
+  * 类型: Type 的 resource 到 run, either “CPU” 或 “GPU”
+  * burst_settings: Optional, settings structure to use for the current job submission. The structure fields should match the results obtained from [getresource](https://optics.ansys.com/hc/en-us/articles/360034931353-getresource-Script-command). If left empty, default settings are used.
 
+  
+  
 **示例**
+    
+    
+    runsweep;
+    runsweep("thickness_sweep");
 
-```
-runsweep;
-runsweep("thickness_sweep");
-```
+**参见**
 
-**另见**
-
-[run](run.md), [getsweepdata](getsweepdata.md), [addjob](addjob.md), [runjobs](runjobs.md), [参数扫描](https://optics.ansys.com/hc/en-us/articles/360034922873-Parameter-sweeps)
+[ run ](/hc/en-us/articles/360034931333-run) , [ getsweepdata ](/hc/en-us/articles/360034409794-getsweepdata) , [ addjob ](/hc/en-us/articles/360034410714-addjob) , [ runjobs ](/hc/en-us/articles/360034931373-runjobs) , [ 参数 sweeps ](/hc/en-us/articles/360034922873-Parameter-sweeps)

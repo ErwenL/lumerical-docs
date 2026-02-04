@@ -1,34 +1,32 @@
 <!--
 Translation from English documentation
 Original command: selectpartial
-Translation date: 2026-02-03
+Translation date: 2026-02-04 22:50:14
 -->
 
 # selectpartial
 
-选择具有给定部分名称的任何对象。
+Selects any 对象 使用 一个 given partial name. 
 
-**语法** | **描述**
----|---
-selectpartial("partialname"); | 选择对象名称中可以找到 "partialname" 的任何对象，前提是该对象不在组中。要选择位于组中的对象，请参阅下面的命令。
-selectpartial("partialgroupname::partialname"); | 选择组名称中可以找到 "partialgroupname" 且对象名称中可以找到 "partialname" 的任何对象。
-
+**语法** |  **描述**  
+---|---  
+selectpartial("partialname");  |  Selects any 对象 其中 "partialname" 可以 为 found 在 该 对象 name provided 该 对象 是 not 在 一个 group. To select 对象 located 在 groups see 该 命令 below.  This 函数 does not 返回 any 数据.   
+selectpartial("partialgroupname::partialname");  |  Selects any 对象 其中 "partialgroupname" 可以 为 found 在 该 group name 和 "partialname" 可以 为 found 在 该 对象 name.   
+  
 **示例**
 
-创建两个对象并将它们放入组中。在组内创建三角形对象的额外副本。
+创建 two 对象 和 put them 在 一个 group. Make 一个 additional copy 的 该 triangle 对象 within 该 group. 
+    
+    
+    #创建 一个 substrate 使用 一个 channel etched 在 该 center. Put 该 对象 在 一个 group
+    addrect;
+    addtriangle;
+    selectpartial("angle"); # select both 该 triANGLE 和 rectANGLE 对象
+    addtogroup("结构");# 添加 选中的 到 group
+    #select 该 etch 和 copy 到 创建 一个 second channel
+    selectpartial("结构::tri"); # select 该 TRIangle
+    copy(1e-6);            # copy 该 TRIangle
 
-```lsf
-# 创建一个带有中心蚀刻通道的基底。将对象放入组中
-addrect;
-addtriangle;
-selectpartial("angle"); # 选择 triANGLE 和 rectANGLE 两个对象
-addtogroup("structure"); # 将选中的对象添加到组中
-# 选择蚀刻并复制以创建第二个通道
-selectpartial("structure::tri"); # 选择 TRIangle
-copy(1e-6);            # 复制 TRIangle
-```
+**参见**
 
-**另请参见**
-
-- [操作对象](./command_list.md)
-- [groupscope](./groupscope.md)
+[ Manipulating 对象 ](/hc/en-us/articles/360037228834) , [ groupscope ](/hc/en-us/articles/360034928553-groupscope)

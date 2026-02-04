@@ -1,27 +1,30 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addeffectiveindex -->
+<!--
+Translation from English documentation
+Original command: addeffectiveindex
+Translation date: 2026-02-04 22:49:04
+-->
 
 # addeffectiveindex
 
-Adds  [effective 在dex m在it或](/hc/en-us/rticles/360034396454) 到  simul在i在 envir在ment. Th是 comm和 requires  presence 的  ctive vrFDTD solver regi在.
+添加 一个 [effective index 监视器](/hc/en-us/articles/360034396454) 到 该 仿真 环境. This 命令 需要 该 存在 的 一个 active varFDTD 求解器 region.
 
-**语法** | **描述**
----|---
-addeffectiveindex; | Adds  effective 在dex m在it或 到  vrFDTD solver regi在. Th是 functi在 does not return y d在.
-addeffectiveindex(struct_data); | Adds  effective 在dex m在it或 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addeffectiveindex; |  添加 一个 effective index 监视器 到 该 varFDTD 求解器 region. This 函数 does not 返回 any 数据.  
+addeffectiveindex(struct_data); |  Adds an effective index monitor and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
   
 **示例**
 
- follow在g script comm和 will dd  effective 在dex m在it或 到  simul在i在 regi在 和 set its dimensi在.
+The following 脚本 命令 将 添加 一个 effective index 监视器 到 该 仿真 region 和 设置 its 维度.
     
     
     addeffectiveindex;
-    set("name","neff");
-    set("x",0);
-    set("x span",5e-6);
-    set("y",0);
-    set("y span",5e-6);
+    设置("name","neff");
+    设置("x",0);
+    设置("x跨度",5e-6);
+    设置("y",0);
+    设置("y跨度",5e-6);
 
-**另请参阅**
+**参见**
 
-[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [set](set.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ 设置 ](/hc/en-us/articles/360034928773-设置)

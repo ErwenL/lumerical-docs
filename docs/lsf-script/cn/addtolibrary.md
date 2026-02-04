@@ -1,20 +1,23 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addtolibrary -->
+<!--
+Translation from English documentation
+Original command: addtolibrary
+Translation date: 2026-02-04 22:49:36
+-->
 
 # addtolibrary
 
-Adds  selected element 到  currently selected folder under Cus到m librry. 
+添加 该 选中的 元素 到 该 currently 选中的 folder under Custom library. 
 
-**语法** | **描述**
----|---
-addtolibrary ("name", replace); | Adds  element 到  currently selected folder under Cus到m librry.   "nme" specified 是  cus到m folder nme. If no folder nmed 作为 specified,  new folder will  gener在ed under  Cus到m librry.   "replce" 是  boole vlue. If "replce" 是 true,  element 在  Cus到m librry 使用  sme nme will  replced; if "replce" 是 flse,  wrn在g messge will pop up 到 get furr cti在 对于 replc在g  element 使用  sme nme 或 not.  defult vlue 对于 "replce" 是 flse.
+**语法** |  **描述**  
+---|---  
+addtolibrary ("name", replace);  |  添加 一个 元素 到 该 currently 选中的 folder under Custom library.  The "name" specified 是 该 自定义 folder name. If no folder named as specified, 一个 新的 folder 将 为 generated under 该 Custom library.  The "replace" 是 一个 boolean 值. If "replace" 是 true, 该 元素 在 该 Custom library 使用 该 same name 将 为 replaced; 如果 "replace" 是 false, 一个 warning message 将 pop up 到 获取 further action 用于 replacing 该 元素 使用 该 same name 或 not. The default 值 用于 "replace" 是 false.   
   
-**Emple**
+**Eample**
     
     
-    #adds the selected element to the folder "folder1" under Custom library
+    #添加 该 选中的 元素 到 该 folder "folder1" under Custom library
     addtolibrary("folder1", true);
 
-**另请参阅**
+**参见**
 
-[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [librry](librry.md) , [ cus到mlibrry ](/hc/en-us/rticles/360034407254-cus到mlibrry)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ library ](/hc/en-us/articles/360034927473-library) , [ customlibrary ](/hc/en-us/articles/360034407254-customlibrary)

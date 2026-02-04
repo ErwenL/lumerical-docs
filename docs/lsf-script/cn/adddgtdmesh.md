@@ -1,36 +1,39 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: adddgtdmesh -->
+<!--
+Translation from English documentation
+Original command: adddgtdmesh
+Translation date: 2026-02-04 22:49:04
+-->
 
 # adddgtdmesh
 
-Adds  [mesh c在str在t (override regi在)](https://optics.sys.com/hc/en-us/rticles/360034397994) 到  'DGTD' simul在i在. A DGTD solver regi在 must  present 在  objects tree 对于 th是 comm和 到 w或k.
+Adds a [mesh constraint (override region)](https://optics.ansys.com/hc/en-us/articles/360034397994) to a 'DGTD' simulation. A DGTD solver region must be present in the objects tree for this command to work.
 
-**语法** | **描述**
----|---
-adddgtdmesh; | Adds  mesh c在str在t 到  'DGTD' simul在i在 envir在ment. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+adddgtdmesh; |  添加 一个 mesh constraint 到 该 'DGTD' 仿真 环境. This 函数 does not 返回 any 数据.  
   
-**Exmple 1**
+**示例 1**
 
- follow在g script comm和s will dd  mesh c在str在t 到  DGTD solver lredy present 在  objects tree 和 pr在t  nme 的 ll 的 its properties.
+The following 脚本 commands 将 添加 一个 mesh constraint 到 该 DGTD 求解器 already present 在 该 对象 tree 和 print 该 name 的 all 的 its 属性.
     
     
     adddgtdmesh;
-    ?set;
+    ?设置;
 
-**Exmple 2**
+**示例 2**
 
- follow在g script comm和s will dd  mesh c在str在t 到  DGTD solver regi在 在 F在ite Element IDE, nme it, 作为sign it 到  specific surfce tween two dom在s, 和 set  mximum edge length 对于 y element 在  surfce.
+The following 脚本 commands 将 添加 一个 mesh constraint 到 该 DGTD 求解器 region 在 Finite Element IDE, name it, assign it 到 一个 specific surface between two domains, 和 设置 该 maximum edge 长度 用于 any 元素 在 该 surface.
     
     
     adddgtdsolver;
     adddgtdmesh;
-    set("name","mesh_surface");
-    set("geometry type","surface");
-    set("surface type","domain:domain");
-    set("domain 1",2);
-    set("domain 2",3);
-    set("max edge length",0.05e-6);
+    设置("name","mesh_surface");
+    设置("geometry 类型","surface");
+    设置("surface 类型","domain:domain");
+    设置("domain 1",2);
+    设置("domain 2",3);
+    设置("max edge 长度",0.05e-6);
 
-**另请参阅**
+**参见**
 
-- [dddgtdsolver](./dddgtdsolver.md)
+- [adddgtdsolver](./adddgtdsolver.md)

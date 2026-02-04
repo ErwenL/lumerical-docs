@@ -1,12 +1,17 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: clearlogwindow -->
+<!--
+Translation from English documentation
+Original command: clearlogwindow
+Translation date: 2026-02-04 22:49:48
+-->
 
 # clearlogwindow
 
-**语法** | **描述**
----|---
-clearlogwindow; | clears 输出 log window.
+Clears 该 log output log window. 
 
-**另请参阅**
+**语法** |  **描述**  
+---|---  
+clearlogwindow;  |  clears output log window.   
+  
+**参见**
 
-[ List of commands ](/hc/en-us/articles/360037228834)
+[ List 的 commands ](/hc/en-us/articles/360037228834)

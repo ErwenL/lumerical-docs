@@ -1,39 +1,33 @@
 <!--
 Translation from English documentation
 Original command: dipolepower
-Translation date: 2026-02-03 23:05:45
+Translation date: 2026-02-04 22:49:48
 -->
 
 # dipolepower
 
-返回偶极子源注入仿真区域的功率。在3D仿真中，如果使用cwnorm，单位为瓦特；如果使用nonorm，单位为瓦特/赫兹²。
+返回 该 power injected into 该 仿真 region 通过 一个 dipole 源. In 3D simulations, 该 units 将 为 在 Watts 如果 cwnorm 是 used, 和 Watts/Hertz2 如果 nonorm 是 used.
 
-dipolepower脚本命令返回注入仿真区域的功率，相当于测量从偶极子周围小盒子透射出的功率。相比之下，[sourcepower](/hc/en-us/articles/360034925313-sourcepower)将返回偶极子在均匀材料中辐射的功率。对于均匀介质中的偶极子，dipolepower和sourcepower是等效的。
+The dipolepower 脚本 命令 返回 该 power 该 was injected into 该 仿真 region, 和 是 equivalent 到 measuring 该 power transmitted out 的 一个 small box surrounding 该 dipole. In contrast, [sourcepower](/hc/en-us/articles/360034925313-sourcepower) 将 返回 该 power 该 该 dipole would radiate 在 一个 homogeneous 材料. dipolepower 和 sourcepower 是 equivalent 用于 dipoles 在 一个 homogeneous medium.
 
-高级说明：
+Advanced notes:
 
-  * 如果偶极子位于色散介质中（折射率的虚部非零），则此函数的结果不可靠。在这种情况下，建议在偶极子周围使用监视器盒子。
-  * 当使用非常小的仿真网格尺寸时，此计算中的数值误差可能会变得明显。如果网格步长小于或等于λ/1000，建议通过测量偶极子周围小盒子中的辐射功率来验证dipolepower结果。
+  * If 该 dipole 是 located within 一个 dispersive medium (使用 一个 non-zero imaginary part 的 该 refractive index), 那么 该 results 的 此 函数 是 not reliable. In such situations, 使用 一个 box 的 monitors around 该 dipole 是 recommended.
+  * Numerical errors 在 此 calculation 可能 become noticeable 当 very small 仿真 mesh sizes 是 used. If 该 mesh step 是 该 order 的, 或 smaller than, λ/1000, verifying 该 dipolepower results 通过 measuring 该 radiated power 使用 一个 small box 的 monitors surrounding 该 dipole 是 recommended.
 
 
 
-如果您在色散介质中使用偶极子，请访问[支持中心](https://www.lumerical.com/support/)获取更多帮助。
+Please visit the [Support Center](https://www.lumerical.com/support/) for more assistance if you are using a dipole in a dispersive medium.
 
-**Syntax** |  **Description**  
+**语法** |  **描述**  
 ---|---  
-out = dipolepower(f); |  返回偶极子源在频率点f处辐射的功率。（f单位为Hz）  
-out = dipolepower(f, name); |  此选项允许您获取单个偶极子辐射的功率，而不是所有偶极子的总和。此选项仅在包含多个偶极子的仿真中需要。  
+out = dipolepower(f); |  返回 该 amount 的 power radiated 通过 该 dipole 源, at 频率 points f. (f 在 Hz)  
+out = dipolepower(f, name); |  This option allows you 到 obtain 该 power radiated 通过 一个 single dipole, rather than 该 sum 的 all dipoles. This option 是 only needed 用于 simulations 使用 multiple dipoles.  
   
- **示例**
+**示例**
 
- 请参阅[偶极子-辐射功率](/hc/en-us/articles/360034382794-Sources-Dipoles)页面和[荧光增强](https://apps.lumerical.com/fluorescence-enhancement.html)应用示例。
+See the [Dipoles - Radiated Power](/hc/en-us/articles/360034382794-Sources-Dipoles) page and the [Fluorescence enhancement](https://apps.lumerical.com/fluorescence-enhancement.html) application example.
 
- **参见**
+**参见**
 
-- [sourcenorm](./sourcenorm.md)
-- [sourcepower](./sourcepower.md)
-- [sourcepower_avg](./sourcepower_avg.md)
-- [sourcepower_pavg](./sourcepower_pavg.md)
-- [transmission](./transmission.md)
-- [cwnorm](./cwnorm.md)
-- [nonorm](./nonorm.md)
+[sourcenorm](/hc/en-us/articles/360034925273-sourcenorm), [sourcepower](/hc/en-us/articles/360034925313-sourcepower), [sourcepower_avg](/hc/en-us/articles/360034925333-sourcepower-avg), [sourcepower_pavg](/hc/en-us/articles/360034925353-sourcepower-pavg), [transmission](/hc/en-us/articles/360034405354-transmission), [cwnorm](/hc/en-us/articles/360034405454-cwnorm), [nonorm](/hc/en-us/articles/360034405434-nonorm)

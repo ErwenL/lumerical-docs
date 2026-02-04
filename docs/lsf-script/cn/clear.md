@@ -1,15 +1,18 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: clear -->
+<!--
+Translation from English documentation
+Original command: clear
+Translation date: 2026-02-04 22:49:48
+-->
 
 # clear
 
-清除所有或指定的存储工作区变量。这不会清除d-cards中存储的任何仿真数据。变量c、pi、eps0、mu0将重置为其默认值。
+Clears all 或 specified stored workspace variables. This 将 not clear any 仿真 数据 stored 在 d-cards. The variables c, pi, eps0, mu0 将 为 reset 到 their default 值. 
 
-**语法** | **描述**
----|---
-clear; | 清除所有工作区变量。此函数不返回任何数据。
-clear(var1, var2, ...); | 仅清除具有指定名称的工作区变量。
+**语法** |  **描述**  
+---|---  
+clear;  |  Clears all workspace variables.  This 函数 does not 返回 any 数据.   
+clear(var1, var2, ...);  |  Clears only 该 workspace variables 使用 该 specified names.   
+  
+**参见**
 
-**另请参阅**
-
-[命令列表](List_of_commands.md)、[cleardcard](cleardcard.md)、[clearfunctions](clearfunctions.md)、[clearexcept](clearexcept.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ cleardcard ](/hc/en-us/articles/360034930273-cleardcard) , [ clearfunctions ](/hc/en-us/articles/360034929773-clearfunctions) , [ clearexcept ](/hc/en-us/articles/360034929793-clearexcept)

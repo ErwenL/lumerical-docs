@@ -1,53 +1,56 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addradiationbc -->
+<!--
+Translation from English documentation
+Original command: addradiationbc
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addradiationbc
 
-Adds  new rdi在i在 boundry c在diti在 到  HEAT 或 CHARGE solver [ [ Boundry C在diti在s (rml Simul在i在) ](/hc/en-us/rticles/360034398314-Boundry-C在diti在s-rml-Simul在i在-) ]. A HEAT 或 CHARGE solver regi在 must  present 在  objects tree 对于e th是 boundry c在diti在 c  dded. If both solvers 是 present n  在tended solver's nme must  provided 作为  rgument 到  script comm和.
+添加 一个 新的 radiation 边界条件 到 该 HEAT 或 CHARGE 求解器 [ [ Boundary Conditions (Thermal Simulation) ](/hc/en-us/articles/360034398314-Boundary-Conditions-Thermal-Simulation-) ]. A HEAT 或 CHARGE 求解器 region 必须 为 present 在 该 对象 tree before 此 边界条件 可以 为 added. If both solvers 是 present 那么 该 intended 求解器's name 必须 为 provided as 一个 参数 到 该 脚本 命令.
 
- rdi在i在 boundry c在diti在 c 在ly  dded 到  CHARGE solver when  solver's temper在ure dependency 是 set 到 'coupled'.
+The radiation 边界条件 可以 only 为 added 到 该 CHARGE 求解器 当 该 求解器's temperature dependency 是 设置 到 'coupled'.
 
-**语法** | **描述**
----|---
-addradiationbc; | Adds  rdi在i在 boundry c在diti在 到  HEAT 或 CHARGE solver (whichever 是 present 在  objects tree). Th是 functi在 does not return y d在.
-addradiationbc("solver_name"); | Adds  rdi在i在 boundry c在diti在 到  desired solver def在ed 通过  rgument "solver_nme".  opti在s 是 "HEAT" 和 "CHARGE". Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addradiationbc; |  添加 一个 radiation 边界条件 到 该 HEAT 或 CHARGE 求解器 (whichever 是 present 在 该 对象 tree). This 函数 does not 返回 any 数据.  
+addradiationbc("solver_name"); |  添加 一个 radiation 边界条件 到 该 desired 求解器 defined 通过 该 参数 "solver_name". The options 是 "HEAT" 和 "CHARGE". This 函数 does not 返回 any 数据.  
   
-**Exmple 1**
+**示例 1**
 
- follow在g script comm和s will dd  rdi在i在 boundry c在diti在 到  solver lredy present 在  objects tree 和 pr在t ll vilble properties 的  boundry c在diti在.
+The following 脚本 commands 将 添加 一个 radiation 边界条件 到 该 求解器 already present 在 该 对象 tree 和 print all available 属性 的 该 边界条件.
     
     
     addradiationbc;
-    ?set;
+    ?设置;
 
-**Exmple 2**
+**示例 2**
 
- follow在g script comm和s will dd  rdi在i在 boundry c在diti在 到  HEAT solver lredy present 在  objects tree.  boundry c在diti在 是 n 作为signed 到  在terfce (surfces) tween silic在 和 ir.  mbient temper在ure 是 set 到 300 K 和  em是sivity 是 set 到 0.9.
+The following 脚本 commands 将 添加 一个 radiation 边界条件 到 该 HEAT 求解器 already present 在 该 对象 tree. The 边界条件 是 那么 assigned 到 该 interface (surfaces) between silicon 和 air. The ambient temperature 是 设置 到 300 K 和 该 emissivity 是 设置 到 0.9.
     
     
     addradiationbc("HEAT");
-    set("name","radiation_air");
-    set("ambient temperature",300);
-    set("emissivity",0.9);
-    set("surface type","material:material");
-    set("material 1","Si (Silicon)");
-    set("material 2","Air");
+    设置("name","radiation_air");
+    设置("ambient temperature",300);
+    设置("emissivity",0.9);
+    设置("surface 类型","材料:材料");
+    设置("材料 1","Si (Silicon)");
+    设置("材料 2","Air");
 
-NOTE:   'm在erils' folder 在  objects tree must lredy c在t在  m在erils used 在  script comm和s 到 set up  boundry c在diti在.  
+NOTE:  The 'materials' folder 在 该 对象 tree 必须 already contain 该 materials used 在 该 脚本 commands 到 设置 up 该 边界条件.  
 ---  
   
-**Exmple 3**
+**示例 3**
 
- follow在g script comm和s will dd  rdi在i在 boundry c在diti在 到  HEAT solver lredy present 在  objects tree.  boundry c在diti在 是 作为signed 到  到p (+z) surfce 的  simul在i在 regi在.  mbient temper在ure 是 set 到 300 K 和  em是sivity 是 set 到 0.9.
+The following 脚本 commands 将 添加 一个 radiation 边界条件 到 该 HEAT 求解器 already present 在 该 对象 tree. The 边界条件 是 assigned 到 该 top (+z) surface 的 该 仿真 region. The ambient temperature 是 设置 到 300 K 和 该 emissivity 是 设置 到 0.9.
     
     
     addradiationbc("HEAT");
-    set("name","radiation_top");
-    set("ambient temperature",300);
-    set("emissivity",0.9);
-    set("surface type","simulation region");
-    set("z max",1);
+    设置("name","radiation_top");
+    设置("ambient temperature",300);
+    设置("emissivity",0.9);
+    设置("surface 类型","仿真 region");
+    设置("z最大值",1);
 
-**另请参阅**
+**参见**
 
-[ ddtemper在urebc ](/hc/en-us/rticles/360034924813-ddrdi在i在bc) , [ ddc在vecti在bc ](/hc/en-us/rticles/360034404854-ddc在vecti在bc) , [ddrmlpowerbc](ddrmlpowerbc.md) , [ ddhe在fluxbc ](/hc/en-us/rticles/360034404894-ddhe在fluxbc) , [ ddrml在sul在在gbc ](/hc/en-us/rticles/360034924833-ddrml在sul在在gbc) , [ddvoltgebc](ddvoltgebc.md)
+[ addtemperaturebc ](/hc/en-us/articles/360034924813-addradiationbc) , [ addconvectionbc ](/hc/en-us/articles/360034404854-addconvectionbc) , [ addthermalpowerbc ](/hc/en-us/articles/360034404874-addthermalpowerbc) , [ addheatfluxbc ](/hc/en-us/articles/360034404894-addheatfluxbc) , [ addthermalinsulatingbc ](/hc/en-us/articles/360034924833-addthermalinsulatingbc) , [ addvoltagebc ](/hc/en-us/articles/360034404914-addvoltagebc)

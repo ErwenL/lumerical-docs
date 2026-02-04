@@ -1,12 +1,17 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: waituntildone -->
+<!--
+Translation from English documentation
+Original command: waituntildone
+Translation date: 2026-02-04 22:50:15
+-->
 
 # waituntildone
 
-**语法** | **描述**
----|---
-waituntildone; | This 函数 only 返回 after the current 仿真 is done. It allows to wait for the 仿真 before performing any other tasks that depends on 仿真 completion.
+This 函数 only 返回 after 该 current 仿真 是 done. 
 
-**另请参阅**
+**语法** |  **描述**  
+---|---  
+waituntildone;  |  This 函数 only 返回 after 该 current 仿真 是 done. It allows 到 wait 用于 该 仿真 before performing any other tasks 该 depends 在 仿真 completion.   
+  
+**参见**
 
-[ List of commands ](/hc/en-us/articles/360037228834) , [ runinitialize ](/hc/en-us/articles/360034410974-runinitialize) , [ runstep ](/hc/en-us/articles/360034931733-runstep) , [ runfinalize ](/hc/en-us/articles/360034931753-runfinalize)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ runinitialize ](/hc/en-us/articles/360034410974-runinitialize) , [ runstep ](/hc/en-us/articles/360034931733-runstep) , [ runfinalize ](/hc/en-us/articles/360034931753-runfinalize)

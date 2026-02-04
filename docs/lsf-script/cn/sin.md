@@ -1,25 +1,27 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: sin -->
+<!--
+Translation from English documentation
+Original command: sin
+Translation date: 2026-02-04 22:50:14
+-->
 
 # sin
 
-计算三角正弦函数。角度单位为弧度。该函数适用于复数角度。复数的相位在-π到π之间评估。
+计算 该 trigonometric sine 函数. Angle units 是 在 radians. The 函数 是 defined 用于 complex angles. Phase 的 一个 complex 数字 是 evaluated between -  π  和  π  . 
 
-**语法** | **描述**
----|---
-out = sin(x); | 返回x的复数正弦值。
-
+**语法** |  **描述**  
+---|---  
+out = sin(x);  |  返回 该 complex sine 的 x.   
+  
 **示例**
 
-计算sin(π/4 + i)。
+计算 sin(  π  /4 + i). 
+    
+    
+    theta=pi/4+1i;
+    ?sin(theta);
+    result: 
+    1.09112+0.830993i 
 
-```lsf
-theta=pi/4+1i;
-?sin(theta);
-result: 
-1.09112+0.830993i 
-```
+**参见**
 
-**另请参阅**
-
-[命令列表](List_of_commands.md)、[asin](asin.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ asin ](/hc/en-us/articles/360034405574-asin)

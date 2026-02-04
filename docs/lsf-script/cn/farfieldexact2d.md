@@ -1,32 +1,38 @@
+<!--
+Translation from English documentation
+Original command: farfieldexact2d
+Translation date: 2026-02-04 22:49:48
+-->
+
 # farfieldexact2d
 
-此函数将完整的复矢量场投影到特定位置。预期在距离相当于一个波长的数量级时是正确的。来自多个监视器的投影可以相加以创建总远场投影 - 请参阅 [来自监视器盒的投影](**%20to%20be%20defined\**)。
+This 函数 projects complete complex 向量 fields 到 specific locations. It 是 expected 到 为 correct down 到 distances 在 该 order 的 one 波长. The projections 从 multiple monitors 可以 为 added 到 创建 一个 total far field projection - see [ Projections 从 一个 监视器 box ](/hc/en-us/articles/360034915613-Projections-从-一个-监视器-box) .
 
-farfieldexact2d 将任何表面投影到由向量 x、y 定义的网格点。如果只返回 E 场作为结果，数据以 NxMxPx3 维矩阵形式返回，其中 N 是 x 向量的长度，M 是 y 向量的长度，P 是频率点数，最后一个索引表示 Ex、Ey 和 Ez。注意 N 和 M 可以为 1；当它们都为 1 时，此函数与 farfieldexact 相同。如果同时返回 E 和 H 场，数据以数据集形式返回，E 和 H 场与相应的 x、y 和频率/波长一起打包。
+farfieldexact2d projects any surface 到 该 grid points defined 通过 该 vectors x, y. If only E field 是 returned as 该 result, 该 数据 是 returned 在 该 form 的 一个 矩阵 该 是 的 维度 NxMxPx3 其中 N 是 该 长度 的 该 x 向量, M 是 该 长度 的 该 y 向量, P 是 该 数字 的 频率 points, 和 该 final index represents Ex, Ey, 和 Ez. 注意 该 N 和 M 可以 为 1; 当 they 是 both 1, 该 函数 是 该 same as farfieldexact. If both E 和 H fileds 是 returned, 该 数据 是 returned as 一个 dataset 使用 该 E 和 H fields packaged 使用 该 对应的 x,y, 和 频率/波长.
 
-**语法** | **描述**
----|---
-out = farfieldexact2d( "mname", x, y, f, index); | 将给定的功率或场分布监视器投影到由向量 x、y 指定的网格点的远场。仅返回 E 场。
-out = farfieldexact2d( dataset, x, y, f, index); | 将给定的直线数据集投影到由向量 x、y 指定的网格点的远场。仅返回 E 场。
-out = farfieldexact2d( "mname", x, y, opt); | 将给定的功率或场分布监视器投影到由向量 x、y 指定的网格点的远场。返回 E 场或 E 和 H 场。请参阅下表了解选项。
-out = farfieldexact2d( dataset, x, y, opt); | 将给定的直线数据集投影到由向量 x、y 指定的网格点的远场。返回 E 场或 E 和 H 场。请参阅下表了解选项。
-
-**参数** |  | **默认值** | **类型** | **描述**
----|---|---|---|---
-mname | 必填 | | 字符串 | 计算远场的监视器名称。
-dataset | 必填 | | 数据集 | 包含 E 和 H 的直线数据集
-x | 必填 | | 向量 | 计算远场的网格点的 x 坐标。
-y | 必填 | | 向量 | 计算远场的网格点的 y 坐标。
-f | 可选 | 1 | 向量 | 所需频率点的索引。可以是单个数字或向量。R2016b 引入了多线程投影。
-index | 可选 | 监视器中心处的折射率 | 数字 | 用于投影的材料折射率。
-opt | 可选 | | 结构体 | 'opt' 参数包括以下选项："field"：此参数可选。它定义返回的场，可以是 "E" 或 "E and H"。"f"：此参数可选。它定义所需频率点的索引。可以是单个数字或向量。R2016b 引入了多线程投影。"index"：此参数可选。它定义用于投影的材料折射率。
-
-[[注意：]] 使用数据集时，折射率的默认值为 1。
+**语法** |  **描述**  
+---|---  
+out = farfieldexact2d( "mname", x, y, f, index); |  Projects 一个 given power 或 field profile 监视器 到 该 far field at grid points specified 通过 该 vectors x,y. 返回 E field only.  
+out = farfieldexact2d( dataset, x, y, f, index); |  Projects 一个 given rectilinear dataset 到 该 far field at grid points specified 通过 该 vectors x,y. 返回 E field only.  
+out = farfieldexact2d( "mname", x, y, opt); |  Projects 一个 given power 或 field profile 监视器 到 该 far field at grid points specified 通过 该 vectors x,y. 返回 E filed 或 E 和 H fields. Refer 到 该 following table 用于 该 options.  
+out = farfieldexact2d( dataset, x, y, opt); |  Projects 一个 given rectilinear dataset 到 该 far field at grid points specified 通过 该 vectors x,y. 返回 E filed 或 E 和 H fields. Refer 到 该 following table 用于 该 options.  
+  
+**Parameter** |  |  **Default 值** |  **Type** |  **描述**  
+---|---|---|---|---  
+mname |  required |  |  字符串 |  name 的 该 监视器 从 该 far field 是 calculated.  
+dataset |  required |  |  dataset |  Rectilinear dataset containing both E 和 H  
+x |  required |  |  向量 |  x coordinates 的 该 grid points 其中 far field 是 calculated.  
+y |  required |  |  向量 |  y coordinates 的 该 grid points 其中 far field 是 calculated.  
+f |  optional | 1 |  向量 |  Index 的 该 desired 频率 point. This 可以 为 一个 single 数字 或 一个 向量. Multithreaded projection was introduced since R2016b.  
+index |  optional | index at 监视器 center |  数字 |  The index 的 该 材料 到 use 用于 该 projection.  
+opt |  optional |  |  结构体 |  该 'opt' 参数 includes 该 following options: "field": This 参数 是 optional. It defines 该 返回 field, 可以 either 为 "E" 或 "E 和 H". "f": This 参数 是 optional. It defines 该 index 的 该 desired 频率 point. This 可以 为 一个 single 数字 或 一个 向量. Multi-threaded projection was introduced since R2016b. "index": This 参数 是 optional. It defines 该 index 的 该 材料 到 use 用于 该 projection.  
+  
+[[注意:]] When 使用 一个 dataset, 该 default 值 的 该 refractive index 是 1.
 
 **示例**
 
-请参阅 farfieldexact3d 函数描述中的示例。
+See example 在 farfieldexact3d 函数 description.
 
-**另请参阅**
+**参见**
 
-[命令列表](../命令列表.md)、[farfield2d](./farfield2d.md)、[farfieldexact3d](./farfieldexact3d.md)、[farfieldexact](./farfieldexact.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ farfield2d ](/hc/en-us/articles/360034410074-farfield2d) , [ farfieldexact3d ](/hc/en-us/articles/360034930733-farfieldexact3d) , [ farfieldexact ](/hc/en-us/articles/360034410214-farfieldexact)

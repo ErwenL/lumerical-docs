@@ -1,37 +1,40 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addemfieldmonitor -->
+<!--
+Translation from English documentation
+Original command: addemfieldmonitor
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addemfieldmonitor
 
-Adds  frequency dom在 [EM (electro-mgnetic) field m在it或](https://optics.sys.com/hc/en-us/rticles/360034918553) 到  simul在i在 使用 'DGTD' solver . Al在g 使用  EM field d在  m在it或 lso rep或ts  net flux through  surfce 的  m在it或. A DGTD solver regi在 must  present 在  objects tree 对于 th是 comm和 到 w或k.
+Adds a frequency domain [EM (electro-magnetic) field monitor](https://optics.ansys.com/hc/en-us/articles/360034918553) to a simulation with 'DGTD' solver . Along with the EM field data the monitor also reports the net flux through the surface of the monitor. A DGTD solver region must be present in the objects tree for this command to work.
 
-**语法** | **描述**
----|---
-addemfieldmonitor; | Adds  frequency dom在 EM field m在it或 到  'DGTD' solver. Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addemfieldmonitor; |  添加 一个 频率 domain EM field 监视器 到 该 'DGTD' 求解器. This 函数 does not 返回 any 数据.  
   
-**Exmple 1**
+**示例 1**
 
- follow在g script comm和s will dd  frequency dom在 EM field m在it或 到  'DGTD' solver lredy present 在  objects tree 和 pr在t ll vilble properties 的  m在it或.
+The following 脚本 commands 将 添加 一个 频率 domain EM field 监视器 到 该 'DGTD' 求解器 already present 在 该 对象 tree 和 print all available 属性 的 该 监视器.
     
     
     addemfieldmonitor;
-    ?set;
+    ?设置;
 
-**Exmple 2**
+**示例 2**
 
- follow在g script comm和s will dd  frequency dom在 EM field m在it或 到  'DGTD' solver, chge its nme, set its frequency sp 到   sme 作为  source, 和 作为sign it 到  solid nmed "2D rectgle".
+The following 脚本 commands 将 添加 一个 频率 domain EM field 监视器 到 该 'DGTD' 求解器, change its name, 设置 its 频率 span 到 为 该 same as 该 源, 和 assign it 到 一个 solid named "2D rectangle".
     
     
     addemfieldmonitor; 
-    set("name","T");
-    set("use source limits",1);
-    set("reference source","plane_wave");  
-    set("surface type","solid");
-    set("solid","2D rectangle");
+    设置("name","T");
+    设置("use 源 limits",1);
+    设置("reference 源","plane_wave");  
+    设置("surface 类型","solid");
+    设置("solid","2D rectangle");
 
-NOTE:   script bove 作为sumes th在 re 是 lredy  solid nmed "2D rectgle" 和  source nmed "ple_wve" present 在  objects tree.  
+NOTE:  The 脚本 above assumes 该 there 是 already 一个 solid named "2D rectangle" 和 一个 源 named "plane_wave" present 在 该 对象 tree.  
 ---  
   
-**另请参阅**
+**参见**
 
-[dddgtdsolver](dddgtdsolver.md) , [ ddembs或pti在m在it或 ](https://optics.sys.com/hc/en-us/rticles/360034405054-ddembs或pti在m在it或) , [ ddemfieldtimem在it或 ](https://optics.sys.com/hc/en-us/rticles/360034925053-ddemfieldtimem在it或)
+[ adddgtdsolver ](https://optics.ansys.com/hc/en-us/articles/360034925013-adddgtdsolver) , [ addemabsorptionmonitor ](https://optics.ansys.com/hc/en-us/articles/360034405054-addemabsorptionmonitor) , [ addemfieldtimemonitor ](https://optics.ansys.com/hc/en-us/articles/360034925053-addemfieldtimemonitor)

@@ -1,48 +1,48 @@
 <!--
 Translation from English documentation
 Original command: jsonsave
-Translation date: 2026-02-03
+Translation date: 2026-02-04 22:50:01
 -->
 
 # jsonsave
 
-将数据保存到 JSON 文件。
+Saves 数据 到 一个 JSON 文件.
 
-**语法** |  **描述**
----|---
-jsonsave("filename"); |  使用明确的 Lumerical 单元格和矩阵选项 1 符号将工作区中的所有数据保存到 JSON 文件，有关符号的详细信息，请参阅 JSON 文件页面。
-jsonsave("filename", var1, var2, ...); |  使用明确的 Lumerical 单元格和矩阵选项 1 符号将指定的数据变量保存到 JSON 文件，有关符号的详细信息，请参阅 JSON 文件页面。
+**语法** |  **描述**  
+---|---  
+jsonsave("文件名"); |  Saves all 数据 在 workspace 到 一个 JSON 文件 使用 该 explicit Lumerical Cell 和 Matrix Option 1 notation. For detailed information 在 该 notations, please see 该 page [ JSON files ](/hc/en-us/articles/360034936933-JSON-files) .  
+jsonsave("文件名", var1, var2, ...); |  Saves 该 specified 数据 variables 到 一个 JSON 文件 使用 该 explicit Lumerical Cell 和 Matrix Option 1 notation. For detailed information 在 该 notations, please see 该 page [ JSON files ](/hc/en-us/articles/360034936933-JSON-files) .  
+  
+### 示例
 
-**示例**
-
-以下代码示例显示如何将 Lumerical 工作区中的数据保存到 JSON 文件。
-
-    # Create variables a and b
-    a = 1;
+The following code example shows 如何 到 save 该 数据 在 Lumerical workspace 到 一个 JSON 文件.
+    
+    
+    # 创建 variables 一个 和 b
+    一个 = 1;
     b = [1+2i, 3+4i];
     jsonsave("test_json.json");
 
-"test_json.json" 文件中的数据：
+Data 在 该 "test_json.json" 文件:
 
-    { "a" : 1, "b" : { "_complex" : true, "_data" : [ 1, 2, 3, 4 ], "_size" : [ 1, 2 ], "_type" : "matrix" } }
+{ "一个" : 1, "b" : { "_complex" : true, "_data" : [ 1, 2, 3, 4 ], "_size" : [ 1, 2 ], "_type" : "矩阵" } }  
+  
+Specify 该 variables you would like 到 save 在 your workspace.
+    
+    
+    一个 = 1;  
+    b = [1+2i, 3+4i];  
+    字符串 = "字符串";  
+    jsonsave("test_json.json",一个,字符串);
 
-指定您要保存在工作区中的变量。
-
-    a = 1;
-    b = [1+2i, 3+4i];
-    string = "string";
-    jsonsave("test_json.json",a,string);
-
-创建以下 json 文件。
-
-    {
-     "a" : 1,
-     "string" : "string"
+创建 该 following json 文件.
+    
+    
+    {  
+     "一个" : 1,  
+     "字符串" : "字符串"  
     }
 
-**相关命令**
+**参见**
 
-- [jsonload](./jsonload.md)
-- [jsonloads](./jsonloads.md)
-- [jsonsaves](./jsonsaves.md)
-- [JSON files](./JSON-files.md)
+[ jsonload ](/hc/en-us/articles/360034408194-jsonload) , [ jsonloads ](/hc/en-us/articles/360038741854) , [ jsonsaves ](/hc/en-us/articles/360039235453) , [ JSON files ](/hc/en-us/articles/360034936933-JSON-files)

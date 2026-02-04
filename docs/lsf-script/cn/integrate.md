@@ -1,58 +1,63 @@
 <!--
 Translation from English documentation
 Original command: integrate
-Translation date: 2026-02-03
+Translation date: 2026-02-04 22:50:01
 -->
 
 # integrate
 
-返回矩阵指定维度上的积分。
+返回 该 integral over 该 specified 维度 的 一个 矩阵. 
 
-对单例维度进行积分将返回零（即单个点下的面积为零）。有关替代行为，请参见 integrate2。
+Integrals over singleton dimensions 将 返回 zero (i.e. 该 area under 一个 single point 是 zero). See integrate2 用于 一个 alternate behavior. 
 
-**语法** |  **描述**
----|---
-out = integrate(A, n, x1);  |  在矩阵的第 n 维上对 A 进行积分。x1 是该维度对应的位置向量。
-out = integrate(A, d, x1, x2, ...);  |  计算 A 在指定维度列表 d 上的积分。d 是包含要积分维度的向量。xi 是 A 的对应于正在执行积分的维度的位置向量。例如
+**语法** |  **描述**  
+---|---  
+out = integrate(A, n, x1);  |  Integrates A over 该 nth 维度 在 该 矩阵.  x1 是 该 对应的 position 向量 用于 该 维度.   
+out = integrate(A, d, x1, x2, ...);  |  计算 该 integral 的 A over 该 specified list 的 维度(s) d.  d 是 一个 向量 containing 该 dimensions over 该 到 integrate.  xi 是 该 position vectors 对应的 到 该 dimensions 的 A over 该 该 integration 是 occurring.  For example 
 
-  * power = integrate(A,1:2,x,y) 将在 x-y 曲面上对 A 进行积分。
+  * power = integrate(A,1:2,x,y) 将 integrate A over 一个 x-y surface. 
 
+  
+  
 **示例**
 
-在以下示例中，integrate 命令用于对 y=x² 从 0 到 3 进行积分，其中函数在点 x=0,1,2,3 处进行采样。积分函数将从位置向量 x 确定 dx。作为参考，连续函数 y=x² 的积分值为 9。减小 dx 将使这个离散积分趋近于连续结果。
+In 该 following example, 该 integrate 命令 是 used 到 integrate y=x^2 从 0 到 3, 其中 该 函数 是 sampled at 该 points x=0,1,2,3. The integrate 函数 将 determine dx 从 该 position 向量 x. For reference, 该 值 的 此 integral 用于 该 continuous 函数 y=x^2 (as opposed 到 该 discrete samples 在 此 example) 是 9. Reducing dx 将 make 此 discrete integral approach 该 continuous result. 
 
-高级说明：这个非常简单的示例中的实际计算将为 0.5*0 + 1*1 + 1*4 + 0.5*9 = 9.5，如下图所示。值得注意的是，第一个和最后一个点的因子为 0.5*dx，因为它们在积分范围的边缘。如果没有对这些点应用 0.5 的因子，积分将从 x=-0.5 到 x=3.5 有效计算。
-
+Advanced note: The actual calculation 在 此 very simple example 将 为 0.5*0 + 1*1 + 1*4 + 0.5*9 = 9.5, as illustrated 在 该 figure below. It 是 interesting 到 note 该 该 first 和 last points have 一个 factor 的 0.5*dx because they 是 at 该 edge 的 该 integration range. Without 该 factor 的 0.5 applied 到 那些 points, 该 integral would effectively 为 calculated 从 x=-0.5 到 x=3.5 
+    
+    
     ?x=0:3;
     y=x^2;
     ?integrate(y,1,x);
-    result:
-    0
-    1
-    2
-    3
-    result:
-    9.5
+    result: 
+    0 
+    1 
+    2 
+    3 
+    result: 
+    9.5 
 
-接下来，我们演示积分函数正确处理非均匀采样。从 0 到 2 的函数部分使用 dx=1 进行评估，而从 2 到 3 使用 dx=0.2。在这种情况下，积分函数将计算 0.5*0 + 1*1 + 0.6*4 + 0.2*4.84 + 0.2*5.76 + 0.2*6.76 + 0.2*7.84 + 0.1*9;
-
+Next, we demonstrate 该 该 integrate 函数 correctly treats non-uniform sampling. The portion 的 该 函数 从 0 到 2 是 evaluated 使用 一个 dx=1, while 一个 dx 的 0.2 是 used 从 2 到 3. In 此 case, 该 integrate 函数 将 计算 0.5*0 + 1*1 + 0.6*4 + 0.2*4.84 + 0.2*5.76 + 0.2*6.76 + 0.2*7.84 + 0.1*9; 
+    
+    
     ?x=[[0:1]; [2:0.2:3]];
     y=x^2;
     ?integrate(y,1,x);
-    result:
-    0
-    1
-    2
-    2.2
-    2.4
-    2.6
-    2.8
-    3
-    result:
-    9.34
+    result: 
+    0 
+    1 
+    2 
+    2.2 
+    2.4 
+    2.6 
+    2.8 
+    3 
+    result: 
+    9.34 
 
-最后，这个示例显示如何通过积分坡印廷向量来计算通过 y 法向监视器传输的功率。要获得传输功率，我们要对坡印廷向量的法向分量的实部 (Py) 进行积分。Py 数据矩阵的大小为 Nx × Ny × Nz × Nf，其中 Nx、Ny、Nz 是每个方向的网格点数。如果监视器是 Y 法向的，则 Ny=1。Nf 是监视器收集的频率点数。在对 X 和 Z 方向进行积分后，我们基本上得到传输功率与频率的 1D 函数。
-
+Lastly, 此 example shows 如何 到 计算 该 power transmitted through 一个 y-normal 监视器 通过 integrating 该 Poynting 向量. To 获取 transmitted power, we want 到 integrate 该 real part 的 该 normal component 的 该 poynting 向量 (Py). The Py 数据 矩阵 将 have size N  x  x N  y  x N  z  x N  f  , 其中 Nx, Ny, Nz 是 该 数字 的 mesh point 在 each direction. If 该 监视器 是 Y-normal, Ny=1. Nf 是 该 数字 的 频率 points collected 通过 该 监视器. After integrating over 该 X 和 Z direction, we 是 basically left 使用 一个 1D 函数 的 该 transmitted power vs 频率. 
+    
+    
     Py = getdata("Monitor1","Py");
     x = getdata("Monitor1","x");
     y = getdata("Monitor1","y");
@@ -60,17 +65,6 @@ out = integrate(A, d, x1, x2, ...);  |  计算 A 在指定维度列表 d 上的�
     f = getdata("Monitor1","f");
     power = 0.5 * integrate( real(Py), [1,3], x,z );
 
-**相关命令**
+**参见**
 
-- [List of commands](./List-of-commands.md)
-- [integrate2](./integrate2.md)
-- [conv2](./conv2.md)
-- [max](./max.md)
-- [min](./min.md)
-- [interp](./interp.md)
-- [find](./find.md)
-- [pinch](./pinch.md)
-- [round](./round.md)
-- [getdata](./getdata.md)
-- [sum](./sum.md)
-- [length](./length.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ integrate2 ](/hc/en-us/articles/360034405834-integrate2) , [ conv2 ](/hc/en-us/articles/360034405854-conv2) , [ max ](/hc/en-us/articles/360034925693-max) , [ min ](/hc/en-us/articles/360034925713-min) , [ interp ](/hc/en-us/articles/360034925893-interp) , [ find ](/hc/en-us/articles/360034405874-find) , [ pinch ](/hc/en-us/articles/360034405674-pinch) , [ round ](/hc/en-us/articles/360034406194-round) , [ getdata ](/hc/en-us/articles/360034409834-getdata) , [ sum ](/hc/en-us/articles/360034405694-sum) , [ 长度 ](/hc/en-us/articles/360034925653-长度)

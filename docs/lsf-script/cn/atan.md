@@ -1,39 +1,38 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: atan -->
+<!--
+Translation from English documentation
+Original command: atan
+Translation date: 2026-02-04 22:49:36
+-->
 
 # atan
 
-计算反三角正切函数（反正切）。角度单位为弧度。该函数适用于复数值。复数的相位在-π到π之间评估。如果x是复数或|x|>1，使用以下公式：
+计算 该 inverse trigonometric tangent 函数 (arctangent). Angle units 是 在 radians. The 函数 是 defined 用于 complex 值. Phase 的 一个 complex 数字 是 evaluated between -  π  和  π  . If x 是 complex, 或 abs(x) > 1, 该 following equation 是 used: 
 
-$$
-	ext{arctan(x)} = rac{i}{2}	ext{ln}(rac{i+x}{i-x})
-$$
+$$ \text{arctan(x)} = \frac{i}{2}\text{ln}(\frac{i+x}{i-x}) $$ 
 
-**语法** | **描述**
----|---
-out = atan(x); | 返回x的复数反正切。atan的范围是-π/2到π/2。
-
+**语法** |  **描述**  
+---|---  
+out = atan(x);  |  返回 该 complex arctangent 的 x. The range 的 atan 是 -  π  /2 到  π  /2.   
+  
 **示例**
 
-绘制atan(y/x)在-π ≤ theta ≤ π范围内的图像。
+Plot atan(y/x) 用于 -  π  ≤ theta≤  π  . 
+    
+    
+    theta=linspace(-pi,pi,1000);
+    x=cos(theta);
+    y=sin(theta);
+    plot(theta*180/pi,atan(y/x)*180/pi,"theta (deg)","atan(y/x) (deg)","atan(y/x)");
+    plot(y/x,atan(y/x)*180/pi,"y/x","atan(y/x) (deg)","atan(y/x)");
 
-```lsf
-theta=linspace(-pi,pi,1000);
-x=cos(theta);
-y=sin(theta);
-plot(theta*180/pi,atan(y/x)*180/pi,"theta (deg)","atan(y/x) (deg)","atan(y/x)");
-plot(y/x,atan(y/x)*180/pi,"y/x","atan(y/x) (deg)","atan(y/x)");
-```
+计算 atan(  π  /4 + i). 
+    
+    
+    x=pi/4+1i;
+    ?atan(x);
+    result: 
+    0.972497+0.50321i 
 
-计算atan(π/4 + i)。
+**参见**
 
-```lsf
-x=pi/4+1i;
-?atan(x);
-result: 
-0.972497+0.50321i 
-```
-
-**另请参阅**
-
-[命令列表](List_of_commands.md)、[atan2](atan2.md)、[tan](tan.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ atan2 ](/hc/en-us/articles/360034925473-atan2) , [ tan ](/hc/en-us/articles/360034925433-tan)

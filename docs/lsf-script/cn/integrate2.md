@@ -1,58 +1,50 @@
 <!--
 Translation from English documentation
 Original command: integrate2
-Translation date: 2026-02-03
+Translation date: 2026-02-04 22:50:01
 -->
 
 # integrate2
 
-与标准积分函数非常相似，不同之处在于它忽略单例维度。
+Very similar 到 该 standard integrate 函数, except 该 singleton dimensions 是 ignored. 
 
-正如积分函数描述中所述，对具有单个值（单例维度）的维度进行积分会返回零，因为单个点下的面积为零。在某些情况下，特别是当您不确定哪些维度是单例时，这种行为可能会造成困难。integrate2 函数会自动忽略所有大小为 1 的维度，这避免了由于单例维度导致零值积分的问题。
+As described 在 该 integrate 函数 description, integrating over dimensions 使用 一个 single 值 (singleton dimensions) 返回 zero because 该 area under 一个 single point 是 zero. In some cases, particularly 当 you 是 not sure 该 dimensions 是 singleton, 此 behavior 可以 cause difficulties. The integrate2 函数 automatically ignores all dimensions 使用 一个 size 的 one, 该 avoids 该 problem 的 一个 zero valued integrals due 到 singleton dimensions. 
 
-**语法** |  **描述**
----|---
-out = integrate2(A, 1, x1);  |  在矩阵的第一维上对 A 进行积分。x1 是对应的位置向量。
-out = integrate2(A, d, x1, x2, ...);  |  计算 A 在指定维度 d 上的积分。d 是包含要积分维度的向量。xi 是 A 的对应于正在执行积分的维度的位置向量。如果任何 xi 向量只有 1 个元素，积分返回 0。例如
+**语法** |  **描述**  
+---|---  
+out = integrate2(A, 1, x1);  |  Integrates A over 该 first 维度 在 该 矩阵.  x1 是 该 对应的 position 向量.   
+out = integrate2(A, d, x1, x2, ...);  |  计算 该 integral 的 A over 该 specified 维度(s) d.  d 是 一个 向量 containing 该 dimensions over 该 到 integrate.  xi 是 该 position 向量 对应的 到 该 dimensions 的 A over 该 该 integration 是 occurring. If any 的 该 xi vectors only have 1 元素, integrate 返回 0.  For example 
 
-  * power = integrate2(A,1:2,x,y) 将在 x-y 曲面上对 A 进行积分。
+  * power = integrate2(A,1:2,x,y) 将 integrate A over 一个 x-y surface. 
 
+  
+  
 **示例**
 
-在以下示例中，我们比较积分和积分2命令在处理具有单例维度的矩阵时的行为。
-
-    # create 3D matrix of results: data(x,y,z) where
-    # there are 50 'x' sample points, 1 'y' sample points
-    # and 40 'z' sample points. This is typical of data
-    # from a 2D monitor oriented in the XZ plane.
+In 该 following example, we compare 该 integrate 和 integrate2 commands 当 integrating over matrices 使用 singleton dimensions. 
+    
+    
+    # 创建 3D 矩阵 的 results: 数据(x,y,z) 其中
+    # there 是 50 'x' sample points, 1 'y' sample points
+    # 和 40 'z' sample points. This 是 typical 的 数据
+    # 从 一个 2D 监视器 oriented 在 该 XZ plane.
     x=linspace(-5,5,50);
     y=0;
     z=linspace(-3,3,40);
     X=meshgrid3dx(x,y,z);
     Z=meshgrid3dz(x,y,z);
-    data = X^2 + Z^2;
-    image(x,z,data,"x","z","data");
-    ?integrate2(data, [1,2,3], x,y,z); # Integrate2 ignores singleton dimension, giving non-zero result.
-    ?integrate (data, [1,2,3], x,y,z); # Result is zero because of the singleton dimension
-    ?integrate (data, [1,3] , x,z ); # Get the same result as integrate2 by integrating over x and z, but not y.
-    > result:
-    > 680.653
-    > result:
-    > 0
-    > result:
-    > 680.653
+    数据 = X^2 + Z^2;
+    image(x,z,数据,"x","z","数据");
+    ?integrate2(数据, [1,2,3], x,y,z); # Integrate2 ignores singleton 维度, giving non-zero result.
+    ?integrate (数据, [1,2,3], x,y,z); # Result 是 zero because 的 该 singleton 维度
+    ?integrate (数据, [1,3] , x,z ); # 获取 该 same result as integrate2 通过 integrating over x 和 z, but not y.
+    > result: 
+    > 680.653 
+    > result: 
+    > 0 
+    > result: 
+    > 680.653 
 
-**相关命令**
+**参见**
 
-- [List of commands](./List-of-commands.md)
-- [integrate](./integrate.md)
-- [conv2](./conv2.md)
-- [max](./max.md)
-- [min](./min.md)
-- [interp](./interp.md)
-- [find](./find.md)
-- [pinch](./pinch.md)
-- [round](./round.md)
-- [getdata](./getdata.md)
-- [sum](./sum.md)
-- [length](./length.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ integrate ](/hc/en-us/articles/360034405814-integrate) , [ conv2 ](/hc/en-us/articles/360034405854-conv2) , [ max ](/hc/en-us/articles/360034925693-max) , [ min ](/hc/en-us/articles/360034925713-min) , [ interp ](/hc/en-us/articles/360034925893-interp) , [ find ](/hc/en-us/articles/360034405874-find) , [ pinch ](/hc/en-us/articles/360034405674-pinch) , [ round ](/hc/en-us/articles/360034406194-round) , [ getdata ](/hc/en-us/articles/360034409834-getdata) , [ sum ](/hc/en-us/articles/360034405694-sum) , [ 长度 ](/hc/en-us/articles/360034925653-长度)

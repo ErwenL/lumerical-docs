@@ -1,63 +1,58 @@
 <!--
----
-title: setnamed
-command_type: property
----
+Translation from English documentation
+Original command: setnamed
+Translation date: 2026-02-04 22:50:14
 -->
 
 # setnamed
 
-类似于`set`命令，但必须指定对象名称。此命令在分析模式下会返回错误。
+Likes 该  设置  命令, except 该 该 对象 name 必须 为 specified. This 命令 将 返回 一个 error 在 分析 mode.
 
-**语法** | **描述**
----|---
-`?setnamed("name");` | 返回名为name的对象的属性列表。
-`setnamed("name", "property", value);` | 与set相同，但作用于具有特定名称的对象，而不是选定的对象。
-`setnamed("name", struct);` | 结构体可以接受，代替"property"-value对参数。
-`setnamed("name", "property", value, i);` | 当有多个对象具有相同名称时，此形式可用于设置第i个命名对象的属性。对象按其在对象树中的位置排序。最上面的选定对象被赋予索引1，索引号向下递增。
-`setnamed("groupname::name", "property", value);` | 与set相同，但作用于在名为"groupname"的组中名为"name"的对象，而不是选定的对象。
-`setnamed("groupname::name", "property", value, i);` | 当多个对象具有相同名称时，此形式可用于设置组"groupname"中第i个名为"name"的对象的属性。对象按其在对象树中的位置排序。最上面的选定对象被赋予索引1，索引号向下递增。
-
+**语法** |  **描述**  
+---|---  
+?setnamed("name"); |  返回 一个 list 的 该 属性 的 该 对象 called name.  
+setnamed("name", "属性", 值); |  The same as 设置, but acts 在 对象 使用 一个 specific name, instead 的 选中的 对象.  
+setnamed("name", 结构体); |  A 结构体 可以 为 accepted 在 place 的 "属性"-值 pair 的 参数.  
+setnamed("name", "属性", 值,i); |  This form 可以 为 used 到 设置 该 属性 的 该 ith named 对象 当 multiple 对象 have 该 same name. The 对象 是 ordered 通过 their location 在 该 对象 tree. The uppermost 选中的 对象 是 given 该 index 1, 和 该 index numbers increase as you go down 该 tree.  
+setnamed("groupname::name", "属性", 值); |  The same as 设置, but acts 在 对象 within 该 group named "groupname" 该 是 named "name", instead 的 选中的 对象.  
+setnamed("groupname::name", "属性", 值,i); |  This form 可以 为 used 到 设置 该 属性 的 该 ith 对象 使用 该 name "name" 在 该 group "groupname" 当 multiple 对象 have 该 same name. The 对象 是 ordered 通过 their location 在 该 对象 tree. The uppermost 选中的 对象 是 given 该 index 1, 和 该 index numbers increase as you go down 该 tree.  
+  
 **示例**
 
-将名为"circle"的对象的半径设置为10nm：
+设置 该 radius 的 该 对象 called "circle" 到 10nm:
+    
+    
+    setnamed("circle","radius",10e-9); 
 
-```
-setnamed("circle", "radius", 10e-9);
-```
+添加 2 微米 到 该 radius 的 all 选中的 对象 named circle:
+    
+    
+    用于 (i=1:getnamednumber("circle")) {
+     rad=getnamed("circle","radius",i);
+     setnamed("circle","radius",rad+2e-6,i);
+    }
 
-为所有名为circle的选定对象的半径增加2微米：
+Use 结构体 as 一个 input 到 设置 该 coordinates 和 dimensions 的 一个 对象 called "rectangle":
+    
+    
+    coordinates = {"x" : -3e-7,  
+                   "x跨度" : 1e-6,  
+                   "y" : 5e-6,  
+                   "y跨度" : 1e-5,  
+                   "z" : 1e-7,  
+                   "z跨度" : 2.2e-7};  
+      
+    setnamed("rectangle", coordinates);
 
-```
-for (i = 1; getnamednumber("circle")) {
-    rad = getnamed("circle", "radius", i);
-    setnamed("circle", "radius", rad + 2e-6, i);
-}
-```
+**注意**
 
-使用结构体作为输入，设置名为"rectangle"的对象的坐标和尺寸：
+In INTERCONNECT, 该 元素 属性 值 必须 为 entered 在 该  setnamed  命令 使用 该 fixed standard unit. In some cases, 该 standard unit 是 different 从 该 default unit 在 该 Property View. Following 是 一个 example 的 setting 该 ONA center 频率. The center 频率 default unit 是 THz, while 该 standard unit 是 Hz, 和 当 使用 该  setnamed  命令, 该 值 needs 到 为 在 Hz:
+    
+    
+    setnamed("ONA", "center 频率", 193.1e12); 
 
-```
-coordinates = {"x": -3e-7,
-               "x span": 1e-6,
-               "y": 5e-6,
-               "y span": 1e-5,
-               "z": 1e-7,
-               "z span": 2.2e-7};
+To find 该 standard unit 用于 一个 元素 属性, open 该 元素's help page 在 该 Knowledge Page, 和 look at 该 Default unit column. A note 是 included 用于 cases 其中 该 default 和 standard units differ. For example, see 该 center 频率 的 该 [ ONA ](**%20to%20be%20defined%20**) .
 
-setnamed("rectangle", coordinates);
-```
+**参见**
 
-**注意事项**
-
-在INTERCONNECT中，在`setnamed`命令中输入元素属性值时必须使用固定的标准单位。在某些情况下，标准单位与属性视图中的默认单位不同。以下示例是设置ONA中心频率。中心频率的默认单位是THz，而标准单位是Hz，使用`setnamed`命令时，值需要以Hz为单位：
-
-```
-setnamed("ONA", "center frequency", 193.1e12);
-```
-
-要查找元素属性的标准单位，请在知识页面上打开该元素的帮助页面，查看默认单位列。当默认单位和标准单位不同时会包含一条注释。例如，参见[ONA](ona.md)的中心频率。
-
-**另请参阅**
-
-- [操作对象](manipulating-objects.md), [set](set.md), [get](get.md), [getnamed](getnamed.md), [getnamednumber](getnamednumber.md)
+[ Manipulating 对象 ](/hc/en-us/articles/360037228834) , [ 设置 ](/hc/en-us/articles/360034928773-设置) , [ 获取 ](/hc/en-us/articles/360034928873-获取) , [ getnamed ](/hc/en-us/articles/360034408574-getnamed) , [ getnamednumber ](/hc/en-us/articles/360034408594-getnamednumber)

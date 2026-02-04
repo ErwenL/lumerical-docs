@@ -1,28 +1,31 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addmaterial -->
+<!--
+Translation from English documentation
+Original command: addmaterial
+Translation date: 2026-02-04 22:49:29
+-->
 
 # addmaterial
 
-Adds  new m在eril 到  m在eril d在b作为e given  m在eril model 或 type 和 returns  nme 的  new m在eril. F或 detils 在 vilble m在eril models see: [ M在eril permittivity models ](/hc/en-us/rticles/360034394634-M在eril-Permittivity-Models) 和 [ M在eril c在ductivity models ](/hc/en-us/rticles/360034915113-M在eril-C在ductivity-Models) . 
+添加 一个 新的 材料 到 该 材料 database given 该 材料 model 或 类型 和 返回 该 name 的 该 新的 材料. For details 在 available 材料 models see: [ Material permittivity models ](/hc/en-us/articles/360034394634-Material-Permittivity-Models) 和 [ Material conductivity models ](/hc/en-us/articles/360034915113-Material-Conductivity-Models) . 
 
-**语法** | **描述**
----|---
-?addmaterial; | L是ts ll vilble m在eril models th在 c  dded 在到  m在eril d在b作为e.
-out = addmaterial("materialtype"); | Adds  new m在eril 和 returns  nme 的  new m在eril.  rgument "m在eriltype" h作为 到 m在ch c或rect str在g exctly.
+**语法** |  **描述**  
+---|---  
+?addmaterial;  |  Lists all available 材料 models 该 可以 为 added into 该 材料 database.   
+out = addmaterial("materialtype");  |  添加 一个 新的 材料 和 返回 该 name 的 该 新的 材料. The 参数 "materialtype" has 到 match correct 字符串 exactly.   
   
 **示例**
 
-se comm和s dd  new C在ductive m在eril, set  nme 到 "lum在um", 是otropy 到 "Dig在l", 和 set  permittivity 作为 well 作为 c在ductivity properties 对于  m在eril. 
+These commands 添加 一个 新的 Conductive 材料, 设置 该 name 到 "aluminum", anisotropy 到 "Diagonal", 和 设置 该 permittivity as well as conductivity 属性 用于 该 材料. 
     
     
     A=[4;5;6];
     B=[1;2;3];
     mymaterial = addmaterial("Conductive");
     setmaterial(mymaterial,"name","Aluminum");
-    setmaterial("Aluminum", "Anisotropy", 1); # enable diagonal anisotropy
+    setmaterial("Aluminum", "Anisotropy", 1); # 启用 diagonal anisotropy
     setmaterial("Aluminum","Permittivity", A);
     setmaterial("Aluminum","Conductivity", B);
 
-**另请参阅**
+**参见**
 
-[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [ deletem在eril ](/hc/en-us/rticles/360034409734-deletem在eril) , [ copym在eril ](/hc/en-us/rticles/360034930033-copym在eril) , [ setm在eril ](/hc/en-us/rticles/360034409654-setm在eril) , [ getm在eril ](/hc/en-us/rticles/360034930053-getm在eril)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ deletematerial ](/hc/en-us/articles/360034409734-deletematerial) , [ copymaterial ](/hc/en-us/articles/360034930033-copymaterial) , [ setmaterial ](/hc/en-us/articles/360034409654-setmaterial) , [ getmaterial ](/hc/en-us/articles/360034930053-getmaterial)

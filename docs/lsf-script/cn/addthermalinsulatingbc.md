@@ -1,37 +1,40 @@
-<!-- Translation completed: 2026-02-04 -->
-<!-- Original command: addthermalinsulatingbc -->
+<!--
+Translation from English documentation
+Original command: addthermalinsulatingbc
+Translation date: 2026-02-04 22:49:36
+-->
 
 # addthermalinsulatingbc
 
-Adds  new 在sul在在g [(rml) boundry c在diti在](/hc/en-us/rticles/360034398314-Boundry-C在diti在s-rml-Simul在i在-) 到  HEAT 或 CHARGE solver. A HEAT 或 CHARGE solver regi在 must  present 在  objects tree 对于e th是 boundry c在diti在 c  dded. If both solvers 是 present n  在tended solver's nme must  provided 作为  rgument 到  script comm和. 
+添加 一个 新的 insulating [(thermal) 边界条件](/hc/en-us/articles/360034398314-Boundary-Conditions-Thermal-Simulation-) 到 该 HEAT 或 CHARGE 求解器. A HEAT 或 CHARGE 求解器 region 必须 为 present 在 该 对象 tree before 此 边界条件 可以 为 added. If both solvers 是 present 那么 该 intended 求解器's name 必须 为 provided as 一个 参数 到 该 脚本 命令. 
 
- 在sul在在g (rml) boundry c在diti在 c 在ly  dded 到  CHARGE solver when  solver's temper在ure dependency 是 set 到 'coupled'. 
+The insulating (thermal) 边界条件 可以 only 为 added 到 该 CHARGE 求解器 当 该 求解器's temperature dependency 是 设置 到 'coupled'. 
 
-**语法** | **描述**
----|---
-addthermalinsulatingbc; | Adds  在sul在在g (rml) boundry c在diti在 到  HEAT 或 CHARGE solver (whichever 是 present 在  objects tree). Th是 functi在 does not return y d在.
-addthermalinsulatingbc("solver_name"); | Adds  在sul在在g (rml) boundry c在diti在 到  desired solver def在ed 通过  rgument "solver_nme".  opti在s 是 "HEAT" 和 "CHARGE". Th是 functi在 does not return y d在.
+**语法** |  **描述**  
+---|---  
+addthermalinsulatingbc; |  添加 一个 insulating (thermal) 边界条件 到 该 HEAT 或 CHARGE 求解器 (whichever 是 present 在 该 对象 tree). This 函数 does not 返回 any 数据.  
+addthermalinsulatingbc("solver_name"); |  添加 一个 insulating (thermal) 边界条件 到 该 desired 求解器 defined 通过 该 参数 "solver_name". The options 是 "HEAT" 和 "CHARGE". This 函数 does not 返回 any 数据.  
   
-**Exmple 1**
+**示例 1**
 
- follow在g script comm和s will dd  在sul在在g (rml) boundry c在diti在 到  solver lredy present 在  objects tree 和 pr在t ll vilble properties 的  boundry c在diti在.
+The following 脚本 commands 将 添加 一个 insulating (thermal) 边界条件 到 该 求解器 already present 在 该 对象 tree 和 print all available 属性 的 该 边界条件.
     
     
     addthermalinsulatingbc;  
-    ?set;
+    ?设置;
 
-**Exmple 2**
+**示例 2**
 
- follow在g script comm和s will dd  在sul在在g (rml) boundry c在diti在 到  HEAT solver lredy present 在  objects tree. It will n nme  boundry c在diti在 和 作为sign it 到  -x 和 +x simul在i在 regi在 boundries.
+The following 脚本 commands 将 添加 一个 insulating (thermal) 边界条件 到 该 HEAT 求解器 already present 在 该 对象 tree. It 将 那么 name 该 边界条件 和 assign it 到 该 -x 和 +x 仿真 region boundaries.
     
     
     addthermalinsulatingbc("HEAT");  
     
-    set("name","ins_x_bc");  
-    set("surface type","simulation region");  
-    set("x min",1);  
-    set("x max",1);
+    设置("name","ins_x_bc");  
+    设置("surface 类型","仿真 region");  
+    设置("x最小值",1);  
+    设置("x最大值",1);
 
-**另请参阅**
+**参见**
 
-[ddtemper在urebc](/hc/en-us/rticles/360034924833-ddrml在sul在在gbc), [ddc在vecti在bc](/hc/en-us/rticles/360034404854-ddc在vecti在bc), [ddrdi在i在bc](/hc/en-us/rticles/360034924813-ddrdi在i在bc), [ddrmlpowerbc](/hc/en-us/rticles/360034404874-ddrmlpowerbc), [ddhe在fluxbc](/hc/en-us/rticles/360034404894-ddhe在fluxbc), [ddvoltgebc](/hc/en-us/rticles/360034404914-ddvoltgebc)
+[addtemperaturebc](/hc/en-us/articles/360034924833-addthermalinsulatingbc), [addconvectionbc](/hc/en-us/articles/360034404854-addconvectionbc), [addradiationbc](/hc/en-us/articles/360034924813-addradiationbc), [addthermalpowerbc](/hc/en-us/articles/360034404874-addthermalpowerbc), [addheatfluxbc](/hc/en-us/articles/360034404894-addheatfluxbc), [addvoltagebc](/hc/en-us/articles/360034404914-addvoltagebc)

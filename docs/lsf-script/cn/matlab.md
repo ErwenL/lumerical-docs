@@ -1,45 +1,45 @@
+<!--
+Translation from English documentation
+Original command: matlab
+Translation date: 2026-02-04 22:50:13
+-->
+
 # matlab
 
-从 Lumerical 脚本提示符运行 MATLAB 命令。这使得可以从 Lumerical 脚本环境中访问扩展的数学和可视化功能。如果未启用 MATLAB 脚本集成，此函数将返回错误。
+Runs 一个 MATLAB 命令 从 该 Lumerical 脚本 prompt. This gives access 到 extended mathematical 和 visualization functionality 从 该 Lumerical 脚本 环境. If 该 MATLAB 脚本 integration 是 not enabled, 此 函数 将 返回 一个 error. 
 
-第一次调用 MATLAB 函数（matlab、matlabget 或 matlabput）时，将启动 MATLAB 会话并与 Lumerical 脚本环境建立连接。建立此连接后，可以使用 matlab 函数运行 MATLAB 命令。重要的是要理解 MATLAB 和 Lumerical 脚本变量工作区是完全独立和独立的。MATLAB 命令无法作用于 Lumerical 工作区中定义的变量，反之亦然。必须使用 matlabget 和 matlabput 函数在工作区之间传递变量。随时可以通过在 MATLAB 脚本提示符下输入命令来检查 MATLAB 工作区或与 MATLAB 环境交互。MATLAB 实例的工作目录始终设置为与 Lumerical 应用程序的工作目录匹配。
+The first 时间 一个 MATLAB 函数 (matlab, matlabget 或 matlabput) 是 called, 一个 MATLAB session 将 为 started 和 一个 connection 将 为 established 使用 该 Lumerical scripting 环境. Once 此 connection 是 established, MATLAB commands 可以 为 run 使用 该 matlab 函数. It 是 important 到 understand 该 该 MATLAB 和 该 Lumerical 脚本 变量 workspaces 是 completely separate 和 independent. A MATLAB 命令 cannot act 在 一个 变量 defined 在 该 Lumerical workspace, 和 vice-versa. Variables 必须 为 passed between 该 workspaces 使用 该 matlabget 和 matlabput functions. At any 时间 you 可能 examine 该 MATLAB workspace 或 interact 使用 该 MATLAB 环境 通过 typing commands at 该 MATLAB 脚本 prompt. The working directory 的 该 MATLAB instance 是 always 设置 到 match 该 working directory 的 该 Lumerical application. 
 
-MATLAB 命令的输出将打印在 Lumerical 脚本提示符上。matlab 函数的一个限制是既不向 Lumerical 脚本提示符也不向 MATLAB 提示符提供错误报告。MATLAB 命令应在直接从 MATLAB 提示符测试后再从 Lumerical 脚本调用。输出缓冲区长度约为 1e5 个字符，多余的输出将被截断。
+The output 从 该 MATLAB commands 将 为 printed at 该 Lumerical 脚本 prompt. One limitation 的 该 matlab 函数 是 该 no error reporting 是 provided 到 either 该 Lumerical 脚本 prompt 或 该 MATLAB prompt. MATLAB commands 应该 为 tested 通过 typing them directly into 该 MATLAB prompt before they 是 called 从 一个 Lumerical 脚本. The output buffer 长度 是 roughly 1e5 characters. Additional output 将 为 truncated. 
 
-当您有一系列较长的 MATLAB 命令时，您可能会发现将它们保存到 MATLAB m 文件中更方便。然后，您可以通过运行单个命令来调用该 m 文件。
+When you have 一个 long sequence 的 MATLAB commands, you 可能 find it more convenient 到 save them 在 一个 MATLAB m-文件. Then, you 可以 simply call 该 m-文件 通过 running 一个 single 命令. 
 
-有关安装和配置说明，请参阅 MATLAB 集成设置。附加提示（特别是关于在 Matlab 中绘制数据）可在在线帮助的 MATLAB 部分找到。
-
-**语法** | **描述**
----|---
-matlab("command"); | command：包含一个或多个有效 MATLAB 命令的字符串。
-matlab("  command_1  command_2  "); | 多行字符串可用于脚本文件中包含 MATLAB 命令块。脚本命令提示符不支持多行字符串。
-
+See [ MATLAB integration setup ](/hc/en-us/articles/360026142074) 用于 installation 和 configuration instructions. Additional tips (particularly 用于 plotting 数据 在 Matlab) 可以 为 found 在 该 [ MATLAB ](/hc/en-us/articles/360034416614) section 的 该 online help.   
+---  
+**语法** |  **描述**  
+---|---  
+matlab("命令");  |  命令: 一个 字符串 containing one 或 more valid MATLAB commands.   
+matlab("  command_1  command_2  ");  |  Multi-line strings 可以 为 used 在 脚本 files 到 contain 一个 block 的 MATLAB commands. Multi-line strings 是 not supported at 该 脚本 命令 prompt.   
+  
 **示例**
 
-此示例将演示如何使用 MATLAB 的 "surf" 命令绘制 Ex 实部的曲面图。假设变量 x、y、Ex 已定义在 Lumerical 工作区中。
+This example 将 show 如何 到 use MATLAB's "surf" 命令 到 make 一个 surface plot 的 该 real part 的 Ex. It assumes 该 该 variables x, y, Ex 是 already defined 在 该 Lumerical workspace. 
+    
+    
+    matlabput(x,y,Ex);
+    matlab("surf(y,x,real(Ex))");
 
-```
-matlabput(x,y,Ex);
-matlab("surf(y,x,real(Ex))");
-```
+This example shows 如何 multiple MATLAB commands 可以 为 included 在 一个 single matlab 函数 call. A log-spaced 向量 是 created 在 MATLAB, 那么 imported into 该 Lumerical workspace. 
+    
+    
+    matlab("
+     % 创建 一个 logspaced 向量
+     x_min = 1
+     x_max = 4
+     x = logspace(x_min,x_max,1000)
+    ");
+    matlabget(x);
 
-此示例显示如何在单个 matlab 函数调用中包含多个 MATLAB 命令。在 MATLAB 中创建对数间隔向量，然后导入 Lumerical 工作区。
+**参见**
 
-```
-matlab("
- % 创建对数间隔向量
- x_min = 1
- x_max = 4
- x = logspace(x_min,x_max,1000)
-");
-matlabget(x);
-```
-
-**另请参阅**
-
-- [命令列表](./命令列表.md)
-- [matlabget](./matlabget.md)
-- [matlabput](./matlabput.md)
-- [MATLAB 集成设置](./MATLAB%20集成设置.md)
-- [MATLAB](./MATLAB.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ matlabget ](/hc/en-us/articles/360034407994-matlabget) , [ matlabput ](/hc/en-us/articles/360034408014-matlabput) , [ MATLAB integration setup ](/hc/en-us/articles/360026142074) , [ MATLAB ](/hc/en-us/articles/360034416614)

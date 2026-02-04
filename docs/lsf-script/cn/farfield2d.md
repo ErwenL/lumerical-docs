@@ -1,46 +1,50 @@
+<!--
+Translation from English documentation
+Original command: farfield2d
+Translation date: 2026-02-04 22:49:48
+-->
+
 # farfield2d
 
-将给定的功率或场分布监视器或直线数据集投影到远场，投影到 1 米半径的半圆上。返回电场强度 |E|^2。farfield2d 不使用一组线性间隔的角度进行投影，请使用 [farfieldangle 脚本命令](./farfieldangle.md) 获取适当的角度向量。
+Projects 一个 given power 或 field profile 监视器 或 一个 rectilinear dataset 到 该 far field 到 一个 1 meter radius semi-circle. The electric field intensity |E|  2  是 returned. Farfield2d does not use 一个 设置 的 linearly spaced angles 用于 该 projection, use [farfieldangle - Script 命令](/hc/en-us/articles/360034930653) 到 获取 该 appropriate angle 向量. 
 
-**语法** | **描述**
----|---
-out = farfield2d("mname", f, n, illumination, periods, index, direction); | 将给定的功率或场分布监视器投影到指定频率点的远场。结果是一个 NxM 矩阵，第一维是远场投影的分辨率，第二维是投影的频率点数。
-out = farfield2d(dataset, f, n, illumination, periods, index, direction); | 将给定的直线数据集投影到指定频率点的远场。结果是一个 NxM 矩阵，第一维是远场投影的分辨率，第二维是投影的频率点数。
-
-**参数** |  | **默认值** | **类型** | **描述**
----|---|---|---|---
-mname | 必填 | | 字符串 | 监视器名称
-dataset | 必填 | | 数据集 | 包含 E 和 H 的直线数据集
-f | 可选 | 1 | 向量 | 所需频率点的索引。f 可以是单个值，也可以是频率点向量。R2016b 引入了多线程投影。
-n | 可选 | 2000 | 数字 | 远场点数。
-illumination | 可选 | 1 | 数字 | 对于周期性结构。高斯照明：1 平面波照明：2
-periods | 可选 | 1 | 数字 | 要使用的周期数
-index | 可选 | 监视器中心处的值 | 数字 | 用于投影的材料折射率。
-direction | 可选 | 最大功率流方向 | 数字 | 方向：可以是 +1 或 -1。
-
+**语法** |  **描述**  
+---|---  
+out = farfield2d("mname", f, n, illumination, periods, index, direction); |  Projects 一个 given power 或 field profile 监视器 到 该 far field at 该 specified 频率 points. The result 是 一个 NxM 矩阵 其中 该 first 维度 是 该 resolution 的 该 far field projection, 和 该 second 维度 是 该 数字 的 频率 points projected.  
+out = farfield2d(dataset, f, n, illumination, periods, index, direction); |  Projects 一个 given rectilinear dataset 到 该 far field at 该 specified 频率 points. The result 是 一个 NxM 矩阵 其中 该 first 维度 是 该 resolution 的 该 far field projection, 和 该 second 维度 是 该 数字 的 频率 points projected.  
+  
+**Parameter** |  |  **Default 值** |  **Type** |  **描述**  
+---|---|---|---|---  
+mname |  required |  |  字符串 |  Name 的 该 监视器  
+dataset |  required |  |  dataset |  Rectilinear dataset containing both E 和 H  
+f |  optional |  1 |  向量 |  Index 的 该 desired 频率 point. f 可以 为 一个 single 值, 或 一个 向量 的 频率 points. Multithreaded projection was introduced since R2016b.  
+n |  optional |  2000 |  数字 |  The 数字 的 points 在 该 far field.  
+illumination |  optional |  1 |  数字 |  For periodic structures Gaussian illumination: 1 Plane wave illumination: 2  
+periods |  optional |  1 |  数字 |  数字 的 periods 到 为 used  
+index |  optional |  值 at 监视器 center |  数字 |  The index 的 该 材料 到 use 用于 该 projection.  
+direction |  optional |  direction 的 max power flow |  数字 |  Direction: 此 可以 为 +1 或 -1.  
+  
 **示例**
 
-此示例绘制名为 monitor 的 1D 监视器的远场投影。在此示例中，投影第二个频率点。如果监视器只包含一个频率的数据，则不需要第二个参数。
+This example plots 该 far field projection 的 一个 1D 监视器 called 监视器. In 此 example 该 second 频率 point 是 projected. If 该 监视器 only contains 数据 at one 频率, 该 second 参数 是 not required.
+    
+    
+    E2=farfield2d("监视器",2,501);
+    theta=farfieldangle("监视器",2,501);
+    plot(theta,E2,"angle (deg)","|E|^2 far field"); 
 
-```powershell
-E2=farfield2d("monitor",2,501);
-theta=farfieldangle("monitor",2,501);
-plot(theta,E2,"angle (deg)","|E|^2 far field");
-```
+The following example plots 该 far field projection 的 一个 rectilinear dataset. Here, 该 dataset 是 从 一个 1D 监视器.
+    
+    
+    dataset=getresult("监视器", "E");  
+    dataset.addattribute("H",getattribute(getresult("监视器","H"),"H"));  
+      
+    E2=farfield2d(dataset,2,501);  
+    theta=farfieldangle(dataset,2,501);  
+    plot(theta,E2,"angle (deg)","|E|^2 far field"); 
 
-以下示例绘制直线数据集的远场投影。这里，数据集来自 1D 监视器。
+For additional examples see [ Far field projection ](/hc/en-us/articles/360034914713) .
 
-```powershell
-dataset=getresult("monitor", "E");
-dataset.addattribute("H",getattribute(getresult("monitor","H"),"H"));
+**参见**
 
-E2=farfield2d(dataset,2,501);
-theta=farfieldangle(dataset,2,501);
-plot(theta,E2,"angle (deg)","|E|^2 far field");
-```
-
-更多示例请参阅 [远场投影](../远场投影.md)。
-
-**另请参阅**
-
-[命令列表](../命令列表.md)、[farfield3d](./farfield3d.md)、[farfieldangle](./farfieldangle.md)、[farfieldvector2d](./farfieldvector2d.md)、[farfieldpolar2d](./farfieldpolar2d.md)、[farfieldexact2d](./farfieldexact2d.md)、[farfieldfilter](./farfieldfilter.md)、[farfieldexact](./farfieldexact.md)、[farfield2dintegrate](./farfield2dintegrate.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ farfield3d ](/hc/en-us/articles/360034930693-farfield3d) , [ farfieldangle ](/hc/en-us/articles/360034930653-farfieldangle) , [ farfieldvector2d ](/hc/en-us/articles/360034930633-farfieldvector2d) , [ farfieldpolar2d ](/hc/en-us/articles/360034410094-farfieldpolar2d) , [ farfieldexact2d ](/hc/en-us/articles/360034410234-farfieldexact2d) , [ farfieldfilter ](/hc/en-us/articles/360034930613-farfieldfilter) , [ farfieldexact ](/hc/en-us/articles/360034410214-farfieldexact) , [ farfield2dintegrate ](/hc/en-us/articles/360034930673-farfield2dintegrate)

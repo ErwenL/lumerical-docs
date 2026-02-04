@@ -1,80 +1,75 @@
 <!--
-Translation Status: Completed
-Source: docs/lsf-script/en/run.md
-Last Updated: 2026-02-03
+Translation from English documentation
+Original command: run
+Translation date: 2026-02-04 22:50:14
 -->
 
 # run
 
-运行当前模拟。当模拟完成时，所有模拟数据将保存到当前模拟文件。然后更新后的模拟文件将被GUI重新加载。此函数不返回任何数据。
+Run 该 current 仿真. When 该 仿真 finishes, all 仿真 数据 将 为 saved 到 该 current 仿真 文件. The updated 仿真 文件 将 那么 为 re-loaded 通过 该 GUI. This 函数 does not 返回 any 数据.
 
-对于MODE、CHARGE、HEAT、FEEM、DGTD，
+For MODE, CHARGE, HEAT, FEEM, DGTD,
 
-**语法** |  **说明**  
+**语法** |  **描述**  
 ---|---  
-run; |  以资源管理器中定义的并行模式启动模拟。  
-run("solver"); |  使用指定的"solver"以资源管理器中定义的并行模式启动模拟。  
+run; |  Launch 该 仿真 在 parallel mode as defined 在 该 resource manager.  
+run(“求解器”); |  Launch 该 仿真 使用 该 specified “求解器” 在 parallel mode as defined 在 该 resource manager.  
   
-对于FDTD和RCWA，
+For FDTD 和 RCWA,
 
-**语法** |  **说明**  
+**语法** |  **描述**  
 ---|---  
 run;  
-|  使用模拟器选项卡中[运行模拟组](https://optics.ansys.com/hc/en-us/articles/36952912384403-Ansys-Lumerical-FDTD-Modern-User-Interface)中设置的资源启动模拟。  
-run("solver"); |  使用指定的"solver"启动模拟，使用模拟器选项卡中运行模拟组设置的资源。  
-run("solver", "resource_type") |  使用solver和resource_type启动模拟：
+|  Launch the simulation using the resource set in the [run simulation group](https://optics.ansys.com/hc/en-us/articles/36952912384403-Ansys-Lumerical-FDTD-Modern-User-Interface) of the simulator tab.  
+run("求解器"); |  Launch 该 仿真 使用 该 specified “求解器”, 使用 该 resource 设置 在 该 run 仿真 group 的 该 simulator tab.  
+run("求解器", "resource_type") |  Launch 该 仿真 使用 求解器 和 resource_type:
 
-  * solver：求解器名称，可以是"FDTD"、"RCWA"
-  * resource_type：资源类型，对于FDTD可以是"CPU"、"GPU"，对于RCWA只能是"CPU"
+  * 求解器: 求解器 name, 可以 为 “FDTD”, “RCWA”
+  * resource_type: resource 类型, 可以 为 "CPU", "GPU" 用于 FDTD, 和 “CPU” only 用于 RCWA
 
-这允许使用指定的资源而不影响模拟器选项卡中[运行模拟组](https://optics.ansys.com/hc/en-us/articles/36952912384403-Ansys-Lumerical-FDTD-Modern-User-Interface)中的CPU/GPU选择。  
-run("solver", "resource_type", "resource_name"); |  使用solver、resource_type和指定的resource_name启动模拟：
+This allows to use the specified resource without affecting the CPU/GPU selection set in the [run simulation group](https://optics.ansys.com/hc/en-us/articles/36952912384403-Ansys-Lumerical-FDTD-Modern-User-Interface) of the simulator tab.  
+run("求解器", "resource_type", "resource_name"); |  Launch 该 仿真 使用 求解器, resource_type, 和 使用 一个 specified resource_name:
 
-  * solver：求解器名称，可以是"FDTD"、"RCWA"
-  * resource_type：资源类型，对于FDTD可以是"CPU"、"GPU"，对于RCWA只能是"CPU"
-  * resource_name：资源名称，必须遵循[资源配置窗口](https://optics.ansys.com/hc/en-us/articles/360058790674-Resource-configuration-elements-and-controls)中设置的资源
+  * 求解器: 求解器 name, 可以 为 “FDTD”, “RCWA”
+  * resource_type: resource 类型, 可以 为 "CPU", "GPU" 用于 FDTD, 和 “CPU” only 用于 RCWA
+  * resource_name: resource name, must follow a resource set in the [resource configuration window](https://optics.ansys.com/hc/en-us/articles/360058790674-Resource-configuration-elements-and-controls)
+
+  
+run("FDTD", "GPU", "resource_name", CUDA_VISIBLE_DEVICE_values); |  Launch 一个 FDTD GPU 仿真 使用 一个 specified resource_name 和 CUDA_VISIBLE_DEVICE_values:
+
+  * resource_name: resource name, 必须 follow 一个 resource 设置 在 该 resource configuration window
+  * CUDA_VISIBLE_DEVICE_values: GPUs 到 为 used specified 通过 该 环境 变量 CUDA_VISIBLE_DEVICE, 可以 为 一个 single 值 或 一个 矩阵 representing multiple GPUs
 
   
   
-run("FDTD", "GPU", "resource_name", CUDA_VISIBLE_DEVICE_values); |  使用指定的resource_name和CUDA_VISIBLE_DEVICE_values启动FDTD GPU模拟：
+For INTERCONNECT,
 
-  * resource_name：资源名称，必须遵循资源配置窗口中设置的资源
-  * CUDA_VISIBLE_DEVICE_values：由环境变量CUDA_VISIBLE_DEVICE指定的要使用的GPU，可以是单个值或表示多个GPU的矩阵
-
-  
-  
-对于INTERCONNECT，
-
-**语法** |  **说明**  
+**语法** |  **描述**  
 ---|---  
-run; |  启动模拟。模拟将使用资源管理器中第一个活动资源的设置运行。  
+run; |  Launch 该 仿真. The 仿真 将 为 run 使用 该 settings 从 该 first active resource 在 该 resource manager.  
   
-当使用[Ansys Cloud Burst Compute for Lumerical](https://optics.ansys.com/hc/en-us/articles/39824576734867-Ansys-Cloud-Burst-Compute-for-Lumerical)时，
+When using [Ansys Cloud Burst Compute™ for Lumerical](https://optics.ansys.com/hc/en-us/articles/39824576734867-Ansys-Cloud-Burst-Compute-for-Lumerical),
 
-**语法** |  **说明**  
+**语法** |  **描述**  
 ---|---  
-run("solver", "resource_type", "burst", burst_settings); |  提交当前突发作业：
+run(“求解器”, “resource_type”, “burst”, burst_settings); |  Submits 该 current burst job:
 
-  * solver：求解器名称，目前仅支持"FDTD"
-  * resource_type：模拟运行类型，可以是"CPU"或"GPU"
-  * burst_settings：可选，用于当前作业提交的结构体设置。结构体字段应与[getresource](https://optics.ansys.com/hc/en-us/articles/360034931353-getresource-Script-command)获得的结果匹配。
+  * 求解器: Name 的 该 求解器, currently, only “FDTD” 是 supported
+  * resource_type: Type 的 仿真 到 run, either “CPU” 或 “GPU”
+  * burst_settings: Optional, settings structure to use for the current job submission. The structure fields should match the results obtained from [getresource](https://optics.ansys.com/hc/en-us/articles/360034931353-getresource-Script-command).
 
   
   
 **示例**
 
-在FDTD中创建并运行新模拟。
+创建 和 run 一个 新的 仿真 在 FDTD.
     
     
-    newproject;    # 创建新模拟文件
-    addfdtd;       # 添加FDTD模拟区域
-    adddipole;     # 添加偶极子源
-    run;           # 以并行模式运行模拟
+    newproject;  # 创建 一个 新的 仿真 文件
+    addfdtd;    # 添加 该 FDTD 仿真 region
+    adddipole;   # 添加 一个 diopole 源
+    run;      # run 该 仿真 在 parallel mode
 
-**另请参见**
+**参见**
 
-- [runanalysis](./runanalysis.md)
-- [addjob](./addjob.md)
-- [runjobs](./runjobs.md)
-- [save](./save.md)
-- [load](./load.md)
+[ runanalysis ](/hc/en-us/articles/360034409874-runanalysis) , [ addjob ](/hc/en-us/articles/360034410714-addjob) , [ runjobs ](/hc/en-us/articles/360034931373-runjobs) , [ save ](/hc/en-us/articles/360034410814-save) , [ load](/hc/en-us/articles/360034410834-load), [FDTD GPU Solver Information](/hc/en-us/articles/17518942465811)

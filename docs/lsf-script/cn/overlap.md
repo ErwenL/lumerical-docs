@@ -1,68 +1,66 @@
+<!--
+Translation from English documentation
+Original command: overlap
+Translation date: 2026-02-04 22:50:14
+-->
+
 # overlap
 
-返回由 FDE 求解器计算或由 FDTD 或 varFDTD 模拟中的频率监视器记录的两个模式之间的重叠和功率耦合，或 rectilinear 数据集中记录的场分布。
+返回 该 overlap 和 power coupling between two modes calculated 通过 该 FDE 求解器 或 recorded 通过 频率 monitors 从 一个 FDTD 或 varFDTD 仿真, 或 field profiles recorded 在 rectilinear datasets.
 
-重叠测量两个场分布（模式）之间重叠的电磁场比例。这也是可以在模式 1 中传播的模式 2 的功率比例（对于前向和后向传播的场）。取整个公式的绝对值以确保其为正。
+Overlap measures 该 fraction 的 electromagnetic fields 该 overlap between 该 two field profiles (modes). This 是 also 该 fraction 的 power 从 mode2 该 可以 propagate 在 mode1 (用于 both forward 和 backward propagating fields). The absolute 值 的 该 entire formula 是 到 ensure it 是 positive.
 
 $$ {\text { overlap }=\left| \operatorname{Re} \left[\frac{(\int \mathbf{E}_{1} \times \mathbf{H}_{2}^{*} \cdot d \mathbf{S}) (\int \mathbf{E}_{2} \times \mathbf{H}_{1}^{*} \cdot d \mathbf{S} ) }{\int \mathbf{E}_{1} \times \mathbf{H}_{1}^{*} \cdot d \mathbf{S} }\right] \frac{1}{ \operatorname{Re} ( \int \mathbf{E}_{2} \times \mathbf{H}_{2}^{*} \cdot d \mathbf{S} )} \right| } $$
 
-**语法** | **描述**
----|---
+**语法** |  **描述**  
+---|---  
 out = overlap(mode2, mode1); | 
 
-  * mode2、mode1：计算重叠的模式，输入可以是
-    1. FDE 中的模式 D-CARD，字符串输入，例如 'mode1'、'mode2'
-    2. FDTD 中频率监视器的名称，字符串输入，例如 'm1'、'm2'
-    3. Rectilinear 数据集，详见下文
-  * out(1)：模式重叠
-  * out(2)：模式功率耦合
+  * mode2, mode1: modes 到 计算 overlaps 用于, inputs 可以 为 
+    1. Mode D-CARDs 在 FDE, 字符串 input, e.g., ‘mode1’, ‘mode2’
+    2. Names 的 频率 domain monitors 在 FDTD, 字符串 input, e.g., ‘m1’, ‘m2’
+    3. Rectilinear datasets, see below 用于 more information
+  * out(1): 该 mode overlap
+  * out(2): 该 mode power coupling
 
-out = overlap(mode2, mode1, x, y,z); | 可以在计算重叠之前调整模式对齐方式。
+  
+out = overlap(mode2, mode1, x, y,z); |  Mode alignment 可以 为 adjusted before overlap 是 calculated.
 
-  * x 偏移
-  * y 偏移
-  * z 偏移
+  * x offset
+  * y offset
+  * z offset
 
-偏移应用于列出的第二个模式，即本例中的 'mode1'。所有输入（FDE 模式名称、频率监视器、rectilinear 数据集）也适用于具有对齐调整的语法。
+The offset 是 applied 到 该 second mode listed, i.e. ‘mode1’ 在 此 case. All inputs (FDE mode names, 频率 monitors, rectilinear datasets) 是 valid also 用于 该 syntax 使用 alignment adjustment.  
+  
+## Using Rectilinear Datasets
 
-## 使用 Rectilinear 数据集
+Starting 在 2024R2.3, rectilinear data设置使用 arbitrary field profiles 是 supported 在 addition 到 监视器 names 和 D-CARDs。
 
-从 2024R2.3 开始，除监视器名称和 D-CARD 外，还支持具有任意场分布的 rectilinear 数据集。
+Rectilinear datasets **cannot** be mixed with other input types, however, data can be extracted from modes using the [getresult script command](https://optics.ansys.com/hc/en-us/articles/360034409854-getresult-Script-command), shown in the examples below.
 
-但是，rectilinear 数据集不能与其他输入类型混合，但是，可以使用 getresult 脚本命令从模式中提取数据，如下例所示。
-
-使用 rectilinear 数据集时，它们应包含属性名称 'E' 和 'H'，将分别用作电场和磁场。如果未找到属性名称 'E'，则假设数据集的第一个属性为电场。如果未找到属性 'H'，则假设电场属性之后的第一个属性为磁场。
+When 使用 rectilinear datasets, they 应该 contain attribute names ‘E’ 和 ‘H’, 该 将 为 used as 该 electric 和 magnetic fields, respectively. If no attribute name ‘E’ 是 found, 该 first attribute 的 该 dataset 是 assumed 到 为 该 electric field. If no attribute ‘H’ 是 found, 该 first attribute 的 该 dataset after 该 electric field attribute 是 assumed 到 为 该 magnetic field.
 
 **示例**
 
-此示例演示如何使用 overlap 命令计算两个模式之间的重叠和功率耦合。
+This example shows 如何 到 use 该 overlap 命令 到 计算 该 overlap 和 power coupling between two modes.
+    
+    
+    copydcard("mode1","test_mode1");copydcard("mode2","test_mode2");
+    out = overlap("test_mode1","test_mode2");
+    ?out(1);  # overlap  
+    ?out(2);  # power coupling  
+      
+    #The same result as above, but 使用 rectilinear datasets  
+    EH1 = getresult("mode1","E"); #getresult used 到 extract E 和 H 数据  
+    H1 = getresult("mode1","H");  
+    EH1.addattribute("H",H1.H);  
+    EH2 = getresult("mode2","E");  
+    H2 = getresult("mode2","H");  
+    EH2.addattribute("H",H2.H);  
+    out2 = overlap(EH1,EH2);  
+    ?out2(1); # overlap  
+    ?out2(2); # power coupling
 
-```
-copydcard("mode1","test_mode1");copydcard("mode2","test_mode2");
-out = overlap("test_mode1","test_mode2");
-?out(1);  # 重叠
-?out(2);  # 功率耦合
+**参见**
 
-# 与上面相同的结果，但使用 rectilinear 数据集
-EH1 = getresult("mode1","E"); # getresult 用于提取 E 和 H 数据
-H1 = getresult("mode1","H");
-EH1.addattribute("H",H1.H);
-EH2 = getresult("mode2","E");
-H2 = getresult("mode2","H");
-EH2.addattribute("H",H2.H);
-out2 = overlap(EH1,EH2);
-?out2(1); # 重叠
-?out2(2); # 功率耦合
-```
-
-**另请参阅**
-
-- [命令列表](./命令列表.md)
-- [copydcard](./copydcard.md)
-- [findmodes](./findmodes.md)
-- [coupling](./coupling.md)
-- [bestoverlap](./bestoverlap.md)
-- [propagate](./propagate.md)
-- [expand](./expand.md)
-- [expand2](./expand2.md)
-- [optimizeposition](./optimizeposition.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ copydcard ](/hc/en-us/articles/360034930233-copydcard) , [ findmodes ](/hc/en-us/articles/360034405214-findmodes) , [ coupling ](/hc/en-us/articles/360034925173-coupling) , [ bestoverlap ](/hc/en-us/articles/360034405274-bestoverlap) , [ propagate ](/hc/en-us/articles/360034925213-propagate) , [ expand ](/hc/en-us/articles/360034926653-expand) , [ expand2 ](/hc/en-us/articles/360034406414-expand2) , [ optimizeposition ](/hc/en-us/articles/360034405314-optimizeposition)

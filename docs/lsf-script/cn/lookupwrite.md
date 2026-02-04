@@ -1,85 +1,81 @@
+<!--
+Translation from English documentation
+Original command: lookupwrite
+Translation date: 2026-02-04 22:50:13
+-->
+
 # lookupwrite
 
-向查找表文件写入设计和提取参数对。此函数必须在 lookupopen 之后且 lookupclose 之前调用。
+Writes 到 一个 lookup table 文件 使用 一个 design 和 一个 extracted 参数 pair. This 函数 必须 为 called after [ lookupopen ](/hc/en-us/articles/360034408254-lookupopen) 和 before [ lookupclose ](/hc/en-us/articles/360034408234-lookupclose) . 
 
-**语法** | **描述**
----|---
-out = lookupwrite ("filename","table",design, "extracted"); | 向查找表写入设计和提取参数对。design 和 extracted 参数是包含多个结构的单元数组，允许在多个设计和提取参数之间映射。此函数可以多次调用，每次调用时设计和提取参数将追加到当前文件。此函数必须在 lookupopen 之后且 lookupclose 之前调用。
-out = lookupwrite ("filename"); | 获取脚本对象（在这种情况下是包含 xml 文件所有内容的单元数组）并保存到文件。
-
+**语法** |  **描述**  
+---|---  
+out = lookupwrite ("文件名","table",design, "extracted");  |  Writes 到 一个 lookup table 使用 一个 design 和 一个 extracted 参数 pair. The design 和 extracted 参数 是 cells 该 contain multiple structures, allowing 用于 mapping between multiple design 和 extracted 参数. This 函数 可以 为 called multiple times, 用于 each call 该 design 和 extracted 参数 将 为 appended 到 该 current 文件. This 函数 必须 为 called after  lookupopen  和 before  lookupclose  .   
+out = lookupwrite ("文件名");  |  Takes 一个 脚本 对象, 在 此 case 一个 单元格 数组 containing all 该 contents 的 该 xml 文件, 和 save it 到 一个 文件.   
+  
 **示例**
 
-以下脚本映射波导宽度和高度两个值到有效折射率和群折射率。
+The 脚本 below maps two 值 的 waveguide width 和 height 到 该 effective index 和 group index. 
+    
+    
+    design = 单元格(2);
+    #extracted contains neff 和 ng
+    extracted = 单元格(2);
+    #design (input 参数)
+    design{1} = 结构体;
+    design{1}.name = "width";
+    design{1}.值 = 5.03333e-07;
+    design{2} = 结构体;
+    design{2}.name = "heigth";
+    design{2}.值 = 2.18889e-07;
+    #extracted (output results)
+    extracted{1} = 结构体;
+    extracted{1}.name = "neff";
+    extracted{1}.值 = 2.1;
+    extracted{2} = 结构体;
+    extracted{2}.name = "ng";
+    extracted{2}.值 = 4.42;
+    #open 文件 到 write table
+    lookupopen( "新的.xml", "new_extracted" );
+    #write first design/extracted pair
+    lookupwrite( "新的.xml", design, extracted );
+    #second design/extracted pair
+    design{1}.值 = 6.03333e-07;
+    design{2}.值 = 1.18889e-07;
+    extracted{1}.值 = 2.2;
+    extracted{2}.值 = 4.45;
+    #write second design/extracted pair
+    lookupwrite( "新的.xml", design, extracted );
+    #close 文件
+    lookupclose( "新的.xml" );
 
-```
-design = cell(2);
-# extracted 包含 neff 和 ng
-extracted = cell(2);
-# design（输入参数）
-design{1} = struct;
-design{1}.name = "width";
-design{1}.value = 5.03333e-07;
-design{2} = struct;
-design{2}.name = "heigth";
-design{2}.value = 2.18889e-07;
-# extracted（输出结果）
-extracted{1} = struct;
-extracted{1}.name = "neff";
-extracted{1}.value = 2.1;
-extracted{2} = struct;
-extracted{2}.name = "ng";
-extracted{2}.value = 4.42;
-# 打开文件以写入表
-lookupopen( "new.xml", "new_extracted" );
-# 写入第一个 design/extracted 对
-lookupwrite( "new.xml", design, extracted );
-# 第二个 design/extracted 对
-design{1}.value = 6.03333e-07;
-design{2}.value = 1.18889e-07;
-extracted{1}.value = 2.2;
-extracted{2}.value = 4.45;
-# 写入第二个 design/extracted 对
-lookupwrite( "new.xml", design, extracted );
-# 关闭文件
-lookupclose( "new.xml" );
-```
+其中 “新的.xml” 是 一个 lookup table containing 该 table “new_extracted” 
+    
+    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <lumerical_lookup_table version="1.0" name = "new_extracted">
+    <association>
+      <design>
+        <值 name="width" 类型="double">5.03333e-07</值>
+        <值 name="heigth" 类型="double">2.18889e-07</值>
+      <design>
+      <extracted>
+        <值 name="neff" 类型="double">2.1</值>
+        <值 name="ng" 类型="double">4.42</值>
+      </extracted>
+    </association>
+    <association>  
+      <design>
+        <值 name="width" 类型="double">6.03333e-07</值>
+        <值 name="heigth" 类型="double">1.18889e-07</值>
+      <design>
+      <extracted>
+        <值 name="neff" 类型="double">2.2</值>
+        <值 name="ng" 类型="double">4.45</值>
+      </extracted>
+    </association>
+    </lumerical_lookup_table>
 
-其中 "new.xml" 是包含表 "new_extracted" 的查找表：
+**参见**
 
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<lumerical_lookup_table version="1.0" name = "new_extracted">
-<association>
-  <design>
-    <value name="width" type="double">5.03333e-07</value>
-    <value name="heigth" type="double">2.18889e-07</value>
-  <design>
-  <extracted>
-    <value name="neff" type="double">2.1</value>
-    <value name="ng" type="double">4.42</value>
-  </extracted>
-</association>
-<association>
-  <design>
-    <value name="width" type="double">6.03333e-07</value>
-    <value name="heigth" type="double">1.18889e-07</value>
-  <design>
-  <extracted>
-    <value name="neff" type="double">2.2</value>
-    <value name="ng" type="double">4.45</value>
-  </extracted>
-</association>
-</lumerical_lookup_table>
-```
-
-**另请参阅**
-
-- [命令列表](./命令列表.md)
-- [lookupclose](./lookupclose.md)
-- [lookupopen](./lookupopen.md)
-- [lookupread](./lookupread.md)
-- [lookupreadtable](./lookupreadtable.md)
-- [lookupreadvalue](./lookupreadvalue.md)
-- [lookupreadnportsparameter](./lookupreadnportsparameter.md)
-- [lookupappend](./lookupappend.md)
-- [insert](./insert.md)
+[ List 的 commands ](/hc/en-us/articles/360037228834) , [ lookupclose ](/hc/en-us/articles/360034408234-lookupclose) , [ lookupopen ](/hc/en-us/articles/360034408254-lookupopen) , [ lookupread ](/hc/en-us/articles/360034928333-lookupread) , [ lookupreadtable ](/hc/en-us/articles/360034928393-lookupreadtable) , [ lookupreadvalue ](/hc/en-us/articles/360034928413-lookupreadvalue) , [ lookupreadnportsparameter ](/hc/en-us/articles/360034408274-lookupreadnportsparameter) , [ lookupappend ](/hc/en-us/articles/360034928433-lookupappend) , [ insert ](/hc/en-us/articles/360034928453-insert)

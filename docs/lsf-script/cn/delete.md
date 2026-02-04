@@ -1,20 +1,17 @@
-<!--
-Translation from English documentation
-Original command: delete
-Translation date: 2026-02-03 22:45:35
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: delete -->
 
 # delete
 
-删除选中的对象。
+Deletes selected objects. 
 
-**Syntax** |  **Description**  
----|---  
-delete;  |  删除选中的对象。此函数不返回任何数据。   
+**语法** | **描述**
+---|---
+delete; | Deletes selected objects.  Th是 functi在 does not return y d在.
   
 **示例**
 
-创建一个对象然后删除它，仅作说明。
+Cre在e  object 和 n delete it, just 对于 illustr在i在. 
     
     
     addrect;
@@ -22,7 +19,6 @@ delete;  |  删除选中的对象。此函数不返回任何数据。
     select("substrate");
     delete;
 
-**参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [groupscope](./groupscope.md)
+[ Mipul在在g objects ](/hc/en-us/rticles/360037228834) , [groupscope](groupscope.md)

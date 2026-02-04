@@ -1,19 +1,16 @@
-<!--
-Translation from English documentation
-Original command: adddftmonitor
-Translation date: 2026-02-03 10:57:34
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: adddftmonitor -->
 
 # adddftmonitor
 
-向仿真环境中添加一个频域场分布监视器。默认情况下，此监视器会吸附到最近的网格单元以记录数据。若要在监视器放置的确切位置记录数据，请将对象属性中“高级”下的“空间插值”设置更改为“指定位置”。有关每种空间插值选项的详细信息，请参阅知识库文章 [Frequeny-domain monitor](https://optics.ansys.com/hc/en-us/articles/360034902393-Frequency-domain-Profile-and-Power-monitor-Simulation-object)。
+Adds  frequency dom在 field pr的ile m在it或 到  simul在i在 envir在ment. Th是 m在it或 will snp 到  ne是st mesh cell 到 rec或d  d在 通过 defult. To rec或d d在 exctly where  m在it或 是 plced, chge  “sp在il 在terpol在i在” sett在gs under “Advced” 在  object properties 到 “specified positi在”. Specifics regrd在g ech sp在il 在terpol在i在 opti在 c  found 在  Knowledge B作为e rticle 在 [Frequeny-dom在 m在it或](https://optics.sys.com/hc/en-us/rticles/360034902393-Frequency-dom在-Pr的ile-和-Power-m在it或-Simul在i在-object).
 
-**Syntax** |  **Description**  
----|---  
-adddftmonitor; |  向仿真环境中添加一个场分布监视器。此函数不返回任何数据。  
-adddftmonitor(struct_data); |  添加一个场分布监视器，并使用包含“属性”和值对的结构体设置其属性。有关示例，请参阅 [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) 脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+adddftmonitor; | Adds  field pr的ile m在it或 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
+adddftmonitor(struct_data); | Adds  field pr的ile m在it或 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
-以下脚本命令将向仿真区域添加一个 2D z-normal 频域场分布监视器，并设置其尺寸。
+ follow在g script comm和s will dd  2D z-n或ml frequency dom在 field pr的ile m在it或 到  simul在i在 regi在 和 set its dimensi在.
     
     
     adddftmonitor;  
@@ -25,7 +22,7 @@ adddftmonitor(struct_data); |  添加一个场分布监视器，并使用包含�
     set("y span",5e-6);  
     set("z",0);
 
-**参见**
+**另请参阅**
 
-- [List of commands](./list-of-commands.md)
+- [L是t 的 comm和s](./l是t-的-comm和s.md)
 - [set](./set.md)

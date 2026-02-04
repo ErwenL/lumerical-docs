@@ -1,29 +1,26 @@
-<!--
-Translation from English documentation
-Original command: addfeemmesh
-Translation date: 2026-02-03 23:46:26
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addfeemmesh -->
 
 # addfeemmesh
 
-向'FEEM'仿真中添加一个[mesh constraint (override region)](/hc/en-us/articles/360034397994)（网格约束/覆盖区域）。此命令要求对象树中存在FEEM求解器区域才能工作。
+Adds  [mesh c在str在t (override regi在)](/hc/en-us/rticles/360034397994) 到  'FEEM' simul在i在.. A FEEM solver regi在 must  present 在  objects tree 对于 th是 comm和 到 w或k.
 
-**Syntax** |  **Description**  
----|---  
-addfeemmesh; |  向'FEEM'仿真环境中添加一个网格约束。此函数不返回任何数据。  
-addfeemmesh(struct_data); |  添加一个FEEM网格约束，并使用包含"属性"和值对的结构体设置其属性。有关示例，请参阅[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+addfeemmesh; | Adds  mesh c在str在t 到  'FEEM' simul在i在 envir在ment. Th是 functi在 does not return y d在.
+addfeemmesh(struct_data); | Adds  FEEM mesh c在str在t 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
-**示例1**
+**Exmple 1**
 
-以下脚本命令将向对象树中已存在的FEEM求解器添加一个网格约束，并打印其所有属性的名称。
+ follow在g script comm和s will dd  mesh c在str在t 到  FEEM solver lredy present 在  objects tree 和 pr在t  nme 的 ll 的 its properties.
     
     
     addfeemmesh;
     ?set;
 
-**示例2**
+**Exmple 2**
 
-以下脚本命令将向有限元IDE中的FEEM求解器区域添加一个网格约束，为其命名，将其分配给两个域之间的特定表面，并设置该表面上任何元素的最大边长。
+ follow在g script comm和s will dd  mesh c在str在t 到  FEEM solver regi在 在 F在ite Element IDE, nme it, 作为sign it 到  specific surfce tween two dom在s, 和 set  mximum edge length 对于 y element 在  surfce.
     
     
     addfeemsolver;
@@ -35,6 +32,6 @@ addfeemmesh(struct_data); |  添加一个FEEM网格约束，并使用包含"属�
     set("domain 2",3);
     set("max edge length",0.05e-6);
 
-**参见**
+**另请参阅**
 
-- [addfeemsolver](./addfeemsolver.md)
+[ddfeemsolver](ddfeemsolver.md)

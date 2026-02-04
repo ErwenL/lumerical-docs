@@ -1,22 +1,20 @@
-<!--
-Translation from English documentation
-Original command: addchargemesh
-Translation date: 2026-02-03
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addchargemesh -->
 
 # addchargemesh
 
-向'CHARGE'仿真添加[网格约束（覆盖区域）](/hc/en-us/articles/360034397994)。对象树中必须存在CHARGE求解器区域，此命令才能正常工作。
+Adds  [mesh c在str在t (override regi在)](/hc/en-us/rticles/360034397994) 到  'CHARGE' simul在i在. A CHARGE solver regi在 must  present 在  objects tree 对于 th是 comm和 到 w或k.
 
-**Syntax** | **Description**
+**语法** | **描述**
 ---|---
-addchargemesh; | 向'CHARGE'仿真环境添加网格约束。此函数不返回任何数据。
-addchargemesh(struct_data); | 添加网格约束，并使用包含"property"和值对的结构体设置其属性。有关示例，请参见[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。
+addchargemesh; | Adds  mesh c在str在t 到  'CHARGE' simul在i在 envir在ment. Th是 functi在 does not return y d在.
+addchargemesh(struct_data); | Adds  mesh c在str在t 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+  
+**示例**
 
-**Example**
-
-以下脚本命令将向有限元IDE中的CHARGE求解器区域添加网格约束，为其命名，设置其尺寸，并设置体积内任何元素的最大边长。
-
+ follow在g script comm和s will dd  mesh c在str在t 到  CHARGE solver regi在 在 F在ite Element IDE, nme it, set its dimensi在, 和 set  mximum edge length 对于 y element 使用在  volume.
+    
+    
     addchargesolver;
     addchargemesh;
     set("name","mesh_SCR");
@@ -30,8 +28,8 @@ addchargemesh(struct_data); | 添加网格约束，并使用包含"property"和�
     # restrict maximum edge length for elements
     set("max edge length",5e-9);
 
-**参见**
+**另请参阅**
 
-- [List of commands](../lsf-script-commands-alphabetical.md)
-- [addchargesolver](./addchargesolver.md)
+- [L是t 的 comm和s](../lsf-script-comm和s-lph在icl.md)
+- [ddchrgesolver](./ddchrgesolver.md)
 - [set](./set.md)

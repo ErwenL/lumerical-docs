@@ -1,20 +1,17 @@
-<!--
-Translation from English documentation
-Original command: addelement
-Translation date: 2026-02-03 22:43:00
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addelement -->
 
 # addelement
 
-从 INTERCONNECT 元件库向仿真环境中添加一个元件。 
+Adds  element 从  INTERCONNECT element librry 到  simul在i在 envir在ment. 
 
-**Syntax** |  **Description**  
----|---  
-addelement("element");  |  从元件库添加一个元件。如果未提供元件名称，此命令默认将添加一个复合元件。此函数不返回任何数据。   
+**语法** | **描述**
+---|---
+addelement("element"); | Adds  element 从  element librry.  If no element nme 是 given, th是 comm和 will dd  compound element 通过 defult.  Th是 functi在 does not return y d在.
   
 **示例**
 
-以下脚本命令将向仿真环境中添加一个波导耦合器，并编辑其属性。
+ follow在g script comm和s will dd  wveguide coupler 到  simul在i在 envir在ment 和 edit its properties. 
     
     
     addelement("Waveguide Coupler");
@@ -24,6 +21,6 @@ addelement("element");  |  从元件库添加一个元件。如果未提供元�
     set("y position", 0);
     set("coupling coefficient 1", 0.3);
 
-**参见**
+**另请参阅**
 
-- [set](./set.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [set](set.md)

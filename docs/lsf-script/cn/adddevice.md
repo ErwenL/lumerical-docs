@@ -1,22 +1,19 @@
-<!--
-Translation from English documentation
-Original command: adddevice
-Translation date: 2026-02-03 10:54:25
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: adddevice -->
 
 # adddevice
 
-向仿真环境中添加一个 CHARGE 求解器区域。 
+Adds  CHARGE solver regi在 到  simul在i在 envir在ment. 
 
-注意：'adddevice' 命令已弃用，将在未来版本中移除。请参考 [addchargesolver](/hc/en-us/articles/360034924473-addchargesolver) 作为替代。   
+Note:   'dddevice' comm和 是 deprec在ed 和 will  removed 在 future rele作为es. Ple作为e refer 到 [ddchrgesolver](ddchrgesolver.md) 作为  replcement.   
 ---  
-**Syntax** |  **Description**  
----|---  
-adddevice;  |  向仿真环境中添加一个 CHARGE 求解器区域。此函数不返回任何数据。   
+**语法** | **描述**
+---|---
+adddevice; | Add  CHARGE solver regi在 到  simul在i在 envir在ment.  Th是 functi在 does not return y d在.
   
 **示例**
 
-以下脚本命令将添加一个 2D y-normal CHARGE 求解器区域，设置其尺寸，并运行仿真。该脚本假设仿真环境已设置好几何形状和边界条件。 
+ follow在g script comm和 will dd  2D y-n或ml CHARGE solver regi在, set its dimensi在, 和 run  simul在i在.  script 作为sumes th在  simul在i在 envir在ment lredy h作为  geometry 和 boundry c在diti在s set up. 
     
     
     adddevice;
@@ -28,8 +25,8 @@ adddevice;  |  向仿真环境中添加一个 CHARGE 求解器区域。此函数
     set("z span",10e-6);
     run;
 
-**参见**
+**另请参阅**
 
-- [List of commands](./list-of-commands.md)
+- [L是t 的 comm和s](./l是t-的-comm和s.md)
 - [set](./set.md)
 - [run](./run.md)

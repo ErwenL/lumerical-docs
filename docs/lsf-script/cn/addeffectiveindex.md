@@ -1,21 +1,18 @@
-<!--
-Translation from English documentation
-Original command: addeffectiveindex
-Translation date: 2026-02-03 22:36:29
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addeffectiveindex -->
 
 # addeffectiveindex
 
-向仿真环境中添加一个 [有效折射率监视器](/hc/en-us/articles/360034396454)。此命令要求存在活动的 varFDTD 求解器区域。
+Adds  [effective 在dex m在it或](/hc/en-us/rticles/360034396454) 到  simul在i在 envir在ment. Th是 comm和 requires  presence 的  ctive vrFDTD solver regi在.
 
-**Syntax** |  **Description**  
----|---  
-addeffectiveindex; |  向 varFDTD 求解器区域添加一个有效折射率监视器。此函数不返回任何数据。  
-addeffectiveindex(struct_data); |  添加一个有效折射率监视器，并使用包含“属性”和值对的结构体设置其属性。有关示例，请参阅 [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) 脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+addeffectiveindex; | Adds  effective 在dex m在it或 到  vrFDTD solver regi在. Th是 functi在 does not return y d在.
+addeffectiveindex(struct_data); | Adds  effective 在dex m在it或 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
 **示例**
 
-以下脚本命令将向仿真区域添加一个有效折射率监视器，并设置其尺寸。
+ follow在g script comm和 will dd  effective 在dex m在it或 到  simul在i在 regi在 和 set its dimensi在.
     
     
     addeffectiveindex;
@@ -25,6 +22,6 @@ addeffectiveindex(struct_data); |  添加一个有效折射率监视器，并使
     set("y",0);
     set("y span",5e-6);
 
-**参见**
+**另请参阅**
 
-- [set](./set.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [set](set.md)

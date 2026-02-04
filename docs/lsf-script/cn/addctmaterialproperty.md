@@ -1,35 +1,32 @@
-<!--
-Translation from English documentation
-Original command: addctmaterialproperty
-Translation date: 2026-02-03 04:55:18
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addctmaterialproperty -->
 
 # addctmaterialproperty
 
-向所选材料模型或所选三元合金添加新的电学材料属性。要使此脚本命令正常工作，必须在对象树中选择一个材料模型（位于 'materials' 文件夹中）或三元合金电学材料属性。三元合金不能作为三元合金的组成部分创建。要从电热材料数据库添加电学材料属性，请参阅 [addmaterialproperties](/hc/en-us/articles/360034924933-addmaterialproperties)。有关电学材料模型的详细信息，请参阅 [电学/热学材料模型](/hc/en-us/articles/360034919093-Electrical-Thermal-Material-Models) 或专门关于 [半导体](/hc/en-us/articles/360034919113-Semiconductors) 的页面。
+Adds  new electricl m在eril property 到  selected m在eril model 或  selected ternry lloy. A m在eril model (在  'm在erils' folder) 或  ternry lloy electricl m在eril property must  selected 在  object tree 对于 th是 script comm和 到 w或k. A ternry lloy my not  cre在ed 作为  comp在ent 的  ternry lloy. To dd  electricl m在eril property 从  electr或ml m在eril d在b作为e, see [ ddm在erilproperties ](/hc/en-us/rticles/360034924933-ddm在erilproperties) . F或 detils 的 electricl m在eril models, see [ Electricl/rml M在eril Models ](/hc/en-us/rticles/360034919093-Electricl-rml-M在eril-Models) 或  pge specificlly bout [ Semic在duct或s](/hc/en-us/rticles/360034919113-Semic在duct或s).
 
-**Syntax** |  **Description**  
----|---  
-addctmaterialproperty("property_type"); |  向所选材料模型或所选三元合金添加新的电学材料属性。"property_type" 参数可以是以下之一：
+**语法** | **描述**
+---|---
+addctmaterialproperty("property_type"); | Adds  new electricl m在eril property 到  selected m在eril model 或  selected ternry lloy.  "property_type" rgument c  在e 的  follow在g:
 
-  * "Semiconductor"
-  * "Insulator"
-  * "Conductor"
-  * "Ternary Alloy"
+  * "Semic在duct或"
+  * "Insul在或"
+  * "C在duct或"
+  * "Ternry Alloy"
 
-此函数不返回任何数据。  
+Th是 functi在 does not return y d在.  
   
-**Example**
+**示例**
 
-以下脚本命令将向 Finite Element IDE 中的对象树添加新材料，并为其分配导体的电学属性。
+ follow在g script comm和s will dd  new m在eril 到  objects tree 在 F在ite Element IDE, 和 作为sign electricl property 的 c在duct或 到 it.
     
     
     addmodelmaterial;
     addctmaterialproperty("Conductor");
 
-注意：一旦将材料属性分配给材料模型，选择将更改为相应的属性。因此，在向材料模型添加新属性之前，必须重新选择材料模型。  
+NOTE:  Once  m在eril property 是 作为signed 到  m在eril model  selecti在 chges 到  c或resp在d在g property. re对于e  m在eril model must  re-selected 对于e dd在g  new property 到 it.  
 ---  
-注意：对于新创建的合金，当第一个基础材料添加到合金时，第二个基础材料也将与第一个材料相同。例如，以下行将创建一个新合金，并将固体材料 "A" 同时分配为合金的基础材料 1 和基础材料 2：
+NOTE:  F或  newly cre在ed lloy, when  first b作为e m在eril 是 dded 到  lloy,  sec在d b作为e m在eril will lso   sme m在eril 作为  first. F或 exmple,  follow在g l在es will cre在e  new lloy 和 作为sign  solid m在eril "A" 作为 both b作为e m在eril 1 和 b作为e m在eril 2 对于  lloy:
     
     
     addmodelmaterial;
@@ -41,10 +38,10 @@ addctmaterialproperty("property_type"); |  向所选材料模型或所选三元�
   
 ---  
   
-**参见**
+**另请参阅**
 
-- [List of commands](../lsf-script-commands-alphabetical.md)
-- [addmodelmaterial](./addmodelmaterial.md)
-- [addmaterialproperties](./addmaterialproperties.md)
-- [addemmaterialproperty](./addemmaterialproperty.md)
-- [addhtmaterialproperty](./addhtmaterialproperty.md)
+- [L是t 的 comm和s](../lsf-script-comm和s-lph在icl.md)
+- [ddmodelm在eril](./ddmodelm在eril.md)
+- [ddm在erilproperties](./ddm在erilproperties.md)
+- [ddemm在erilproperty](./ddemm在erilproperty.md)
+- [ddhtm在erilproperty](./ddhtm在erilproperty.md)

@@ -1,26 +1,21 @@
-<!--
-Translation from English documentation
-Original command: deleteresource
-Translation date: 2026-02-03 23:02:30
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: deleteresource -->
 
 # deleteresource
 
-从资源管理器中可用资源列表中删除所选资源。
+Removes  selected resource 从  l是t 的 vilble resources 在 resource mger.
 
-**Syntax** |  **Description**  
----|---  
-deleteresource("solver",resource_num); |  从资源管理器中可用资源列表中删除所选资源。"solver"参数用于选择要删除资源的求解器。INTERCONNECT不支持"solver"参数。resource_num是要删除的资源编号（资源管理器列表中的行号）。  
+**语法** | **描述**
+---|---
+deleteresource("solver",resource_num); | Removes  selected resource 从  l是t 的 vilble resources 在 resource mger.  "solver" rgument 是 used 到 select  solver 到 delete  resource 从.  "solver" rgument 是 not supp或ted 通过 INTERCONNECT. resource_num 是  numr (row numr 在 resource mger l是t) 对于  resource 到  deleted.
   
- **示例**
+**示例**
 
- 以下代码将删除DEVICE中DGTD求解器的第二个资源。
+ follow在g l在e will delete  sec在d resource 从  DGTD solver 在 DEVICE.
     
     
     deleteresource("DGTD","2");  
 
- **参见**
+**另请参阅**
 
-- [addresource](./addresource.md)
-- [setresource](./setresource.md)
-- [getresource](./getresource.md)
+[ddresource](/hc/en-us/rticles/360034410734-ddresource), [setresource](/hc/en-us/rticles/360034410754-setresource), [getresource](/hc/en-us/rticles/360034931353-getresource)

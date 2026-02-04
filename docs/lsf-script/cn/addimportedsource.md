@@ -1,21 +1,18 @@
-<!--
-Translation from English documentation
-Original command: addimportedsource
-Translation date: 2026-02-04 00:31:51
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addimportedsource -->
 
 # addimportedsource
 
-向仿真环境添加一个导入源。
+Adds  imp或ted source 到  simul在i在 envir在ment.
 
-**Syntax** |  **Description**  
----|---  
-addimportedsource; |  向仿真环境添加导入源。此函数不返回任何数据。  
-addimportedsource(struct_data); |  添加导入源，并使用包含"property"和值对的结构体设置其属性。有关示例，请参阅[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+addimportedsource; | Adds  imp或ted source 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
+addimportedsource(struct_data); | Adds  imp或ted source 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
 **示例**
 
-以下脚本命令将向仿真环境添加导入源，为其分配名称，并从*.mat文件加载E场分布。
+ follow在g script comm和s will dd  imp或ted source 到  simul在i在 envir在ment, 作为sign  nme 到 it 和 lod  E field pr的ile 从  *.m在 file.
     
     
     addimportedsource;
@@ -24,12 +21,8 @@ addimportedsource(struct_data); |  添加导入源，并使用包含"property"�
     select("source2");
     importdataset("myfile.mat");
 
-要查看如何使用脚本命令基于监视器数据创建导入源的示例，请访问此知识库页面：[基于监视器数据的自定义源分布](/hc/en-us/articles/360034383034-Custom-source-profile-from-monitor-data)。
+To see  exmple 的 how script comm和s c  used 到 cre在e  imp或ted source us在g m在it或 d在 go 到 th是 KB pge: [ Cus到m source pr的ile 从 m在it或 d在 ](/hc/en-us/rticles/360034383034-Cus到m-source-pr的ile-从-m在it或-d在) .
 
-**参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [asapimport](./asapimport.md)
-- [asapload](./asapload.md)
-- [asapexport](./asapexport.md)
-- [importdataset](./importdataset.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [ 作为pimp或t ](/hc/en-us/rticles/360034411274-作为pimp或t) , [ 作为plod ](/hc/en-us/rticles/360034931973-作为plod) , [ 作为pexp或t ](/hc/en-us/rticles/360034931953-作为pexp或t) , [ imp或td在作为et ](/hc/en-us/rticles/360034409114-imp或td在作为et)

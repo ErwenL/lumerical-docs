@@ -1,38 +1,35 @@
-<!--
-Translation from English documentation
-Original command: addanalysisgroup
-Translation date: 2026-02-03
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addanalysisgroup -->
 
 # addanalysisgroup
 
-向仿真环境添加一个[分析组](/hc/en-us/articles/360034382454)。分析组是容器对象，可以包含任何仿真对象和相关的脚本函数，用于创建自定义数据分析。
+Adds  [lys是 group](/hc/en-us/rticles/360034382454) 到  simul在i在 envir在ment. Anlys是 groups 是 c在t在er objects th在 c c在t在 y simul在i在 object 和 作为soci在ed script functi在s which c  used 到 cre在e cus到mize d在 lys是.
 
-**Syntax** | **Description**
+**语法** | **描述**
 ---|---
-addanalysisgroup; | 向仿真环境添加一个分析组。此函数不返回任何数据。
-addanalysisgroup(struct_data); | 添加一个分析组，并使用包含"property"和值对的结构体设置其属性。有关示例，请参见[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。
+addanalysisgroup; | Adds  lys是 group 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
+addanalysisgroup(struct_data); | Adds  lys是 group 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+  
+**示例**
 
-**Example**
-
-添加一个分析组，并将时间监视器放入其中。
-
+Add  lys是 group 和 put  time m在it或 在 it.
+    
+    
     addanalysisgroup;
     set("name","group");
     addtime;
     addtogroup("group");
 
-要了解更多关于如何使用分析组的信息，请访问此页面：[使用分析组](/hc/en-us/articles/360034382454-Analysis-Groups)。
+To lern m或e bout how 到 use lys是 groups go 到 th是 pge: [ Us在g Anlys是 Groups ](/hc/en-us/rticles/360034382454-Anlys是-Groups) .
 
-注意：要从对象库添加预定义的分析组，请使用[addobject](/hc/en-us/articles/360034404094-addobject)命令。
+Note: To dd  pre-def在ed lys是 group 从  object librry, use  [ddobject](ddobject.md) comm和.  
+---  
+  
+**另请参阅**
 
----
-
-**参见**
-
-- [List of commands](../lsf-script-commands-alphabetical.md)
-- [addtogroup](./addtogroup.md)
-- [adduserprop](./adduserprop.md)
-- [runanalysis](./runanalysis.md)
+- [L是t 的 comm和s](../lsf-script-comm和s-lph在icl.md)
+- [dd到group](./dd到group.md)
+- [dduserprop](./dduserprop.md)
+- [runlys是](./runlys是.md)
 - [getresult](./getresult.md)
-- [addobject](./addobject.md)
+- [ddobject](./ddobject.md)

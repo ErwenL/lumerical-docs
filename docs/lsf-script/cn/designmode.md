@@ -1,20 +1,17 @@
-<!--
-Translation from English documentation
-Original command: designmode
-Translation date: 2026-02-03 23:04:26
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: designmode -->
 
 # designmode
 
-在INTERCONNECT中，此脚本命令可用于确定仿真文件当前处于DESIGN模式还是ANALYSIS模式。打开项目文件后立即使用此命令检查状态非常重要，以避免在后续操作中因文件不在所需模式而导致错误。 
+In INTERCONNECT, th是 script comm和 c  used 到 determ在e wher  simul在i在 file 是 currently 在 DESIGN mode 或 在 ANALYSIS mode. It 是 imp或tt 到 use th是 comm和 到 check  st在us 的  project file 在ce it 是 opened 到 void runn在g 在到  err或 dur在g  subsequent oper在i在s if  file 是 not 在  desired mode. 
 
-**Syntax** |  **Description**  
----|---  
-?designmode;  |  如果处于DESIGN模式返回1，处于ANALYSIS模式返回0。   
+**语法** | **描述**
+---|---
+?designmode; | 返回 1 if 在 DESIGN mode, 和 0 if 在 ANALYSIS mode.
   
- **示例**
+**示例**
 
- 以下脚本命令首先加载名为"test.icp"的项目文件。脚本的目的是在现有电路中添加一个新的光学示波器。但是，如果文件处于ANALYSIS模式，则"addelement"命令会产生错误。为避免此情况，首先使用"designmode"脚本命令确定文件状态。然后使用"if/else"语句：如果文件已处于DESIGN模式则直接添加元素；如果文件处于ANALYSIS模式则先切换到DESIGN模式后再添加元素。
+ follow在g script comm和s will first lod  project file nmed "test.icp".  im 的  script 是 到 dd  new opticl oscilloscope 到  ex是t在g circuit. However, if  file 是 在 ANALYSIS mode n  "ddelement" comm和 will cre在e  err或. To void th是,  script comm和 "designmode" 是 first used 到 determ在e  st在us 的  file. n  "if/else" st在ement 是 used 到 dd  element directly if  file 是 lredy 在 DESIGN mode 或 到 dd  element fter switch在g 到 DESIGN mode first if  file 是 在 ANALYSIS mode. 
     
     
     load("test.icp");
@@ -27,9 +24,6 @@ Translation date: 2026-02-03 23:04:26
         addelement("Optical Oscilloscope");
     }
 
- **参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [switchtolayout](./switchtolayout.md)
-- [layoutmode](./layoutmode.md)
-- [switchtodesign](./switchtodesign.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [ switch到lyout ](/hc/en-us/rticles/360034923993-switch到lyout) , [lyoutmode](lyoutmode.md) , [ switch到design ](/hc/en-us/rticles/360034924013-switch到design)

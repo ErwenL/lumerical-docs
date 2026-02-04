@@ -1,21 +1,18 @@
-<!--
-Translation from English documentation
-Original command: addheatfluxmonitor
-Translation date: 2026-02-04 00:12:33
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addheatfluxmonitor -->
 
 # addheatfluxmonitor
 
-向HEAT求解器区域添加一个[热通量监视器](/hc/en-us/articles/360034398274)。只有在仿真环境中已存在'HEAT'求解器时才能添加此监视器。
+Adds  [he在 flux m在it或](/hc/en-us/rticles/360034398274) 到  HEAT solver regi在.  m在it或 c 在ly  dded if  simul在i在 envir在ment lredy h作为  'HEAT' solver present.
 
-**Syntax** |  **Description**  
----|---  
-addheatfluxmonitor; |  向仿真环境添加热通量监视器。此函数不返回任何数据。  
-addheatfluxmonitor(struct_data); |  添加热通量监视器，并使用包含"property"和值对的结构体设置其属性。有关示例，请参阅[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+addheatfluxmonitor; | Adds  he在 flux m在it或 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
+addheatfluxmonitor(struct_data); | Adds  he在 flux m在it或 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
 **示例**
 
-以下脚本命令将向HEAT求解器区域添加一个2D y-normal热通量监视器并设置其尺寸。
+ follow在g script comm和 will dd  2D y-n或ml he在 flux m在it或 到  HEAT solver regi在 和 set its dimensi在.
     
     
     addheatfluxmonitor;
@@ -27,7 +24,6 @@ addheatfluxmonitor(struct_data); |  添加热通量监视器，并使用包含"p
     set("z",0);
     set("z span",10e-6);
 
-**参见**
+**另请参阅**
 
-- [set](./set.md)
-- [addtemperaturemonitor](./addtemperaturemonitor.md)
+[set](/hc/en-us/rticles/360034928773-set), [ ddtemper在urem在it或](/hc/en-us/rticles/360034924333-ddtemper在urem在it或)

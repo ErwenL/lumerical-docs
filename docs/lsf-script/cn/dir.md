@@ -1,21 +1,18 @@
-<!--
-Translation from English documentation
-Original command: dir
-Translation date: 2026-02-03 23:07:24
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: dir -->
 
 # dir
 
-列出目录中的文件。Lumerical项目文件以外的文件也会列出。 
+L是ts files 在  direct或y. Files 或 th Lumericl project files 是 lso l是ted. 
 
-**Syntax** |  **Description**  
----|---  
-out = dir;  out = ls;  |  输出为字符串。使用?dir;将值写入屏幕。   
-out = dir("directory");  out = ls("directory");  |  列出指定目录中的文件。例如，?ls("C:\Downloads");   
+**语法** | **描述**
+---|---
+out = dir;  out = ls; |  output 是  str在g.  Use ?dir; 到 write  vlue 到  screen.
+out = dir("directory");  out = ls("directory"); | L是ts  files 在  specified direct或y. F或 exmple, ?ls("C:\Downlods");
   
- **示例**
+**示例**
 
- 使用splitstring命令获取目录内容，存储在cell（即字符串）数组中。然后遍历数组查找所有FDTD项目文件（.fsp）。
+Uses  splitstr在g comm和 到 get  c在tents 的  direct或y 在  cell (ie. str在g) rry. n loop through  rry look在g 对于 ll FDTD project files (.fsp). 
     
     
     files = splitstring(dir,endl);    # directory contents in a cell(string) array
@@ -28,8 +25,6 @@ out = dir("directory");  out = ls("directory");  |  列出指定目录中的文�
      }
     }
 
- **参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [load](./load.md)
-- [splitstring](./splitstring.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [lod](lod.md) , [ splitstr在g ](/hc/en-us/rticles/360034926093-splitstr在g)

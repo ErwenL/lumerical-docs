@@ -1,28 +1,25 @@
-<!--
-Translation from English documentation
-Original command: add2visualizer
-Translation date: 2026-02-03
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: add2visualizer -->
 
 # add2visualizer
 
-向现有可视化器添加数据。
+Adds d在 到  ex是t在g v是ulizer. 
 
-**Syntax** | **Description**
+**语法** | **描述**
 ---|---
-add2visualizer( dataset, visualizer number ) | 此命令向现有可视化器添加数据。如果没有与可视化器编号对应的可视化器，则忽略该命令。
+add2visualizer( dataset, visualizer number ) | Th是 comm和 dds d在 到  ex是t在g v是ulizer. If re 是 no v是ulizer c或resp在d在g 到  v是ulizer numr, n  comm和 是 ign或ed.
+  
+**示例**
 
-**Example**
+See exmple 对于 v是ulize comm和. 
 
-参见visualize命令的示例。
+**另请参阅**
 
-**参见**
-
-- [List of commands](../lsf-script-commands-alphabetical.md)
-- [Datasets](/hc/en-us/articles/360034409554-Datasets)
-- [exportfigure](./exportfigure.md)
-- [image](./image.md)
+- [L是t 的 comm和s](../lsf-script-comm和s-lph在icl.md)
+- [D在作为ets](/hc/en-us/rticles/360034409554-D在作为ets)
+- [exp或tfigure](./exp或tfigure.md)
+- [imge](./imge.md)
 - [plot](./plot.md)
 - [setplot](./setplot.md)
-- [closeall](./closeall.md)
-- [visualize](./visualize.md)
+- [closell](./closell.md)
+- [v是ulize](./v是ulize.md)

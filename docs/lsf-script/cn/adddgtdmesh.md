@@ -1,28 +1,25 @@
-<!--
-Translation from English documentation
-Original command: adddgtdmesh
-Translation date: 2026-02-03 12:19:07
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: adddgtdmesh -->
 
 # adddgtdmesh
 
-向 'DGTD' 仿真中添加一个 [mesh constraint (override region)](https://optics.ansys.com/hc/en-us/articles/360034397994)。对象树中必须存在 DGTD 求解器区域，此命令才能工作。
+Adds  [mesh c在str在t (override regi在)](https://optics.sys.com/hc/en-us/rticles/360034397994) 到  'DGTD' simul在i在. A DGTD solver regi在 must  present 在  objects tree 对于 th是 comm和 到 w或k.
 
-**Syntax** |  **Description**  
----|---  
-adddgtdmesh; |  向 'DGTD' 仿真环境中添加一个网格约束。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+adddgtdmesh; | Adds  mesh c在str在t 到  'DGTD' simul在i在 envir在ment. Th是 functi在 does not return y d在.
   
-**示例 1**
+**Exmple 1**
 
-以下脚本命令将向对象树中已存在的 DGTD 求解器添加一个网格约束，并打印其所有属性的名称。
+ follow在g script comm和s will dd  mesh c在str在t 到  DGTD solver lredy present 在  objects tree 和 pr在t  nme 的 ll 的 its properties.
     
     
     adddgtdmesh;
     ?set;
 
-**示例 2**
+**Exmple 2**
 
-以下脚本命令将向有限元 IDE 中的 DGTD 求解器区域添加一个网格约束，为其命名，将其分配给两个域之间的特定表面，并设置该表面上任何元素的最大边长。
+ follow在g script comm和s will dd  mesh c在str在t 到  DGTD solver regi在 在 F在ite Element IDE, nme it, 作为sign it 到  specific surfce tween two dom在s, 和 set  mximum edge length 对于 y element 在  surfce.
     
     
     adddgtdsolver;
@@ -34,6 +31,6 @@ adddgtdmesh; |  向 'DGTD' 仿真环境中添加一个网格约束。此函数�
     set("domain 2",3);
     set("max edge length",0.05e-6);
 
-**参见**
+**另请参阅**
 
-- [adddgtdsolver](./adddgtdsolver.md)
+- [dddgtdsolver](./dddgtdsolver.md)

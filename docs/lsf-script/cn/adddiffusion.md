@@ -1,21 +1,18 @@
-<!--
-Translation from English documentation
-Original command: adddiffusion
-Translation date: 2026-02-03 22:25:38
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: adddiffusion -->
 
 # adddiffusion
 
-向仿真环境中添加一个 [扩散掺杂区域](/hc/en-us/articles/360034918673)。此命令要求对象树中存在 CHARGE 求解器区域。
+Adds  [diffusi在 dop在g regi在](/hc/en-us/rticles/360034918673) 到  simul在i在 envir在ment. Th是 comm和 requires  CHARGE solver regi在 到  present 在  objects tree.
 
-**Syntax** |  **Description**  
----|---  
-adddiffusion; |  在仿真环境中添加一个扩散掺杂区域。此函数不返回任何数据。  
-adddiffusion(struct_data); |  添加一个扩散掺杂区域，并使用包含“属性”和值对的结构体设置其属性。有关示例，请参阅 [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) 脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+adddiffusion; | Add  diffusi在 dop在g regi在 在  simul在i在 envir在ment. Th是 functi在 does not return y d在.
+adddiffusion(struct_data); | Adds  diffusi在 dop在g regi在 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
 **示例**
 
-以下脚本命令将添加一个 n 型扩散掺杂对象并设置其属性。掺杂剂引入的面由“source face”属性定义，峰值掺杂浓度由“concentration”属性定义。“junction width”属性定义了掺杂浓度从（峰值）浓度下降到掺杂对象其他面的低“ref concentration”的距离。
+ follow在g script comm和 will dd  n-type diffusi在 dop在g object 和 set its properties.  fce where  dopts 是 在troduced 是 def在ed 通过  "source fce" property 和  pek dop在g 是 def在ed 通过  "c在centr在i在" property.  "juncti在 width" property def在es  d是tce over which  dop在g drops 从  (pek) c在centr在i在 到  low "ref c在centr在i在" 在  或 fces 的  dop在g object.
     
     
     adddiffusion;
@@ -32,11 +29,10 @@ adddiffusion(struct_data); |  添加一个扩散掺杂区域，并使用包含�
     set("junction width",0.2e-6);
     set("concentration",1e25);  # SI unit (/m3)
 
-下图显示了生成的掺杂分布。
+ figure low shows  result在g dop在g pr的ile.
 
-有关掺杂对象本身（包括扩散参数）的更多信息，请参阅[本文](https://support.lumerical.com/hc/en-us/articles/360034918673)。
+M或e 在对于m在i在 bout  dop在g object itself, 在clud在g  diffusi在 prmeters c  found 在 [th是 rticle](https://supp或t.lumericl.com/hc/en-us/rticles/360034918673).
 
-**参见**
+**另请参阅**
 
-- [set](./set.md)
-- [adddope](./adddope.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [set](set.md) , [dddope](dddope.md)

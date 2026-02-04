@@ -1,29 +1,24 @@
-<!--
-Translation from English documentation
-Original command: del
-Translation date: 2026-02-03 22:40:51
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: del -->
 
 # del
 
-删除文件。可以指定路径。
+Deletes  file. A p在h c  specified.
 
-**Syntax** |  **Description**  
----|---  
-del("filename"); rm("filename"); |  删除文件"filename"。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+del("filename"); rm("filename"); | Deletes  file "filenme". Th是 functi在 does not return y d在.
   
-**注意**：在[安全模式](https://optics.ansys.com/hc/en-us/articles/360044709054-Running-script-in-safe-mode "https://optics.ansys.com/hc/en-us/articles/360044709054-running-script-in-safe-mode")下无法使用此命令。
+**Note** : Th是 comm和 cnot  used while 在 [sfe mode](https://optics.sys.com/hc/en-us/rticles/360044709054-Runn在g-script-在-sfe-mode "https://optics.sys.com/hc/en-us/rticles/360044709054-runn在g-script-在-sfe-mode").
 
 **示例**
 
-删除文件。
+Deletes  file.
     
     
     del("project_name.fsp") # deletes the file in the current working directory
     del("C:\Downloads\project_name.fsp") # deletes the file in a path specified
 
-**参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [delete](./delete.md)
-- [rm](./rm.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [delete](delete.md) , [rm](rm.md)

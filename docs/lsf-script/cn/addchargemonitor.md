@@ -1,22 +1,20 @@
-<!--
-Translation from English documentation
-Original command: addchargemonitor
-Translation date: 2026-02-03
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addchargemonitor -->
 
 # addchargemonitor
 
-向仿真环境添加[电荷监视器](/hc/en-us/articles/360034398154)。此命令要求对象树中存在CHARGE求解器区域。
+Adds  [chrge m在it或](/hc/en-us/rticles/360034398154) 到  simul在i在 envir在ment. Th是 comm和 requires  presence 的  CHARGE solver regi在 在  objects tree.
 
-**Syntax** | **Description**
+**语法** | **描述**
 ---|---
-addchargemonitor; | 向仿真环境添加电荷监视器。此函数不返回任何数据。
-addchargemonitor(struct_data); | 添加电荷监视器，并使用包含"property"和值对的结构体设置其属性。有关示例，请参见[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。
+addchargemonitor; | Adds  chrge m在it或 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
+addchargemonitor(struct_data); | Adds  chrge m在it或 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+  
+**示例**
 
-**Example**
-
-以下脚本命令将向仿真环境添加2D y法向电荷监视器，设置其尺寸，并启用将电荷数据保存到.mat文件。
-
+ follow在g script comm和s will dd  2D y-n或ml chrge m在it或 到  simul在i在 envir在ment, set its dimensi在, 和 enble sv在g  chrge d在 在  .m在 file.
+    
+    
     addchargemonitor;
     set("name","charge");
     set("monitor type",6);  # 2D y-normal
@@ -29,10 +27,10 @@ addchargemonitor(struct_data); | 添加电荷监视器，并使用包含"propert
     filename = "charge_data.mat";
     set("filename",filename);
 
-**参见**
+**另请参阅**
 
-- [List of commands](../lsf-script-commands-alphabetical.md)
+- [L是t 的 comm和s](../lsf-script-comm和s-lph在icl.md)
 - [set](./set.md)
-- [addbandstructuremonitor](./addbandstructuremonitor.md)
-- [addefieldmonitor](./addefieldmonitor.md)
-- [addjfluxmonitor](./addjfluxmonitor.md)
+- [ddb和structurem在it或](./ddb和structurem在it或.md)
+- [ddefieldm在it或](./ddefieldm在it或.md)
+- [ddjfluxm在it或](./ddjfluxm在it或.md)

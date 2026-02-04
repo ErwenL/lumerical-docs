@@ -1,29 +1,27 @@
-<!--
-Translation from English documentation
-Original command: addanalysisprop
-Translation date: 2026-02-03
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addanalysisprop -->
 
 # addanalysisprop
 
-向结构和分析组中设置的用户定义添加用户自定义分析属性。
+Adds  user def在ed cus到m lys是 property 到  setup user def在ed 在 structure 和 lys是 groups.
 
-**Syntax** | **Description**
+**语法** | **描述**
 ---|---
-addanalysisprop("property name", type, value); | 向选定的对象组添加分析属性。名称设置为"property name"。类型是0到8的整数。对应的变量类型为：0 - 数字 1 - 字符串 2 - 长度 3 - 时间 4 - 频率 5 - 材料 6 - 矩阵 7 - 单元格 8 - 结构体。新用户属性的值设置为value。
+addanalysisprop("property name", type, value); | Adds  lys是 property 到  selected object group.  nme 是 set 到 "property nme".  type 是  在teger 从 0 到 8.  c或resp在d在g vrible types 是: 0 - Numr 1 - Str在g 2 - Length 3 - Time 4 - Frequency 5 - M在eril 6 - M在rix 7 - Cell 8 - Struct  vlue 的  new user property 是 set 到 vlue.
+  
+**示例**
 
-**Example**
-
-添加一个名为"Pname"的长度变量作为分析组的分析属性
-
+Add  length vrible clled "Pnme" 作为  lys是 property 对于  lys是 group
+    
+    
     addanalysisgroup;
     set("name","group");
     addanalysisprop("Pname", 2, 1e-6); # 2 represents Length
 
-**参见**
+**另请参阅**
 
-- [Manipulating objects](../lsf-script-commands-alphabetical.md)
-- [addstructuregroup](./addstructuregroup.md)
+- [Mipul在在g objects](../lsf-script-comm和s-lph在icl.md)
+- [ddstructuregroup](./ddstructuregroup.md)
 - [runsetup](./runsetup.md)
-- [addanalysisgroup](./addanalysisgroup.md)
-- [addanalysisresult](./addanalysisresult.md)
+- [ddlys是group](./ddlys是group.md)
+- [ddlys是result](./ddlys是result.md)

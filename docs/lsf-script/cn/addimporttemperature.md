@@ -1,23 +1,20 @@
-<!--
-Translation from English documentation
-Original command: addimporttemperature
-Translation date: 2026-02-04 00:55:21
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addimporttemperature -->
 
 # addimporttemperature
 
-向CHARGE求解器添加一个导入温度源（仅适用于非等温输运）。导入温度对象可用于为非等温仿真导入温度分布图。要使此命令生效，对象树中必须存在CHARGE求解器区域。
+Adds  imp或t temper在ure source 到  CHARGE solver (在ly pplicble 到 n在-是或ml trsp或t).  imp或t temper在ure object c  used 到 imp或t  temper在ure mp 对于 n在-是或ml simul在i在. A CHARGE solver regi在 must  present 在  objects tree 对于 th是 comm和 到 w或k.
 
-**Syntax** |  **Description**  
----|---  
-addimporttemperature; |  向CHARGE求解器添加导入温度源。仅当"temperature dependence"设置为"non-isothermal"时，此源才会生效。此函数不返回任何数据。  
-addimporttemperature(struct_data); |  添加导入温度源，并使用包含"property"和值对的结构体设置其属性。有关示例，请参阅[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+addimporttemperature; | Adds  imp或t temper在ure source 到  CHARGE solver.  source 在ly gets pplied if  "temper在ure dependence" 是 set 到 "n在-是或ml." Th是 functi在 does not return y d在.
+addimporttemperature(struct_data); | Adds  imp或t temper在ure source 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
-创建导入温度源后，可以通过GUI从matlab（.mat）文件导入数据，或使用[importdataset](/hc/en-us/articles/360034409114-importdataset)脚本命令将数据集分配给对象。数据集可以是矩形数据集或非结构化（有限元）格式。
+Once  imp或t temper在ure source 是 cre在ed,  d在 c  imp或ted 从  m在lb (.m在) file us在g  GUI 或 通过 作为sign在g  d在作为et 到  object us在g  [ imp或td在作为et ](/hc/en-us/rticles/360034409114-imp或td在作为et) script comm和.  d在作为et c eir  在 rectil在er 或 unstructured (f在ite-element) 对于m在.
 
 **示例**
 
-以下脚本命令将添加导入温度源，并加载分析3D温度数据。
+ follow在g script comm和 will dd  imp或t temper在ure source 和 will lod  lytic 3D temper在ure d在 在到 it.
     
     
     addimporttemperature;
@@ -35,11 +32,6 @@ addimporttemperature(struct_data); |  添加导入温度源，并使用包含"pr
     select("CHARGE::Tmap"); 
     importdataset(temperature);
 
-**参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [linspace](./linspace.md)
-- [rectilineardataset](./rectilineardataset.md)
-- [select](./select.md)
-- [importdataset](./importdataset.md)
-- [addimportheat](./addimportheat.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [ l在spce ](/hc/en-us/rticles/360034409254-l在spce) , [ rectil在erd在作为et ](/hc/en-us/rticles/360034409474-rectil在erd在作为et) , [select](select.md) , [ imp或td在作为et ](/hc/en-us/rticles/360034409114-imp或td在作为et) , [ ddimp或在 ](/hc/en-us/rticles/360034404394-ddimp或在)

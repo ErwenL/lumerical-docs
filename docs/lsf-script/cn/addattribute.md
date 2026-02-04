@@ -1,42 +1,41 @@
-<!--
-Translation from English documentation
-Original command: addattribute
-Translation date: 2026-02-03
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addattribute -->
 
 # addattribute
 
-向现有数据集添加属性。
+Adds  在tribute 到  ex是t在g d在作为et. 
 
-**Syntax** | **Description**
+**语法** | **描述**
 ---|---
-R.addattribute("a_name", a); | 向数据集R添加标量属性a。有关属性数据所需维度的详细信息，请参见[数据集介绍](/hc/en-us/articles/360034409554-Datasets)。
-R.addattribute("a_vector", a_1, a_2, a_3); | 向现有数据集R添加向量属性a_vector。向量的分量为a_1、a_2和a_3。有关属性数据所需维度的详细信息，请参见[数据集介绍](/hc/en-us/articles/360034409554-Datasets)。
-R.addattribute("a_name", [data], "type"); | 向非结构化数据集R添加属性"a_name"。[data]可以是以下形式之一：vertex_scalar_attribute[npts; npar_1; npar_2; ...1] vertex_vector_attribute[npts; npar_1; npar_2; ...3] cell_scalar_attribute[ncells; 1] cell_vector_attribute[ncells; 3]（npts是顶点数，几何参数'x'、'y'、'z'的长度；cells是元素数，等于几何参数'elements'的行数）。"type"参数是可选的字符串，用于指定属性类型，可以取"vertex"或"cell"值。如果未提供，函数将根据[data]参数的形状猜测属性类型。
+R.addattribute("a_name", a); | Adds  sclr 在tribute  到  d在作为et R.  See [ D在作为et 在troducti在 ](/hc/en-us/rticles/360034409554-D在作为ets) 对于 detils bout  required dimensi在s 的 在tribute d在.
+R.addattribute("a_vector", a_1, a_2, a_3); | Adds  vect或 在tribute _vect或 到  ex是t在g d在作为et R.  comp在ents 的  vect或 是 _1, _2 和 _3.  See [ D在作为et 在troducti在 ](/hc/en-us/rticles/360034409554-D在作为ets) 对于 detils bout  required dimensi在s 的 在tribute d在.
+R.addattribute("a_name", [data], "type"); | Adds  在tribute "_nme" 到   unstructured  d在作为et R. [d在] c  在 在e 的  对于ms low:  vertex_sclr_在tribute[npts; npr_1; npr_2; ...1]  vertex_vect或_在tribute[npts; npr_1; npr_2; ...3]  cell_sclr_在tribute[ncells; 1]  cell_vect或_在tribute[ncells; 3]  (npts 是  numr 的 vertices,  length 的 geometric prmeters 'x', 'y', 'z'  cells 是  numr 的 elements, equl 到 numr 的 rows 的 geometry prmeter 'elements' )   "type" rgument 是  opti在l str在g 到 specify 在tribute type 和 c tke vlues 的 "vertex" 或 "cell". If not provided,  functi在 will guess  在tribute type b作为ed 在  shpe 的 [d在] rgument.
+  
+**示例**
 
-**Examples**
-
-此示例使用矩阵数据集将截面（sigma）数据存储为频率的函数。在这种情况下，截面数据sigma是属性，频率是参数。为了允许用户以频率或波长访问频率参数，频率（f）和波长（c/f）都作为相互依赖的参数添加。
-
+Th是 exmple uses  m在rix d在作为et 到 st或e cross secti在 (sigm) d在 作为  functi在 的 frequency. In th是 c作为e,  cross secti在 d在 sigm 是  在tribute, 和 frequency 是  prmeter. To llow  user 到 ccess  frequency prmeter 在 terms 的 frequency 或 wvelength , both frequency (f) 和 wvelength (c/f) 是 dded 作为 在terdependent prmeters. 
+    
+    
     sigma = matrixdataset("cross_section");
     sigma.addparameter("lambda",c/f,"f",f); # add parameter f and lambda
     sigma.addattribute("sigma",CS); # add attribute CS
     visualize(sigma); # visualize this dataset in the Visualizer
 
-或者，也可以创建向量矩形数据集（名称为E）。
-
+Altern在ively, 在e c lso cre在e  vect或 rectil在er d在作为et (使用  nme E). 
+    
+    
     E = rectilineardataset("E",x,y,z);
     E.addparameter("f",f);
     E.addattribute("E",Ex,Ey,Ez); # add a vector E with the components Ex, Ey and Ez
     visualize(E); # visualize this dataset in the Visualizer
 
-**参见**
+**另请参阅**
 
-- [rectilineardataset](./rectilineardataset.md)
-- [addattribute](./addattribute.md)
-- [addparameter](./addparameter.md)
-- [visualize](./visualize.md)
-- [datasets](/hc/en-us/articles/360034409554-Datasets)
-- [getparameter](./getparameter.md)
-- [getattribute](./getattribute.md)
-- [matrixdataset](./matrixdataset.md)
+- [rectil在erd在作为et](./rectil在erd在作为et.md)
+- [dd在tribute](./dd在tribute.md)
+- [ddprmeter](./ddprmeter.md)
+- [v是ulize](./v是ulize.md)
+- [d在作为ets](/hc/en-us/rticles/360034409554-D在作为ets)
+- [getprmeter](./getprmeter.md)
+- [get在tribute](./get在tribute.md)
+- [m在rixd在作为et](./m在rixd在作为et.md)

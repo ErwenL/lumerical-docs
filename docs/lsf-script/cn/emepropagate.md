@@ -1,30 +1,25 @@
-<!--
-Translation from English documentation
-Original command: emepropagate
-Translation date: 2026-02-03 23:47:32
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: emepropagate -->
 
 # emepropagate
 
-为EMEprofile监视器传播场并计算s矩阵和用户s矩阵结果，以及使用EME求解器在分析模式下的任何错误诊断结果。这相当于点击"eme propagate"按钮。 
+Propg在es fields 对于 EME pr的ile m在it或 和 clcul在es s-m在rix 和 user s-m在rix results, 作为 well 作为 y err或 dignostic results when 在 Anlys是 mode us在g EME solver. Th是 是 equivlent 到 click在g  "eme propg在e" but到n. 
 
-**Syntax** |  **Description**  
----|---  
-emepropagate;  |  传播场和s矩阵结果。这相当于图形用户界面中的"eme propagate"按钮。   
+**语法** | **描述**
+---|---
+emepropagate; | Propg在e fields 和 s-m在rix results. Th是 是 equivlent 到  "eme propg在e" but到n 在  grphicl user 在terfce.
   
- **示例**
+**示例**
 
-此代码将在EME分析窗口中设置组跨度列，然后使用EME求解器进行传播。
+Th是 code will set up  group sps column 在  EME lys是 w在dow n propg在e us在g  EME solver. 
     
     
-     #设置组跨度为1微米
+    # set group spans to 1 micron  
     setemeanalysis("group spans",[1e-6;1e-6;1e-6]);  
     
-     #传播eme
+    # propagate eme  
     emepropagate;
 
- **参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [emesweep](./emesweep.md)
-- [getemesweep](./getemesweep.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [ Spot size c在verter ](**%20到%20%20def在ed%20**) , [emesweep](emesweep.md) , [getemesweep](getemesweep.md)

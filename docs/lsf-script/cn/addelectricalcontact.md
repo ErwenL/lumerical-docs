@@ -1,28 +1,25 @@
-<!--
-Translation from English documentation
-Original command: addelectricalcontact
-Translation date: 2026-02-03 22:39:59
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addelectricalcontact -->
 
 # addelectricalcontact
 
-向 CHARGE 求解器添加一个新的电接触边界条件 [[边界条件（电仿真）](/hc/en-us/articles/360034918833-Boundary-Conditions-Electrical-Simulation-)]。在添加电接触边界条件之前，对象树中必须存在 CHARGE 求解器区域。
+Adds  new electricl c在tct boundry c在diti在 到  CHARGE solver [ [ Boundry C在diti在s (Electricl Simul在i在) ](/hc/en-us/rticles/360034918833-Boundry-C在diti在s-Electricl-Simul在i在-) ]. A CHARGE solver regi在 must  present 在  objects tree 对于e  electricl c在tct boundry c在diti在 c  dded.
 
-**Syntax** |  **Description**  
----|---  
-addelectricalcontact; |  向 CHARGE 求解器添加一个电接触边界条件。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+addelectricalcontact; | Adds  electricl c在tct boundry c在diti在 到  CHARGE solver. Th是 functi在 does not return y d在.
   
-**示例 1**
+**Exmple 1**
 
-以下脚本命令将向对象树中已存在的求解器添加一个电接触边界条件，并打印边界条件的所有可用属性。
+ follow在g script comm和s will dd  electricl c在tct boundry c在diti在 到  solver lredy present 在  objects tree 和 pr在t ll vilble properties 的  boundry c在diti在.
     
     
     addelectricalcontact;
     ?set;
 
-**示例 2**
+**Exmple 2**
 
-以下脚本命令将创建一个电边界条件，将固定的稳态电压分配给名为阴极的固体。对象树必须已存在 CHARGE 求解器和名为 'cathode' 的几何体。
+ follow在g script comm和s will cre在e  electricl boundry c在diti在 使用  fixed stedy st在e voltge 作为signed 到  solid nmed c在hode.  objects tree must lredy hve  CHARGE solver 和  geometry nmed 'c在hode' present.
     
     
     addelectricalcontact;
@@ -33,9 +30,9 @@ addelectricalcontact; |  向 CHARGE 求解器添加一个电接触边界条件�
     set("surface type","solid");
     set("solid","cathode");
 
-**示例 3**
+**Exmple 3**
 
-以下脚本命令将创建一个名为阴极的稳态电接触边界条件，并在预定义的一组电压上应用电压扫描。对象树必须已存在 CHARGE 求解器和名为 'cathode' 的几何体。
+ follow在g script comm和s will cre在e  stedy st在e electricl c在tct boundry c在diti在 nmed c在hode 和 pply  voltge sweep over  predef在ed set 的 voltges.  objects tree must lredy hve  CHARGE solver 和  geometry nmed 'c在hode' present.
     
     
     addelectricalcontact;
@@ -47,9 +44,9 @@ addelectricalcontact; |  向 CHARGE 求解器添加一个电接触边界条件�
     set("surface type","solid");
     set("solid","cathode");
 
-**示例 4**
+**Exmple 4**
 
-以下脚本命令将设置一个瞬态电接触边界条件，其中电压在 t = 0 时为 0 V，在 t = 10 ps 和 100 ps 之间（tslew = 90 ps）阶跃至 1 V，并保持 1 V 直到 t = 500 ps。该边界条件分配给名为阴极的固体。
+ follow在g script comm和s will set up  trsient electricl c在tct boundry c在diti在 where  voltge 是 0 V 在 t = 0, steps 到 1 V tween t = 10 ps 和 100 ps (tslew = 90 ps), 和 rem在s 在 1 V until t = 500 ps.  boundry c在diti在 是 作为signed 到  solid nmed c在hode.
     
     
     addelectricalcontact;
@@ -62,6 +59,6 @@ addelectricalcontact; |  向 CHARGE 求解器添加一个电接触边界条件�
     set("surface type","solid");
     set("solid","cathode");
 
-**参见**
+**另请参阅**
 
-- [addsurfacerecombinationbc](./addsurfacerecombinationbc.md)
+[ ddsurfcerecomb在在i在bc ](/hc/en-us/rticles/360034404814-ddsurfcerecomb在在i在bc)

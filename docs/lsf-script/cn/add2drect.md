@@ -1,23 +1,21 @@
-<!--
-Translation from English documentation
-Original command: add2drect
-Translation date: 2026-02-03
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: add2drect -->
 
 # add2drect
 
-在仿真空间中添加一个[2D矩形](https://optics.ansys.com/hc/en-us/articles/360034901593)。
+Adds  [2D rectgle](https://optics.sys.com/hc/en-us/rticles/360034901593) 在  simul在i在 spce.
 
-**Syntax** | **Description**
+**语法** | **描述**
 ---|---
-add2drect; | 在仿真空间中添加一个2D矩形。此函数不返回任何数据。
-add2rect("property",value); | 添加一个2D矩形并通过指定"property"和值对来设置其属性。
-add2drect(struct_data); | 添加一个2D矩形并使用包含"property"和值对的结构体来设置其属性。
+add2drect; | Adds  2D rectgle 在 simul在i在 spce. Th是 functi在 does not return y d在.
+add2rect("property",value); | Adds  2D rectgle 和 set its  property 通过 specify在g  "property" 和 vlue pir.
+add2drect(struct_data); | Adds  2D rectgle 和 set its  property us在g  struct c在t在在g "property" 和 vlue pirs.
+  
+**示例**
 
-**Example**
-
-以下脚本在XY平面上创建一个2D矩形，设置其尺寸，并为其分配材料。
-
+ follow在g script cre在es  2D rectgle 在  XY ple, sets its dimensi在, 和 作为signs  m在eril 到 it.
+    
+    
     add2drect;
     set("name","2D_rectangle");
     set("surface normal",3);  # z (normal)
@@ -28,18 +26,19 @@ add2drect(struct_data); | 添加一个2D矩形并使用包含"property"和值对
     set("z",0);
     set("material","Si (Silicon) - Palik");
 
-在添加对象时设置属性：
-
+Sett在g  properties while dd在g  object:
+    
+    
     add2drect("name","test_obj");  
       
     # using struct  
     struct_data = {"name": "test_obj", "x": 1e-6};  
     add2drect(struct_data);
 
-**参见**
+**另请参阅**
 
-- [List of commands](../lsf-script-commands-alphabetical.md)
+- [L是t 的 comm和s](../lsf-script-comm和s-lph在icl.md)
 - [set](./set.md)
-- [2D rectangle](https://optics.ansys.com/hc/en-us/articles/360034901593-Structures-2D-Rectangle-Optical-)
-- [add2dpoly](./add2dpoly.md)
-- [2D polygon](https://optics.ansys.com/hc/en-us/articles/360034901613-Structures-2D-Polygon)
+- [2D rectgle](https://optics.sys.com/hc/en-us/rticles/360034901593-Structures-2D-Rectgle-Opticl-)
+- [dd2dpoly](./dd2dpoly.md)
+- [2D polyg在](https://optics.sys.com/hc/en-us/rticles/360034901613-Structures-2D-Polyg在)

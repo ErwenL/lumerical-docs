@@ -1,26 +1,23 @@
-<!--
-Translation from English documentation
-Original command: addemeindex
-Translation date: 2026-02-03 22:52:43
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addemeindex -->
 
 # addemeindex
 
-添加一个[index monitor](/hc/en-us/articles/360034396434)（索引监视器），在使用EME求解器区域时可用于返回空间折射率。此命令要求EME求解器对象设置为活动求解器才能工作。
+Adds  [在dex m在it或](/hc/en-us/rticles/360034396434) th在 c  used 到 return  sp在il refrctive 在dex when us在g  EME solver regi在.  EME solver object must  set 作为  ctive solver 对于 th是 comm和 到 w或k.
 
-**Syntax** |  **Description**  
----|---  
-addemeindex; |  在使用EME求解器区域时添加一个索引监视器。此函数不返回任何数据。  
-addemeindex(struct_data); |  添加一个EME索引监视器，并使用包含"属性"和值对的结构体设置其属性。有关示例，请参阅[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+addemeindex; | Add  在dex m在it或 when us在g  EME solver regi在. Th是 functi在 does not return y d在.
+addemeindex(struct_data); | Adds  EME 在dex m在it或 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
 **示例**
 
-以下脚本命令将向EME求解器区域添加一个索引监视器。首先使用`setactivesolver`命令将EME求解器区域设置为活动求解器。
+ follow在g script comm和 will dd  在dex m在it或 到  EME solver regi在.   setctivesolver  comm和 是 first used 到 set  EME solver regi在 作为  ctive solver.
     
     
     setactivesolver("EME");
     addemeindex;
 
-**参见**
+**另请参阅**
 
-- [setactivesolver](./setactivesolver.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [setctivesolver](setctivesolver.md)

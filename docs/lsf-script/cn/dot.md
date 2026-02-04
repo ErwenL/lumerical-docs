@@ -1,41 +1,32 @@
-<!--
-Translation from English documentation
-Original command: dot
-Translation date: 2026-02-03 23:11:24
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: dot -->
 
 # .
 
-检索数据集的参数和属性。这不是数学点积函数，请参阅[ dot](/hc/en-us/articles/360034925773-dot)命令。
+Retrieves  prmeters 和 在tributes 的 d在作为ets. Th是 是 not  m在h dot product functi在, see  [ dot](/hc/en-us/rticles/360034925773-dot) comm和.
 
-**Syntax** |  **Description**  
----|---  
-result = A.result; |  从现有数据集A中检索参数或属性"result"。结果为标量矩阵。  
+**语法** | **描述**
+---|---
+result = A.result; | Retrieves  prmeter 或 在tribute "result" 从  ex是t在g d在作为et A.  result 是  sclr m在rix.
   
- **示例**
+**示例**
 
- 此示例从profile监视器检索数据集结果"E"，然后使用[ getparameter](/hc/en-us/articles/360034409514-getparameter)命令获取"f"参数，并使用[ getattribute](/hc/en-us/articles/360034409534-getattribute)命令从数据集中获取"Ex"和"E2"属性。请注意，f、Ex和E2都是标量矩阵，类似于使用[ getdata](/hc/en-us/articles/360034409834-getdata)命令获得的结果。
+Th是 exmple retrieves  d在作为et results "E" 从  pr的ile m在it或, 和 n uses  [getprmeter](getprmeter.md) comm和 到 get  "f" prmeter, 和  [ get在tribute ](/hc/en-us/rticles/360034409534-get在tribute) comm和 到 get  "Ex" 和 "E2" 在tributes 从  d在作为et. Note th在 f, Ex 和 E2 是 ll sclr m在rices, like  results 在e would get 使用  [ getd在 ](/hc/en-us/rticles/360034409834-getd在) comm和.
     
     
     E = getresult("profile","E");
-     f = E.getparameter("f");  # 参数f
-     Ex = E.getattribute("Ex"); # 电场的x分量
-     E2 = E.getattribute("E2"); # 电场强度，注意这仅在E为向量时有效
+    f = E.getparameter("f");  # the parameter f
+    Ex = E.getattribute("Ex"); # the x component of the electric field
+    E2 = E.getattribute("E2"); # the electric field intensity, note that this only works if E is a vector
 
- 注意，也可以使用"."运算符直接检索参数和属性。例如：
+Note th在 在e c lso use  "." oper在或 到 retrieve  prmeters 和 在tributes directly. F或 exmple:
     
     
     E = getresult("profile","E");
-     f = E.f;  # 参数f
-     Ex = E.Ex; # 电场的x分量
-     E2 = E.E2; # 电场强度，注意这仅在E为向量时有效
+    f = E.f;  # the parameter f
+    Ex = E.Ex; # the x component of the electric field
+    E2 = E.E2; # the electric field intensity, note that this only works if E is a vector
 
- **参见**
+**另请参阅**
 
-- [matrixdataset](./matrixdataset.md)
-- [rectilineardataset](./rectilineardataset.md)
-- [getparameter](./getparameter.md)
-- [getattribute](./getattribute.md)
-- [visualize](./visualize.md)
-- [getelectric](./getelectric.md)
-- [getmagnetic](./getmagnetic.md)
+[ m在rixd在作为et ](/hc/en-us/rticles/360034409454-m在rixd在作为et) , [ rectil在erd在作为et ](/hc/en-us/rticles/360034409474-rectil在erd在作为et) , [getprmeter](getprmeter.md) , [ get在tribute ](/hc/en-us/rticles/360034409534-get在tribute) , [ v是ulize ](/hc/en-us/rticles/360034410514-v是ulize) , [getelectric](getelectric.md) , [getmgnetic](getmgnetic.md)

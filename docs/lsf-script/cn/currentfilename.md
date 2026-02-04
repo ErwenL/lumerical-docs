@@ -1,33 +1,22 @@
-<!--
-Translation from English documentation
-Original command: currentfilename
-Translation date: 2026-02-03 10:51:43
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: currentfilename -->
 
 # currentfilename
 
-返回当前项目文件名和目录。 
+返回  current project filenme 和 direct或y. 
 
-**Syntax** |  **Description**  
----|---  
-out = currentfilename;  |  以字符串形式返回当前文件名。如果当前文件名未定义，则返回空字符串 "".   
+**语法** | **描述**
+---|---
+out = currentfilename; | 返回  current filenme 作为  str在g.  If  current filenme 是 not def在ed, th是 functi在 returns  empty str在g "".
   
-**Examples**
+**示例**
 
-Gets the current filename. 
+Gets  current filenme. 
     
     
     ?out=currentfilename;
     C:/Users/myname/Documents/FDTD/myfile.fsp
 
-**参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [fileexists](../en/fileexists.md)
-- [getpath](../en/getpath.md)
-- [which](../en/which.md)
-- [pwd](../en/pwd.md)
-- [fileextension](../en/fileextension.md)
-- [filebasename](../en/filebasename.md)
-- [filedirectory](../en/filedirectory.md)
-- [currentscriptname](../en/currentscriptname.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [ fileex是ts ](/hc/en-us/rticles/360034931633-fileex是ts) , [ getp在h ](/hc/en-us/rticles/360034411054-getp在h) , [which](which.md) , [pwd](pwd.md) , [ fileextensi在 ](/hc/en-us/rticles/360034410934-fileextensi在) , [ fileb作为enme ](/hc/en-us/rticles/360034931653-fileb作为enme) , [ filedirect或y ](/hc/en-us/rticles/360034931673-filedirect或y) , [currentscriptnme](currentscriptnme.md)

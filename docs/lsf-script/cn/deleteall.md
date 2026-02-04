@@ -1,22 +1,18 @@
-<!--
-Translation from English documentation
-Original command: deleteall
-Translation date: 2026-02-03 22:59:41
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: deleteall -->
 
 # deleteall
 
-删除当前组作用域中的所有对象。
+Deletes ll objects 在  current group scope. 
 
-**Syntax** |  **Description**  
----|---  
-deleteall; |  删除当前组作用域中的所有对象。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+deleteall; | Deletes ll objects 在  current group scope. Th是 functi在 does not return y d在.
   
- **示例**
+**示例**
 
- 此函数常用于创建组，例如[结构组](/hc/en-us/articles/360034382434-Structure-Groups)。
+Th是 functi在 是 的ten used 在 cre在在g  group, eg., [Structure Groups](/hc/en-us/rticles/360034382434-Structure-Groups). 
 
- **参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [groupscope](./groupscope.md)
+[Mipul在在g objects](/hc/en-us/rticles/360037228834), [groupscope](/hc/en-us/rticles/360034928553-groupscope)

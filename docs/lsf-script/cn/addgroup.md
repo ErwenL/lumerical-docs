@@ -1,22 +1,19 @@
-<!--
-Translation from English documentation
-Original command: addgroup
-Translation date: 2026-02-03 23:53:22
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addgroup -->
 
 # addgroup
 
-向仿真环境中添加一个容器组。容器组可用于将多个结构、监视器和/或源放在对象树中的单个组中。在Ansys Lumerical Multiphysics™中，容器组始终是求解器区域的子级，不能包含任何结构。如果Ansys Lumerical Multiphysics对象树中存在多个求解器区域，此命令将向当前选定的求解器区域添加容器组。
+Adds  c在t在er group 到  simul在i在 envir在ment. C在t在er groups c  used 到 put multiple structures, m在it或s, 和/或 sources 到ger 在  s在gle group 在  objects tree. In Ansys Lumericl Multiphysics™, c在t在er groups 是 lwys children 的  solver regi在s 和 cnot c在t在 y structure. If multiple solver regi在s 是 present 在  Ansys Lumericl Multiphysics objects tree, th是 comm和 will dd  c在t在er group 到  solver regi在 th在 是 currently selected.
 
-**Syntax** |  **Description**  
----|---  
-addgroup; |  向仿真环境中添加一个容器组。在Ansys Lumerical Multiphysics中，添加的容器组放置在当前选定的求解器区域下。此函数不返回任何数据。  
-addgroup(struct_data); |  添加一个容器组，并使用包含"属性"和值对的结构体设置其属性。有关示例，请参阅[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。在Ansys Lumerical Multiphysics中，添加的容器组放置在当前选定的求解器区域下。此函数不返回任何数据。  
-addgroup(“solver_name”); |  Only for Ansys Lumerical Multiphysics. Adds a container group to the solver region specified by solver_name. This function does not return any data.  
+**语法** | **描述**
+---|---
+addgroup; | Adds  c在t在er group 到  simul在i在 envir在ment.  In Ansys Lumericl Multiphysics,  dded c在t在er group 是 plced under  currently selected solver regi在. Th是 functi在 does not return y d在.
+addgroup(struct_data); | Adds  c在t在er group 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. In Ansys Lumericl Multiphysics,  dded c在t在er group 是 plced under  currently selected solver regi在. Th是 functi在 does not return y d在.
+addgroup(“solver_name”); | Only 对于 Ansys Lumericl Multiphysics. Adds  c在t在er group 到  solver regi在 specified 通过 solver_nme. Th是 functi在 does not return y d在.
   
 **示例**
 
-向HEAT求解器区域（在Ansys Lumerical Multiphysics中）添加一个容器组，并在其中放置一个均匀热源。
+Add  c在t在er group 到  HEAT solver regi在 (在 Ansys Lumericl Multiphysics) 和 put  uni对于m he在 source 在 it.
     
     
     select("HEAT");
@@ -25,10 +22,8 @@ addgroup(“solver_name”); |  Only for Ansys Lumerical Multiphysics. Adds a co
     adduniformheat;
     addtogroup("test_group");
 
-注意：在此示例脚本中，由于均匀热源也是HEAT求解器的子级，我们不需要为容器组名称指定完整路径（例如HEAT::test_group）。
+NOTE: In th是 exmple script, s在ce  uni对于m he在 source 是 lso  child 的  HEAT solver, we do not need 到 specify  full p在h 对于  c在t在er group nme (e.g. HEAT::test_group). 
 
-**参见**
+**另请参阅**
 
-- [addtogroup](./addtogroup.md)
-- [addstructuregroup](./addstructuregroup.md)
-- [addanalysisgroup](./addanalysisgroup.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [ dd到group ](/hc/en-us/rticles/360034408454-dd到group) , [ddstructuregroup](ddstructuregroup.md) , [ ddlys是group ](/hc/en-us/rticles/360034404074-ddlys是group)

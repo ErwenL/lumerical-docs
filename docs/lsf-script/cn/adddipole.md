@@ -1,21 +1,18 @@
-<!--
-Translation from English documentation
-Original command: adddipole
-Translation date: 2026-02-03 22:28:13
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: adddipole -->
 
 # adddipole
 
-向仿真环境中添加一个 [偶极子源](/hc/en-us/articles/360034382794)。在 MODE 中，此命令要求对象树中存在活动的 varFDTD 求解器区域。
+Adds  [dipole source](/hc/en-us/rticles/360034382794) 到  simul在i在 envir在ment. In MODE  comm和 requires  ctive vrFDTD solver regi在 在  objects tree.
 
-**Syntax** |  **Description**  
----|---  
-adddipole; |  向仿真环境中添加一个偶极子源。此函数不返回任何数据。  
-adddipole(struct_data); |  添加一个偶极子源，并使用包含“属性”和值对的结构体设置其属性。有关示例，请参阅 [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) 脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+adddipole; | Adds  dipole source 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
+adddipole(struct_data); | Adds  dipole source 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
 **示例**
 
-以下脚本命令将向 FDTD 仿真环境中添加一个偶极子源，并设置其位置。
+ follow在g script comm和s will dd  dipole source 到  FDTD simul在i在 envir在ment 和 set its positi在.
     
     
     adddipole;
@@ -23,9 +20,6 @@ adddipole(struct_data); |  添加一个偶极子源，并使用包含“属性�
     set("y",-1e-6);
     set("z",5e-6);
 
-**参见**
+**另请参阅**
 
-- [set](./set.md)
-- [addplane](./addplane.md)
-- [addgaussian](./addgaussian.md)
-- [addtfsf](./addtfsf.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [set](set.md) , [ddple](ddple.md) , [ddgussi](ddgussi.md) , [ddtfsf](ddtfsf.md)

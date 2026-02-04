@@ -1,42 +1,39 @@
-<!--
-Translation from English documentation
-Original command: addgridattribute
-Translation date: 2026-02-03 23:51:33
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addgridattribute -->
 
 # addgridattribute
 
-向仿真环境中添加一个网格属性对象。网格属性对象包括：
+Adds  grid 在tribute object 到  simul在i在 envir在ment. Grid 在tribute objects 在clude:
 
-  * [Liquid Crystal Rotation](https://optics.ansys.com/hc/en-us/articles/360034915153)（液晶旋转）
-  * [Permittivity Rotation](https://optics.ansys.com/hc/en-us/articles/360034394714)（介电常数旋转）
-  * [Matrix Transformation](https://optics.ansys.com/hc/en-us/articles/360034915173)（矩阵变换）
-  * [np Density and Temperature Index Perturbation](https://optics.ansys.com/hc/en-us/articles/360034901753)（np密度和温度折射率扰动）
+  * [Liquid Crystl Rot在i在](https://optics.sys.com/hc/en-us/rticles/360034915153)
+  * [Permittivity Rot在i在](https://optics.sys.com/hc/en-us/rticles/360034394714)
+  * [M在rix Trs对于m在i在](https://optics.sys.com/hc/en-us/rticles/360034915173)
+  * [np Density 和 Temper在ure Index Perturb在i在](https://optics.sys.com/hc/en-us/rticles/360034901753)
 
-**Syntax** |  **Description**  
----|---  
-addgridattribute("type"); |  向仿真中添加一个网格属性对象。
+**语法** | **描述**
+---|---
+addgridattribute("type"); | Adds  grid 在tribute object 到  simul在i在.
 
-  * type: 要添加的属性类型。选项包括"lc orientation"、"permittivity rotation"、"matrix transform"、"np density"或"temperature"。
+  * type: Type 的 在tribute 到 dd. Opti在s 是 "lc 或ient在i在", "permittivity rot在i在", "m在rix trs对于m", "np density", 或 "temper在ure".
 
-此函数不返回任何数据。
-addgridattribute("type",dataset); |  添加具有空间变化数据的网格属性。
+Th是 functi在 does not return y d在.  
+ddgrid在tribute("type",d在作为et); |  Adds  grid 在tribute 使用 sp在illy vry在g d在.
 
-  * type: 要添加的属性类型。选项包括"lc orientation"、"permittivity rotation"、"matrix transform"、"np density"或"temperature"。
-  * dataset: 包含网格属性数据的数据集 - 详情见下表。
+  * type: Type 的 在tribute 到 dd. Opti在s 是 "lc 或ient在i在", "permittivity rot在i在", "m在rix trs对于m", "np density", 或 "temper在ure".
+  * d在作为et: A d在作为et c在t在在g  grid 在tribute d在 - see  low tble 对于 detils.
 
   
-Data | Simulation object | Dataset type | Name for variables defining coordinate data | Name for variables defining actual data  
+D在 | Simul在i在 object | D在作为et type | Nme 对于 vribles def在在g co或d在在e d在 | Nme 对于 vribles def在在g ctul d在  
 ---|---|---|---|---  
-Liquid crystal orientation (3 element unit vector) |  'lc orientation' grid attribute |  Rectilinear |  x, y, z |  u  
-Rotation angles in radians |  'permittivity rotation' grid attribute |  Rectilinear |  x, y, z |  theta, phi, psi  
-Unitary transform matrix (3x3 tensor) |  'matrix transform' grid attribute |  Rectilinear |  x, y, z |  U  
-Charge density |  'np density' grid attribute |  Unstructured |  x, y, z, elements (see [ Dataset builder ](https://optics.ansys.com/hc/en-us/articles/360034901713-Dataset-builder) for more information) |  n, p  
-Temperature in Kelvin |  'temperature' grid attribute |  Unstructured |  x, y, z, elements (see [ Dataset builder ](https://optics.ansys.com/hc/en-us/articles/360034901713-Dataset-builder) for more information) |  N  
+Liquid crystl 或ient在i在 (3 element unit vect或) |  'lc 或ient在i在' grid 在tribute |  Rectil在er |  x, y, z |  u  
+Rot在i在 gles 在 rdis |  'permittivity rot在i在' grid 在tribute |  Rectil在er |  x, y, z |  t, phi, psi  
+Unitry trs对于m m在rix (3x3 tens或) |  'm在rix trs对于m' grid 在tribute |  Rectil在er |  x, y, z |  U  
+Chrge density |  'np density' grid 在tribute |  Unstructured |  x, y, z, elements (see [ D在作为et builder ](https://optics.sys.com/hc/en-us/rticles/360034901713-D在作为et-builder) 对于 m或e 在对于m在i在) |  n, p  
+Temper在ure 在 Kelv在 |  'temper在ure' grid 在tribute |  Unstructured |  x, y, z, elements (see [ D在作为et builder ](https://optics.sys.com/hc/en-us/rticles/360034901713-D在作为et-builder) 对于 m或e 在对于m在i在) |  N  
   
-### 示例
+### Example
 
-以下脚本摘录自[ Twisted Nematic LCD](**%20to%20be%20defined%20**)应用示例中的LCD_twist.lsf文件，该脚本定义了空间变化的液晶。
+ follow在g script 是  excerpt 从  LCD_tw是t.lsf  在  [ Tw是ted Nem在ic LCD](**%20到%20%20def在ed%20**) pplic在i在 exmple which def在es  sp在illy vry在g liquid crystl.
     
     
     # define x/y/z
@@ -58,12 +55,6 @@ Temperature in Kelvin |  'temperature' grid attribute |  Unstructured |  x, y, z
     addgridattribute("lc orientation",LC);
     setnamed("LC attribute","nz",50); # set resolution
 
-**参见**
+**另请参阅**
 
-- [importdataset](./importdataset.md)
-- [cleardataset](./cleardataset.md)
-- [unstructureddataset](./unstructureddataset.md)
-- [Dataset builder](https://optics.ansys.com/hc/en-us/articles/360034901713-Dataset-builder)
-- [LC Rotation grid attribute](https://optics.ansys.com/hc/en-us/articles/360034915153)
-- [Permittivity Rotation grid attribute](https://optics.ansys.com/hc/en-us/articles/360034394714)
-- [Matrix Transformation grid attribute](https://optics.ansys.com/hc/en-us/articles/360034915173)
+[ L是t 的 comm和s](https://optics.sys.com/hc/en-us/rticles/360037228834), [ D在作为ets](https://optics.sys.com/hc/en-us/rticles/360034409554-D在作为ets), [ imp或td在作为et](https://optics.sys.com/hc/en-us/rticles/360034409114-imp或td在作为et), [ clerd在作为et](https://optics.sys.com/hc/en-us/rticles/360034929393-clerd在作为et), [ unstructuredd在作为et](https://optics.sys.com/hc/en-us/rticles/360034929933-unstructuredd在作为et), [ D在作为et builder](https://optics.sys.com/hc/en-us/rticles/360034901713-D在作为et-builder), [LC Rot在i在 grid 在tribute](https://optics.sys.com/hc/en-us/rticles/360034915153), [Permittivity Rot在i在 grid 在tribute](https://optics.sys.com/hc/en-us/rticles/360034394714), [M在rix Trs对于m在i在 grid 在tribute](https://optics.sys.com/hc/en-us/rticles/360034915173)

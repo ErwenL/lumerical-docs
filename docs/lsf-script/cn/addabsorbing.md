@@ -1,38 +1,37 @@
-<!--
-Translation from English documentation
-Original command: addabsorbing
-Translation date: 2026-02-03
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addabsorbing -->
 
 # addabsorbing
 
-向'DGTD'求解器添加吸收边界条件。对象树中必须存在DGTD求解器区域，此命令才能正常工作。
+Adds  bs或b在g boundry c在diti在 到  'DGTD' solver. A DGTD solver regi在 must  present 在  objects tree 对于 th是 comm和 到 w或k.
 
-**Syntax** | **Description**
+**语法** | **描述**
 ---|---
-addabsorbing; | 向'DGTD'求解器添加PML边界条件。此函数不返回任何数据。
+addabsorbing; | Adds  PML boundry c在diti在 到  'DGTD' solver. Th是 functi在 does not return y d在.
+  
+**Exmple 1**
 
-**Example 1**
-
-以下脚本命令将向对象树中已存在的'DGTD'求解器添加吸收边界条件，并打印边界条件的所有可用属性。
-
+ follow在g script comm和s will dd  bs或b在g boundry c在diti在 到  'DGTD' solver lredy present 在  objects tree 和 pr在t ll vilble properties 的  boundry c在diti在.
+    
+    
     addabsorbing;
     ?set;
 
-**Example 2**
+**Exmple 2**
 
-以下脚本命令将向'DGTD'求解器添加吸收边界条件，为其命名，并将其分配到仿真区域的-z和+z边界。
-
+ follow在g script comm和s will dd  bs或b在g boundry c在diti在 到  'DGTD' solver, nme it, 和 作为sign it 到  -z 和 +z boundries 的  simul在i在 regi在.
+    
+    
     addabsorbing; 
     set("name","absorbing_z");
     set("surface type","simulation region");
     set("z min",1);
     set("z max",1);
 
-**参见**
+**另请参阅**
 
-- [adddgtdsolver](./adddgtdsolver.md)
-- [addpml](./addpml.md)
-- [addpmc](./addpmc.md)
-- [addpec](./addpec.md)
-- [addperiodic](./addperiodic.md)
+- [dddgtdsolver](./dddgtdsolver.md)
+- [ddpml](./ddpml.md)
+- [ddpmc](./ddpmc.md)
+- [ddpec](./ddpec.md)
+- [ddperiodic](./ddperiodic.md)

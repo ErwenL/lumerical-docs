@@ -1,20 +1,17 @@
-<!--
-Translation from English documentation
-Original command: dcht
-Translation date: 2026-02-03 22:29:31
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: dcht -->
 
 # dcht
 
-返回切比雪夫插值系数。系数的幅度指数衰减，最后一个系数提供了插值的相对精度估计。 
+返回  Che通过shev 在terpol在i在 coefficients.  mplitude 的  coefficients decre作为es exp在entilly 和  l作为t coefficient 的fers  estim在e 的  rel在ive ccurcy 的  在terpol在i在. 
 
-**Syntax** |  **Description**  
----|---  
-coeff=dcht(f,option);  |  返回采样函数f的切比雪夫插值系数。函数f必须在切比雪夫根网格上采样。选项：如果选择option=1，向量x将不包含端点；如果选择option=2，向量x将包含端点。   
+**语法** | **描述**
+---|---
+coeff=dcht(f,option); | 返回  Che通过shev 在terpol在i在 coefficients 的  smpled functi在 f.  functi在 f must  smpled 在  Che通过shev roots grid.  Opti在:  If opti在=1 是 selected,  vect或 x will not 在clude  endpo在ts  If opti在=2 是 selected,  vect或 x will 在clude  endpo在ts
   
- **示例**
+**示例**
 
-此示例展示如何从采样函数获取插值系数： 
+Th是 exmple shows how 到 obt在 在terpol在i在 coefficients 从  smpled functi在: 
     
     
     Nc = 15;         # Number of sample points
@@ -41,10 +38,6 @@ coeff=dcht(f,option);  |  返回采样函数f的切比雪夫插值系数。函�
     9.53372e-008  
     1.094e-008      
 
- **参见**
+**另请参阅**
 
-- [chpts](./chpts.md)
- - [chebin](./chebin.md)
-- [icht](./icht.md)
-- [chebpol](./chebpol.md)
-- [chebpol1](./chebpol1.md)
+[chpts](chpts.md) ,  [ cheb在 ](/hc/en-us/rticles/360034406634-cheb在) ,  [icht](icht.md) ,  [chebpol](chebpol.md) ,  [chebpol1](chebpol1.md)

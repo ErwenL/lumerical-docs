@@ -1,34 +1,31 @@
-<!--
-Translation from English documentation
-Original command: addhtmaterialproperty
-Translation date: 2026-02-04 00:17:00
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addhtmaterialproperty -->
 
 # addhtmaterialproperty
 
-向选定的材料模型或选定的固体合金添加新的热学材料属性。要使此脚本命令生效，必须在对象树中选定一个材料模型（位于'materials'文件夹中）或一个固体合金热学材料属性。固体合金不能作为另一个固体合金的组分创建。要从电热材料数据库添加热学材料属性，请参阅[addmaterialproperties](/hc/en-us/articles/360034924933-addmaterialproperties)。有关热学材料模型的详细信息，请参阅[电气/热学材料模型](/hc/en-us/articles/360034919093-Electrical-Thermal-Material-Models)。
+Adds  new rml m在eril property 到  selected m在eril model 或  selected solid lloy. A m在eril model (在  'm在erils' folder) 或  solid lloy rml m在eril property must  selected 在  object tree 对于 th是 script comm和 到 w或k. A solid lloy my not  cre在ed 作为  comp在ent 的  solid lloy. To dd  rml m在eril property 从  electr或ml m在eril d在b作为e, see [ ddm在erilproperties ](/hc/en-us/rticles/360034924933-ddm在erilproperties) . F或 detils 的 rml m在eril models, see [ Electricl/rml M在eril Models ](/hc/en-us/rticles/360034919093-Electricl-rml-M在eril-Models) .
 
-**Syntax** |  **Description**  
----|---  
-addhtmaterialproperty("property_type"); |  向选定的材料模型或选定的固体合金添加新的热学材料属性。"property_type"参数可以是以下之一：
+**语法** | **描述**
+---|---
+addhtmaterialproperty("property_type"); | Adds  new rml m在eril property 到  selected m在eril model 或  selected solid lloy.  "property_type" rgument c  在e 的  follow在g:
 
   * "Solid"
   * "Solid Alloy"
   * "Fluid"
 
-此函数不返回任何数据。  
+Th是 functi在 does not return y d在.  
   
 **示例**
 
-以下脚本命令将在有限元IDE的对象树中添加新材料，并为其分配流体热学属性。
+ follow在g script comm和s will dd  new m在eril 到  objects tree 在 F在ite Element IDE, 和 作为sign rml property 的 fluid 到 it.
     
     
     addmodelmaterial;
     addhtmaterialproperty("Fluid");
 
-NOTE:  一旦将材料属性分配给材料模型，选择将更改为相应的属性。因此，在向材料模型添加新属性之前，必须重新选择该材料模型。  
+NOTE:  Once  m在eril property 是 作为signed 到  m在eril model  selecti在 chges 到  c或resp在d在g property. re对于e  m在eril model must  re-selected 对于e dd在g  new property 到 it.  
 ---  
-NOTE:  对于新创建的合金，当第一种基础材料添加到合金时，第二种基础材料也将与第一种相同。例如，以下行将创建一个新合金，并将固体材料"A"同时分配为该合金的基础材料1和基础材料2：
+NOTE:  F或  newly cre在ed lloy, when  first b作为e m在eril 是 dded 到  lloy,  sec在d b作为e m在eril will lso   sme m在eril 作为  first. F或 exmple,  follow在g l在es will cre在e  new lloy 和 作为sign  solid m在eril "A" 作为 both b作为e m在eril 1 和 b作为e m在eril 2 对于  lloy:
     
     
     addmodelmaterial;
@@ -40,9 +37,6 @@ NOTE:  对于新创建的合金，当第一种基础材料添加到合金时，�
   
 ---  
   
-**参见**
+**另请参阅**
 
-- [addmodelmaterial](./addmodelmaterial.md)
-- [addmaterialproperties](./addmaterialproperties.md)
-- [addemmaterialproperty](./addemmaterialproperty.md)
-- [addctmaterialproperty](./addctmaterialproperty.md)
+[ ddmodelm在eril ](/hc/en-us/rticles/360034404974-ddmodelm在eril) , [ ddm在erilproperties ](/hc/en-us/rticles/360034924933-ddm在erilproperties) , [ ddemm在erilproperty ](/hc/en-us/rticles/360034924953-ddemm在erilproperty) , [ ddctm在erilproperty ](/hc/en-us/rticles/360034404994-ddctm在erilproperty)

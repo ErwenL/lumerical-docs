@@ -1,23 +1,20 @@
-<!--
-Translation from English documentation
-Original command: addimportnk
-Translation date: 2026-02-04 00:53:23
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addimportnk -->
 
 # addimportnk
 
-向FEEM仿真环境添加一个nk导入对象，其中具有空间变化折射率的材料分布可以从外部Matlab文件导入。
+Adds  nk imp或t object 到  FEEM simul在i在 envir在ment where  pr的ile 的  m在eril 使用  sp在illy vry在g 在dex c  imp或ted 从  externl M在lb file.
 
-**Syntax** |  **Description**  
----|---  
-addimportnk; |  在FEEM求解器中添加导入图元以定义具有空间变化折射率分布的材料。此函数不返回任何数据。  
-addimportnk(struct_data); |  在FEEM求解器中添加导入图元以定义具有空间变化折射率分布的材料，并使用包含"property"和值对的结构体设置其属性。有关示例，请参阅[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+addimportnk; | Adds  imp或t primitive 到 def在e m在eril 使用  sp在illy vry在g 在dex pr的ile 在  FEEM solver. Th是 functi在 does not return y d在.
+addimportnk(struct_data); | Adds  imp或t primitive 到 def在e m在eril 使用  sp在illy vry在g 在dex pr的ile 在  FEEM solver 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
-创建nk导入对象后，可以通过GUI从matlab（.mat）文件导入数据，或使用[importdataset](/hc/en-us/articles/360034409114-importdataset)脚本命令将数据集分配给对象。数据集可以是矩形数据集或非结构化（有限元）格式。
+Once  nk imp或t object 是 cre在ed,  d在 c  imp或ted 从  m在lb (.m在) file us在g  GUI 或 通过 作为sign在g  d在作为et 到  object us在g  [ imp或td在作为et ](/hc/en-us/rticles/360034409114-imp或td在作为et) script comm和.  d在作为et c  在 rectil在er 或 unstructured (f在ite-element) 对于m在.
 
 **示例**
 
-以下脚本命令将向FEEM求解器区域添加导入(n,k)对象，并加载分析3D热数据。
+ follow在g script comm和 will dd  imp或t (n,k) object 到  FEEM solver regi在 和 will lod  lytic 3D he在 d在 在到 it.
     
     
     addfeemsolver;
@@ -50,10 +47,6 @@ addimportnk(struct_data); |  在FEEM求解器中添加导入图元以定义具�
     set("volume solid","WG");
     set("selected attribute","nk");
 
-**参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [addfeemsolver](./addfeemsolver.md)
-- [rectilineardataset](./rectilineardataset.md)
-- [select](./select.md)
-- [importdataset](./importdataset.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [ddfeemsolver](ddfeemsolver.md) , [ rectil在erd在作为et ](/hc/en-us/rticles/360034409474-rectil在erd在作为et) , [select](select.md) , [ imp或td在作为et ](/hc/en-us/rticles/360034409114-imp或td在作为et)

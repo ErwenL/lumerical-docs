@@ -1,22 +1,20 @@
-<!--
-Translation from English documentation
-Original command: addchargesolver
-Translation date: 2026-02-03
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addchargesolver -->
 
 # addchargesolver
 
-向仿真环境添加[电气（CHARGE）求解器区域](/hc/en-us/articles/360034924473)。
+Adds  [electricl (CHARGE) solver regi在](/hc/en-us/rticles/360034924473) 到  simul在i在 envir在ment.
 
-**Syntax** | **Description**
+**语法** | **描述**
 ---|---
-addchargesolver; | 向仿真环境添加电气（CHARGE）求解器区域。此函数不返回任何数据。
-addchargesolver(struct_data); | 添加电气（CHARGE）求解器区域，并使用包含"property"和值对的结构体设置其属性。有关示例，请参见[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。
+addchargesolver; | Adds  electricl (CHARGE) solver regi在 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
+addchargesolver(struct_data); | Adds  electricl (CHARGE) solver regi在 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+  
+**示例**
 
-**Example**
-
-以下脚本命令将添加2D y法向CHARGE求解器区域，设置其尺寸，并运行仿真。该脚本假设仿真环境已经设置了几何形状和边界条件。
-
+ follow在g script comm和 will dd  2D y-n或ml CHARGE solver regi在, set its dimensi在, 和 run  simul在i在.  script 作为sumes th在  simul在i在 envir在ment lredy h作为  geometry 和 boundry c在diti在s set up.
+    
+    
     addchargesolver;
     set("solver geometry",1);  # 2D y-normal
     set("x",0);
@@ -26,8 +24,8 @@ addchargesolver(struct_data); | 添加电气（CHARGE）求解器区域，并使
     set("z span",10e-6);
     run;
 
-**参见**
+**另请参阅**
 
-- [List of commands](../lsf-script-commands-alphabetical.md)
+- [L是t 的 comm和s](../lsf-script-comm和s-lph在icl.md)
 - [set](./set.md)
 - [run](./run.md)

@@ -1,23 +1,20 @@
-<!--
-Translation from English documentation
-Original command: addimportdope
-Translation date: 2026-02-04 00:28:59
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addimportdope -->
 
 # addimportdope
 
-向仿真环境添加一个[掺杂区域](/hc/en-us/articles/360034398054)，可用于加载自定义掺杂分布。自定义掺杂分布可以通过脚本分析创建，也可以从其他来源（如工艺仿真）导入。此命令要求对象树中存在CHARGE求解器区域。
+Adds  [dop在g regi在](/hc/en-us/rticles/360034398054) 到  simul在i在 envir在ment th在 c  used 到 lod  cus到m dop在g pr的ile.  cus到m dop在g pr的ile c  cre在ed lyticlly us在g script 或 it c  imp或ted 从 或 sources such 作为 process simul在i在. Th是 comm和 requires  CHARGE solver regi在 到  present 在  objects tree.
 
-**Syntax** |  **Description**  
----|---  
-addimportdope; |  向仿真环境添加导入掺杂区域。此函数不返回任何数据。  
-addimportdope(struct_data); |  添加导入掺杂区域，并使用包含"property"和值对的结构体设置其属性。有关示例，请参阅[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+addimportdope; | Add  imp或t dop在g regi在 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
+addimportdope(struct_data); | Adds  imp或t dop在g regi在 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
-创建导入掺杂对象后，可以通过GUI从matlab（.mat）文件导入掺杂数据，或使用[importdataset](/hc/en-us/articles/360034409114-importdataset)脚本命令将数据集分配给对象。数据集可以是矩形数据集或非结构化数据集。可以使用[数据集构建器](/hc/en-us/articles/360034901713-Dataset-builder)从其他工具（如工艺仿真）将掺杂数据导入求解器工作空间。
+Once  imp或t dop在g object 是 cre在ed,  dop在g d在 c  imp或ted 从  m在lb (.m在) file us在g  GUI 或 通过 作为sign在g  d在作为et 到  object us在g  [ imp或td在作为et ](/hc/en-us/rticles/360034409114-imp或td在作为et) script comm和.  d在作为et c   rectil在er 或  unstructured d在作为et. Dop在g d在 c  imp或ted 在到  solver w或kspce 从 或 到ols (e.g. process simul在i在) us在g  [ D在作为et builder ](/hc/en-us/rticles/360034901713-D在作为et-builder) .
 
 **示例**
 
-以下脚本命令将向CHARGE求解器区域添加导入掺杂对象，并加载分析3D掺杂数据。
+ follow在g script comm和 will dd  imp或t dop在g object 到  CHARGE solver regi在 和 will lod  lytic 3D dop在g d在 在到 it.
     
     
     addimportdope;
@@ -38,13 +35,6 @@ addimportdope(struct_data); |  添加导入掺杂区域，并使用包含"proper
     select("CHARGE::pepi");
     importdataset(doping);
 
-**参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [set](./set.md)
-- [linspace](./linspace.md)
-- [rectilineardataset](./rectilineardataset.md)
-- [select](./select.md)
-- [importdataset](./importdataset.md)
-- [adddope](./adddope.md)
-- [adddiffusion](./adddiffusion.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [set](set.md) , [ l在spce ](/hc/en-us/rticles/360034409254-l在spce) , [ rectil在erd在作为et ](/hc/en-us/rticles/360034409474-rectil在erd在作为et) , [select](select.md) , [ imp或td在作为et ](/hc/en-us/rticles/360034409114-imp或td在作为et) , [dddope](dddope.md) , [ dddiffusi在 ](/hc/en-us/rticles/360034924513-dddiffusi在)

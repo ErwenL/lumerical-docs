@@ -1,0 +1,794 @@
+{
+  "batch_id": "20260204_091805",
+  "statistics": {
+    "total_untranslated": 156,
+    "processed": 156,
+    "translated": 134,
+    "failed": 0,
+    "skipped": 22,
+    "elapsed_time_seconds": 81.24,
+    "timestamp": "2026-02-04T09:18:05.651067"
+  },
+  "results": [
+    {
+      "command": "constructgeneratormatrix",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:44.420800"
+    },
+    {
+      "command": "conv2",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:44.945024"
+    },
+    {
+      "command": "convertnportsparametersweep",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:45.470738"
+    },
+    {
+      "command": "copy",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:45.995490"
+    },
+    {
+      "command": "copydcard",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:46.524813"
+    },
+    {
+      "command": "copymaterial",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:47.041638"
+    },
+    {
+      "command": "copysweep",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:47.567001"
+    },
+    {
+      "command": "copytoclipboard",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:48.090175"
+    },
+    {
+      "command": "corrcoef",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:48.611803"
+    },
+    {
+      "command": "corrtransf",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:49.135813"
+    },
+    {
+      "command": "cos",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:49.649053"
+    },
+    {
+      "command": "coupling",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:50.172671"
+    },
+    {
+      "command": "cov",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:50.709571"
+    },
+    {
+      "command": "cp",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:51.234720"
+    },
+    {
+      "command": "createbeam",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:51.757519"
+    },
+    {
+      "command": "createcompound",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:52.280218"
+    },
+    {
+      "command": "createsphericalsurface",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:52.795538"
+    },
+    {
+      "command": "cross",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:53.326425"
+    },
+    {
+      "command": "farfieldfilter",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:53.828680"
+    },
+    {
+      "command": "farfieldpolar2d",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:54.342280"
+    },
+    {
+      "command": "farfieldpolar3d",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:54.844699"
+    },
+    {
+      "command": "farfieldsettings",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:55.361331"
+    },
+    {
+      "command": "farfieldspherical",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:55.888110"
+    },
+    {
+      "command": "farfieldux",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:56.409858"
+    },
+    {
+      "command": "farfielduy",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:56.930690"
+    },
+    {
+      "command": "farfieldvector2d",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:57.457287"
+    },
+    {
+      "command": "farfieldvector3d",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:57.983813"
+    },
+    {
+      "command": "feval",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:58.502118"
+    },
+    {
+      "command": "fft",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:59.023598"
+    },
+    {
+      "command": "fftk",
+      "success": true,
+      "timestamp": "2026-02-04T09:16:59.546494"
+    },
+    {
+      "command": "fftw",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:00.066944"
+    },
+    {
+      "command": "filebasename",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:00.588251"
+    },
+    {
+      "command": "filedirectory",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:01.100090"
+    },
+    {
+      "command": "fileexists",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:01.611912"
+    },
+    {
+      "command": "fileexpand",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:02.136839"
+    },
+    {
+      "command": "fileextension",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:02.654151"
+    },
+    {
+      "command": "fileopendialog",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:03.176930"
+    },
+    {
+      "command": "filesavedialog",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:03.697956"
+    },
+    {
+      "command": "find",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:04.225552"
+    },
+    {
+      "command": "findmodes",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:04.745380"
+    },
+    {
+      "command": "findpeaks",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:05.268371"
+    },
+    {
+      "command": "findproperty",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:05.789226"
+    },
+    {
+      "command": "findpropertyvalue",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:06.311369"
+    },
+    {
+      "command": "findresonances",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:06.836766"
+    },
+    {
+      "command": "findstring",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:07.357149"
+    },
+    {
+      "command": "finite",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:07.882527"
+    },
+    {
+      "command": "fitnormpdf",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:08.404267"
+    },
+    {
+      "command": "fitpearson4pdf",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:08.928063"
+    },
+    {
+      "command": "flip",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:09.448896"
+    },
+    {
+      "command": "flipelement",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:09.975566"
+    },
+    {
+      "command": "floor",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:10.496651"
+    },
+    {
+      "command": "for",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:11.018767"
+    },
+    {
+      "command": "framerate",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:11.544792"
+    },
+    {
+      "command": "frequencysweep",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:12.071110"
+    },
+    {
+      "command": "gdsaddcircle",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:12.589500"
+    },
+    {
+      "command": "gdsaddpath",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:13.111556"
+    },
+    {
+      "command": "gdsaddpoly",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:13.640256"
+    },
+    {
+      "command": "gdsaddrect",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:14.159969"
+    },
+    {
+      "command": "gdsaddref",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:14.684661"
+    },
+    {
+      "command": "gdsaddstencil",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:15.223437"
+    },
+    {
+      "command": "gdsaddtext",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:15.744411"
+    },
+    {
+      "command": "gdsbegincell",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:16.273124"
+    },
+    {
+      "command": "gdsclose",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:16.806102"
+    },
+    {
+      "command": "gdsendcell",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:17.321814"
+    },
+    {
+      "command": "gdsimport",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:17.852364"
+    },
+    {
+      "command": "gdsopen",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:18.368078"
+    },
+    {
+      "command": "get",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:18.901284"
+    },
+    {
+      "command": "getactivesolver",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:19.416175"
+    },
+    {
+      "command": "getanalysis",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:19.946038"
+    },
+    {
+      "command": "getattribute",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:20.471007"
+    },
+    {
+      "command": "getcelllist",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:20.989955"
+    },
+    {
+      "command": "getcommands",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:21.504710"
+    },
+    {
+      "command": "getdata",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:22.037025"
+    },
+    {
+      "command": "getdevice",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:22.562095"
+    },
+    {
+      "command": "getdgtdindex",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:23.075817"
+    },
+    {
+      "command": "geteigensolver",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:23.608397"
+    },
+    {
+      "command": "getelectric",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:24.119465"
+    },
+    {
+      "command": "getemeanalysis",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:24.651925"
+    },
+    {
+      "command": "getemesweep",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:25.177687"
+    },
+    {
+      "command": "getfdtdindex",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:25.692088"
+    },
+    {
+      "command": "getfdtdsurfaceconductivity",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:26.220287"
+    },
+    {
+      "command": "getfield",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:26.743920"
+    },
+    {
+      "command": "getglobalmonitor",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:27.268259"
+    },
+    {
+      "command": "getglobalsource",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:27.792197"
+    },
+    {
+      "command": "getindex",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:28.318416"
+    },
+    {
+      "command": "getlayerlist",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:28.836183"
+    },
+    {
+      "command": "getlicenseestimate",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:29.364538"
+    },
+    {
+      "command": "getlicenseestimateallactiveresources",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:29.874322"
+    },
+    {
+      "command": "getmagnetic",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:30.383441"
+    },
+    {
+      "command": "getmaterial",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:30.889253"
+    },
+    {
+      "command": "getmeshcontours",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:31.393958"
+    },
+    {
+      "command": "getmodeindex",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:31.902968"
+    },
+    {
+      "command": "getname",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:32.412046"
+    },
+    {
+      "command": "getnamed",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:32.921578"
+    },
+    {
+      "command": "getnamednumber",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:33.432254"
+    },
+    {
+      "command": "getnumber",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:33.941678"
+    },
+    {
+      "command": "getnumericalpermittivity",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:34.447327"
+    },
+    {
+      "command": "getparameter",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:34.957319"
+    },
+    {
+      "command": "getpath",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:35.469279"
+    },
+    {
+      "command": "getperiodicity",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:35.977369"
+    },
+    {
+      "command": "getports",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:36.487658"
+    },
+    {
+      "command": "getposition",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:36.995052"
+    },
+    {
+      "command": "getrectangle",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:37.503649"
+    },
+    {
+      "command": "getremotedata",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:38.011512"
+    },
+    {
+      "command": "getresource",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:38.521111"
+    },
+    {
+      "command": "getresult",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:39.029299"
+    },
+    {
+      "command": "getresultdata",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:39.536411"
+    },
+    {
+      "command": "getsetting",
+      "success": false,
+      "timestamp": "2026-02-04T09:17:40.040697"
+    },
+    {
+      "command": "getsolver",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:40.555505"
+    },
+    {
+      "command": "getsourceangle",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:41.078043"
+    },
+    {
+      "command": "getsourcedirection",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:41.598595"
+    },
+    {
+      "command": "getsurfaceconductivity",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:42.124007"
+    },
+    {
+      "command": "getsweep",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:42.644476"
+    },
+    {
+      "command": "getsweepdata",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:43.166688"
+    },
+    {
+      "command": "getsweepresult",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:43.688467"
+    },
+    {
+      "command": "getvalue",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:44.207801"
+    },
+    {
+      "command": "getvariable",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:44.730209"
+    },
+    {
+      "command": "getview",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:45.254140"
+    },
+    {
+      "command": "gpuspecs",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:45.780291"
+    },
+    {
+      "command": "grating",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:46.301965"
+    },
+    {
+      "command": "gratingangle",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:46.830921"
+    },
+    {
+      "command": "gratingbloch1",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:47.346093"
+    },
+    {
+      "command": "gratingbloch2",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:47.876748"
+    },
+    {
+      "command": "gratingm",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:48.400450"
+    },
+    {
+      "command": "gratingn",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:48.919049"
+    },
+    {
+      "command": "gratingordercount",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:49.455799"
+    },
+    {
+      "command": "gratingorders",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:49.970796"
+    },
+    {
+      "command": "gratingperiod1",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:50.501075"
+    },
+    {
+      "command": "gratingperiod2",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:51.028014"
+    },
+    {
+      "command": "gratingpolar",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:51.551456"
+    },
+    {
+      "command": "gratingprojection",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:52.068067"
+    },
+    {
+      "command": "gratingu1",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:52.587920"
+    },
+    {
+      "command": "gratingu2",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:53.119417"
+    },
+    {
+      "command": "gratingvector",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:53.643721"
+    },
+    {
+      "command": "upper",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:54.167031"
+    },
+    {
+      "command": "validate",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:54.690197"
+    },
+    {
+      "command": "validateall",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:55.224547"
+    },
+    {
+      "command": "var",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:55.742249"
+    },
+    {
+      "command": "vectorplot",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:56.273710"
+    },
+    {
+      "command": "version",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:56.787450"
+    },
+    {
+      "command": "versionfile",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:57.321118"
+    },
+    {
+      "command": "visualize",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:57.837803"
+    },
+    {
+      "command": "vtksave",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:58.355264"
+    },
+    {
+      "command": "waituntildone",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:58.869858"
+    },
+    {
+      "command": "which",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:59.398110"
+    },
+    {
+      "command": "wizarddata",
+      "success": true,
+      "timestamp": "2026-02-04T09:17:59.929163"
+    },
+    {
+      "command": "wizardgetdata",
+      "success": true,
+      "timestamp": "2026-02-04T09:18:00.447934"
+    },
+    {
+      "command": "wizardoption",
+      "success": true,
+      "timestamp": "2026-02-04T09:18:00.967128"
+    },
+    {
+      "command": "wizardwidget",
+      "success": true,
+      "timestamp": "2026-02-04T09:18:01.491238"
+    },
+    {
+      "command": "workspace",
+      "success": true,
+      "timestamp": "2026-02-04T09:18:02.012326"
+    },
+    {
+      "command": "write",
+      "success": true,
+      "timestamp": "2026-02-04T09:18:02.539216"
+    },
+    {
+      "command": "zbfexport",
+      "success": true,
+      "timestamp": "2026-02-04T09:18:03.057365"
+    },
+    {
+      "command": "zbfload",
+      "success": true,
+      "timestamp": "2026-02-04T09:18:03.582084"
+    },
+    {
+      "command": "zbfread",
+      "success": true,
+      "timestamp": "2026-02-04T09:18:04.101854"
+    },
+    {
+      "command": "zbfwrite",
+      "success": false,
+      "timestamp": "2026-02-04T09:18:04.618099"
+    },
+    {
+      "command": "zeros",
+      "success": true,
+      "timestamp": "2026-02-04T09:18:05.137075"
+    }
+  ]
+}

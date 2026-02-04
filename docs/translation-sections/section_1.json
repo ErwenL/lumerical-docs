@@ -236,8 +236,20 @@
     "addmovie",
     "addparameter",
     "addpath",
-    "addpec"
+    "addpec",
+    "addperiodic",
+    "addplanarsolid",
+    "addplane",
+    "addpmc",
+    "addpml",
+    "addpoly",
+    "addport_lparenFDTDrparen",
+    "addpyramid",
+    "addring",
+    "addtfsf",
+    "addvarfdtd",
+    "addwaveguide"
   ],
-  "progress": 30.51,
-  "last_updated": "2026-02-04T01:12:44.792364"
+  "progress": 37.29,
+  "last_updated": "2026-02-04T09:15:46.157070"
 }

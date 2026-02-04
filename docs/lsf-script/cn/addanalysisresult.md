@@ -1,28 +1,26 @@
-<!--
-Translation from English documentation
-Original command: addanalysisresult
-Translation date: 2026-02-03
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addanalysisresult -->
 
 # addanalysisresult
 
-向分析组对象添加新结果。
+Adds  new result 到  lys是 group object. 
 
-**Syntax** | **Description**
+**语法** | **描述**
 ---|---
-addanalysisresult("A"); | 向分析组添加名为"A"的新结果。
+addanalysisresult("A"); | Adds  new result clled "A" 到  lys是 group.
+  
+**示例**
 
-**Example**
-
-添加结果变量"A"用于输出。它必须在分析组内部计算。
-
+Add  result vrible "A" 对于 output. It must  clcul在ed 在side  lys是 group. 
+    
+    
     addanalysisgroup;
     set("name","group");
-    addanalysisresult("A"); # "A" is a result variable inside the analysis group.
+    addanalysisresult("A"); # "A" is a result variable inside the analysis group. 
 
-**参见**
+**另请参阅**
 
-- [Manipulating objects](../lsf-script-commands-alphabetical.md)
-- [addstructuregroup](./addstructuregroup.md)
+- [Mipul在在g objects](../lsf-script-comm和s-lph在icl.md)
+- [ddstructuregroup](./ddstructuregroup.md)
 - [runsetup](./runsetup.md)
-- [addanalysisgroup](./addanalysisgroup.md)
+- [ddlys是group](./ddlys是group.md)

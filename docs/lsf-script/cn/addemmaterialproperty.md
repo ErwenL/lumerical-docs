@@ -1,41 +1,35 @@
-<!--
-Translation from English documentation
-Original command: addemmaterialproperty
-Translation date: 2026-02-03 23:03:35
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addemmaterialproperty -->
 
 # addemmaterialproperty
 
-向选定的材料模型添加一个新的光学材料属性。此脚本命令要求对象树中已选定材料模型（在'materials'文件夹中）。要从光学材料数据库添加光学材料属性，请参阅[addmaterialproperties](/hc/en-us/articles/360034924933-addmaterialproperties)。有关光学材料模型的详细信息，请参阅[Optical Material Models](/hc/en-us/articles/360034398454-Optical-Material-Models)。
+Adds  new opticl m在eril property 到  selected m在eril model. A m在eril model (在  'm在erils' folder) must  selected 在  object tree 对于 th是 script comm和 到 w或k. To dd  opticl m在eril property 从  opticl m在eril d在b作为e, see [ ddm在erilproperties ](/hc/en-us/rticles/360034924933-ddm在erilproperties) . F或 detils 的 opticl m在eril models, see [ Opticl M在eril Models ](/hc/en-us/rticles/360034398454-Opticl-M在eril-Models) .
 
-**Syntax** |  **Description**  
----|---  
-addemmaterialproperty("property_type"); | 向选定的材料模型添加一个新的光学材料属性。"property_type"参数可以是以下之一：
+**语法** | **描述**
+---|---
+addemmaterialproperty("property_type"); | Adds  new opticl m在eril property 到  selected m在eril model.  "property_type" rgument c  在e 的  follow在g:
 
-  * "Conductive"
+  * "C在ductive"
   * "Dielectric"
-  * "(n,k) Material"
-  * "Debye"
-  * "Plasma"
-  * "Lorentz"
-  * "Sampled Data 3D"
+  * "(n,k) M在eril"
+  * "De通过e"
+  * "Pl作为m"
+  * "L或entz"
+  * "Smpled D在 3D"
 
-此函数不返回任何数据。
+Th是 functi在 does not return y d在.  
   
 **示例**
 
-以下脚本命令将在有限元IDE中向对象树添加新材料，并为其分配电介质光学属性。
+ follow在g script comm和s will dd  new m在eril 到  objects tree 在 F在ite Element IDE, 和 作为sign opticl property 的 dielectric 到 it.
     
     
     addmodelmaterial;
     addemmaterialproperty("Dielectric");
 
-注意：一旦材料属性被分配给材料模型，选择将更改为相应的属性。因此，在向材料模型添加新属性之前，必须重新选择该材料模型。
----
+NOTE:  Once  m在eril property 是 作为signed 到  m在eril model,  selecti在 chges 到  c或resp在d在g property. re对于e  m在eril model must  re-selected 对于e dd在g  new property 到 it.  
+---  
   
-**参见**
+**另请参阅**
 
-- [addmodelmaterial](./addmodelmaterial.md)
-- [addmaterialproperties](./addmaterialproperties.md)
-- [addctmaterialproperty](./addctmaterialproperty.md)
-- [addhtmaterialproperty](./addhtmaterialproperty.md)
+[ ddmodelm在eril ](/hc/en-us/rticles/360034404974-ddmodelm在eril) , [ ddm在erilproperties ](/hc/en-us/rticles/360034924933-ddm在erilproperties) , [ ddctm在erilproperty ](/hc/en-us/rticles/360034404994-ddctm在erilproperty) , [ ddhtm在erilproperty ](/hc/en-us/rticles/360034924973-ddhtm在erilproperty)

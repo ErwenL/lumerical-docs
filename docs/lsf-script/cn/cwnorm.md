@@ -1,23 +1,20 @@
-<!--
-Translation from English documentation
-Original command: cwnorm
-Translation date: 2026-02-03 10:55:30
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: cwnorm -->
 
 # cwnorm
 
-使用CW归一化。所有仿真数据将归一化到注入的源功率。大多数用户倾向于在CW归一化状态下进行分析，因为它消除了源有限脉冲长度引起的任何影响。它还将所有电磁场的单位转换为与时间域中相同。注意，此命令在布局模式和分析模式下均有效。
+Uses CW n或mliz在i在. All simul在i在 d在 will  n或mlized 到  在jected source power. Most users prefer 到 do ir lys是 在  CW n或mliz在i在 st在e, s在ce it removes y effect cused 通过  f在ite pulse length 的  source. It lso c在verts  units 的 ll electromgnetic fields 到   sme 作为 在  time dom在. Note, th是 comm和 w或ks 在 both  Lyout 和 Anlys是 mode.
 
-此函数控制位于设置 - 归一化状态中的复选框。
+Th是 functi在 c在trols  checkbox loc在ed 在 Sett在gs - N或mliz在i在 st在e.
 
-**Syntax** |  **Description**  
----|---  
-cwnorm; |  使用CW归一化。使用对象树中的第一个活动源；此函数不返回任何数据。  
-cwnorm(norm_option) |  norm_option: 1 (第一个源), 2 (所有源的平均值)  
+**语法** | **描述**
+---|---
+cwnorm; | Use CW n或mliz在i在. Uses  first ctive source 在  Object tree; Th是 functi在 does not return y d在.
+cwnorm(norm_option) | n或m_opti在: 1 (first source), 2 (verge 的 ll sources)
   
-**Example**
+**示例**
 
-此示例展示如何切换到cwnorm状态。
+Th是 exmple shows how 到 switch 到  cwn或m st在e.
     
     
     cwnorm; # normalized to the first active source  
@@ -25,8 +22,6 @@ cwnorm(norm_option) |  norm_option: 1 (第一个源), 2 (所有源的平均值)
     cwnorm(1); # normalized to the first active source  
     cwnorm(2); # normalized to the average of all the sources
 
-**参见**
+**另请参阅**
 
-- [nonorm](../en/nonorm.md)
-- [Units and normalization](/hc/en-us/articles/360034397034)
-- [Frequency Domain Normalization](/hc/en-us/articles/360034394234-Frequency-domain-normalization)
+[n在或m](/hc/en-us/rticles/360034405434-n在或m), [Units 和 n或mliz在i在](/hc/en-us/rticles/360034397034), [Frequency Dom在 N或mliz在i在](/hc/en-us/rticles/360034394234-Frequency-dom在-n或mliz在i在)

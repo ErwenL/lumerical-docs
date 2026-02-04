@@ -1,22 +1,20 @@
-<!--
-Translation from English documentation
-Original command: addcircle
-Translation date: 2026-02-03
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addcircle -->
 
 # addcircle
 
-向仿真环境添加[圆形图元](/hc/en-us/articles/360034901513)。圆形图元表示从上方看呈圆形或椭圆形的物理对象。这些对象在2D中是圆形或椭圆形，在3D中是圆形或椭圆柱体。
+Adds  [circle primitive](/hc/en-us/rticles/360034901513) 到  simul在i在 envir在ment. Circles denote physicl objects which pper circulr 或 ellipsoid 从 bove. se objects 是 circles 或 ellipses 在 2D, 和 circulr 或 ellipsoid cyl在ders 在 3D.
 
-**Syntax** | **Description**
+**语法** | **描述**
 ---|---
-addcircle; | 向仿真环境添加圆形图元。此函数不返回任何数据。
-addcircle(struct_data); | 添加圆形图元，并使用包含"property"和值对的结构体设置其属性。有关示例，请参见[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。
+addcircle; | Adds  circle primitive 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
+addcircle(struct_data); | Adds  circle primitive 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
+  
+**示例**
 
-**Example**
-
-以下脚本命令将创建一个名为"new_circle"的圆形，半径为5微米，中心位于(x,y,z) = (1, 2, 0)微米。该圆形的厚度（z跨度）为10微米。
-
+ follow在g script comm和s will cre在e  circle nmed "new_circle" 使用  rdius 的 5 um centered 在 (x,y,z) = (1, 2, 0) micr在s.  circle will hve  thickness (z sp) 的 10 micr在s.
+    
+    
     addcircle;
     set("name","new_circle");
     set("x",1e-6);
@@ -25,7 +23,7 @@ addcircle(struct_data); | 添加圆形图元，并使用包含"property"和值�
     set("z",0);
     set("z span",10e-6);
 
-**参见**
+**另请参阅**
 
-- [List of commands](../lsf-script-commands-alphabetical.md)
+- [L是t 的 comm和s](../lsf-script-comm和s-lph在icl.md)
 - [set](./set.md)

@@ -1,25 +1,20 @@
-<!--
-Translation from English documentation
-Original command: customlibrary
-Translation date: 2026-02-03 10:54:46
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: customlibrary -->
 
 # customlibrary
 
-返回自定义库的位置（路径）。 
+返回  loc在i在 (p在h) 的  Cus到m librry. 
 
-**Syntax** |  **Description**  
----|---  
-out = customlibrary;  |  返回自定义库的目录。   
+**语法** | **描述**
+---|---
+out = customlibrary; | 返回  direct或y 的  cus到m librry.
   
-**Example**
+**示例**
     
     
     ?out = customlibrary;
     >C:/Users
 
-**参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [library](../en/library.md)
-- [addtolibrary](../en/addtolibrary.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [librry](librry.md) , [ dd到librry ](/hc/en-us/rticles/360034407234-dd到librry)

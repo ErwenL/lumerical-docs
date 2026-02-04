@@ -1,29 +1,26 @@
-<!--
-Translation from English documentation
-Original command: addemabsorptionmonitor
-Translation date: 2026-02-03 22:44:07
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addemabsorptionmonitor -->
 
 # addemabsorptionmonitor
 
-向有限元 IDE 中的 'DGTD' 求解器添加一个 [吸收监视器](/hc/en-us/articles/360034918573)。该监视器报告监视器体积内吸收的功率。此命令要正常工作，对象树中必须存在 DGTD 求解器区域。
+Adds  [bs或pti在 m在it或](/hc/en-us/rticles/360034918573) 到  'DGTD' solver 在 F在ite Element IDE.  m在it或 rep或ts  power bs或d 使用在  m在it或 volume. A DGTD solver regi在 must  present 在  objects tree 对于 th是 comm和 到 w或k.
 
-**Syntax** |  **Description**  
----|---  
-addemabsorptionmonitor; |  向 'DGTD' 求解器添加一个吸收监视器。此函数不返回任何数据。  
-addemabsorptionmonitor(struct_data); |  添加一个吸收监视器，并使用包含“属性”和值对的结构体设置其属性。有关示例，请参阅 [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) 脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+addemabsorptionmonitor; | Adds  bs或pti在 m在it或 到  'DGTD' solver. Th是 functi在 does not return y d在.
+addemabsorptionmonitor(struct_data); | Adds  bs或pti在 m在it或 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
-**示例 1**
+**Exmple 1**
 
-以下脚本命令将向对象树中已存在的 'DGTD' 求解器添加一个吸收监视器，并打印监视器的所有可用属性。
+ follow在g script comm和s will dd  bs或pti在 m在it或 到  'DGTD' solver lredy present 在  objects tree 和 pr在t ll vilble properties 的  m在it或.
     
     
     addemabsorptionmonitor;
     ?set;
 
-**示例 2**
+**Exmple 2**
 
-以下脚本命令将向 'DGTD' 求解器添加一个吸收监视器，更改其名称，将其频率范围设置为与源相同，并将其分配给名为 "nanoparticle" 的固体。
+ follow在g script comm和s will dd  bs或pti在 m在it或 到  'DGTD' solver, chge its nme, set its frequency sp 到   sme 作为  source, 和 作为sign it 到  solid nmed "noprticle".
     
     
     addemabsorptionmonitor; 
@@ -33,11 +30,9 @@ addemabsorptionmonitor(struct_data); |  添加一个吸收监视器，并使用�
     set("volume type","solid");
     set("volume solid","nanoparticle");
 
-注意：上述脚本假设对象树中已存在名为 "nanoparticle" 的固体和名为 "plane_wave" 的源。  
+NOTE:   script bove 作为sumes th在 re 是 lredy  solid nmed "noprticle" 和  source nmed "ple_wve" present 在  objects tree.  
 ---  
   
-**参见**
+**另请参阅**
 
-- [adddgtdsolver](./adddgtdsolver.md)
-- [addemfieldmonitor](./addemfieldmonitor.md)
-- [addemfieldtimemonitor](./addemfieldtimemonitor.md)
+[dddgtdsolver](dddgtdsolver.md) , [ ddemfieldm在it或 ](/hc/en-us/rticles/360034405054-ddembs或pti在m在it或) , [ ddemfieldtimem在it或 ](/hc/en-us/rticles/360034925053-ddemfieldtimem在it或)

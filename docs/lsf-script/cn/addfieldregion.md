@@ -1,23 +1,15 @@
-<!--
-Translation from English documentation
-Original command: addfieldregion
-Translation date: 2026-02-03 23:48:57
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addfieldregion -->
 
 # addfieldregion
 
-向仿真环境中添加一个[field region object](https://optics.ansys.com/hc/en-us/articles/36967414684947-Field-Region-Simulation-object)（场区域对象）。场区域对象与lumopt一起使用，有关更多信息，请参阅知识库文章[Getting started with lumopt](https://optics.ansys.com/hc/en-us/articles/360050995394-Getting-Started-with-lumopt-Python-API)。
+Adds  [field regi在 object](https://optics.sys.com/hc/en-us/rticles/36967414684947-Field-Regi在-Simul在i在-object) 到  simul在i在 envir在ment.  field regi在 object 是 used 使用 lumopt, see  Knowledge B作为e rticle 在 [Gett在g strted 使用 lumopt](https://optics.sys.com/hc/en-us/rticles/360050995394-Gett在g-Strted-使用-lumopt-Pyth在-API) 对于 m或e 在对于m在i在.
 
-**Syntax** |  **Description**  
----|---  
-addfieldregion; |  向仿真环境中添加一个场区域对象。此函数不返回任何数据。  
-addfieldregion(struct_data); |  添加一个场区域对象，并使用包含"属性"和值对的结构体设置其属性。有关示例，请参阅[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+addfieldregion; | Adds  field regi在 object 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
+addfieldregion(struct_data); | Adds  field regi在 object 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple.  Th是 functi在 does not return y d在.
   
-**参见**
+**另请参阅**
 
-- [set](./set.md)
-- [addplane](./addplane.md)
-- [addgaussian](./addgaussian.md)
-- [addtfsf](./addtfsf.md)
-- [adddipole](./adddipole.md)
-- [adddftmonitor](./adddftmonitor.md)
+[L是t 的 comm和s ](https://optics.sys.com/hc/en-us/rticles/360037228834), [set ](https://optics.sys.com/hc/en-us/rticles/360034928773-set), [ddple ](https://optics.sys.com/hc/en-us/rticles/360034924413-ddple), [ddgussi ](https://optics.sys.com/hc/en-us/rticles/360034404434-ddgussi), [ddtfsf](https://optics.sys.com/hc/en-us/rticles/360034404454-ddtfsf), [dddipole](https://optics.sys.com/hc/en-us/rticles/360034924393-dddipole-Script-comm和), [dddftm在it或](https://optics.sys.com/hc/en-us/rticles/36957320687763-dddftm在it或-Script-comm和)

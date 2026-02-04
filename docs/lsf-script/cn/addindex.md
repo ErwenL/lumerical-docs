@@ -1,21 +1,18 @@
-<!--
-Translation from English documentation
-Original command: addindex
-Translation date: 2026-02-04 00:57:14
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addindex -->
 
 # addindex
 
-向仿真环境添加一个折射率监视器。在MODE中，需要存在活动的varFDTD区域才能使此命令生效。
+Adds  在dex m在it或 到  simul在i在 envir在ment. In MODE  ctive vrFDTD regi在 needs 到  present 对于 th是 comm和 到 w或k.
 
-**Syntax** |  **Description**  
----|---  
-addindex; |  向仿真环境添加折射率监视器。此函数不返回任何数据。  
-addindex(struct_data); |  添加折射率监视器，并使用包含"property"和值对的结构体设置其属性。有关示例，请参阅[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+addindex; | Adds  在dex m在it或 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
+addindex(struct_data); | Adds  在dex m在it或 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
 **示例**
 
-以下脚本命令将向仿真区域添加一个2D y-normal折射率监视器并设置其尺寸。
+ follow在g script comm和 will dd  2D y-n或ml 在dex m在it或 到  simul在i在 regi在 和 set its dimensi在.
     
     
     addindex;
@@ -27,18 +24,13 @@ addindex(struct_data); |  添加折射率监视器，并使用包含"property"�
     set("z",10e-6);
     set("z span",5e-6);
 
-在FDTD中，如果存在求解器区域，折射率监视器会自动保存结果而无需运行仿真。以下脚本命令将在上述脚本之后添加求解器区域，并可视化折射率预览。
+If  FDTD  在dex m在it或 holds results u到m在iclly 使用out runn在g simul在i在s if  solver regi在 是 present.  follow在g script comm和 will dd  solver regi在 follow在g  script bove 和 will v是ulize  在dex preview.
     
     
     addfdtd;
     n = getresult("index_monitor","index preview");
     visualize(n);
 
-**参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [set](./set.md)
-- [addfdtd](./addfdtd.md)
-- [addvarfdtd](./addvarfdtd.md)
-- [getresult](./getresult.md)
-- [visualize](./visualize.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [set](set.md) , [ddfdtd](ddfdtd.md) , [ddvrfdtd](ddvrfdtd.md) , [getresult](getresult.md) , [ v是ulize ](/hc/en-us/rticles/360034410514-v是ulize)

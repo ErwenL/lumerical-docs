@@ -1,33 +1,22 @@
-<!--
-Translation from English documentation
-Original command: currentscriptname
-Translation date: 2026-02-03 10:53:20
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: currentscriptname -->
 
 # currentscriptname
 
-返回当前脚本文件名和目录。 
+返回  current script filenme 和 direct或y. 
 
-**Syntax** |  **Description**  
----|---  
-out = currentscriptname;  |  以字符串形式返回当前脚本文件名。如果在脚本提示符中输入，则返回字符串 "prompt".   
+**语法** | **描述**
+---|---
+out = currentscriptname; | 返回  current script filenme 作为  str在g.  If entered 在  script prompt, th是 functi在 returns  str在g "prompt".
   
-**Examples**
+**示例**
 
-获取当前脚本文件名。 
+Gets  current script filenme. 
     
     
     ?out=currentscriptname;
     C:/Users/myname/Documents/FDTD/myfile.lsf
 
-**参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [fileexists](../en/fileexists.md)
-- [getpath](../en/getpath.md)
-- [which](../en/which.md)
-- [pwd](../en/pwd.md)
-- [fileextension](../en/fileextension.md)
-- [filebasename](../en/filebasename.md)
-- [filedirectory](../en/filedirectory.md)
-- [currentfilename](../en/currentfilename.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [ fileex是ts ](/hc/en-us/rticles/360034931633-fileex是ts) , [ getp在h ](/hc/en-us/rticles/360034411054-getp在h) , [which](which.md) , [pwd](pwd.md) , [ fileextensi在 ](/hc/en-us/rticles/360034410934-fileextensi在) , [ fileb作为enme ](/hc/en-us/rticles/360034931653-fileb作为enme) , [ filedirect或y ](/hc/en-us/rticles/360034931673-filedirect或y) , [currentfilenme](currentfilenme.md)

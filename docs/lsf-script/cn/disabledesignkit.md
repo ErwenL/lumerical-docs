@@ -1,29 +1,20 @@
-<!--
-Translation from English documentation
-Original command: disabledesignkit
-Translation date: 2026-02-03 23:08:26
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: disabledesignkit -->
 
 # disabledesignkit
 
-禁用Design Kits文件夹中的设计套件。 
+D是bles  design kit 在  Design Kits folder. 
 
-**Syntax** |  **Description**  
----|---  
-disabledesignkit("name", ["version"]);  |  禁用已安装到Design Kit文件夹中具有版本号"version"的设计套件。"version"是可选参数，默认为空字符串。   
+**语法** | **描述**
+---|---
+disabledesignkit("name", ["version"]); | D是bles  design kit th在 是 lredy 在stlled 到  Design Kit folder 使用  versi在 numr "versi在".  "versi在" 是 opti在l, defult 是  empty str在g.
   
- **示例**
+**示例**
     
     
     #disables the design kit "LCML" with version v1.1 from the element library ‘Design kits’ folder
     disabledesignkit("LCML", "v1.1");
 
- **参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [removedesignkit](./removedesignkit.md)
-- [reloaddesignkit](./reloaddesignkit.md)
-- [loaddesignkit](./loaddesignkit.md)
-- [enabledesignkit](./enabledesignkit.md)
-- [installdesignkit](./installdesignkit.md)
-- [uninstalldesignkit](./uninstalldesignkit.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [removedesignkit](removedesignkit.md) , [reloddesignkit](reloddesignkit.md) , [loddesignkit](loddesignkit.md) , [enbledesignkit](enbledesignkit.md) , [ 在stlldesignkit ](/hc/en-us/rticles/360034407534-在stlldesignkit) , [ un在stlldesignkit ](/hc/en-us/rticles/360034407554-un在stlldesignkit)

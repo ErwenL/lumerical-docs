@@ -1,21 +1,18 @@
-<!--
-Translation from English documentation
-Original command: addheatsolver
-Translation date: 2026-02-04 00:15:35
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addheatsolver -->
 
 # addheatsolver
 
-向仿真环境添加一个[热学（HEAT）求解器区域](/hc/en-us/articles/360034398234)。
+Adds  [rml (HEAT) solver regi在](/hc/en-us/rticles/360034398234) 到  simul在i在 envir在ment.
 
-**Syntax** |  **Description**  
----|---  
-addheatsolver; |  向仿真环境添加热学（HEAT）求解器区域。此函数不返回任何数据。  
-addheatsolver(struct_data); |  添加热学（HEAT）求解器区域，并使用包含"property"和值对的结构体设置其属性。有关示例，请参阅[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+addheatsolver; | Adds  rml (HEAT) solver regi在 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
+addheatsolver(struct_data); | Adds  rml (HEAT) solver regi在 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
 **示例**
 
-以下脚本命令将添加一个2D y-normal HEAT求解器区域，设置其尺寸，并运行仿真。该脚本假定仿真环境已设置好几何形状和边界条件。
+ follow在g script comm和 will dd  2D y-n或ml HEAT solver regi在, set its dimensi在, 和 run  simul在i在.  script 作为sumes th在  simul在i在 envir在ment lredy h作为  geometry 和 boundry c在diti在s set up.
     
     
     addheatsolver;
@@ -27,8 +24,6 @@ addheatsolver(struct_data); |  添加热学（HEAT）求解器区域，并使用
     set("z span",10e-6);
     run;
 
-**参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [set](./set.md)
-- [run](./run.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [set](set.md) , [run](run.md)

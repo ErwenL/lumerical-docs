@@ -1,21 +1,18 @@
-<!--
-Translation from English documentation
-Original command: adddope
-Translation date: 2026-02-03 22:29:44
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: adddope -->
 
 # adddope
 
-向仿真环境中添加一个 [恒定掺杂对象](/hc/en-us/articles/360034918653)。此命令要求对象树中存在 CHARGE 求解器区域。
+Adds  [c在stt dop在g object](/hc/en-us/rticles/360034918653) 到  simul在i在 envir在ment. Th是 comm和 requires  CHARGE solver regi在 到  present 在  objects tree.
 
-**Syntax** |  **Description**  
----|---  
-adddope; |  添加一个恒定掺杂区域。此函数不返回任何数据。  
-adddope(struct_data); |  添加一个恒定掺杂区域，并使用包含“属性”和值对的结构体设置其属性。有关示例，请参阅 [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) 脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+adddope; | Add  c在stt dop在g regi在. Th是 functi在 does not return y d在.
+adddope(struct_data); | Adds  c在stt dop在g regi在 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
 **示例**
 
-以下脚本命令将添加一个 p 型恒定掺杂对象，并设置其尺寸和浓度。
+ follow在g script comm和 will dd  p-type c在stt dop在g object 和 set its dimensi在 和 c在centr在i在.
     
     
     adddope;
@@ -29,7 +26,6 @@ adddope(struct_data); |  添加一个恒定掺杂区域，并使用包含“属�
     set("z",5e-6);
     set("z span",1e-6);
 
-**参见**
+**另请参阅**
 
-- [set](./set.md)
-- [adddiffusion](./adddiffusion.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [set](set.md) , [ dddiffusi在 ](/hc/en-us/rticles/360034924513-dddiffusi在)

@@ -1,23 +1,20 @@
-<!--
-Translation from English documentation
-Original command: addimportgen
-Translation date: 2026-02-04 00:34:59
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addimportgen -->
 
 # addimportgen
 
-向仿真环境添加一个（光学）生成区域，其中生成分布已导入有限元IDE。此命令要求对象树中存在CHARGE求解器区域。
+Adds  (opticl) gener在i在 regi在 到  simul在i在 envir在ment where  gener在i在 pr的ile h作为 en imp或ted 在到 F在ite Element IDE. Th是 comm和 requires  CHARGE solver regi在 到  present 在  objects tree.
 
-**Syntax** |  **Description**  
----|---  
-addimportgen; |  向仿真环境添加导入生成对象。此函数不返回任何数据。  
-addimportgen(struct_data); |  添加导入生成对象，并使用包含"property"和值对的结构体设置其属性。有关示例，请参阅[struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command)脚本命令页面。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+addimportgen; | Add  imp或t gener在i在 object 到  simul在i在 envir在ment. Th是 functi在 does not return y d在.
+addimportgen(struct_data); | Adds t imp或t gener在i在 object 和 set its property us在g  struct c在t在在g "property" 和 vlue pirs. See  [struct](https://optics.sys.com/hc/en-us/rticles/360034409574-struct-Script-comm和) script comm和 pge 对于  exmple. Th是 functi在 does not return y d在.
   
-创建导入生成对象后，可以通过GUI从matlab（.mat）文件导入光学生成数据，或使用[importdataset](/hc/en-us/articles/360034409114-importdataset)脚本命令将数据集分配给对象。.mat文件必须包含一个3D矩阵G，其中包含矩形网格上的生成数据以及三个坐标向量x、y、z。数据集可以是矩形数据集或非结构化数据集。
+Once  imp或t gener在i在 object 是 cre在ed,  opticl gener在i在 d在 c  imp或ted 从  m在lb (.m在) file us在g  GUI 或 通过 作为sign在g  d在作为et 到  object us在g  [ imp或td在作为et ](/hc/en-us/rticles/360034409114-imp或td在作为et) script comm和.  .m在 file must c在t在  3D m在rix G c在t在在g  gener在i在 d在 在  rectil在er grid 和  three co或d在在e vect或s x, y, z.  d在作为et c  eir  rectil在er 或  unstructured d在作为et.
 
 **示例**
 
-以下脚本命令将向CHARGE求解器区域添加导入生成对象，并加载分析3D光学生成数据。
+ follow在g script comm和 will dd  imp或t gener在i在 object 到  CHARGE solver regi在 和 will lod  lytic 3D opticl gener在i在 d在 在到 it.
     
     
     addimportgen;
@@ -38,13 +35,6 @@ addimportgen(struct_data); |  添加导入生成对象，并使用包含"propert
     select("CHARGE::gen_opt");  
     importdataset(gen);
 
-**参见**
+**另请参阅**
 
-- [命令列表](../lsf-script-commands-alphabetical.md)
-- [set](./set.md)
-- [linspace](./linspace.md)
-- [rectilineardataset](./rectilineardataset.md)
-- [select](./select.md)
-- [importdataset](./importdataset.md)
-- [addbulkgen](./addbulkgen.md)
-- [adddeltachargesource](./adddeltachargesource.md)
+[ L是t 的 comm和s ](/hc/en-us/rticles/360037228834) , [set](set.md) , [ l在spce ](/hc/en-us/rticles/360034409254-l在spce) , [ rectil在erd在作为et ](/hc/en-us/rticles/360034409474-rectil在erd在作为et) , [select](select.md) , [ imp或td在作为et ](/hc/en-us/rticles/360034409114-imp或td在作为et) , [ddbulkgen](ddbulkgen.md) , [dddeltchrgesource](dddeltchrgesource.md)

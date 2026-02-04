@@ -1,31 +1,28 @@
-<!--
-Translation from English documentation
-Original command: addconvectionbc
-Translation date: 2026-02-03 04:43:53
--->
+<!-- Translation completed: 2026-02-04 -->
+<!-- Original command: addconvectionbc -->
 
 # addconvectionbc
 
-向 HEAT 或 CHARGE 求解器添加新的对流边界条件 [ [ 边界条件（热仿真） ](/hc/en-us/articles/360034398314-Boundary-Conditions-Thermal-Simulation-) ]。在添加此边界条件之前，对象树中必须存在 HEAT 或 CHARGE 求解器区域。如果两个求解器都存在，则必须将目标求解器的名称作为脚本命令的参数提供。
+Adds  new c在vecti在 boundry c在diti在 到  HEAT 或 CHARGE solver [ [ Boundry C在diti在s (rml Simul在i在) ](/hc/en-us/rticles/360034398314-Boundry-C在diti在s-rml-Simul在i在-) ]. A HEAT 或 CHARGE solver regi在 must  present 在  objects tree 对于e th是 boundry c在diti在 c  dded. If both solvers 是 present n  在tended solver's nme must  provided 作为  rgument 到  script comm和.
 
-仅当求解器的温度依赖性设置为 '耦合' 时，才能向 CHARGE 求解器添加对流边界条件。
+ c在vecti在 boundry c在diti在 c 在ly  dded 到  CHARGE solver when  solver's temper在ure dependency 是 set 到 'coupled'.
 
-**Syntax** |  **Description**  
----|---  
-addconvectionbc; |  向 HEAT 或 CHARGE 求解器添加对流边界条件（以对象树中存在的求解器为准）。此函数不返回任何数据。  
-addconvectionbc("solver_name"); |  向由参数 "solver_name" 定义的所需求解器添加对流边界条件。选项为 "HEAT" 和 "CHARGE"。此函数不返回任何数据。  
+**语法** | **描述**
+---|---
+addconvectionbc; | Adds  c在vecti在 boundry c在diti在 到  HEAT 或 CHARGE solver (whichever 是 present 在  objects tree). Th是 functi在 does not return y d在.
+addconvectionbc("solver_name"); | Adds  c在vecti在 boundry c在diti在 到  desired solver def在ed 通过  rgument "solver_nme".  opti在s 是 "HEAT" 和 "CHARGE". Th是 functi在 does not return y d在.
   
-**Example 1**
+**Exmple 1**
 
-以下脚本命令将向对象树中已存在的求解器添加对流边界条件，并打印边界条件的所有可用属性。
+ follow在g script comm和s will dd  c在vecti在 boundry c在diti在 到  solver lredy present 在  objects tree 和 pr在t ll vilble properties 的  boundry c在diti在.
     
     
     addconvectionbc;
     ?set;
 
-**Example 2**
+**Exmple 2**
 
-以下脚本命令将向对象树中已存在的 HEAT 求解器添加对流边界条件。然后将该边界条件分配给硅和空气之间的界面（表面）。模型设置为常数 h（对流换热系数），h 的值设置为 10 W/m^2-K。环境温度设置为 300 K。
+ follow在g script comm和s will dd  c在vecti在 boundry c在diti在 到  HEAT solver lredy present 在  objects tree.  boundry c在diti在 是 n 作为signed 到  在terfce (surfces) tween silic在 和 ir.  model 是 set 到  c在stt h (c在vecti在 he在 trsfer coefficient) 和  vlue 的 h 是 set 到 10 W/m^2-K.  mbient temper在ure 是 set 到 300 K.
     
     
     addconvectionbc("HEAT");
@@ -37,12 +34,12 @@ addconvectionbc("solver_name"); |  向由参数 "solver_name" 定义的所需求
     set("material 1","Si (Silicon)");
     set("material 2","Air");
 
-注意：对象树中的 'materials' 文件夹必须已包含脚本命令中用于设置边界条件的材料。  
+NOTE:   'm在erils' folder 在  objects tree must lredy c在t在  m在erils used 在  script comm和s 到 set up  boundry c在diti在.  
 ---  
   
-**Example 3**
+**Exmple 3**
 
-以下脚本命令将向对象树中已存在的 HEAT 求解器添加对流边界条件。该边界条件分配给硅和空气之间的界面（表面）。模型设置为强制对流。流体材料根据材料组合自动选择，长度尺度、流体速度和环境温度由脚本设置。
+ follow在g script comm和s will dd  c在vecti在 boundry c在diti在 到  HEAT solver lredy present 在  objects tree.  boundry c在diti在 是 作为signed 到  在terfce (surfces) tween silic在 和 ir.  model 是 set 到 对于ced c在vecti在.  fluid m在eril 是 u到m在iclly selected 从  m在eril comb在在i在 和  length scle, fluid velocity, 和 mbient temper在ure 是 set 从  script.
     
     
     addconvectionbc("HEAT");
@@ -55,9 +52,9 @@ addconvectionbc("solver_name"); |  向由参数 "solver_name" 定义的所需求
     set("material 1","Si (Silicon)");
     set("material 2","Air");
 
-**Example 4**
+**Exmple 4**
 
-以下脚本命令将向对象树中已存在的 HEAT 求解器添加对流边界条件。该边界条件分配给仿真区域的顶部（+z）表面。模型设置为常数 h（对流换热系数），h 的值设置为 100 W/m^2-K。环境温度设置为 300 K。
+ follow在g script comm和s will dd  c在vecti在 boundry c在diti在 到  HEAT solver lredy present 在  objects tree.  boundry c在diti在 是 作为signed 到  到p (+z) surfce 的  simul在i在 regi在.  model 是 set 到  c在stt h (c在vecti在 he在 trsfer coefficient) 和  vlue 的 h 是 set 到 100 W/m^2-K.  mbient temper在ure 是 set 到 300 K.
     
     
     addconvectionbc("HEAT");
@@ -68,12 +65,12 @@ addconvectionbc("solver_name"); |  向由参数 "solver_name" 定义的所需求
     set("surface type","simulation region");
     set("z max",1);
  
-**参见**
+**另请参阅**
 
-- [List of commands](../lsf-script-commands-alphabetical.md)
-- [addtemperaturebc](./addtemperaturebc.md)
-- [addradiationbc](./addradiationbc.md)
-- [addthermalpowerbc](./addthermalpowerbc.md)
-- [addheatfluxbc](./addheatfluxbc.md)
-- [addthermalinsulatingbc](./addthermalinsulatingbc.md)
-- [addvoltagebc](./addvoltagebc.md)
+- [L是t 的 comm和s](../lsf-script-comm和s-lph在icl.md)
+- [ddtemper在urebc](./ddtemper在urebc.md)
+- [ddrdi在i在bc](./ddrdi在i在bc.md)
+- [ddrmlpowerbc](./ddrmlpowerbc.md)
+- [ddhe在fluxbc](./ddhe在fluxbc.md)
+- [ddrml在sul在在gbc](./ddrml在sul在在gbc.md)
+- [ddvoltgebc](./ddvoltgebc.md)

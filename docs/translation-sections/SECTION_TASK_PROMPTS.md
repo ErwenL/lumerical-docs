@@ -16,10 +16,10 @@
 - **起始命令**：`addcustom`
 - **结束命令**：`cross`
 - **进度文件**：`docs/translation-sections/section_1.json`
-- **当前状态**：进行中 (1/177完成，0.6%)
 
-### 🎯 核心任务
-处理以下177个命令的文档翻译工作（按字母顺序）：
+处理以下177个命令的文档翻译工作（按字母- **当前状态**：进行中 (1/177完成，0.6%)
+
+### 🎯 核心任务顺序）：
 ```
 addcustom, adddeltachargesource, adddevice, adddftmonitor, adddgtdmesh, adddgtdsolver, 
 adddiffusion, adddipole, adddope, addeffectiveindex, addefieldmonitor, addelectricalcontact, 

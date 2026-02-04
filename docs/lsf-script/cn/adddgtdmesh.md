@@ -12,17 +12,17 @@ Translation date: 2026-02-03 12:19:07
 ---|---  
 adddgtdmesh; |  向 'DGTD' 仿真环境中添加一个网格约束。此函数不返回任何数据。  
   
-**示例1**
+**示例 1**
 
-The following script commands will add a mesh constraint to the DGTD solver already present in the objects tree and print the name of all of its properties.
+以下脚本命令将向对象树中已存在的 DGTD 求解器添加一个网格约束，并打印其所有属性的名称。
     
     
     adddgtdmesh;
     ?set;
 
-**Example 2**
+**示例 2**
 
-The following script commands will add a mesh constraint to the DGTD solver region in Finite Element IDE, name it, assign it to a specific surface between two domains, and set the maximum edge length for any element on the surface.
+以下脚本命令将向有限元 IDE 中的 DGTD 求解器区域添加一个网格约束，为其命名，将其分配给两个域之间的特定表面，并设置该表面上任何元素的最大边长。
     
     
     adddgtdsolver;
@@ -34,6 +34,6 @@ The following script commands will add a mesh constraint to the DGTD solver regi
     set("domain 2",3);
     set("max edge length",0.05e-6);
 
-**See Also**
+**参见**
 
 - [adddgtdsolver](./adddgtdsolver.md)

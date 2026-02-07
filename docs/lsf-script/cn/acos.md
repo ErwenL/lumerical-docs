@@ -25,5 +25,5 @@ out = acos(x); | 返回x的复反余弦值。
 
 **参见**
 
-- [List 的 commands](。。/lsf-脚本-commands-alphabetical。md)
-- [cos](。/cos。md)
+- [List of commands](../lsf-script-commands-alphabetical.md)
+- [cos](./cos.md)

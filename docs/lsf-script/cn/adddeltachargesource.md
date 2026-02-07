@@ -1,23 +1,23 @@
 <!--
-Translation from English documentation
-Original command: adddeltachargesource
-Translation date: 2026-02-04 22:49:04
+Translation 从 English documentation
+Original 命令: adddeltachargesource
+Translation date: 2026-02-04 23:30:14
 -->
 
 # adddeltachargesource
 
-添加 一个 [delta optical generation 源](/hc/en-us/articles/360034398094) 到 该 仿真 环境. This 命令 需要 一个 CHARGE 求解器 region 到 为 present 在 该 对象 tree.
+添加 一个 [delta optical generation 源](/hc/en-us/articles/360034398094) 到 该 仿真 环境。 This 命令 需要 一个 CHARGE 求解器 region 到 为 present 在 该 对象 tree。
 
-**语法** |  **描述**  
----|---  
-adddeltachargesource; |  添加 一个 delta optical generation 源 到 该 仿真 环境. This 函数 does not 返回 any 数据.  
+**语法** | **描述**
+---|---
+adddeltachargesource; | 添加 一个 delta optical generation 源 到 该 仿真 环境。 This 函数 does not 返回any 数据。
 adddeltachargesource(struct_data); |  Adds a delta optical generation source and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
-  
+
 **示例**
 
-The following 脚本 commands 将 添加 一个 delta optical generation 源, 设置 its location, 和 设置 该 generation rate 通过 defining 一个 net electron-hole-pair current (/sec).
-    
-    
+The following 脚本 commands 将 添加 一个 delta optical generation 源， 设置 its location， 和 设置 该 generation rate 通过 defining 一个 net electron-hole-pair current (/sec)。
+
+
     adddeltachargesource;
     设置("name","delta");
     设置("x",0);

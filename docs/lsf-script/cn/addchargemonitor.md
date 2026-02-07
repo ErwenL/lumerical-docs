@@ -1,23 +1,23 @@
 <!--
-Translation from English documentation
-Original command: addchargemonitor
-Translation date: 2026-02-04 22:48:24
+Translation 从 English documentation
+Original 命令: addchargemonitor
+Translation date: 2026-02-04 23:28:27
 -->
 
 # addchargemonitor
 
-添加 一个 [charge 监视器](/hc/en-us/articles/360034398154) 到 该 仿真 环境. This 命令 requires 该 presence 的 一个 CHARGE 求解器 region 在 该 对象 tree.
+添加 一个 [charge 监视器](/hc/en-us/articles/360034398154) 到 该 仿真 环境。 This 命令 需要 该 存在 的 一个 CHARGE 求解器 region 在 该 对象 tree。
 
-**语法** |  **描述**  
----|---  
-addchargemonitor; |  添加 一个 charge 监视器 到 该 仿真 环境. This 函数 does not 返回 any 数据.  
+**语法** | **描述**
+---|---
+addchargemonitor; | 添加 一个 电荷 监视器 到 该 仿真 环境。 This 函数 does not 返回any 数据。
 addchargemonitor(struct_data); |  Adds a charge monitor and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
-  
+
 **示例**
 
-The following 脚本 commands 将 添加 一个 2D y-normal charge 监视器 到 该 仿真 环境, 设置 its dimension, 和 enable saving 该 charge 数据 在 一个 .mat file.
-    
-    
+The following 脚本 commands 将 添加 一个 2D y-normal 电荷 监视器 到 该 仿真 环境， 设置 its 维度， 和 启用 保存 该 电荷 数据 在 一个 .mat 文件。
+
+
     addchargemonitor;
     设置("name","charge");
     设置("监视器 类型",6);  # 2D y-normal

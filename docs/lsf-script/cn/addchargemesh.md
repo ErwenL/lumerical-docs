@@ -1,23 +1,23 @@
 <!--
-Translation from English documentation
-Original command: addchargemesh
-Translation date: 2026-02-04 22:46:39
+Translation 从 English documentation
+Original 命令: addchargemesh
+Translation date: 2026-02-04 23:28:27
 -->
 
 # addchargemesh
 
-添加 a [mesh constraint (override region)](/hc/en-us/articles/360034397994) to the 'CHARGE' 仿真. A CHARGE 求解器 region must be present in the 对象 tree for this 命令 to work.
+添加 一个 [mesh constraint (override region)](/hc/en-us/articles/360034397994) 到 该 'CHARGE' 仿真。 A CHARGE 求解器 region 必须 为 present 在 该 对象 tree 用于 此 命令 到 work。
 
-**语法** |  **描述**  
----|---  
-addchargemesh; |  添加 a mesh constraint to the 'CHARGE' 仿真 environment. This 函数 does not 返回 any 数据.  
+**语法** | **描述**
+---|---
+addchargemesh; | 添加 一个 mesh constraint 到 该 'CHARGE' 仿真 环境。 This 函数 does not 返回any 数据。
 addchargemesh(struct_data); |  Adds a mesh constraint and set its property using a struct containing "property" and value pairs. See the [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct-Script-command) script command page for an example. This function does not return any data.  
-  
+
 **示例**
 
-The following 脚本 commands will 添加 a mesh constraint to the CHARGE 求解器 region in Finite Element IDE, name it, 设置 its dimension, and 设置 the maximum edge length for any 元素 within the volume.
-    
-    
+The following 脚本 commands 将 添加 一个 mesh constraint 到 该 CHARGE 求解器 region 在 Finite Element IDE， name it， 设置 its 维度， 和 设置 该 maximum edge 长度 用于 any 元素 within 该 volume。
+
+
     addchargesolver;
     addchargemesh;
     设置("name","mesh_SCR");

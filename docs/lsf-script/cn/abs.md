@@ -1,6 +1,6 @@
 <!--
-Translation from English documentation
-Original command: abs
+Translation 从 English documentation
+Original 命令: abs
 Translation date: 2026-02-04
 -->
 
@@ -9,7 +9,7 @@ Translation date: 2026-02-04
 返回数字或矩阵的绝对值。
 
 **语法** | **描述**
----|---  
+---|---
 out = abs(x); | 返回x的绝对值。
 
 **示例**

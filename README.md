@@ -1,27 +1,33 @@
-# Lumerical Script Command Documentation
+# Lumerical LumAPI Documentation Archive
 
-Lumerical script command documentation collected by AI agents.
+LumAPI (Lumerical API) documentation archive collected by AI agents.
 
 ## Overview
 
-This project scrapes and organizes Lumerical Scripting Language (LSF) command documentation from the Ansys Optics knowledge base into a local, searchable Markdown repository.
+This branch contains archived LumAPI documentation for the Lumerical simulation software. This is a **read-only archive branch** - for active development, please see the main branches.
 
-## Current Status
+## Branch Structure
 
-- **Total commands**: 727
-- **Successfully scraped**: 102 commands
-- **Remaining**: 88 commands
-- **Progress**: 14.0% complete
-- **Last update**: 2026-02-02
+This repository uses separate branches for different purposes:
 
-## Quick Start
+1. **`main`** - Active LSF (Lumerical Scripting Language) documentation scraping
+2. **`translation`** - Chinese translation of LSF documentation  
+3. **`lumapi`** - **This branch**: Archived LumAPI documentation (read-only)
 
-See the following documents for detailed information:
+## Contents
 
-- [LSF Documentation Scraping Workflow](LSF-DOCUMENTATION-SCRAPING-WORKFLOW.md) - Complete technical documentation
-- [Quick Start Scraping Guide](QUICK-START-SCRAPING.md) - Minimal setup instructions
-- [Project Completion Summary](SCRAPING-PROJECT-COMPLETION-SUMMARY.md) - Current status and accomplishments
+- **LumAPI command documentation**: 86 command reference files in [`docs/lumapi/`](docs/lumapi/)
+- **LumAPI principles**: Overview document at [`docs/lumapi-principles.md`](docs/lumapi-principles.md)
 
-## Generated Documentation
+## Archive Status
 
-Scraped documentation is available in [`docs/lsf-script/`](docs/lsf-script/) as individual Markdown files, one per command.
+- **Last updated**: 2026-02-07
+- **Document count**: 86 LumAPI command references
+- **Branch purpose**: Archive only - no active development
+- **Source**: Manually collected by AI agents from Lumerical documentation
+
+## Related Branches
+
+For active development, check out:
+- `git checkout main` - LSF documentation scraping tools
+- `git checkout translation` - Chinese translation workflow

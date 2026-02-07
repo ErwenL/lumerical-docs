@@ -1,24 +1,44 @@
-## 项目目的
+# LumAPI Documentation Archive - History
 
-这个项目的初衷是整理luermical script的文档，有两个目的
+**Branch**: `lumapi` (archive only)  
+**Status**: Read-only archive of LumAPI documentation  
+**Last updated**: 2026-02-07
 
-- 为lumerical script language vscode 插件项目，提供可靠参考。
-- 为了另一个基于lumapi的python package （lumpy）中的部分哎自动实现，提供参考。
+## Archive Purpose
 
-## 项目进展现状
+This branch preserves the LumAPI documentation work that was manually created by AI agents. This work has been **paused indefinitely** due to quality concerns and high resource costs.
 
-目前该项目的工作主要包含三个部分：
+## Original Project Goals
 
-- AI手动整理高质量lumapi命令文档：
-  - 现状：完成很少一部分命令文档
-  - 评价：AI的操作与我预期不一致，并没有参考官网文档为基础，而是完全靠模型理解手写， 无法确认有无事实错误。为了保证高质量，非常消耗token，而且非常缓慢。目前已经暂停该方向工作。
-- 从官网上抓取luermical script 官方英文文档
-  - 现状：已经完成从官网上抓取全部命令文档
-  - 评价：基本满意。但是还有些细节需要打磨
-- 将官方英文文档翻译成中文文档
-  - 现状：已经尝试用脚本生成了所有中文文档的模板。只有少数文档在模型手动翻译下有这较高的质量，大部分文档的质量非常糟糕。
-  - 评价：脚本批量处理翻译文档，再手动审查的方案，已经被放弃。程序处理的文档翻译质量太差，不可用。还是优先考虑逐条手动翻译，即使慢一些，可以慢慢累计进度。
+The original project aimed to document Lumerical scripting with two main objectives:
 
-## 下一步展望
+1. Provide reliable reference for a Lumerical Script Language VS Code plugin
+2. Support automated implementations in a Python package (`lumpy`) based on LumAPI
 
-将重心迁移至lumerical script 英文命令文档，提高文档质量。
+## LumAPI Documentation Status
+
+### Work Completed
+- **Manual AI documentation**: 86 LumAPI command references created by AI agents
+- **Quality assessment**: AI-generated documentation was not based on official sources and may contain factual errors
+- **Resource cost**: High token consumption with slow progress
+
+### Decision to Pause
+- **Quality concerns**: AI-generated documentation without official source verification
+- **Efficiency issues**: Manual creation process was too slow and expensive
+- **Strategic shift**: Focus moved to scraping official LSF documentation instead
+
+## Current Archive Contents
+
+- **86 LumAPI command references** in [`docs/lumapi/`](docs/lumapi/)
+- **Principles document** at [`docs/lumapi-principles.md`](docs/lumapi-principles.md)
+- **No active development** - this branch is read-only
+
+## Related Active Work
+
+For active development, please refer to:
+- **`main` branch**: LSF documentation scraping from official Ansys Optics website
+- **`translation` branch**: Chinese translation of LSF documentation
+
+## Archive Creation
+
+This archive branch was created during project reorganization on 2026-02-07 to separate paused LumAPI work from active LSF documentation efforts.

@@ -39,7 +39,7 @@ except ImportError as e:
 
     def format_markdown_file(filepath: Path) -> bool:
         """Format a markdown file using mdformat with tables plugin.
-        
+
         Returns True if formatting succeeded or was skipped, False on error.
         """
         if not ENABLE_MARKDOWN_FORMAT:
@@ -47,7 +47,7 @@ except ImportError as e:
         try:
             import subprocess
             import sys
-            
+
             # 使用mdformat命令行工具格式化文件
             result = subprocess.run(
                 [sys.executable, "-m", "mdformat", str(filepath), "--wrap", "88"],
@@ -70,7 +70,7 @@ except ImportError as e:
         filepath = OUTPUT_DIR / f"{filename}.md"
         filepath.write_text(content, encoding="utf-8")
         logging.info(f"保存 {command_name} -> {filepath}")
-        
+
         # 格式化Markdown文件
         format_markdown_file(filepath)
 

@@ -260,7 +260,7 @@ def sanitize_filename(name: str) -> str:
 
 def format_markdown_file(filepath: Path) -> bool:
     """Format a markdown file using mdformat with tables plugin.
-    
+
     Returns True if formatting succeeded or was skipped, False on error.
     """
     if not ENABLE_MARKDOWN_FORMAT:
@@ -268,7 +268,7 @@ def format_markdown_file(filepath: Path) -> bool:
     try:
         import subprocess
         import sys
-        
+
         # 使用mdformat命令行工具格式化文件
         result = subprocess.run(
             [sys.executable, "-m", "mdformat", str(filepath), "--wrap", "88"],
@@ -294,7 +294,7 @@ def save_command_markdown(command_name: str, content: str):
     filepath = OUTPUT_DIR / f"{filename}.md"
     filepath.write_text(content, encoding="utf-8")
     print(f"Saved {command_name} -> {filepath}")
-    
+
     # 格式化Markdown文件
     format_markdown_file(filepath)
 

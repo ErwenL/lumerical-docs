@@ -1,11 +1,11 @@
 # logmessage
 
-This function sends messages from scripted elements to the INTERCONNECT output window. 
+This function sends messages from scripted elements to the INTERCONNECT output window.
 
-**Syntax** |  **Description**  
----|---  
-logmessage;  |  This function sends messages from scripted elements to the INTERCONNECT output window. It is specially useful to debug scripted elements.   
-  
-###  See Also 
+| **Syntax**  | **Description**                                                                                                                           |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| logmessage; | This function sends messages from scripted elements to the INTERCONNECT output window. It is specially useful to debug scripted elements. |
 
-[ List of commands ](/hc/en-us/articles/360037228834)
+### See Also
+
+[ List of commands ](../lsf-script-commands-alphabetical.md)

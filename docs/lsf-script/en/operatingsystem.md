@@ -1,17 +1,18 @@
 # operatingsystem
 
-Returns the current operating system. 
+Returns the current operating system.
 
-**Syntax** |  **Description**  
----|---  
-operatingsystem;  |  Returns the current operating system. Valid return values are “windows”, “apple” or “linux”.   
-  
+| **Syntax**       | **Description**                                                                              |
+| ---------------- | -------------------------------------------------------------------------------------------- |
+| operatingsystem; | Returns the current operating system. Valid return values are “windows”, “apple” or “linux”. |
+
 **Example**
-    
-    
-    >?operatingsystem;
-    windows
+
+```
+>?operatingsystem;
+windows
+```
 
 **See Also**
 
-[ List of commands ](/hc/en-us/articles/360037228834)
+[ List of commands ](../lsf-script-commands-alphabetical.md)

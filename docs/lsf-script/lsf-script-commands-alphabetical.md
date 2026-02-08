@@ -2,810 +2,853 @@
 
 Source: https://optics.ansys.com/hc/en-us/articles/360034923553-Lumerical-scripting-language-Alphabetical-list
 
-## A
+### A
 
-- [abs](https://optics.ansys.com/hc/en-us/articles/360034925553-abs)
-- [acos](https://optics.ansys.com/hc/en-us/articles/360034925453-acos)
-- [add2dpoly](https://optics.ansys.com/hc/en-us/articles/360034404774-add2dpoly)
-- [add2drect](https://optics.ansys.com/hc/en-us/articles/360034924753-add2drect)
-- [add2visualizer](https://optics.ansys.com/hc/en-us/articles/360034410534-add2visualizer)
-- [addabsorbing](https://optics.ansys.com/hc/en-us/articles/360034924873-addabsorbing)
-- [addanalysisgroup](https://optics.ansys.com/hc/en-us/articles/360034404074-addanalysisgroup)
-- [addanalysisprop](https://optics.ansys.com/hc/en-us/articles/360034408474-addanalysisprop)
-- [addanalysisresult](https://optics.ansys.com/hc/en-us/articles/360034928753-addanalysisresult)
-- [addattribute](https://optics.ansys.com/hc/en-us/articles/360034929873-addattribute)
-- [addbandstructuremonitor](https://optics.ansys.com/hc/en-us/articles/360034924653-addbandstructuremonitor)
-- [addbulkgen](https://optics.ansys.com/hc/en-us/articles/360034404634-addbulkgen)
-- [addchargemesh](https://optics.ansys.com/hc/en-us/articles/360034404354-addchargemesh)
-- [addchargemonitor](https://optics.ansys.com/hc/en-us/articles/360034924613-addchargemonitor)
-- [addchargesolver](https://optics.ansys.com/hc/en-us/articles/360034924473-addchargesolver)
-- [addcircle](https://optics.ansys.com/hc/en-us/articles/360034404114-addcircle)
-- [addconvectionbc](https://optics.ansys.com/hc/en-us/articles/360034404854-addconvectionbc)
-- [addctmaterialproperty](https://optics.ansys.com/hc/en-us/articles/360034404994-addctmaterialproperty)
-- [addcustom](https://optics.ansys.com/hc/en-us/articles/360034404134-addcustom)
-- [adddeltachargesource](https://optics.ansys.com/hc/en-us/articles/360034404654-adddeltachargesource)
-- [adddevice](https://optics.ansys.com/hc/en-us/articles/360034404574-adddevice)
-- [adddftmonitor](https://optics.ansys.com/hc/en-us/articles/36957320687763-adddftmonitor-Script-command)
-- [adddgtdmesh](https://optics.ansys.com/hc/en-us/articles/360034924993-adddgtdmesh)
-- [adddgtdsolver](https://optics.ansys.com/hc/en-us/articles/360034925013-adddgtdsolver)
-- [adddiffusion](https://optics.ansys.com/hc/en-us/articles/360034924513-adddiffusion)
-- [adddipole](https://optics.ansys.com/hc/en-us/articles/360034924393-adddipole)
-- [adddope](https://optics.ansys.com/hc/en-us/articles/360034404594-adddope)
-- [addeffectiveindex](https://optics.ansys.com/hc/en-us/articles/360034924593-addeffectiveindex)
-- [addefieldmonitor](https://optics.ansys.com/hc/en-us/articles/360034924633-addefieldmonitor)
-- [addelectricalcontact](https://optics.ansys.com/hc/en-us/articles/360034404794-addelectricalcontact)
-- [addelement](https://optics.ansys.com/hc/en-us/articles/360034404694-addelement)
-- [addemabsorptionmonitor](https://optics.ansys.com/hc/en-us/articles/360034405054-addemabsorptionmonitor)
-- [addeme](https://optics.ansys.com/hc/en-us/articles/360034404314-addeme)
-- [addemeindex](https://optics.ansys.com/hc/en-us/articles/360034924213-addemeindex)
-- [addemeport](https://optics.ansys.com/hc/en-us/articles/360034404334-addemeport)
-- [addemeprofile](https://optics.ansys.com/hc/en-us/articles/360034924233-addemeprofile)
-- [addemfieldmonitor](https://optics.ansys.com/hc/en-us/articles/360034405034-addemfieldmonitor)
-- [addemfieldtimemonitor](https://optics.ansys.com/hc/en-us/articles/360034925053-addemfieldtimemonitor)
-- [addemmaterialproperty](https://optics.ansys.com/hc/en-us/articles/360034924953-addemmaterialproperty)
-- [addfde](https://optics.ansys.com/hc/en-us/articles/360034404294-addfde)
-- [addfdtd](https://optics.ansys.com/hc/en-us/articles/360034924173-addfdtd)
-- [addfeemmesh](https://optics.ansys.com/hc/en-us/articles/360034405014-addfeemmesh)
-- [addfeemsolver](https://optics.ansys.com/hc/en-us/articles/360034925033-addfeemsolver)
-- [addfieldregion](https://optics.ansys.com/hc/en-us/articles/43593863807251-addfieldregion-Script-command)
-- [addgaussian](https://optics.ansys.com/hc/en-us/articles/360034404434-addgaussian)
-- [addgridattribute](https://optics.ansys.com/hc/en-us/articles/360034404674-addgridattribute)
-- [addgroup](https://optics.ansys.com/hc/en-us/articles/360034924073-addgroup)
-- [addheatfluxbc](https://optics.ansys.com/hc/en-us/articles/360034404894-addheatfluxbc)
-- [addheatfluxmonitor](https://optics.ansys.com/hc/en-us/articles/360034404414-addheatfluxmonitor)
-- [addheatmesh](https://optics.ansys.com/hc/en-us/articles/360034404374-addheatmesh)
-- [addheatsolver](https://optics.ansys.com/hc/en-us/articles/360034924493-addheatsolver)
-- [addhtmaterialproperty](https://optics.ansys.com/hc/en-us/articles/360034924973-addhtmaterialproperty)
-- [addimplant](https://optics.ansys.com/hc/en-us/articles/360034404614-addimplant)
-- [addimport](https://optics.ansys.com/hc/en-us/articles/360034404154-addimport)
-- [addimportdope](https://optics.ansys.com/hc/en-us/articles/360034924533-addimportdope)
-- [addimportedsource](https://optics.ansys.com/hc/en-us/articles/360034924433-addimportedsource)
-- [addimportgen](https://optics.ansys.com/hc/en-us/articles/360034924553-addimportgen)
-- [addimportheat](https://optics.ansys.com/hc/en-us/articles/360034404394-addimportheat)
-- [addimportnk](https://optics.ansys.com/hc/en-us/articles/360034924293-addimportnk)
-- [addimporttemperature](https://optics.ansys.com/hc/en-us/articles/360034924273-addimporttemperature)
-- [addindex](https://optics.ansys.com/hc/en-us/articles/360034404474-addindex)
-- [addjfluxmonitor](https://optics.ansys.com/hc/en-us/articles/360034924673-addjfluxmonitor)
-- [addjob](https://optics.ansys.com/hc/en-us/articles/360034410714-addjob)
-- [addlayer](https://optics.ansys.com/hc/en-us/articles/360034924693-addlayer)
-- [addlayerbuilder](https://optics.ansys.com/hc/en-us/articles/360034404714-addlayerbuilder)
-- [addmaterial](https://optics.ansys.com/hc/en-us/articles/360034930013-addmaterial)
-- [addmaterialproperties](https://optics.ansys.com/hc/en-us/articles/360034924933-addmaterialproperties)
-- [addmesh](https://optics.ansys.com/hc/en-us/articles/360034924253-addmesh)
-- [addmode](https://optics.ansys.com/hc/en-us/articles/360034924353-addmode)
-- [addmodeexpansion](https://optics.ansys.com/hc/en-us/articles/360034924573-addmodeexpansion)
-- [addmodelmaterial](https://optics.ansys.com/hc/en-us/articles/360034404974-addmodelmaterial)
-- [addmodesource](https://optics.ansys.com/hc/en-us/articles/360034924373-addmodesource)
-- [addmovie](https://optics.ansys.com/hc/en-us/articles/360034404514-addmovie)
-- [addobject](https://optics.ansys.com/hc/en-us/articles/360034404094-addobject)
-- [addparameter](https://optics.ansys.com/hc/en-us/articles/360034409494-addparameter)
-- [addpath](https://optics.ansys.com/hc/en-us/articles/360034931833-addpath)
-- [addpec](https://optics.ansys.com/hc/en-us/articles/360034924893-addpec)
-- [addperiodic](https://optics.ansys.com/hc/en-us/articles/360034404934-addperiodic)
-- [addplanarsolid](https://optics.ansys.com/hc/en-us/articles/360034924113-addplanarsolid)
-- [addplane](https://optics.ansys.com/hc/en-us/articles/360034924413-addplane)
-- [addpmc](https://optics.ansys.com/hc/en-us/articles/360034924913-addpmc)
-- [addpml](https://optics.ansys.com/hc/en-us/articles/360034924853-addpml)
-- [addpoly](https://optics.ansys.com/hc/en-us/articles/360034404174-addpoly)
-- [addport (FDTD)](https://optics.ansys.com/hc/en-us/articles/360034924793-addport-FDTD-)
-- [addport (INTERCONNECT)](https://optics.ansys.com/hc/en-us/articles/360034408934-addport-INTERCONNECT-)
-- [addproperty](https://optics.ansys.com/hc/en-us/articles/360034409074-addproperty)
-- [addpyramid](https://optics.ansys.com/hc/en-us/articles/360034924133-addpyramid)
-- [addradiationbc](https://optics.ansys.com/hc/en-us/articles/360034924813-addradiationbc)
-- [addrect](https://optics.ansys.com/hc/en-us/articles/360034404214-addrect)
-- [addresource](https://optics.ansys.com/hc/en-us/articles/360034410734-addresource)
-- [addring](https://optics.ansys.com/hc/en-us/articles/360034404234-addring)
-- [addsemiconductorfromalloy](https://optics.ansys.com/hc/en-us/articles/44775700507795-addsemiconductorfromalloy-Script-command)
-- [addsimulationregion](https://optics.ansys.com/hc/en-us/articles/360034404954-addsimulationregion)
-- [addsphere](https://optics.ansys.com/hc/en-us/articles/360034404254-addsphere)
-- [addstructuregroup](https://optics.ansys.com/hc/en-us/articles/360034924093-addstructuregroup)
-- [addsurface](https://optics.ansys.com/hc/en-us/articles/360034404274-addsurface)
-- [addsurfacerecombinationbc](https://optics.ansys.com/hc/en-us/articles/360034404814-addsurfacerecombinationbc)
-- [addsweep](https://optics.ansys.com/hc/en-us/articles/360034930413-addsweep)
-- [addsweepparameter](https://optics.ansys.com/hc/en-us/articles/360034930493-addsweepparameter)
-- [addsweepresult](https://optics.ansys.com/hc/en-us/articles/360034410034-addsweepresult)
-- [addtemperaturebc](https://optics.ansys.com/hc/en-us/articles/360034404834-addtemperaturebc)
-- [addtemperaturemonitor](https://optics.ansys.com/hc/en-us/articles/360034924333-addtemperaturemonitor)
-- [addtfsf](https://optics.ansys.com/hc/en-us/articles/360034404454-addtfsf)
-- [addthermalinsulatingbc](https://optics.ansys.com/hc/en-us/articles/360034924833-addthermalinsulatingbc)
-- [addthermalpowerbc](https://optics.ansys.com/hc/en-us/articles/360034404874-addthermalpowerbc)
-- [addtime](https://optics.ansys.com/hc/en-us/articles/360034404494-addtime)
-- [addtogroup](https://optics.ansys.com/hc/en-us/articles/360034408454-addtogroup)
-- [addtolibrary](https://optics.ansys.com/hc/en-us/articles/360034407234-addtolibrary)
-- [addtriangle](https://optics.ansys.com/hc/en-us/articles/360034924153-addtriangle)
-- [adduniformheat](https://optics.ansys.com/hc/en-us/articles/360034924313-adduniformheat)
-- [adduserprop](https://optics.ansys.com/hc/en-us/articles/360034928733-adduserprop)
-- [addvarfdtd](https://optics.ansys.com/hc/en-us/articles/360034924193-addvarfdtd)
-- [addvoltagebc](https://optics.ansys.com/hc/en-us/articles/360034404914-addvoltagebc)
-- [addwaveguide](https://optics.ansys.com/hc/en-us/articles/360034404754-addwaveguide)
-- [all](https://optics.ansys.com/hc/en-us/articles/360034406334-all)
-- [almostequal](https://optics.ansys.com/hc/en-us/articles/360034410294-almostequal)
-- [amax](https://optics.ansys.com/hc/en-us/articles/360034925733-amax)
-- [amin](https://optics.ansys.com/hc/en-us/articles/360034405714-amin)
-- [analysis](https://optics.ansys.com/hc/en-us/articles/360034405194-analysis)
-- [and](https://optics.ansys.com/hc/en-us/articles/360034410354-and)
-- [angle](https://optics.ansys.com/hc/en-us/articles/360034405614-angle)
-- [annotateproperty](https://optics.ansys.com/hc/en-us/articles/360034927533-annotateproperty)
-- [any](https://optics.ansys.com/hc/en-us/articles/360034926573-any)
-- [arrayperiodicdata](https://optics.ansys.com/hc/en-us/articles/360034409594-arrayperiodicdata)
-- [asapexport](https://optics.ansys.com/hc/en-us/articles/360034931953-asapexport)
-- [asapimport](https://optics.ansys.com/hc/en-us/articles/360034411274-asapimport)
-- [asapload](https://optics.ansys.com/hc/en-us/articles/360034931973-asapload)
-- [asin](https://optics.ansys.com/hc/en-us/articles/360034405574-asin)
-- [atan](https://optics.ansys.com/hc/en-us/articles/360034405594-atan)
-- [atan2](https://optics.ansys.com/hc/en-us/articles/360034925473-atan2)
-- [autoarrange](https://optics.ansys.com/hc/en-us/articles/360034409034-autoarrange)
-- [autosaveoff](https://optics.ansys.com/hc/en-us/articles/360034411534-autosaveoff)
-- [autosaveon](https://optics.ansys.com/hc/en-us/articles/360034932213-autosaveon)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [abs](./en/abs.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925553-abs) | [abs.md](./en/abs.md) |
+| [acos](./en/acos.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925453-acos) | [acos.md](./en/acos.md) |
+| [add2dpoly](./en/add2dpoly.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404774-add2dpoly) | [add2dpoly.md](./en/add2dpoly.md) |
+| [add2drect](./en/add2drect.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924753-add2drect) | [add2drect.md](./en/add2drect.md) |
+| [add2visualizer](./en/add2visualizer.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410534-add2visualizer) | [add2visualizer.md](./en/add2visualizer.md) |
+| [addabsorbing](./en/addabsorbing.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924873-addabsorbing) | [addabsorbing.md](./en/addabsorbing.md) |
+| [addanalysisgroup](./en/addanalysisgroup.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404074-addanalysisgroup) | [addanalysisgroup.md](./en/addanalysisgroup.md) |
+| [addanalysisprop](./en/addanalysisprop.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408474-addanalysisprop) | [addanalysisprop.md](./en/addanalysisprop.md) |
+| [addanalysisresult](./en/addanalysisresult.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928753-addanalysisresult) | [addanalysisresult.md](./en/addanalysisresult.md) |
+| [addattribute](./en/addattribute.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929873-addattribute) | [addattribute.md](./en/addattribute.md) |
+| [addbandstructuremonitor](./en/addbandstructuremonitor.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924653-addbandstructuremonitor) | [addbandstructuremonitor.md](./en/addbandstructuremonitor.md) |
+| [addbulkgen](./en/addbulkgen.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404634-addbulkgen) | [addbulkgen.md](./en/addbulkgen.md) |
+| [addchargemesh](./en/addchargemesh.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404354-addchargemesh) | [addchargemesh.md](./en/addchargemesh.md) |
+| [addchargemonitor](./en/addchargemonitor.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924613-addchargemonitor) | [addchargemonitor.md](./en/addchargemonitor.md) |
+| [addchargesolver](./en/addchargesolver.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924473-addchargesolver) | [addchargesolver.md](./en/addchargesolver.md) |
+| [addcircle](./en/addcircle.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404114-addcircle) | [addcircle.md](./en/addcircle.md) |
+| [addconvectionbc](./en/addconvectionbc.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404854-addconvectionbc) | [addconvectionbc.md](./en/addconvectionbc.md) |
+| [addctmaterialproperty](./en/addctmaterialproperty.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404994-addctmaterialproperty) | [addctmaterialproperty.md](./en/addctmaterialproperty.md) |
+| [addcustom](./en/addcustom.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404134-addcustom) | [addcustom.md](./en/addcustom.md) |
+| [adddeltachargesource](./en/adddeltachargesource.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404654-adddeltachargesource) | [adddeltachargesource.md](./en/adddeltachargesource.md) |
+| [adddevice](./en/adddevice.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404574-adddevice) | [adddevice.md](./en/adddevice.md) |
+| [adddftmonitor](./en/adddftmonitor.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/36957320687763-adddftmonitor-Script-command) | [adddftmonitor.md](./en/adddftmonitor.md) |
+| [adddgtdmesh](./en/adddgtdmesh.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924993-adddgtdmesh) | [adddgtdmesh.md](./en/adddgtdmesh.md) |
+| [adddgtdsolver](./en/adddgtdsolver.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925013-adddgtdsolver) | [adddgtdsolver.md](./en/adddgtdsolver.md) |
+| [adddiffusion](./en/adddiffusion.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924513-adddiffusion) | [adddiffusion.md](./en/adddiffusion.md) |
+| [adddipole](./en/adddipole.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924393-adddipole) | [adddipole.md](./en/adddipole.md) |
+| [adddope](./en/adddope.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404594-adddope) | [adddope.md](./en/adddope.md) |
+| [addeffectiveindex](./en/addeffectiveindex.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924593-addeffectiveindex) | [addeffectiveindex.md](./en/addeffectiveindex.md) |
+| [addefieldmonitor](./en/addefieldmonitor.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924633-addefieldmonitor) | [addefieldmonitor.md](./en/addefieldmonitor.md) |
+| [addelectricalcontact](./en/addelectricalcontact.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404794-addelectricalcontact) | [addelectricalcontact.md](./en/addelectricalcontact.md) |
+| [addelement](./en/addelement.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404694-addelement) | [addelement.md](./en/addelement.md) |
+| [addemabsorptionmonitor](./en/addemabsorptionmonitor.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405054-addemabsorptionmonitor) | [addemabsorptionmonitor.md](./en/addemabsorptionmonitor.md) |
+| [addeme](./en/addeme.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404314-addeme) | [addeme.md](./en/addeme.md) |
+| [addemeindex](./en/addemeindex.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924213-addemeindex) | [addemeindex.md](./en/addemeindex.md) |
+| [addemeport](./en/addemeport.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404334-addemeport) | [addemeport.md](./en/addemeport.md) |
+| [addemeprofile](./en/addemeprofile.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924233-addemeprofile) | [addemeprofile.md](./en/addemeprofile.md) |
+| [addemfieldmonitor](./en/addemfieldmonitor.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405034-addemfieldmonitor) | [addemfieldmonitor.md](./en/addemfieldmonitor.md) |
+| [addemfieldtimemonitor](./en/addemfieldtimemonitor.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925053-addemfieldtimemonitor) | [addemfieldtimemonitor.md](./en/addemfieldtimemonitor.md) |
+| [addemmaterialproperty](./en/addemmaterialproperty.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924953-addemmaterialproperty) | [addemmaterialproperty.md](./en/addemmaterialproperty.md) |
+| [addfde](./en/addfde.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404294-addfde) | [addfde.md](./en/addfde.md) |
+| [addfdtd](./en/addfdtd.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924173-addfdtd) | [addfdtd.md](./en/addfdtd.md) |
+| [addfeemmesh](./en/addfeemmesh.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405014-addfeemmesh) | [addfeemmesh.md](./en/addfeemmesh.md) |
+| [addfeemsolver](./en/addfeemsolver.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925033-addfeemsolver) | [addfeemsolver.md](./en/addfeemsolver.md) |
+| [addfieldregion](./en/addfieldregion.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/43593863807251-addfieldregion-Script-command) | [addfieldregion.md](./en/addfieldregion.md) |
+| [addgaussian](./en/addgaussian.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404434-addgaussian) | [addgaussian.md](./en/addgaussian.md) |
+| [addgridattribute](./en/addgridattribute.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404674-addgridattribute) | [addgridattribute.md](./en/addgridattribute.md) |
+| [addgroup](./en/addgroup.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924073-addgroup) | [addgroup.md](./en/addgroup.md) |
+| [addheatfluxbc](./en/addheatfluxbc.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404894-addheatfluxbc) | [addheatfluxbc.md](./en/addheatfluxbc.md) |
+| [addheatfluxmonitor](./en/addheatfluxmonitor.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404414-addheatfluxmonitor) | [addheatfluxmonitor.md](./en/addheatfluxmonitor.md) |
+| [addheatmesh](./en/addheatmesh.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404374-addheatmesh) | [addheatmesh.md](./en/addheatmesh.md) |
+| [addheatsolver](./en/addheatsolver.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924493-addheatsolver) | [addheatsolver.md](./en/addheatsolver.md) |
+| [addhtmaterialproperty](./en/addhtmaterialproperty.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924973-addhtmaterialproperty) | [addhtmaterialproperty.md](./en/addhtmaterialproperty.md) |
+| [addimplant](./en/addimplant.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404614-addimplant) | [addimplant.md](./en/addimplant.md) |
+| [addimport](./en/addimport.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404154-addimport) | [addimport.md](./en/addimport.md) |
+| [addimportdope](./en/addimportdope.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924533-addimportdope) | [addimportdope.md](./en/addimportdope.md) |
+| [addimportedsource](./en/addimportedsource.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924433-addimportedsource) | [addimportedsource.md](./en/addimportedsource.md) |
+| [addimportgen](./en/addimportgen.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924553-addimportgen) | [addimportgen.md](./en/addimportgen.md) |
+| [addimportheat](./en/addimportheat.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404394-addimportheat) | [addimportheat.md](./en/addimportheat.md) |
+| [addimportnk](./en/addimportnk.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924293-addimportnk) | [addimportnk.md](./en/addimportnk.md) |
+| [addimporttemperature](./en/addimporttemperature.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924273-addimporttemperature) | [addimporttemperature.md](./en/addimporttemperature.md) |
+| [addindex](./en/addindex.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404474-addindex) | [addindex.md](./en/addindex.md) |
+| [addjfluxmonitor](./en/addjfluxmonitor.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924673-addjfluxmonitor) | [addjfluxmonitor.md](./en/addjfluxmonitor.md) |
+| [addjob](./en/addjob.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410714-addjob) | [addjob.md](./en/addjob.md) |
+| [addlayer](./en/addlayer.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924693-addlayer) | [addlayer.md](./en/addlayer.md) |
+| [addlayerbuilder](./en/addlayerbuilder.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404714-addlayerbuilder) | [addlayerbuilder.md](./en/addlayerbuilder.md) |
+| [addmaterial](./en/addmaterial.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930013-addmaterial) | [addmaterial.md](./en/addmaterial.md) |
+| [addmaterialproperties](./en/addmaterialproperties.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924933-addmaterialproperties) | [addmaterialproperties.md](./en/addmaterialproperties.md) |
+| [addmesh](./en/addmesh.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924253-addmesh) | [addmesh.md](./en/addmesh.md) |
+| [addmode](./en/addmode.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924353-addmode) | [addmode.md](./en/addmode.md) |
+| [addmodeexpansion](./en/addmodeexpansion.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924573-addmodeexpansion) | [addmodeexpansion.md](./en/addmodeexpansion.md) |
+| [addmodelmaterial](./en/addmodelmaterial.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404974-addmodelmaterial) | [addmodelmaterial.md](./en/addmodelmaterial.md) |
+| [addmodesource](./en/addmodesource.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924373-addmodesource) | [addmodesource.md](./en/addmodesource.md) |
+| [addmovie](./en/addmovie.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404514-addmovie) | [addmovie.md](./en/addmovie.md) |
+| [addobject](./en/addobject.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404094-addobject) | [addobject.md](./en/addobject.md) |
+| [addparameter](./en/addparameter.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409494-addparameter) | [addparameter.md](./en/addparameter.md) |
+| [addpath](./en/addpath.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931833-addpath) | [addpath.md](./en/addpath.md) |
+| [addpec](./en/addpec.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924893-addpec) | [addpec.md](./en/addpec.md) |
+| [addperiodic](./en/addperiodic.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404934-addperiodic) | [addperiodic.md](./en/addperiodic.md) |
+| [addplanarsolid](./en/addplanarsolid.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924113-addplanarsolid) | [addplanarsolid.md](./en/addplanarsolid.md) |
+| [addplane](./en/addplane.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924413-addplane) | [addplane.md](./en/addplane.md) |
+| [addpmc](./en/addpmc.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924913-addpmc) | [addpmc.md](./en/addpmc.md) |
+| [addpml](./en/addpml.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924853-addpml) | [addpml.md](./en/addpml.md) |
+| [addpoly](./en/addpoly.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404174-addpoly) | [addpoly.md](./en/addpoly.md) |
+| [addport (FDTD)](./en/addport (FDTD).md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924793-addport-FDTD-) | [addport (FDTD).md](./en/addport (FDTD).md) |
+| [addport (INTERCONNECT)](./en/addport (INTERCONNECT).md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408934-addport-INTERCONNECT-) | [addport (INTERCONNECT).md](./en/addport (INTERCONNECT).md) |
+| [addproperty](./en/addproperty.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409074-addproperty) | [addproperty.md](./en/addproperty.md) |
+| [addpyramid](./en/addpyramid.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924133-addpyramid) | [addpyramid.md](./en/addpyramid.md) |
+| [addradiationbc](./en/addradiationbc.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924813-addradiationbc) | [addradiationbc.md](./en/addradiationbc.md) |
+| [addrect](./en/addrect.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404214-addrect) | [addrect.md](./en/addrect.md) |
+| [addresource](./en/addresource.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410734-addresource) | [addresource.md](./en/addresource.md) |
+| [addring](./en/addring.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404234-addring) | [addring.md](./en/addring.md) |
+| [addsemiconductorfromalloy](./en/addsemiconductorfromalloy.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/44775700507795-addsemiconductorfromalloy-Script-command) | [addsemiconductorfromalloy.md](./en/addsemiconductorfromalloy.md) |
+| [addsimulationregion](./en/addsimulationregion.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404954-addsimulationregion) | [addsimulationregion.md](./en/addsimulationregion.md) |
+| [addsphere](./en/addsphere.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404254-addsphere) | [addsphere.md](./en/addsphere.md) |
+| [addstructuregroup](./en/addstructuregroup.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924093-addstructuregroup) | [addstructuregroup.md](./en/addstructuregroup.md) |
+| [addsurface](./en/addsurface.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404274-addsurface) | [addsurface.md](./en/addsurface.md) |
+| [addsurfacerecombinationbc](./en/addsurfacerecombinationbc.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404814-addsurfacerecombinationbc) | [addsurfacerecombinationbc.md](./en/addsurfacerecombinationbc.md) |
+| [addsweep](./en/addsweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930413-addsweep) | [addsweep.md](./en/addsweep.md) |
+| [addsweepparameter](./en/addsweepparameter.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930493-addsweepparameter) | [addsweepparameter.md](./en/addsweepparameter.md) |
+| [addsweepresult](./en/addsweepresult.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410034-addsweepresult) | [addsweepresult.md](./en/addsweepresult.md) |
+| [addtemperaturebc](./en/addtemperaturebc.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404834-addtemperaturebc) | [addtemperaturebc.md](./en/addtemperaturebc.md) |
+| [addtemperaturemonitor](./en/addtemperaturemonitor.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924333-addtemperaturemonitor) | [addtemperaturemonitor.md](./en/addtemperaturemonitor.md) |
+| [addtfsf](./en/addtfsf.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404454-addtfsf) | [addtfsf.md](./en/addtfsf.md) |
+| [addthermalinsulatingbc](./en/addthermalinsulatingbc.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924833-addthermalinsulatingbc) | [addthermalinsulatingbc.md](./en/addthermalinsulatingbc.md) |
+| [addthermalpowerbc](./en/addthermalpowerbc.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404874-addthermalpowerbc) | [addthermalpowerbc.md](./en/addthermalpowerbc.md) |
+| [addtime](./en/addtime.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404494-addtime) | [addtime.md](./en/addtime.md) |
+| [addtogroup](./en/addtogroup.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408454-addtogroup) | [addtogroup.md](./en/addtogroup.md) |
+| [addtolibrary](./en/addtolibrary.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407234-addtolibrary) | [addtolibrary.md](./en/addtolibrary.md) |
+| [addtriangle](./en/addtriangle.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924153-addtriangle) | [addtriangle.md](./en/addtriangle.md) |
+| [adduniformheat](./en/adduniformheat.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924313-adduniformheat) | [adduniformheat.md](./en/adduniformheat.md) |
+| [adduserprop](./en/adduserprop.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928733-adduserprop) | [adduserprop.md](./en/adduserprop.md) |
+| [addvarfdtd](./en/addvarfdtd.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924193-addvarfdtd) | [addvarfdtd.md](./en/addvarfdtd.md) |
+| [addvoltagebc](./en/addvoltagebc.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404914-addvoltagebc) | [addvoltagebc.md](./en/addvoltagebc.md) |
+| [addwaveguide](./en/addwaveguide.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404754-addwaveguide) | [addwaveguide.md](./en/addwaveguide.md) |
+| [all](./en/all.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406334-all) | [all.md](./en/all.md) |
+| [almostequal](./en/almostequal.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410294-almostequal) | [almostequal.md](./en/almostequal.md) |
+| [amax](./en/amax.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925733-amax) | [amax.md](./en/amax.md) |
+| [amin](./en/amin.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405714-amin) | [amin.md](./en/amin.md) |
+| [analysis](./en/analysis.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405194-analysis) | [analysis.md](./en/analysis.md) |
+| [and](./en/and.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410354-and) | [and.md](./en/and.md) |
+| [angle](./en/angle.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405614-angle) | [angle.md](./en/angle.md) |
+| [annotateproperty](./en/annotateproperty.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927533-annotateproperty) | [annotateproperty.md](./en/annotateproperty.md) |
+| [any](./en/any.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926573-any) | [any.md](./en/any.md) |
+| [arrayperiodicdata](./en/arrayperiodicdata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409594-arrayperiodicdata) | [arrayperiodicdata.md](./en/arrayperiodicdata.md) |
+| [asapexport](./en/asapexport.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931953-asapexport) | [asapexport.md](./en/asapexport.md) |
+| [asapimport](./en/asapimport.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411274-asapimport) | [asapimport.md](./en/asapimport.md) |
+| [asapload](./en/asapload.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931973-asapload) | [asapload.md](./en/asapload.md) |
+| [asin](./en/asin.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405574-asin) | [asin.md](./en/asin.md) |
+| [atan](./en/atan.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405594-atan) | [atan.md](./en/atan.md) |
+| [atan2](./en/atan2.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925473-atan2) | [atan2.md](./en/atan2.md) |
+| [autoarrange](./en/autoarrange.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409034-autoarrange) | [autoarrange.md](./en/autoarrange.md) |
+| [autosaveoff](./en/autosaveoff.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411534-autosaveoff) | [autosaveoff.md](./en/autosaveoff.md) |
+| [autosaveon](./en/autosaveon.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932213-autosaveon) | [autosaveon.md](./en/autosaveon.md) |
 
-## B
+### B
 
-- [bar](https://optics.ansys.com/hc/en-us/articles/360034931313-bar)
-- [besseli](https://optics.ansys.com/hc/en-us/articles/360034926973-besseli)
-- [besselj](https://optics.ansys.com/hc/en-us/articles/360034406754-besselj)
-- [besselk](https://optics.ansys.com/hc/en-us/articles/360034406774-besselk)
-- [bessely](https://optics.ansys.com/hc/en-us/articles/360034926953-bessely)
-- [bestoverlap](https://optics.ansys.com/hc/en-us/articles/360034405274-bestoverlap)
-- [bestoverlap2](https://optics.ansys.com/hc/en-us/articles/360034925193-bestoverlap2)
-- [break](https://optics.ansys.com/hc/en-us/articles/360034931873-break)
-- [buildmqwmaterial](https://optics.ansys.com/hc/en-us/articles/360034926553-buildmqwmaterial)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [bar](./en/bar.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931313-bar) | [bar.md](./en/bar.md) |
+| [besseli](./en/besseli.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926973-besseli) | [besseli.md](./en/besseli.md) |
+| [besselj](./en/besselj.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406754-besselj) | [besselj.md](./en/besselj.md) |
+| [besselk](./en/besselk.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406774-besselk) | [besselk.md](./en/besselk.md) |
+| [bessely](./en/bessely.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926953-bessely) | [bessely.md](./en/bessely.md) |
+| [bestoverlap](./en/bestoverlap.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405274-bestoverlap) | [bestoverlap.md](./en/bestoverlap.md) |
+| [bestoverlap2](./en/bestoverlap2.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925193-bestoverlap2) | [bestoverlap2.md](./en/bestoverlap2.md) |
+| [break](./en/break.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931873-break) | [break.md](./en/break.md) |
+| [buildmqwmaterial](./en/buildmqwmaterial.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926553-buildmqwmaterial) | [buildmqwmaterial.md](./en/buildmqwmaterial.md) |
 
-## C
+### C
 
-- [cadimport](https://optics.ansys.com/hc/en-us/articles/42995962396307-cadimport-Script-command)
-- [cd](https://optics.ansys.com/hc/en-us/articles/360034931553-cd)
-- [ceil](https://optics.ansys.com/hc/en-us/articles/360034406174-ceil)
-- [cell](https://optics.ansys.com/hc/en-us/articles/360034929913-cell)
-- [centroid](https://optics.ansys.com/hc/en-us/articles/360034406074-centroid)
-- [chebin](https://optics.ansys.com/hc/en-us/articles/360034406634-chebin)
-- [chebpol](https://optics.ansys.com/hc/en-us/articles/360034926833-chebpol)
-- [chebpol1](https://optics.ansys.com/hc/en-us/articles/360034926853-chebpol1)
-- [checkout](https://optics.ansys.com/hc/en-us/articles/360034931433-checkout)
-- [chol](https://optics.ansys.com/hc/en-us/articles/360034406494-chol)
-- [chpts](https://optics.ansys.com/hc/en-us/articles/360034406614-chpts)
-- [clear](https://optics.ansys.com/hc/en-us/articles/360034929753-clear)
-- [clearanalysis](https://optics.ansys.com/hc/en-us/articles/360034930253-clearanalysis)
-- [cleardataset](https://optics.ansys.com/hc/en-us/articles/360034929393-cleardataset)
-- [cleardcard](https://optics.ansys.com/hc/en-us/articles/360034930273-cleardcard)
-- [clearexcept](https://optics.ansys.com/hc/en-us/articles/360034929793-clearexcept)
-- [clearfunctions](https://optics.ansys.com/hc/en-us/articles/360034929773-clearfunctions)
-- [clearjobs](https://optics.ansys.com/hc/en-us/articles/360034931393-clearjobs)
-- [clearlogwindow](https://optics.ansys.com/hc/en-us/articles/360034411414-clearlogwindow)
-- [clearmodedata](https://optics.ansys.com/hc/en-us/articles/360034408774-clearmodedata)
-- [clearpath](https://optics.ansys.com/hc/en-us/articles/360034931853-clearpath)
-- [clearportmodedata](https://optics.ansys.com/hc/en-us/articles/360034409194-clearportmodedata)
-- [clearsourcedata](https://optics.ansys.com/hc/en-us/articles/360034929093-clearsourcedata)
-- [closeall](https://optics.ansys.com/hc/en-us/articles/360034410594-closeall)
-- [closesession](https://optics.ansys.com/hc/en-us/articles/360034407854-closesession)
-- [colormatch](https://optics.ansys.com/hc/en-us/articles/360034926753-colormatch)
-- [colormatchfunction](https://optics.ansys.com/hc/en-us/articles/360034926733-colormatchfunction)
-- [colormatchuv](https://optics.ansys.com/hc/en-us/articles/360034406514-colormatchuv)
-- [colormatchxy](https://optics.ansys.com/hc/en-us/articles/360034926773-colormatchxy)
-- [conj](https://optics.ansys.com/hc/en-us/articles/360034925533-conj)
-- [connect](https://optics.ansys.com/hc/en-us/articles/360034929313-connect)
-- [constructgeneratormatrix](https://optics.ansys.com/hc/en-us/articles/360034407814-constructgeneratormatrix)
-- [conv2](https://optics.ansys.com/hc/en-us/articles/360034405854-conv2)
-- [convertnportsparametersweep](https://optics.ansys.com/hc/en-us/articles/360034409234-convertnportsparametersweep)
-- [copy](https://optics.ansys.com/hc/en-us/articles/360034408434-copy)
-- [copydcard](https://optics.ansys.com/hc/en-us/articles/360034930233-copydcard)
-- [copymaterial](https://optics.ansys.com/hc/en-us/articles/360034930033-copymaterial)
-- [copysweep](https://optics.ansys.com/hc/en-us/articles/360034930373-copysweep)
-- [copytoclipboard](https://optics.ansys.com/hc/en-us/articles/360034931993-copytoclipboard)
-- [corrcoef](https://optics.ansys.com/hc/en-us/articles/360034406694-corrcoef)
-- [corrtransf](https://optics.ansys.com/hc/en-us/articles/360034926913-corrtransf)
-- [cos](https://optics.ansys.com/hc/en-us/articles/360034405554-cos)
-- [coupling](https://optics.ansys.com/hc/en-us/articles/360034925173-coupling)
-- [cov](https://optics.ansys.com/hc/en-us/articles/360034406674-cov)
-- [cp](https://optics.ansys.com/hc/en-us/articles/360034931573-cp)
-- [createbeam](https://optics.ansys.com/hc/en-us/articles/360034404554-createbeam)
-- [createcompound](https://optics.ansys.com/hc/en-us/articles/360034409054-createcompound)
-- [createsphericalsurface](https://optics.ansys.com/hc/en-us/articles/360034930773-createsphericalsurface)
-- [cross](https://optics.ansys.com/hc/en-us/articles/360034405734-cross)
-- [ctranspose](https://optics.ansys.com/hc/en-us/articles/360034405894-ctranspose)
-- [currentfilename](https://optics.ansys.com/hc/en-us/articles/360034931793-currentfilename)
-- [currentscriptname](https://optics.ansys.com/hc/en-us/articles/360034931813-currentscriptname)
-- [customlibrary](https://optics.ansys.com/hc/en-us/articles/360034407254-customlibrary)
-- [cwnorm](https://optics.ansys.com/hc/en-us/articles/360034405454-cwnorm)
-- [czt](https://optics.ansys.com/hc/en-us/articles/360034926173-czt)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [cadimport](./en/cadimport.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/42995962396307-cadimport-Script-command) | [cadimport.md](./en/cadimport.md) |
+| [cd](./en/cd.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931553-cd) | [cd.md](./en/cd.md) |
+| [ceil](./en/ceil.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406174-ceil) | [ceil.md](./en/ceil.md) |
+| [cell](./en/cell.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929913-cell) | [cell.md](./en/cell.md) |
+| [centroid](./en/centroid.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406074-centroid) | [centroid.md](./en/centroid.md) |
+| [chebin](./en/chebin.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406634-chebin) | [chebin.md](./en/chebin.md) |
+| [chebpol](./en/chebpol.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926833-chebpol) | [chebpol.md](./en/chebpol.md) |
+| [chebpol1](./en/chebpol1.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926853-chebpol1) | [chebpol1.md](./en/chebpol1.md) |
+| [checkout](./en/checkout.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931433-checkout) | [checkout.md](./en/checkout.md) |
+| [chol](./en/chol.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406494-chol) | [chol.md](./en/chol.md) |
+| [chpts](./en/chpts.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406614-chpts) | [chpts.md](./en/chpts.md) |
+| [clear](./en/clear.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929753-clear) | [clear.md](./en/clear.md) |
+| [clearanalysis](./en/clearanalysis.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930253-clearanalysis) | [clearanalysis.md](./en/clearanalysis.md) |
+| [cleardataset](./en/cleardataset.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929393-cleardataset) | [cleardataset.md](./en/cleardataset.md) |
+| [cleardcard](./en/cleardcard.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930273-cleardcard) | [cleardcard.md](./en/cleardcard.md) |
+| [clearexcept](./en/clearexcept.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929793-clearexcept) | [clearexcept.md](./en/clearexcept.md) |
+| [clearfunctions](./en/clearfunctions.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929773-clearfunctions) | [clearfunctions.md](./en/clearfunctions.md) |
+| [clearjobs](./en/clearjobs.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931393-clearjobs) | [clearjobs.md](./en/clearjobs.md) |
+| [clearlogwindow](./en/clearlogwindow.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411414-clearlogwindow) | [clearlogwindow.md](./en/clearlogwindow.md) |
+| [clearmodedata](./en/clearmodedata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408774-clearmodedata) | [clearmodedata.md](./en/clearmodedata.md) |
+| [clearpath](./en/clearpath.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931853-clearpath) | [clearpath.md](./en/clearpath.md) |
+| [clearportmodedata](./en/clearportmodedata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409194-clearportmodedata) | [clearportmodedata.md](./en/clearportmodedata.md) |
+| [clearsourcedata](./en/clearsourcedata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929093-clearsourcedata) | [clearsourcedata.md](./en/clearsourcedata.md) |
+| [closeall](./en/closeall.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410594-closeall) | [closeall.md](./en/closeall.md) |
+| [closesession](./en/closesession.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407854-closesession) | [closesession.md](./en/closesession.md) |
+| [colormatch](./en/colormatch.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926753-colormatch) | [colormatch.md](./en/colormatch.md) |
+| [colormatchfunction](./en/colormatchfunction.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926733-colormatchfunction) | [colormatchfunction.md](./en/colormatchfunction.md) |
+| [colormatchuv](./en/colormatchuv.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406514-colormatchuv) | [colormatchuv.md](./en/colormatchuv.md) |
+| [colormatchxy](./en/colormatchxy.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926773-colormatchxy) | [colormatchxy.md](./en/colormatchxy.md) |
+| [conj](./en/conj.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925533-conj) | [conj.md](./en/conj.md) |
+| [connect](./en/connect.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929313-connect) | [connect.md](./en/connect.md) |
+| [constructgeneratormatrix](./en/constructgeneratormatrix.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407814-constructgeneratormatrix) | [constructgeneratormatrix.md](./en/constructgeneratormatrix.md) |
+| [conv2](./en/conv2.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405854-conv2) | [conv2.md](./en/conv2.md) |
+| [convertnportsparametersweep](./en/convertnportsparametersweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409234-convertnportsparametersweep) | [convertnportsparametersweep.md](./en/convertnportsparametersweep.md) |
+| [copy](./en/copy.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408434-copy) | [copy.md](./en/copy.md) |
+| [copydcard](./en/copydcard.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930233-copydcard) | [copydcard.md](./en/copydcard.md) |
+| [copymaterial](./en/copymaterial.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930033-copymaterial) | [copymaterial.md](./en/copymaterial.md) |
+| [copysweep](./en/copysweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930373-copysweep) | [copysweep.md](./en/copysweep.md) |
+| [copytoclipboard](./en/copytoclipboard.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931993-copytoclipboard) | [copytoclipboard.md](./en/copytoclipboard.md) |
+| [corrcoef](./en/corrcoef.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406694-corrcoef) | [corrcoef.md](./en/corrcoef.md) |
+| [corrtransf](./en/corrtransf.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926913-corrtransf) | [corrtransf.md](./en/corrtransf.md) |
+| [cos](./en/cos.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405554-cos) | [cos.md](./en/cos.md) |
+| [coupling](./en/coupling.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925173-coupling) | [coupling.md](./en/coupling.md) |
+| [cov](./en/cov.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406674-cov) | [cov.md](./en/cov.md) |
+| [cp](./en/cp.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931573-cp) | [cp.md](./en/cp.md) |
+| [createbeam](./en/createbeam.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404554-createbeam) | [createbeam.md](./en/createbeam.md) |
+| [createcompound](./en/createcompound.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409054-createcompound) | [createcompound.md](./en/createcompound.md) |
+| [createsphericalsurface](./en/createsphericalsurface.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930773-createsphericalsurface) | [createsphericalsurface.md](./en/createsphericalsurface.md) |
+| [cross](./en/cross.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405734-cross) | [cross.md](./en/cross.md) |
+| [ctranspose](./en/ctranspose.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405894-ctranspose) | [ctranspose.md](./en/ctranspose.md) |
+| [currentfilename](./en/currentfilename.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931793-currentfilename) | [currentfilename.md](./en/currentfilename.md) |
+| [currentscriptname](./en/currentscriptname.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931813-currentscriptname) | [currentscriptname.md](./en/currentscriptname.md) |
+| [customlibrary](./en/customlibrary.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407254-customlibrary) | [customlibrary.md](./en/customlibrary.md) |
+| [cwnorm](./en/cwnorm.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405454-cwnorm) | [cwnorm.md](./en/cwnorm.md) |
+| [czt](./en/czt.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926173-czt) | [czt.md](./en/czt.md) |
 
-## D
+### D
 
-- [dcht](https://optics.ansys.com/hc/en-us/articles/360034406734-dcht)
-- [debug](https://optics.ansys.com/hc/en-us/articles/360034411334-debug)
-- [del](https://optics.ansys.com/hc/en-us/articles/360034931513-del)
-- [delete](https://optics.ansys.com/hc/en-us/articles/360034928573-delete)
-- [deleteall](https://optics.ansys.com/hc/en-us/articles/360034408314-deleteall)
-- [deletematerial](https://optics.ansys.com/hc/en-us/articles/360034409734-deletematerial)
-- [deleteresource](https://optics.ansys.com/hc/en-us/articles/360034410794-deleteresource)
-- [deletesweep](https://optics.ansys.com/hc/en-us/articles/360034930173-deletesweep)
-- [designmode](https://optics.ansys.com/hc/en-us/articles/360034924053-designmode)
-- [dipolepower](https://optics.ansys.com/hc/en-us/articles/360034925293-dipolepower)
-- [dir](https://optics.ansys.com/hc/en-us/articles/360034410854-dir)
-- [disabledesignkit](https://optics.ansys.com/hc/en-us/articles/360034407474-disabledesignkit)
-- [disconnect](https://optics.ansys.com/hc/en-us/articles/360034408954-disconnect)
-- [dot](https://optics.ansys.com/hc/en-us/articles/360034925773-dot)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [dcht](./en/dcht.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406734-dcht) | [dcht.md](./en/dcht.md) |
+| [debug](./en/debug.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411334-debug) | [debug.md](./en/debug.md) |
+| [del](./en/del.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931513-del) | [del.md](./en/del.md) |
+| [delete](./en/delete.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928573-delete) | [delete.md](./en/delete.md) |
+| [deleteall](./en/deleteall.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408314-deleteall) | [deleteall.md](./en/deleteall.md) |
+| [deletematerial](./en/deletematerial.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409734-deletematerial) | [deletematerial.md](./en/deletematerial.md) |
+| [deleteresource](./en/deleteresource.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410794-deleteresource) | [deleteresource.md](./en/deleteresource.md) |
+| [deletesweep](./en/deletesweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930173-deletesweep) | [deletesweep.md](./en/deletesweep.md) |
+| [designmode](./en/designmode.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924053-designmode) | [designmode.md](./en/designmode.md) |
+| [dipolepower](./en/dipolepower.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925293-dipolepower) | [dipolepower.md](./en/dipolepower.md) |
+| [dir](./en/dir.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410854-dir) | [dir.md](./en/dir.md) |
+| [disabledesignkit](./en/disabledesignkit.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407474-disabledesignkit) | [disabledesignkit.md](./en/disabledesignkit.md) |
+| [disconnect](./en/disconnect.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408954-disconnect) | [disconnect.md](./en/disconnect.md) |
+| [dot](./en/dot.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925773-dot) | [dot.md](./en/dot.md) |
 
-## E
+### E
 
-- [eig](https://optics.ansys.com/hc/en-us/articles/360034925793-eig)
-- [emepropagate](https://optics.ansys.com/hc/en-us/articles/360034925093-emepropagate)
-- [emesweep](https://optics.ansys.com/hc/en-us/articles/360034405114-emesweep)
-- [enabledesignkit](https://optics.ansys.com/hc/en-us/articles/360034927633-enabledesignkit)
-- [encryptscript](https://optics.ansys.com/hc/en-us/articles/360034411554-encryptscript)
-- [end](https://optics.ansys.com/hc/en-us/articles/360034929553-end)
-- [endl](https://optics.ansys.com/hc/en-us/articles/360034410414-endl)
-- [erf](https://optics.ansys.com/hc/en-us/articles/360034926793-erf)
-- [erfc](https://optics.ansys.com/hc/en-us/articles/360034406534-erfc)
-- [erfcinv](https://optics.ansys.com/hc/en-us/articles/360034926813-erfcinv)
-- [erfinv](https://optics.ansys.com/hc/en-us/articles/360034406554-erfinv)
-- [eval](https://optics.ansys.com/hc/en-us/articles/360034926013-eval)
-- [evalremote](https://optics.ansys.com/hc/en-us/articles/360034407894-evalremote)
-- [exist](https://optics.ansys.com/hc/en-us/articles/360034410914-exist)
-- [exit](https://optics.ansys.com/hc/en-us/articles/360034931613-exit)
-- [exp](https://optics.ansys.com/hc/en-us/articles/360034925633-exp)
-- [expand](https://optics.ansys.com/hc/en-us/articles/360034926653-expand)
-- [expand2](https://optics.ansys.com/hc/en-us/articles/360034406414-expand2)
-- [exportcsvresults](https://optics.ansys.com/hc/en-us/articles/360034411454-exportcsvresults)
-- [exportfigure](https://optics.ansys.com/hc/en-us/articles/360034410574-exportfigure)
-- [exporthtml](https://optics.ansys.com/hc/en-us/articles/360034411474-exporthtml)
-- [exportimage](https://optics.ansys.com/hc/en-us/articles/360034928013-exportimage)
-- [exportlib](https://optics.ansys.com/hc/en-us/articles/360034927673-exportlib)
-- [exportnetlist](https://optics.ansys.com/hc/en-us/articles/360034932093-exportnetlist)
-- [exportsweep](https://optics.ansys.com/hc/en-us/articles/360034930553-exportsweep)
-- [exportview](https://optics.ansys.com/hc/en-us/articles/360034929213-exportview)
-- [extractstructure](https://optics.ansys.com/hc/en-us/articles/360034924713-extractstructure)
-- [eye](https://optics.ansys.com/hc/en-us/articles/360034929893-eye)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [eig](./en/eig.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925793-eig) | [eig.md](./en/eig.md) |
+| [emepropagate](./en/emepropagate.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925093-emepropagate) | [emepropagate.md](./en/emepropagate.md) |
+| [emesweep](./en/emesweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405114-emesweep) | [emesweep.md](./en/emesweep.md) |
+| [enabledesignkit](./en/enabledesignkit.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927633-enabledesignkit) | [enabledesignkit.md](./en/enabledesignkit.md) |
+| [encryptscript](./en/encryptscript.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411554-encryptscript) | [encryptscript.md](./en/encryptscript.md) |
+| [end](./en/end.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929553-end) | [end.md](./en/end.md) |
+| [endl](./en/endl.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410414-endl) | [endl.md](./en/endl.md) |
+| [erf](./en/erf.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926793-erf) | [erf.md](./en/erf.md) |
+| [erfc](./en/erfc.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406534-erfc) | [erfc.md](./en/erfc.md) |
+| [erfcinv](./en/erfcinv.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926813-erfcinv) | [erfcinv.md](./en/erfcinv.md) |
+| [erfinv](./en/erfinv.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406554-erfinv) | [erfinv.md](./en/erfinv.md) |
+| [eval](./en/eval.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926013-eval) | [eval.md](./en/eval.md) |
+| [evalremote](./en/evalremote.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407894-evalremote) | [evalremote.md](./en/evalremote.md) |
+| [exist](./en/exist.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410914-exist) | [exist.md](./en/exist.md) |
+| [exit](./en/exit.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931613-exit) | [exit.md](./en/exit.md) |
+| [exp](./en/exp.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925633-exp) | [exp.md](./en/exp.md) |
+| [expand](./en/expand.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926653-expand) | [expand.md](./en/expand.md) |
+| [expand2](./en/expand2.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406414-expand2) | [expand2.md](./en/expand2.md) |
+| [exportcsvresults](./en/exportcsvresults.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411454-exportcsvresults) | [exportcsvresults.md](./en/exportcsvresults.md) |
+| [exportfigure](./en/exportfigure.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410574-exportfigure) | [exportfigure.md](./en/exportfigure.md) |
+| [exporthtml](./en/exporthtml.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411474-exporthtml) | [exporthtml.md](./en/exporthtml.md) |
+| [exportimage](./en/exportimage.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928013-exportimage) | [exportimage.md](./en/exportimage.md) |
+| [exportlib](./en/exportlib.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927673-exportlib) | [exportlib.md](./en/exportlib.md) |
+| [exportnetlist](./en/exportnetlist.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932093-exportnetlist) | [exportnetlist.md](./en/exportnetlist.md) |
+| [exportsweep](./en/exportsweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930553-exportsweep) | [exportsweep.md](./en/exportsweep.md) |
+| [exportview](./en/exportview.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929213-exportview) | [exportview.md](./en/exportview.md) |
+| [extractstructure](./en/extractstructure.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924713-extractstructure) | [extractstructure.md](./en/extractstructure.md) |
+| [eye](./en/eye.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929893-eye) | [eye.md](./en/eye.md) |
 
-## F
+### F
 
-- [farfield2d](https://optics.ansys.com/hc/en-us/articles/360034410074-farfield2d)
-- [farfield2dintegrate](https://optics.ansys.com/hc/en-us/articles/360034930673-farfield2dintegrate)
-- [farfield3d](https://optics.ansys.com/hc/en-us/articles/360034930693-farfield3d)
-- [farfield3dintegrate](https://optics.ansys.com/hc/en-us/articles/360034410174-farfield3dintegrate)
-- [farfieldangle](https://optics.ansys.com/hc/en-us/articles/360034930653-farfieldangle)
-- [farfieldexact](https://optics.ansys.com/hc/en-us/articles/360034410214-farfieldexact)
-- [farfieldexact2d](https://optics.ansys.com/hc/en-us/articles/360034410234-farfieldexact2d)
-- [farfieldexact3d](https://optics.ansys.com/hc/en-us/articles/360034930733-farfieldexact3d)
-- [farfieldfilter](https://optics.ansys.com/hc/en-us/articles/360034930613-farfieldfilter)
-- [farfieldpolar2d](https://optics.ansys.com/hc/en-us/articles/360034410094-farfieldpolar2d)
-- [farfieldpolar3d](https://optics.ansys.com/hc/en-us/articles/360034930713-farfieldpolar3d)
-- [farfieldsettings](https://optics.ansys.com/hc/en-us/articles/360034930593-farfieldsettings)
-- [farfieldspherical](https://optics.ansys.com/hc/en-us/articles/360034410194-farfieldspherical)
-- [farfieldux](https://optics.ansys.com/hc/en-us/articles/360034410134-farfieldux)
-- [farfielduy](https://optics.ansys.com/hc/en-us/articles/360034410154-farfielduy)
-- [farfieldvector2d](https://optics.ansys.com/hc/en-us/articles/360034930633-farfieldvector2d)
-- [farfieldvector3d](https://optics.ansys.com/hc/en-us/articles/360034410114-farfieldvector3d)
-- [feval](https://optics.ansys.com/hc/en-us/articles/360034405934-feval)
-- [fft](https://optics.ansys.com/hc/en-us/articles/360034926133-fft)
-- [fftk](https://optics.ansys.com/hc/en-us/articles/360034406014-fftk)
-- [fftw](https://optics.ansys.com/hc/en-us/articles/360034926153-fftw)
-- [filebasename](https://optics.ansys.com/hc/en-us/articles/360034931653-filebasename)
-- [filedirectory](https://optics.ansys.com/hc/en-us/articles/360034931673-filedirectory)
-- [fileexists](https://optics.ansys.com/hc/en-us/articles/360034931633-fileexists)
-- [fileexpand](https://optics.ansys.com/hc/en-us/articles/360034932153-fileexpand)
-- [fileextension](https://optics.ansys.com/hc/en-us/articles/360034410934-fileextension)
-- [fileopendialog](https://optics.ansys.com/hc/en-us/articles/360034932433-fileopendialog)
-- [filesavedialog](https://optics.ansys.com/hc/en-us/articles/360034411834-filesavedialog)
-- [find](https://optics.ansys.com/hc/en-us/articles/360034405874-find)
-- [findmodes](https://optics.ansys.com/hc/en-us/articles/360034405214-findmodes)
-- [findpeaks](https://optics.ansys.com/hc/en-us/articles/360034925933-findpeaks)
-- [findproperty](https://optics.ansys.com/hc/en-us/articles/360034411594-findproperty)
-- [findpropertyvalue](https://optics.ansys.com/hc/en-us/articles/360034411614-findpropertyvalue)
-- [findresonances](https://optics.ansys.com/hc/en-us/articles/360034925953-findresonances)
-- [findstring](https://optics.ansys.com/hc/en-us/articles/360034405954-findstring)
-- [finite](https://optics.ansys.com/hc/en-us/articles/360034926453-finite)
-- [fitnormpdf](https://optics.ansys.com/hc/en-us/articles/360034926993-fitnormpdf)
-- [fitpearson4pdf](https://optics.ansys.com/hc/en-us/articles/360034927013-fitpearson4pdf)
-- [flip](https://optics.ansys.com/hc/en-us/articles/360034925833-flip)
-- [flipelement](https://optics.ansys.com/hc/en-us/articles/360034928673-flipelement)
-- [floor](https://optics.ansys.com/hc/en-us/articles/360034926353-floor)
-- [for](https://optics.ansys.com/hc/en-us/articles/360034928493-for)
-- [framerate](https://optics.ansys.com/hc/en-us/articles/360034929233-framerate)
-- [frequencysweep](https://optics.ansys.com/hc/en-us/articles/360034925153-frequencysweep)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [farfield2d](./en/farfield2d.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410074-farfield2d) | [farfield2d.md](./en/farfield2d.md) |
+| [farfield2dintegrate](./en/farfield2dintegrate.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930673-farfield2dintegrate) | [farfield2dintegrate.md](./en/farfield2dintegrate.md) |
+| [farfield3d](./en/farfield3d.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930693-farfield3d) | [farfield3d.md](./en/farfield3d.md) |
+| [farfield3dintegrate](./en/farfield3dintegrate.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410174-farfield3dintegrate) | [farfield3dintegrate.md](./en/farfield3dintegrate.md) |
+| [farfieldangle](./en/farfieldangle.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930653-farfieldangle) | [farfieldangle.md](./en/farfieldangle.md) |
+| [farfieldexact](./en/farfieldexact.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410214-farfieldexact) | [farfieldexact.md](./en/farfieldexact.md) |
+| [farfieldexact2d](./en/farfieldexact2d.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410234-farfieldexact2d) | [farfieldexact2d.md](./en/farfieldexact2d.md) |
+| [farfieldexact3d](./en/farfieldexact3d.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930733-farfieldexact3d) | [farfieldexact3d.md](./en/farfieldexact3d.md) |
+| [farfieldfilter](./en/farfieldfilter.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930613-farfieldfilter) | [farfieldfilter.md](./en/farfieldfilter.md) |
+| [farfieldpolar2d](./en/farfieldpolar2d.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410094-farfieldpolar2d) | [farfieldpolar2d.md](./en/farfieldpolar2d.md) |
+| [farfieldpolar3d](./en/farfieldpolar3d.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930713-farfieldpolar3d) | [farfieldpolar3d.md](./en/farfieldpolar3d.md) |
+| [farfieldsettings](./en/farfieldsettings.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930593-farfieldsettings) | [farfieldsettings.md](./en/farfieldsettings.md) |
+| [farfieldspherical](./en/farfieldspherical.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410194-farfieldspherical) | [farfieldspherical.md](./en/farfieldspherical.md) |
+| [farfieldux](./en/farfieldux.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410134-farfieldux) | [farfieldux.md](./en/farfieldux.md) |
+| [farfielduy](./en/farfielduy.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410154-farfielduy) | [farfielduy.md](./en/farfielduy.md) |
+| [farfieldvector2d](./en/farfieldvector2d.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930633-farfieldvector2d) | [farfieldvector2d.md](./en/farfieldvector2d.md) |
+| [farfieldvector3d](./en/farfieldvector3d.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410114-farfieldvector3d) | [farfieldvector3d.md](./en/farfieldvector3d.md) |
+| [feval](./en/feval.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405934-feval) | [feval.md](./en/feval.md) |
+| [fft](./en/fft.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926133-fft) | [fft.md](./en/fft.md) |
+| [fftk](./en/fftk.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406014-fftk) | [fftk.md](./en/fftk.md) |
+| [fftw](./en/fftw.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926153-fftw) | [fftw.md](./en/fftw.md) |
+| [filebasename](./en/filebasename.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931653-filebasename) | [filebasename.md](./en/filebasename.md) |
+| [filedirectory](./en/filedirectory.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931673-filedirectory) | [filedirectory.md](./en/filedirectory.md) |
+| [fileexists](./en/fileexists.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931633-fileexists) | [fileexists.md](./en/fileexists.md) |
+| [fileexpand](./en/fileexpand.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932153-fileexpand) | [fileexpand.md](./en/fileexpand.md) |
+| [fileextension](./en/fileextension.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410934-fileextension) | [fileextension.md](./en/fileextension.md) |
+| [fileopendialog](./en/fileopendialog.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932433-fileopendialog) | [fileopendialog.md](./en/fileopendialog.md) |
+| [filesavedialog](./en/filesavedialog.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411834-filesavedialog) | [filesavedialog.md](./en/filesavedialog.md) |
+| [find](./en/find.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405874-find) | [find.md](./en/find.md) |
+| [findmodes](./en/findmodes.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405214-findmodes) | [findmodes.md](./en/findmodes.md) |
+| [findpeaks](./en/findpeaks.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925933-findpeaks) | [findpeaks.md](./en/findpeaks.md) |
+| [findproperty](./en/findproperty.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411594-findproperty) | [findproperty.md](./en/findproperty.md) |
+| [findpropertyvalue](./en/findpropertyvalue.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411614-findpropertyvalue) | [findpropertyvalue.md](./en/findpropertyvalue.md) |
+| [findresonances](./en/findresonances.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925953-findresonances) | [findresonances.md](./en/findresonances.md) |
+| [findstring](./en/findstring.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405954-findstring) | [findstring.md](./en/findstring.md) |
+| [finite](./en/finite.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926453-finite) | [finite.md](./en/finite.md) |
+| [fitnormpdf](./en/fitnormpdf.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926993-fitnormpdf) | [fitnormpdf.md](./en/fitnormpdf.md) |
+| [fitpearson4pdf](./en/fitpearson4pdf.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927013-fitpearson4pdf) | [fitpearson4pdf.md](./en/fitpearson4pdf.md) |
+| [flip](./en/flip.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925833-flip) | [flip.md](./en/flip.md) |
+| [flipelement](./en/flipelement.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928673-flipelement) | [flipelement.md](./en/flipelement.md) |
+| [floor](./en/floor.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926353-floor) | [floor.md](./en/floor.md) |
+| [for](./en/for.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928493-for) | [for.md](./en/for.md) |
+| [framerate](./en/framerate.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929233-framerate) | [framerate.md](./en/framerate.md) |
+| [frequencysweep](./en/frequencysweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925153-frequencysweep) | [frequencysweep.md](./en/frequencysweep.md) |
 
-## G
+### G
 
-- [gdsaddcircle](https://optics.ansys.com/hc/en-us/articles/360034406914-gdsaddcircle)
-- [gdsaddpath](https://optics.ansys.com/hc/en-us/articles/360034406954-gdsaddpath)
-- [gdsaddpoly](https://optics.ansys.com/hc/en-us/articles/360034927153-gdsaddpoly)
-- [gdsaddrect](https://optics.ansys.com/hc/en-us/articles/360034406934-gdsaddrect)
-- [gdsaddref](https://optics.ansys.com/hc/en-us/articles/360034927173-gdsaddref)
-- [gdsaddstencil](https://optics.ansys.com/hc/en-us/articles/43594268925459-gdsaddstencil-Script-command)
-- [gdsaddtext](https://optics.ansys.com/hc/en-us/articles/360034927193-gdsaddtext)
-- [gdsbegincell](https://optics.ansys.com/hc/en-us/articles/360034927133-gdsbegincell)
-- [gdsclose](https://optics.ansys.com/hc/en-us/articles/360034927113-gdsclose)
-- [gdsendcell](https://optics.ansys.com/hc/en-us/articles/360034406894-gdsendcell)
-- [gdsimport](https://optics.ansys.com/hc/en-us/articles/360034406974-gdsimport)
-- [gdsopen](https://optics.ansys.com/hc/en-us/articles/360034927093-gdsopen)
-- [get](https://optics.ansys.com/hc/en-us/articles/360034928873-get)
-- [getactivesolver](https://optics.ansys.com/hc/en-us/articles/360034929333-getactivesolver)
-- [getanalysis](https://optics.ansys.com/hc/en-us/articles/360034925133-getanalysis)
-- [getattribute](https://optics.ansys.com/hc/en-us/articles/360034409534-getattribute)
-- [getcelllist](https://optics.ansys.com/hc/en-us/articles/360034929413-getcelllist)
-- [getcommands](https://optics.ansys.com/hc/en-us/articles/360034931693-getcommands)
-- [getdata](https://optics.ansys.com/hc/en-us/articles/360034409834-getdata)
-- [getdevice](https://optics.ansys.com/hc/en-us/articles/42996430991507-getdevice-Script-command)
-- [getdgtdindex](https://optics.ansys.com/hc/en-us/articles/360034409774-getdgtdindex)
-- [geteigensolver](https://optics.ansys.com/hc/en-us/articles/360034408794-geteigensolver)
-- [getelectric](https://optics.ansys.com/hc/en-us/articles/360034409974-getelectric)
-- [getemeanalysis](https://optics.ansys.com/hc/en-us/articles/360034405094-getemeanalysis)
-- [getemesweep](https://optics.ansys.com/hc/en-us/articles/360034405134-getemesweep)
-- [getfdtdindex](https://optics.ansys.com/hc/en-us/articles/360034409694-getfdtdindex)
-- [getfdtdsurfaceconductivity](https://optics.ansys.com/hc/en-us/articles/360034930133-getfdtdsurfaceconductivity)
-- [getfield](https://optics.ansys.com/hc/en-us/articles/360034411674-getfield)
-- [getglobalmonitor](https://optics.ansys.com/hc/en-us/articles/360034928933-getglobalmonitor)
-- [getglobalsource](https://optics.ansys.com/hc/en-us/articles/360034928953-getglobalsource)
-- [getindex](https://optics.ansys.com/hc/en-us/articles/360034409674-getindex)
-- [getlayerlist](https://optics.ansys.com/hc/en-us/articles/360034409134-getlayerlist)
-- [getlicenseestimate](https://optics.ansys.com/hc/en-us/articles/41005222267923-getlicenseestimate-Script-command)
-- [getlicenseestimateallactiveresources](https://optics.ansys.com/hc/en-us/articles/41005384196627-getlicenseestimateallactiveresources-Script-command)
-- [getmagnetic](https://optics.ansys.com/hc/en-us/articles/360034930293-getmagnetic)
-- [getmaterial](https://optics.ansys.com/hc/en-us/articles/360034930053-getmaterial)
-- [getmeshcontours](https://optics.ansys.com/hc/en-us/articles/360034929973-getmeshcontours)
-- [getmodeindex](https://optics.ansys.com/hc/en-us/articles/360034930073-getmodeindex)
-- [getname](https://optics.ansys.com/hc/en-us/articles/360034929373-getname)
-- [getnamed](https://optics.ansys.com/hc/en-us/articles/360034408574-getnamed)
-- [getnamednumber](https://optics.ansys.com/hc/en-us/articles/360034408594-getnamednumber)
-- [getnumber](https://optics.ansys.com/hc/en-us/articles/360034928913-getnumber)
-- [getnumericalpermittivity](https://optics.ansys.com/hc/en-us/articles/360034930093-getnumericalpermittivity)
-- [getparameter](https://optics.ansys.com/hc/en-us/articles/360034409514-getparameter)
-- [getpath](https://optics.ansys.com/hc/en-us/articles/360034411054-getpath)
-- [getperiodicity](https://optics.ansys.com/hc/en-us/articles/360034407174-getperiodicity)
-- [getports](https://optics.ansys.com/hc/en-us/articles/360034927953-getports)
-- [getposition](https://optics.ansys.com/hc/en-us/articles/360034928853-getposition)
-- [getrectangle](https://optics.ansys.com/hc/en-us/articles/360034408554-getrectangle)
-- [getremotedata](https://optics.ansys.com/hc/en-us/articles/360034407874-getremotedata)
-- [getresource](https://optics.ansys.com/hc/en-us/articles/360034931353-getresource)
-- [getresult](https://optics.ansys.com/hc/en-us/articles/360034409854-getresult)
-- [getresultdata](https://optics.ansys.com/hc/en-us/articles/360034407714-getresultdata)
-- [getsetting](https://optics.ansys.com/hc/en-us/articles/360034927993-getsetting)
-- [getsolver](https://optics.ansys.com/hc/en-us/articles/360034408614-getsolver)
-- [getsourceangle](https://optics.ansys.com/hc/en-us/articles/360034925253-getsourceangle)
-- [getsourcedirection](https://optics.ansys.com/hc/en-us/articles/360034927333-getsourcedirection)
-- [getsurfaceconductivity](https://optics.ansys.com/hc/en-us/articles/360034409754-getsurfaceconductivity)
-- [getsweep](https://optics.ansys.com/hc/en-us/articles/360034930453-getsweep)
-- [getsweepdata](https://optics.ansys.com/hc/en-us/articles/360034409794-getsweepdata)
-- [getsweepresult](https://optics.ansys.com/hc/en-us/articles/360034409814-getsweepresult)
-- [getvalue](https://optics.ansys.com/hc/en-us/articles/360034407734-getvalue)
-- [getvariable](https://optics.ansys.com/hc/en-us/articles/360034409914-getvariable)
-- [getview](https://optics.ansys.com/hc/en-us/articles/360034408874-getview)
-- [gpuspecs](https://optics.ansys.com/hc/en-us/articles/34669049884947-gpuspecs-Script-command)
-- [grating](https://optics.ansys.com/hc/en-us/articles/360034927213-grating)
-- [gratingangle](https://optics.ansys.com/hc/en-us/articles/360034927273-gratingangle)
-- [gratingbloch1](https://optics.ansys.com/hc/en-us/articles/360034407134-gratingbloch1)
-- [gratingbloch2](https://optics.ansys.com/hc/en-us/articles/360034407154-gratingbloch2)
-- [gratingm](https://optics.ansys.com/hc/en-us/articles/360034927233-gratingm)
-- [gratingn](https://optics.ansys.com/hc/en-us/articles/360034407014-gratingn)
-- [gratingordercount](https://optics.ansys.com/hc/en-us/articles/360034927313-gratingordercount)
-- [gratingorders](https://optics.ansys.com/hc/en-us/articles/360034927353-gratingorders)
-- [gratingperiod1](https://optics.ansys.com/hc/en-us/articles/360034927253-gratingperiod1)
-- [gratingperiod2](https://optics.ansys.com/hc/en-us/articles/360034407074-gratingperiod2)
-- [gratingpolar](https://optics.ansys.com/hc/en-us/articles/360034407034-gratingpolar)
-- [gratingprojection](https://optics.ansys.com/hc/en-us/articles/360034927373-gratingprojection)
-- [gratingu1](https://optics.ansys.com/hc/en-us/articles/360034407094-gratingu1)
-- [gratingu2](https://optics.ansys.com/hc/en-us/articles/360034407114-gratingu2)
-- [gratingvector](https://optics.ansys.com/hc/en-us/articles/360034407054-gratingvector)
-- [groupscope](https://optics.ansys.com/hc/en-us/articles/360034928553-groupscope)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [gdsaddcircle](./en/gdsaddcircle.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406914-gdsaddcircle) | [gdsaddcircle.md](./en/gdsaddcircle.md) |
+| [gdsaddpath](./en/gdsaddpath.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406954-gdsaddpath) | [gdsaddpath.md](./en/gdsaddpath.md) |
+| [gdsaddpoly](./en/gdsaddpoly.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927153-gdsaddpoly) | [gdsaddpoly.md](./en/gdsaddpoly.md) |
+| [gdsaddrect](./en/gdsaddrect.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406934-gdsaddrect) | [gdsaddrect.md](./en/gdsaddrect.md) |
+| [gdsaddref](./en/gdsaddref.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927173-gdsaddref) | [gdsaddref.md](./en/gdsaddref.md) |
+| [gdsaddstencil](./en/gdsaddstencil.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/43594268925459-gdsaddstencil-Script-command) | [gdsaddstencil.md](./en/gdsaddstencil.md) |
+| [gdsaddtext](./en/gdsaddtext.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927193-gdsaddtext) | [gdsaddtext.md](./en/gdsaddtext.md) |
+| [gdsbegincell](./en/gdsbegincell.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927133-gdsbegincell) | [gdsbegincell.md](./en/gdsbegincell.md) |
+| [gdsclose](./en/gdsclose.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927113-gdsclose) | [gdsclose.md](./en/gdsclose.md) |
+| [gdsendcell](./en/gdsendcell.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406894-gdsendcell) | [gdsendcell.md](./en/gdsendcell.md) |
+| [gdsimport](./en/gdsimport.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406974-gdsimport) | [gdsimport.md](./en/gdsimport.md) |
+| [gdsopen](./en/gdsopen.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927093-gdsopen) | [gdsopen.md](./en/gdsopen.md) |
+| [get](./en/get.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928873-get) | [get.md](./en/get.md) |
+| [getactivesolver](./en/getactivesolver.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929333-getactivesolver) | [getactivesolver.md](./en/getactivesolver.md) |
+| [getanalysis](./en/getanalysis.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925133-getanalysis) | [getanalysis.md](./en/getanalysis.md) |
+| [getattribute](./en/getattribute.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409534-getattribute) | [getattribute.md](./en/getattribute.md) |
+| [getcelllist](./en/getcelllist.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929413-getcelllist) | [getcelllist.md](./en/getcelllist.md) |
+| [getcommands](./en/getcommands.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931693-getcommands) | [getcommands.md](./en/getcommands.md) |
+| [getdata](./en/getdata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409834-getdata) | [getdata.md](./en/getdata.md) |
+| [getdevice](./en/getdevice.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/42996430991507-getdevice-Script-command) | [getdevice.md](./en/getdevice.md) |
+| [getdgtdindex](./en/getdgtdindex.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409774-getdgtdindex) | [getdgtdindex.md](./en/getdgtdindex.md) |
+| [geteigensolver](./en/geteigensolver.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408794-geteigensolver) | [geteigensolver.md](./en/geteigensolver.md) |
+| [getelectric](./en/getelectric.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409974-getelectric) | [getelectric.md](./en/getelectric.md) |
+| [getemeanalysis](./en/getemeanalysis.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405094-getemeanalysis) | [getemeanalysis.md](./en/getemeanalysis.md) |
+| [getemesweep](./en/getemesweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405134-getemesweep) | [getemesweep.md](./en/getemesweep.md) |
+| [getfdtdindex](./en/getfdtdindex.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409694-getfdtdindex) | [getfdtdindex.md](./en/getfdtdindex.md) |
+| [getfdtdsurfaceconductivity](./en/getfdtdsurfaceconductivity.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930133-getfdtdsurfaceconductivity) | [getfdtdsurfaceconductivity.md](./en/getfdtdsurfaceconductivity.md) |
+| [getfield](./en/getfield.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411674-getfield) | [getfield.md](./en/getfield.md) |
+| [getglobalmonitor](./en/getglobalmonitor.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928933-getglobalmonitor) | [getglobalmonitor.md](./en/getglobalmonitor.md) |
+| [getglobalsource](./en/getglobalsource.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928953-getglobalsource) | [getglobalsource.md](./en/getglobalsource.md) |
+| [getindex](./en/getindex.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409674-getindex) | [getindex.md](./en/getindex.md) |
+| [getlayerlist](./en/getlayerlist.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409134-getlayerlist) | [getlayerlist.md](./en/getlayerlist.md) |
+| [getlicenseestimate](./en/getlicenseestimate.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/41005222267923-getlicenseestimate-Script-command) | [getlicenseestimate.md](./en/getlicenseestimate.md) |
+| [getlicenseestimateallactiveresources](./en/getlicenseestimateallactiveresources.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/41005384196627-getlicenseestimateallactiveresources-Script-command) | [getlicenseestimateallactiveresources.md](./en/getlicenseestimateallactiveresources.md) |
+| [getmagnetic](./en/getmagnetic.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930293-getmagnetic) | [getmagnetic.md](./en/getmagnetic.md) |
+| [getmaterial](./en/getmaterial.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930053-getmaterial) | [getmaterial.md](./en/getmaterial.md) |
+| [getmeshcontours](./en/getmeshcontours.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929973-getmeshcontours) | [getmeshcontours.md](./en/getmeshcontours.md) |
+| [getmodeindex](./en/getmodeindex.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930073-getmodeindex) | [getmodeindex.md](./en/getmodeindex.md) |
+| [getname](./en/getname.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929373-getname) | [getname.md](./en/getname.md) |
+| [getnamed](./en/getnamed.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408574-getnamed) | [getnamed.md](./en/getnamed.md) |
+| [getnamednumber](./en/getnamednumber.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408594-getnamednumber) | [getnamednumber.md](./en/getnamednumber.md) |
+| [getnumber](./en/getnumber.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928913-getnumber) | [getnumber.md](./en/getnumber.md) |
+| [getnumericalpermittivity](./en/getnumericalpermittivity.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930093-getnumericalpermittivity) | [getnumericalpermittivity.md](./en/getnumericalpermittivity.md) |
+| [getparameter](./en/getparameter.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409514-getparameter) | [getparameter.md](./en/getparameter.md) |
+| [getpath](./en/getpath.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411054-getpath) | [getpath.md](./en/getpath.md) |
+| [getperiodicity](./en/getperiodicity.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407174-getperiodicity) | [getperiodicity.md](./en/getperiodicity.md) |
+| [getports](./en/getports.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927953-getports) | [getports.md](./en/getports.md) |
+| [getposition](./en/getposition.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928853-getposition) | [getposition.md](./en/getposition.md) |
+| [getrectangle](./en/getrectangle.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408554-getrectangle) | [getrectangle.md](./en/getrectangle.md) |
+| [getremotedata](./en/getremotedata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407874-getremotedata) | [getremotedata.md](./en/getremotedata.md) |
+| [getresource](./en/getresource.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931353-getresource) | [getresource.md](./en/getresource.md) |
+| [getresult](./en/getresult.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409854-getresult) | [getresult.md](./en/getresult.md) |
+| [getresultdata](./en/getresultdata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407714-getresultdata) | [getresultdata.md](./en/getresultdata.md) |
+| [getsetting](./en/getsetting.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927993-getsetting) | [getsetting.md](./en/getsetting.md) |
+| [getsolver](./en/getsolver.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408614-getsolver) | [getsolver.md](./en/getsolver.md) |
+| [getsourceangle](./en/getsourceangle.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925253-getsourceangle) | [getsourceangle.md](./en/getsourceangle.md) |
+| [getsourcedirection](./en/getsourcedirection.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927333-getsourcedirection) | [getsourcedirection.md](./en/getsourcedirection.md) |
+| [getsurfaceconductivity](./en/getsurfaceconductivity.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409754-getsurfaceconductivity) | [getsurfaceconductivity.md](./en/getsurfaceconductivity.md) |
+| [getsweep](./en/getsweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930453-getsweep) | [getsweep.md](./en/getsweep.md) |
+| [getsweepdata](./en/getsweepdata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409794-getsweepdata) | [getsweepdata.md](./en/getsweepdata.md) |
+| [getsweepresult](./en/getsweepresult.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409814-getsweepresult) | [getsweepresult.md](./en/getsweepresult.md) |
+| [getvalue](./en/getvalue.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407734-getvalue) | [getvalue.md](./en/getvalue.md) |
+| [getvariable](./en/getvariable.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409914-getvariable) | [getvariable.md](./en/getvariable.md) |
+| [getview](./en/getview.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408874-getview) | [getview.md](./en/getview.md) |
+| [gpuspecs](./en/gpuspecs.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/34669049884947-gpuspecs-Script-command) | [gpuspecs.md](./en/gpuspecs.md) |
+| [grating](./en/grating.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927213-grating) | [grating.md](./en/grating.md) |
+| [gratingangle](./en/gratingangle.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927273-gratingangle) | [gratingangle.md](./en/gratingangle.md) |
+| [gratingbloch1](./en/gratingbloch1.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407134-gratingbloch1) | [gratingbloch1.md](./en/gratingbloch1.md) |
+| [gratingbloch2](./en/gratingbloch2.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407154-gratingbloch2) | [gratingbloch2.md](./en/gratingbloch2.md) |
+| [gratingm](./en/gratingm.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927233-gratingm) | [gratingm.md](./en/gratingm.md) |
+| [gratingn](./en/gratingn.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407014-gratingn) | [gratingn.md](./en/gratingn.md) |
+| [gratingordercount](./en/gratingordercount.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927313-gratingordercount) | [gratingordercount.md](./en/gratingordercount.md) |
+| [gratingorders](./en/gratingorders.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927353-gratingorders) | [gratingorders.md](./en/gratingorders.md) |
+| [gratingperiod1](./en/gratingperiod1.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927253-gratingperiod1) | [gratingperiod1.md](./en/gratingperiod1.md) |
+| [gratingperiod2](./en/gratingperiod2.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407074-gratingperiod2) | [gratingperiod2.md](./en/gratingperiod2.md) |
+| [gratingpolar](./en/gratingpolar.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407034-gratingpolar) | [gratingpolar.md](./en/gratingpolar.md) |
+| [gratingprojection](./en/gratingprojection.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927373-gratingprojection) | [gratingprojection.md](./en/gratingprojection.md) |
+| [gratingu1](./en/gratingu1.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407094-gratingu1) | [gratingu1.md](./en/gratingu1.md) |
+| [gratingu2](./en/gratingu2.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407114-gratingu2) | [gratingu2.md](./en/gratingu2.md) |
+| [gratingvector](./en/gratingvector.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407054-gratingvector) | [gratingvector.md](./en/gratingvector.md) |
+| [groupscope](./en/groupscope.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928553-groupscope) | [groupscope.md](./en/groupscope.md) |
 
-## H
+### H
 
-- [h5info](https://optics.ansys.com/hc/en-us/articles/360034927413-h5info)
-- [h5read](https://optics.ansys.com/hc/en-us/articles/360034407214-h5read)
-- [h5readattr](https://optics.ansys.com/hc/en-us/articles/360034927433-h5readattr)
-- [h5writeattr](https://optics.ansys.com/hc/en-us/articles/19055540178963-h5writeattr-Script-command)
-- [havedata](https://optics.ansys.com/hc/en-us/articles/360034930213-havedata)
-- [haveproperty](https://optics.ansys.com/hc/en-us/articles/360034928973-haveproperty)
-- [haveresult](https://optics.ansys.com/hc/en-us/articles/360034409894-haveresult)
-- [havesweepdata](https://optics.ansys.com/hc/en-us/articles/360034409934-havesweepdata)
-- [havesweepresult](https://optics.ansys.com/hc/en-us/articles/360034409954-havesweepresult)
-- [help](https://optics.ansys.com/hc/en-us/articles/360034411494-help)
-- [hide](https://optics.ansys.com/hc/en-us/articles/360034411374-hide)
-- [hidecategory](https://optics.ansys.com/hc/en-us/articles/360034407394-hidecategory)
-- [hideproperty](https://optics.ansys.com/hc/en-us/articles/360034407374-hideproperty)
-- [histc](https://optics.ansys.com/hc/en-us/articles/360034410494-histc)
-- [histogram](https://optics.ansys.com/hc/en-us/articles/360034409314-histogram)
-- [historyoff](https://optics.ansys.com/hc/en-us/articles/360034408914-historyoff)
-- [historyon](https://optics.ansys.com/hc/en-us/articles/360034929273-historyon)
-- [holdoff](https://optics.ansys.com/hc/en-us/articles/360034931133-holdoff)
-- [holdon](https://optics.ansys.com/hc/en-us/articles/360034931113-holdon)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [h5info](./en/h5info.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927413-h5info) | [h5info.md](./en/h5info.md) |
+| [h5read](./en/h5read.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407214-h5read) | [h5read.md](./en/h5read.md) |
+| [h5readattr](./en/h5readattr.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927433-h5readattr) | [h5readattr.md](./en/h5readattr.md) |
+| [h5writeattr](./en/h5writeattr.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/19055540178963-h5writeattr-Script-command) | [h5writeattr.md](./en/h5writeattr.md) |
+| [havedata](./en/havedata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930213-havedata) | [havedata.md](./en/havedata.md) |
+| [haveproperty](./en/haveproperty.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928973-haveproperty) | [haveproperty.md](./en/haveproperty.md) |
+| [haveresult](./en/haveresult.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409894-haveresult) | [haveresult.md](./en/haveresult.md) |
+| [havesweepdata](./en/havesweepdata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409934-havesweepdata) | [havesweepdata.md](./en/havesweepdata.md) |
+| [havesweepresult](./en/havesweepresult.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409954-havesweepresult) | [havesweepresult.md](./en/havesweepresult.md) |
+| [help](./en/help.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411494-help) | [help.md](./en/help.md) |
+| [hide](./en/hide.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411374-hide) | [hide.md](./en/hide.md) |
+| [hidecategory](./en/hidecategory.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407394-hidecategory) | [hidecategory.md](./en/hidecategory.md) |
+| [hideproperty](./en/hideproperty.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407374-hideproperty) | [hideproperty.md](./en/hideproperty.md) |
+| [histc](./en/histc.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410494-histc) | [histc.md](./en/histc.md) |
+| [histogram](./en/histogram.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409314-histogram) | [histogram.md](./en/histogram.md) |
+| [historyoff](./en/historyoff.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408914-historyoff) | [historyoff.md](./en/historyoff.md) |
+| [historyon](./en/historyon.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929273-historyon) | [historyon.md](./en/historyon.md) |
+| [holdoff](./en/holdoff.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931133-holdoff) | [holdoff.md](./en/holdoff.md) |
+| [holdon](./en/holdon.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931113-holdon) | [holdon.md](./en/holdon.md) |
 
-## I
+### I
 
-- [icht](https://optics.ansys.com/hc/en-us/articles/360034926933-icht)
-- [if](https://optics.ansys.com/hc/en-us/articles/360034408294-if)
-- [imag](https://optics.ansys.com/hc/en-us/articles/360034925513-imag)
-- [image](https://optics.ansys.com/hc/en-us/articles/360034931253-image)
-- [implantkurtosis](https://optics.ansys.com/hc/en-us/articles/360034927053-implantkurtosis)
-- [implantlateralscatter](https://optics.ansys.com/hc/en-us/articles/360034406874-implantlateralscatter)
-- [implantrange](https://optics.ansys.com/hc/en-us/articles/360034406834-implantrange)
-- [implantskewness](https://optics.ansys.com/hc/en-us/articles/360034927033-implantskewness)
-- [implantstraggle](https://optics.ansys.com/hc/en-us/articles/360034406854-implantstraggle)
-- [importbinary](https://optics.ansys.com/hc/en-us/articles/360034408734-importbinary)
-- [importbinary2](https://optics.ansys.com/hc/en-us/articles/360034929013-importbinary2)
-- [importbinaryobfuscated](https://optics.ansys.com/hc/en-us/articles/360034929033-importbinaryobfuscated)
-- [importcsvlc](https://optics.ansys.com/hc/en-us/articles/360034924773-importcsvlc)
-- [importdataset](https://optics.ansys.com/hc/en-us/articles/360034409114-importdataset)
-- [importnetlist](https://optics.ansys.com/hc/en-us/articles/360034932073-importnetlist)
-- [importnk](https://optics.ansys.com/hc/en-us/articles/360034408674-importnk)
-- [importnk2](https://optics.ansys.com/hc/en-us/articles/360034408694-importnk2)
-- [importnkobfuscated](https://optics.ansys.com/hc/en-us/articles/360034408714-importnkobfuscated)
-- [importsurface](https://optics.ansys.com/hc/en-us/articles/360034408654-importsurface)
-- [importsurface2](https://optics.ansys.com/hc/en-us/articles/360034928993-importsurface2)
-- [inpoly](https://optics.ansys.com/hc/en-us/articles/360034926253-inpoly)
-- [insert](https://optics.ansys.com/hc/en-us/articles/360034928453-insert)
-- [insertsweep](https://optics.ansys.com/hc/en-us/articles/360034930433-insertsweep)
-- [installdesignkit](https://optics.ansys.com/hc/en-us/articles/360034407534-installdesignkit)
-- [integrate](https://optics.ansys.com/hc/en-us/articles/360034405814-integrate)
-- [integrate2](https://optics.ansys.com/hc/en-us/articles/360034405834-integrate2)
-- [interp](https://optics.ansys.com/hc/en-us/articles/360034925893-interp)
-- [interptet](https://optics.ansys.com/hc/en-us/articles/360034926673-interptet)
-- [interptri](https://optics.ansys.com/hc/en-us/articles/360034405774-interptri)
-- [inv](https://optics.ansys.com/hc/en-us/articles/360034405754-inv)
-- [invfft](https://optics.ansys.com/hc/en-us/articles/360034406034-invfft)
-- [iscell](https://optics.ansys.com/hc/en-us/articles/360034932273-iscell)
-- [isfield](https://optics.ansys.com/hc/en-us/articles/360034932293-isfield)
-- [islicensestandard](https://optics.ansys.com/hc/en-us/articles/41005466140691-islicensestandard-Script-command)
-- [ispropertyactive](https://optics.ansys.com/hc/en-us/articles/360034927553-ispropertyactive)
-- [isstruct](https://optics.ansys.com/hc/en-us/articles/360034411654-isstruct)
-- [issweep](https://optics.ansys.com/hc/en-us/articles/360034411634-issweep)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [icht](./en/icht.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926933-icht) | [icht.md](./en/icht.md) |
+| [if](./en/if.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408294-if) | [if.md](./en/if.md) |
+| [imag](./en/imag.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925513-imag) | [imag.md](./en/imag.md) |
+| [image](./en/image.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931253-image) | [image.md](./en/image.md) |
+| [implantkurtosis](./en/implantkurtosis.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927053-implantkurtosis) | [implantkurtosis.md](./en/implantkurtosis.md) |
+| [implantlateralscatter](./en/implantlateralscatter.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406874-implantlateralscatter) | [implantlateralscatter.md](./en/implantlateralscatter.md) |
+| [implantrange](./en/implantrange.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406834-implantrange) | [implantrange.md](./en/implantrange.md) |
+| [implantskewness](./en/implantskewness.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927033-implantskewness) | [implantskewness.md](./en/implantskewness.md) |
+| [implantstraggle](./en/implantstraggle.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406854-implantstraggle) | [implantstraggle.md](./en/implantstraggle.md) |
+| [importbinary](./en/importbinary.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408734-importbinary) | [importbinary.md](./en/importbinary.md) |
+| [importbinary2](./en/importbinary2.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929013-importbinary2) | [importbinary2.md](./en/importbinary2.md) |
+| [importbinaryobfuscated](./en/importbinaryobfuscated.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929033-importbinaryobfuscated) | [importbinaryobfuscated.md](./en/importbinaryobfuscated.md) |
+| [importcsvlc](./en/importcsvlc.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924773-importcsvlc) | [importcsvlc.md](./en/importcsvlc.md) |
+| [importdataset](./en/importdataset.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409114-importdataset) | [importdataset.md](./en/importdataset.md) |
+| [importnetlist](./en/importnetlist.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932073-importnetlist) | [importnetlist.md](./en/importnetlist.md) |
+| [importnk](./en/importnk.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408674-importnk) | [importnk.md](./en/importnk.md) |
+| [importnk2](./en/importnk2.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408694-importnk2) | [importnk2.md](./en/importnk2.md) |
+| [importnkobfuscated](./en/importnkobfuscated.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408714-importnkobfuscated) | [importnkobfuscated.md](./en/importnkobfuscated.md) |
+| [importsurface](./en/importsurface.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408654-importsurface) | [importsurface.md](./en/importsurface.md) |
+| [importsurface2](./en/importsurface2.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928993-importsurface2) | [importsurface2.md](./en/importsurface2.md) |
+| [inpoly](./en/inpoly.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926253-inpoly) | [inpoly.md](./en/inpoly.md) |
+| [insert](./en/insert.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928453-insert) | [insert.md](./en/insert.md) |
+| [insertsweep](./en/insertsweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930433-insertsweep) | [insertsweep.md](./en/insertsweep.md) |
+| [installdesignkit](./en/installdesignkit.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407534-installdesignkit) | [installdesignkit.md](./en/installdesignkit.md) |
+| [integrate](./en/integrate.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405814-integrate) | [integrate.md](./en/integrate.md) |
+| [integrate2](./en/integrate2.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405834-integrate2) | [integrate2.md](./en/integrate2.md) |
+| [interp](./en/interp.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925893-interp) | [interp.md](./en/interp.md) |
+| [interptet](./en/interptet.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926673-interptet) | [interptet.md](./en/interptet.md) |
+| [interptri](./en/interptri.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405774-interptri) | [interptri.md](./en/interptri.md) |
+| [inv](./en/inv.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405754-inv) | [inv.md](./en/inv.md) |
+| [invfft](./en/invfft.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406034-invfft) | [invfft.md](./en/invfft.md) |
+| [iscell](./en/iscell.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932273-iscell) | [iscell.md](./en/iscell.md) |
+| [isfield](./en/isfield.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932293-isfield) | [isfield.md](./en/isfield.md) |
+| [islicensestandard](./en/islicensestandard.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/41005466140691-islicensestandard-Script-command) | [islicensestandard.md](./en/islicensestandard.md) |
+| [ispropertyactive](./en/ispropertyactive.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927553-ispropertyactive) | [ispropertyactive.md](./en/ispropertyactive.md) |
+| [isstruct](./en/isstruct.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411654-isstruct) | [isstruct.md](./en/isstruct.md) |
+| [issweep](./en/issweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411634-issweep) | [issweep.md](./en/issweep.md) |
 
-## J
+### J
 
-- [jsonload](https://optics.ansys.com/hc/en-us/articles/360034408194-jsonload)
-- [jsonsave](https://optics.ansys.com/hc/en-us/articles/360034928313-jsonsave)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [jsonload](./en/jsonload.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408194-jsonload) | [jsonload.md](./en/jsonload.md) |
+| [jsonsave](./en/jsonsave.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928313-jsonsave) | [jsonsave.md](./en/jsonsave.md) |
 
-## K
+### K
 
-- [killwizard](https://optics.ansys.com/hc/en-us/articles/360034411794-killwizard)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [killwizard](./en/killwizard.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411794-killwizard) | [killwizard.md](./en/killwizard.md) |
 
-## L
+### L
 
-- [layoutmode](https://optics.ansys.com/hc/en-us/articles/360034924033-layoutmode)
-- [legend](https://optics.ansys.com/hc/en-us/articles/360034931233-legend)
-- [length](https://optics.ansys.com/hc/en-us/articles/360034925653-length)
-- [library](https://optics.ansys.com/hc/en-us/articles/360034927473-library)
-- [linecross](https://optics.ansys.com/hc/en-us/articles/360034406154-linecross)
-- [lineintersect](https://optics.ansys.com/hc/en-us/articles/360034926333-lineintersect)
-- [linspace](https://optics.ansys.com/hc/en-us/articles/360034409254-linspace)
-- [listjobs](https://optics.ansys.com/hc/en-us/articles/360034410774-listjobs)
-- [load](https://optics.ansys.com/hc/en-us/articles/360034410834-load)
-- [loadcustom](https://optics.ansys.com/hc/en-us/articles/360034407314-loadcustom)
-- [loaddata](https://optics.ansys.com/hc/en-us/articles/360034411214-loaddata)
-- [loaddesignkit](https://optics.ansys.com/hc/en-us/articles/360034927613-loaddesignkit)
-- [loadelement](https://optics.ansys.com/hc/en-us/articles/360034407274-loadelement)
-- [loadgdsfile](https://optics.ansys.com/hc/en-us/articles/360034929473-loadgdsfile)
-- [loadsweep](https://optics.ansys.com/hc/en-us/articles/360034409994-loadsweep)
-- [log](https://optics.ansys.com/hc/en-us/articles/360034925573-log)
-- [log10](https://optics.ansys.com/hc/en-us/articles/360034925593-log10)
-- [logmessage](https://optics.ansys.com/hc/en-us/articles/360034932113-logmessage)
-- [lognrnd](https://optics.ansys.com/hc/en-us/articles/360034406214-lognrnd)
-- [lookupappend](https://optics.ansys.com/hc/en-us/articles/360034928433-lookupappend)
-- [lookupclose](https://optics.ansys.com/hc/en-us/articles/360034408234-lookupclose)
-- [lookupopen](https://optics.ansys.com/hc/en-us/articles/360034408254-lookupopen)
-- [lookupread](https://optics.ansys.com/hc/en-us/articles/360034928333-lookupread)
-- [lookupreadnportsparameter](https://optics.ansys.com/hc/en-us/articles/360034408274-lookupreadnportsparameter)
-- [lookupreadtable](https://optics.ansys.com/hc/en-us/articles/360034928393-lookupreadtable)
-- [lookupreadvalue](https://optics.ansys.com/hc/en-us/articles/360034928413-lookupreadvalue)
-- [lookupwrite](https://optics.ansys.com/hc/en-us/articles/360034928353-lookupwrite)
-- [lower](https://optics.ansys.com/hc/en-us/articles/360034405974-lower)
-- [ls](https://optics.ansys.com/hc/en-us/articles/360034410874-ls)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [layoutmode](./en/layoutmode.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924033-layoutmode) | [layoutmode.md](./en/layoutmode.md) |
+| [legend](./en/legend.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931233-legend) | [legend.md](./en/legend.md) |
+| [length](./en/length.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925653-length) | [length.md](./en/length.md) |
+| [library](./en/library.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927473-library) | [library.md](./en/library.md) |
+| [linecross](./en/linecross.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406154-linecross) | [linecross.md](./en/linecross.md) |
+| [lineintersect](./en/lineintersect.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926333-lineintersect) | [lineintersect.md](./en/lineintersect.md) |
+| [linspace](./en/linspace.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409254-linspace) | [linspace.md](./en/linspace.md) |
+| [listjobs](./en/listjobs.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410774-listjobs) | [listjobs.md](./en/listjobs.md) |
+| [load](./en/load.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410834-load) | [load.md](./en/load.md) |
+| [loadcustom](./en/loadcustom.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407314-loadcustom) | [loadcustom.md](./en/loadcustom.md) |
+| [loaddata](./en/loaddata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411214-loaddata) | [loaddata.md](./en/loaddata.md) |
+| [loaddesignkit](./en/loaddesignkit.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927613-loaddesignkit) | [loaddesignkit.md](./en/loaddesignkit.md) |
+| [loadelement](./en/loadelement.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407274-loadelement) | [loadelement.md](./en/loadelement.md) |
+| [loadgdsfile](./en/loadgdsfile.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929473-loadgdsfile) | [loadgdsfile.md](./en/loadgdsfile.md) |
+| [loadsweep](./en/loadsweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409994-loadsweep) | [loadsweep.md](./en/loadsweep.md) |
+| [log](./en/log.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925573-log) | [log.md](./en/log.md) |
+| [log10](./en/log10.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925593-log10) | [log10.md](./en/log10.md) |
+| [logmessage](./en/logmessage.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932113-logmessage) | [logmessage.md](./en/logmessage.md) |
+| [lognrnd](./en/lognrnd.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406214-lognrnd) | [lognrnd.md](./en/lognrnd.md) |
+| [lookupappend](./en/lookupappend.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928433-lookupappend) | [lookupappend.md](./en/lookupappend.md) |
+| [lookupclose](./en/lookupclose.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408234-lookupclose) | [lookupclose.md](./en/lookupclose.md) |
+| [lookupopen](./en/lookupopen.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408254-lookupopen) | [lookupopen.md](./en/lookupopen.md) |
+| [lookupread](./en/lookupread.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928333-lookupread) | [lookupread.md](./en/lookupread.md) |
+| [lookupreadnportsparameter](./en/lookupreadnportsparameter.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408274-lookupreadnportsparameter) | [lookupreadnportsparameter.md](./en/lookupreadnportsparameter.md) |
+| [lookupreadtable](./en/lookupreadtable.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928393-lookupreadtable) | [lookupreadtable.md](./en/lookupreadtable.md) |
+| [lookupreadvalue](./en/lookupreadvalue.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928413-lookupreadvalue) | [lookupreadvalue.md](./en/lookupreadvalue.md) |
+| [lookupwrite](./en/lookupwrite.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928353-lookupwrite) | [lookupwrite.md](./en/lookupwrite.md) |
+| [lower](./en/lower.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405974-lower) | [lower.md](./en/lower.md) |
+| [ls](./en/ls.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410874-ls) | [ls.md](./en/ls.md) |
 
-## M
+### M
 
-- [mapfind](https://optics.ansys.com/hc/en-us/articles/360034926613-mapfind)
-- [materialexists](https://optics.ansys.com/hc/en-us/articles/360034930113-materialexists)
-- [matlab](https://optics.ansys.com/hc/en-us/articles/360034407974-matlab)
-- [matlabget](https://optics.ansys.com/hc/en-us/articles/360034407994-matlabget)
-- [matlabload](https://optics.ansys.com/hc/en-us/articles/360034408034-matlabload)
-- [matlabput](https://optics.ansys.com/hc/en-us/articles/360034408014-matlabput)
-- [matlabsave](https://optics.ansys.com/hc/en-us/articles/360034928113-matlabsave)
-- [matrix](https://optics.ansys.com/hc/en-us/articles/360034929613-matrix)
-- [matrixdataset](https://optics.ansys.com/hc/en-us/articles/360034409454-matrixdataset)
-- [max](https://optics.ansys.com/hc/en-us/articles/360034925693-max)
-- [mcfit](https://optics.ansys.com/hc/en-us/articles/360034930333-mcfit)
-- [mczfit](https://optics.ansys.com/hc/en-us/articles/360034930353-mczfit)
-- [mean](https://optics.ansys.com/hc/en-us/articles/360034406314-mean)
-- [mesh](https://optics.ansys.com/hc/en-us/articles/360034410654-mesh)
-- [meshgrid3dx](https://optics.ansys.com/hc/en-us/articles/360034929693-meshgrid3dx)
-- [meshgrid3dy](https://optics.ansys.com/hc/en-us/articles/360034409374-meshgrid3dy)
-- [meshgrid3dz](https://optics.ansys.com/hc/en-us/articles/360034929713-meshgrid3dz)
-- [meshgrid4d](https://optics.ansys.com/hc/en-us/articles/360034929733-meshgrid4d)
-- [meshgridx](https://optics.ansys.com/hc/en-us/articles/360034409334-meshgridx)
-- [meshgridy](https://optics.ansys.com/hc/en-us/articles/360034929673-meshgridy)
-- [message](https://optics.ansys.com/hc/en-us/articles/360034411714-message)
-- [mie3d](https://optics.ansys.com/hc/en-us/articles/360034406794-mie3d)
-- [mie3ds12](https://optics.ansys.com/hc/en-us/articles/360034406814-mie3ds12)
-- [min](https://optics.ansys.com/hc/en-us/articles/360034925713-min)
-- [mod](https://optics.ansys.com/hc/en-us/articles/360034926373-mod)
-- [move](https://optics.ansys.com/hc/en-us/articles/360034928713-move)
-- [mqwgain](https://optics.ansys.com/hc/en-us/articles/360034926533-mqwgain)
-- [mult](https://optics.ansys.com/hc/en-us/articles/360034925813-mult)
-- [mv](https://optics.ansys.com/hc/en-us/articles/360034931593-mv)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [mapfind](./en/mapfind.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926613-mapfind) | [mapfind.md](./en/mapfind.md) |
+| [materialexists](./en/materialexists.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930113-materialexists) | [materialexists.md](./en/materialexists.md) |
+| [matlab](./en/matlab.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407974-matlab) | [matlab.md](./en/matlab.md) |
+| [matlabget](./en/matlabget.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407994-matlabget) | [matlabget.md](./en/matlabget.md) |
+| [matlabload](./en/matlabload.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408034-matlabload) | [matlabload.md](./en/matlabload.md) |
+| [matlabput](./en/matlabput.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408014-matlabput) | [matlabput.md](./en/matlabput.md) |
+| [matlabsave](./en/matlabsave.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928113-matlabsave) | [matlabsave.md](./en/matlabsave.md) |
+| [matrix](./en/matrix.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929613-matrix) | [matrix.md](./en/matrix.md) |
+| [matrixdataset](./en/matrixdataset.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409454-matrixdataset) | [matrixdataset.md](./en/matrixdataset.md) |
+| [max](./en/max.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925693-max) | [max.md](./en/max.md) |
+| [mcfit](./en/mcfit.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930333-mcfit) | [mcfit.md](./en/mcfit.md) |
+| [mczfit](./en/mczfit.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930353-mczfit) | [mczfit.md](./en/mczfit.md) |
+| [mean](./en/mean.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406314-mean) | [mean.md](./en/mean.md) |
+| [mesh](./en/mesh.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410654-mesh) | [mesh.md](./en/mesh.md) |
+| [meshgrid3dx](./en/meshgrid3dx.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929693-meshgrid3dx) | [meshgrid3dx.md](./en/meshgrid3dx.md) |
+| [meshgrid3dy](./en/meshgrid3dy.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409374-meshgrid3dy) | [meshgrid3dy.md](./en/meshgrid3dy.md) |
+| [meshgrid3dz](./en/meshgrid3dz.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929713-meshgrid3dz) | [meshgrid3dz.md](./en/meshgrid3dz.md) |
+| [meshgrid4d](./en/meshgrid4d.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929733-meshgrid4d) | [meshgrid4d.md](./en/meshgrid4d.md) |
+| [meshgridx](./en/meshgridx.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409334-meshgridx) | [meshgridx.md](./en/meshgridx.md) |
+| [meshgridy](./en/meshgridy.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929673-meshgridy) | [meshgridy.md](./en/meshgridy.md) |
+| [message](./en/message.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411714-message) | [message.md](./en/message.md) |
+| [mie3d](./en/mie3d.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406794-mie3d) | [mie3d.md](./en/mie3d.md) |
+| [mie3ds12](./en/mie3ds12.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406814-mie3ds12) | [mie3ds12.md](./en/mie3ds12.md) |
+| [min](./en/min.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925713-min) | [min.md](./en/min.md) |
+| [mod](./en/mod.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926373-mod) | [mod.md](./en/mod.md) |
+| [move](./en/move.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928713-move) | [move.md](./en/move.md) |
+| [mqwgain](./en/mqwgain.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926533-mqwgain) | [mqwgain.md](./en/mqwgain.md) |
+| [mult](./en/mult.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925813-mult) | [mult.md](./en/mult.md) |
+| [mv](./en/mv.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931593-mv) | [mv.md](./en/mv.md) |
 
-## N
+### Misc
 
-- [near2far](https://optics.ansys.com/hc/en-us/articles/360034930753-near2far)
-- [new](https://optics.ansys.com/hc/en-us/articles/360034931493-new)
-- [newproject](https://optics.ansys.com/hc/en-us/articles/360034931473-newproject)
-- [newwizard](https://optics.ansys.com/hc/en-us/articles/360034932353-newwizard)
-- [newwizardpage](https://optics.ansys.com/hc/en-us/articles/360034932373-newwizardpage)
-- [nonorm](https://optics.ansys.com/hc/en-us/articles/360034405434-nonorm)
-- [norm](https://optics.ansys.com/hc/en-us/articles/360034406434-norm)
-- [normpdf](https://optics.ansys.com/hc/en-us/articles/360034406454-normpdf)
-- [now](https://optics.ansys.com/hc/en-us/articles/360034411694-now)
-- [num2str](https://optics.ansys.com/hc/en-us/articles/360034925993-num2str)
-- [nummodes](https://optics.ansys.com/hc/en-us/articles/360034405294-nummodes)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [!](./en/exclamation.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931013--) | [exclamation.md](./en/exclamation.md) |
+| [!=](./en/exclamationequals.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930913--) | [exclamationequals.md](./en/exclamationequals.md) |
+| ["](./en/quote.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410394--) | [quote.md](./en/quote.md) |
+| [#](./en/hash.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410454--) | [hash.md](./en/hash.md) |
+| [%](./en/percent.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929593--) | [percent.md](./en/percent.md) |
+| [&](./en/ampersand.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930973--) | [ampersand.md](./en/ampersand.md) |
+| ['](./en/apostrophe.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931053--) | [apostrophe.md](./en/apostrophe.md) |
+| [*](./en/asterisk.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930833--) | [asterisk.md](./en/asterisk.md) |
+| [+](./en/plus.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410254--) | [plus.md](./en/plus.md) |
+| [-](./en/minus.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930873--) | [minus.md](./en/minus.md) |
+| [.](./en/dot.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930813--) | [dot.md](./en/dot.md) |
+| [/](./en/slash.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930853--) | [slash.md](./en/slash.md) |
+| [:](./en/colon.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929533--) | [colon.md](./en/colon.md) |
+| [<](./en/lt.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410334--) | [lt.md](./en/lt.md) |
+| [<=](./en/lte.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410314--) | [lte.md](./en/lte.md) |
+| [=](./en/equals.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929513--) | [equals.md](./en/equals.md) |
+| [==](./en/equalsequals.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930893--) | [equalsequals.md](./en/equalsequals.md) |
+| [>](./en/gt.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930953--) | [gt.md](./en/gt.md) |
+| [>=](./en/gte.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930933--) | [gte.md](./en/gte.md) |
+| [?](./en/question.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410434--) | [question.md](./en/question.md) |
+| [^](./en/caret.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410274--) | [caret.md](./en/caret.md) |
+| [|](./en/pipe.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410374--) | [pipe.md](./en/pipe.md) |
+| [~](./en/tilde.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931033--) | [tilde.md](./en/tilde.md) |
 
-## O
+### N
 
-- [ones](https://optics.ansys.com/hc/en-us/articles/360034929633-ones)
-- [opensession](https://optics.ansys.com/hc/en-us/articles/360034407834-opensession)
-- [operatingsystem](https://optics.ansys.com/hc/en-us/articles/360034932133-operatingsystem)
-- [optimizeposition](https://optics.ansys.com/hc/en-us/articles/360034405314-optimizeposition)
-- [or](https://optics.ansys.com/hc/en-us/articles/360034930993-or)
-- [orbit](https://optics.ansys.com/hc/en-us/articles/360034929193-orbit)
-- [overlap](https://optics.ansys.com/hc/en-us/articles/360034405254-overlap)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [near2far](./en/near2far.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930753-near2far) | [near2far.md](./en/near2far.md) |
+| [new](./en/new.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931493-new) | [new.md](./en/new.md) |
+| [newproject](./en/newproject.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931473-newproject) | [newproject.md](./en/newproject.md) |
+| [newwizard](./en/newwizard.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932353-newwizard) | [newwizard.md](./en/newwizard.md) |
+| [newwizardpage](./en/newwizardpage.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932373-newwizardpage) | [newwizardpage.md](./en/newwizardpage.md) |
+| [nonorm](./en/nonorm.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405434-nonorm) | [nonorm.md](./en/nonorm.md) |
+| [norm](./en/norm.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406434-norm) | [norm.md](./en/norm.md) |
+| [normpdf](./en/normpdf.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406454-normpdf) | [normpdf.md](./en/normpdf.md) |
+| [now](./en/now.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411694-now) | [now.md](./en/now.md) |
+| [num2str](./en/num2str.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925993-num2str) | [num2str.md](./en/num2str.md) |
+| [nummodes](./en/nummodes.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405294-nummodes) | [nummodes.md](./en/nummodes.md) |
 
-## P
+### O
 
-- [packagedesignkit](https://optics.ansys.com/hc/en-us/articles/360034407514-packagedesignkit)
-- [parsebackannotation](https://optics.ansys.com/hc/en-us/articles/360034927593-parsebackannotation)
-- [parsewaveguidebackannotation](https://optics.ansys.com/hc/en-us/articles/360034407454-parsewaveguidebackannotation)
-- [partitionvolume](https://optics.ansys.com/hc/en-us/articles/360034410674-partitionvolume)
-- [pastefromclipboard](https://optics.ansys.com/hc/en-us/articles/360034411314-pastefromclipboard)
-- [pastesweep](https://optics.ansys.com/hc/en-us/articles/360034930393-pastesweep)
-- [pause](https://optics.ansys.com/hc/en-us/articles/360034411114-pause)
-- [pearson4pdf](https://optics.ansys.com/hc/en-us/articles/360034926693-pearson4pdf)
-- [permute](https://optics.ansys.com/hc/en-us/articles/360034925853-permute)
-- [pinch](https://optics.ansys.com/hc/en-us/articles/360034405674-pinch)
-- [plot](https://optics.ansys.com/hc/en-us/articles/360034410474-plot)
-- [plotxy](https://optics.ansys.com/hc/en-us/articles/360034931093-plotxy)
-- [polar](https://optics.ansys.com/hc/en-us/articles/360034931153-polar)
-- [polar2](https://optics.ansys.com/hc/en-us/articles/360034931173-polar2)
-- [polarimage](https://optics.ansys.com/hc/en-us/articles/360034931193-polarimage)
-- [polyand](https://optics.ansys.com/hc/en-us/articles/360034926293-polyand)
-- [polyarea](https://optics.ansys.com/hc/en-us/articles/360034926213-polyarea)
-- [polydft](https://optics.ansys.com/hc/en-us/articles/360034406054-polydft)
-- [polydiff](https://optics.ansys.com/hc/en-us/articles/360034926313-polydiff)
-- [polyfit](https://optics.ansys.com/hc/en-us/articles/360034925913-polyfit)
-- [polygrow](https://optics.ansys.com/hc/en-us/articles/360034406094-polygrow)
-- [polyintersect](https://optics.ansys.com/hc/en-us/articles/360034926233-polyintersect)
-- [polyor](https://optics.ansys.com/hc/en-us/articles/360034406114-polyor)
-- [polyxor](https://optics.ansys.com/hc/en-us/articles/360034406134-polyxor)
-- [precision](https://optics.ansys.com/hc/en-us/articles/360034926593-precision)
-- [print](https://optics.ansys.com/hc/en-us/articles/360034929813-print)
-- [probe](https://optics.ansys.com/hc/en-us/articles/360034407294-probe)
-- [prod](https://optics.ansys.com/hc/en-us/articles/360034925673-prod)
-- [propagate](https://optics.ansys.com/hc/en-us/articles/360034925213-propagate)
-- [protectproperty](https://optics.ansys.com/hc/en-us/articles/360034927513-protectproperty)
-- [putremotedata](https://optics.ansys.com/hc/en-us/articles/360034928053-putremotedata)
-- [pwd](https://optics.ansys.com/hc/en-us/articles/360034931773-pwd)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [ones](./en/ones.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929633-ones) | [ones.md](./en/ones.md) |
+| [opensession](./en/opensession.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407834-opensession) | [opensession.md](./en/opensession.md) |
+| [operatingsystem](./en/operatingsystem.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932133-operatingsystem) | [operatingsystem.md](./en/operatingsystem.md) |
+| [optimizeposition](./en/optimizeposition.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405314-optimizeposition) | [optimizeposition.md](./en/optimizeposition.md) |
+| [or](./en/or.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930993-or) | [or.md](./en/or.md) |
+| [orbit](./en/orbit.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929193-orbit) | [orbit.md](./en/orbit.md) |
+| [overlap](./en/overlap.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405254-overlap) | [overlap.md](./en/overlap.md) |
 
-## Q
+### P
 
-- [quadtet](https://optics.ansys.com/hc/en-us/articles/360034926633-quadtet)
-- [quadtri](https://optics.ansys.com/hc/en-us/articles/360034406394-quadtri)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [packagedesignkit](./en/packagedesignkit.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407514-packagedesignkit) | [packagedesignkit.md](./en/packagedesignkit.md) |
+| [parsebackannotation](./en/parsebackannotation.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927593-parsebackannotation) | [parsebackannotation.md](./en/parsebackannotation.md) |
+| [parsewaveguidebackannotation](./en/parsewaveguidebackannotation.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407454-parsewaveguidebackannotation) | [parsewaveguidebackannotation.md](./en/parsewaveguidebackannotation.md) |
+| [partitionvolume](./en/partitionvolume.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410674-partitionvolume) | [partitionvolume.md](./en/partitionvolume.md) |
+| [pastefromclipboard](./en/pastefromclipboard.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411314-pastefromclipboard) | [pastefromclipboard.md](./en/pastefromclipboard.md) |
+| [pastesweep](./en/pastesweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930393-pastesweep) | [pastesweep.md](./en/pastesweep.md) |
+| [pause](./en/pause.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411114-pause) | [pause.md](./en/pause.md) |
+| [pearson4pdf](./en/pearson4pdf.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926693-pearson4pdf) | [pearson4pdf.md](./en/pearson4pdf.md) |
+| [permute](./en/permute.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925853-permute) | [permute.md](./en/permute.md) |
+| [pinch](./en/pinch.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405674-pinch) | [pinch.md](./en/pinch.md) |
+| [plot](./en/plot.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410474-plot) | [plot.md](./en/plot.md) |
+| [plotxy](./en/plotxy.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931093-plotxy) | [plotxy.md](./en/plotxy.md) |
+| [polar](./en/polar.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931153-polar) | [polar.md](./en/polar.md) |
+| [polar2](./en/polar2.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931173-polar2) | [polar2.md](./en/polar2.md) |
+| [polarimage](./en/polarimage.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931193-polarimage) | [polarimage.md](./en/polarimage.md) |
+| [polyand](./en/polyand.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926293-polyand) | [polyand.md](./en/polyand.md) |
+| [polyarea](./en/polyarea.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926213-polyarea) | [polyarea.md](./en/polyarea.md) |
+| [polydft](./en/polydft.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406054-polydft) | [polydft.md](./en/polydft.md) |
+| [polydiff](./en/polydiff.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926313-polydiff) | [polydiff.md](./en/polydiff.md) |
+| [polyfit](./en/polyfit.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925913-polyfit) | [polyfit.md](./en/polyfit.md) |
+| [polygrow](./en/polygrow.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406094-polygrow) | [polygrow.md](./en/polygrow.md) |
+| [polyintersect](./en/polyintersect.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926233-polyintersect) | [polyintersect.md](./en/polyintersect.md) |
+| [polyor](./en/polyor.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406114-polyor) | [polyor.md](./en/polyor.md) |
+| [polyxor](./en/polyxor.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406134-polyxor) | [polyxor.md](./en/polyxor.md) |
+| [precision](./en/precision.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926593-precision) | [precision.md](./en/precision.md) |
+| [print](./en/print.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929813-print) | [print.md](./en/print.md) |
+| [probe](./en/probe.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407294-probe) | [probe.md](./en/probe.md) |
+| [prod](./en/prod.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925673-prod) | [prod.md](./en/prod.md) |
+| [propagate](./en/propagate.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925213-propagate) | [propagate.md](./en/propagate.md) |
+| [protectproperty](./en/protectproperty.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927513-protectproperty) | [protectproperty.md](./en/protectproperty.md) |
+| [putremotedata](./en/putremotedata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928053-putremotedata) | [putremotedata.md](./en/putremotedata.md) |
+| [pwd](./en/pwd.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931773-pwd) | [pwd.md](./en/pwd.md) |
 
-## R
+### Q
 
-- [rand](https://optics.ansys.com/hc/en-us/articles/360034926413-rand)
-- [randmatrix](https://optics.ansys.com/hc/en-us/articles/360034409274-randmatrix)
-- [randn](https://optics.ansys.com/hc/en-us/articles/360034926433-randn)
-- [randnmatrix](https://optics.ansys.com/hc/en-us/articles/360034409294-randnmatrix)
-- [read](https://optics.ansys.com/hc/en-us/articles/360034931933-read)
-- [readdata](https://optics.ansys.com/hc/en-us/articles/360034411234-readdata)
-- [readnportsparameterat](https://optics.ansys.com/hc/en-us/articles/360034409214-readnportsparameterat)
-- [readstltriangles](https://optics.ansys.com/hc/en-us/articles/360034932233-readstltriangles)
-- [real](https://optics.ansys.com/hc/en-us/articles/360034925493-real)
-- [rectilineardataset](https://optics.ansys.com/hc/en-us/articles/360034409474-rectilineardataset)
-- [redo](https://optics.ansys.com/hc/en-us/articles/360034929253-redo)
-- [redraw](https://optics.ansys.com/hc/en-us/articles/360034929133-redraw)
-- [redrawmode](https://optics.ansys.com/hc/en-us/articles/360034408854-redrawmode)
-- [redrawoff](https://optics.ansys.com/hc/en-us/articles/360034408814-redrawoff)
-- [redrawon](https://optics.ansys.com/hc/en-us/articles/360034929153-redrawon)
-- [refresh](https://optics.ansys.com/hc/en-us/articles/360034411514-refresh)
-- [reloaddesignkit](https://optics.ansys.com/hc/en-us/articles/360034927653-reloaddesignkit)
-- [removecustom](https://optics.ansys.com/hc/en-us/articles/360034407594-removecustom)
-- [removedesignkit](https://optics.ansys.com/hc/en-us/articles/360034407494-removedesignkit)
-- [removeexpansion](https://optics.ansys.com/hc/en-us/articles/360034408994-removeexpansion)
-- [removeport](https://optics.ansys.com/hc/en-us/articles/360034929293-removeport)
-- [removesweepparameter](https://optics.ansys.com/hc/en-us/articles/360034930513-removesweepparameter)
-- [removesweepresult](https://optics.ansys.com/hc/en-us/articles/360034930533-removesweepresult)
-- [renameport](https://optics.ansys.com/hc/en-us/articles/360034927693-renameport)
-- [replace](https://optics.ansys.com/hc/en-us/articles/360034926053-replace)
-- [replacelibrary](https://optics.ansys.com/hc/en-us/articles/360034407334-replacelibrary)
-- [replacestring](https://optics.ansys.com/hc/en-us/articles/360034926073-replacestring)
-- [reportmeshstatistics](https://optics.ansys.com/hc/en-us/articles/360034411034-reportmeshstatistics)
-- [reshape](https://optics.ansys.com/hc/en-us/articles/360034925873-reshape)
-- [resume](https://optics.ansys.com/hc/en-us/articles/360036896474-resume)
-- [resumejobs](https://optics.ansys.com/hc/en-us/articles/360036896654-resumejobs)
-- [rm](https://optics.ansys.com/hc/en-us/articles/360034931533-rm)
-- [rotateelement](https://optics.ansys.com/hc/en-us/articles/360034928693-rotateelement)
-- [round](https://optics.ansys.com/hc/en-us/articles/360034406194-round)
-- [run](https://optics.ansys.com/hc/en-us/articles/360034931333-run)
-- [runanalysis](https://optics.ansys.com/hc/en-us/articles/360034409874-runanalysis)
-- [runfinalize](https://optics.ansys.com/hc/en-us/articles/360034931753-runfinalize)
-- [runinitialize](https://optics.ansys.com/hc/en-us/articles/360034410974-runinitialize)
-- [runjobs](https://optics.ansys.com/hc/en-us/articles/360034931373-runjobs)
-- [runoptimization](https://optics.ansys.com/hc/en-us/articles/360034407794-runoptimization)
-- [runparallel](https://optics.ansys.com/hc/en-us/articles/360034410694-runparallel)
-- [runsetup](https://optics.ansys.com/hc/en-us/articles/360034928893-runsetup)
-- [runstartupscripts](https://optics.ansys.com/hc/en-us/articles/360034411014-runstartupscripts)
-- [runstep](https://optics.ansys.com/hc/en-us/articles/360034931733-runstep)
-- [runsweep](https://optics.ansys.com/hc/en-us/articles/360034931413-runsweep)
-- [runwizard](https://optics.ansys.com/hc/en-us/articles/360034411774-runwizard)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [quadtet](./en/quadtet.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926633-quadtet) | [quadtet.md](./en/quadtet.md) |
+| [quadtri](./en/quadtri.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406394-quadtri) | [quadtri.md](./en/quadtri.md) |
 
-## S
+### R
 
-- [save](https://optics.ansys.com/hc/en-us/articles/360034410814-save)
-- [savedata](https://optics.ansys.com/hc/en-us/articles/360034411174-savedata)
-- [savedcard](https://optics.ansys.com/hc/en-us/articles/360034411154-savedcard)
-- [saveelement](https://optics.ansys.com/hc/en-us/articles/360034927493-saveelement)
-- [savesweep](https://optics.ansys.com/hc/en-us/articles/360034410014-savesweep)
-- [scorrcoef](https://optics.ansys.com/hc/en-us/articles/360034406714-scorrcoef)
-- [scriptautorun](https://optics.ansys.com/hc/en-us/articles/360034410954-scriptautorun)
-- [select](https://optics.ansys.com/hc/en-us/articles/360034928593-select)
-- [selectall](https://optics.ansys.com/hc/en-us/articles/360034408354-selectall)
-- [selectfigure](https://optics.ansys.com/hc/en-us/articles/360034410554-selectfigure)
-- [selectmode](https://optics.ansys.com/hc/en-us/articles/360034405234-selectmode)
-- [selectpartial](https://optics.ansys.com/hc/en-us/articles/360034928613-selectpartial)
-- [set](https://optics.ansys.com/hc/en-us/articles/360034928773-set)
-- [setactivesolver](https://optics.ansys.com/hc/en-us/articles/360034409014-setactivesolver)
-- [setanalysis](https://optics.ansys.com/hc/en-us/articles/360034925113-setanalysis)
-- [setconnectionrouting](https://optics.ansys.com/hc/en-us/articles/360034932253-setconnectionrouting)
-- [setdevice](https://optics.ansys.com/hc/en-us/articles/42996468347667-setdevice-Script-command)
-- [seteigensolver](https://optics.ansys.com/hc/en-us/articles/360034929113-seteigensolver)
-- [setemeanalysis](https://optics.ansys.com/hc/en-us/articles/360034405074-setemeanalysis)
-- [setexpansion](https://optics.ansys.com/hc/en-us/articles/360034408974-setexpansion)
-- [setexpression](https://optics.ansys.com/hc/en-us/articles/360034409094-setexpression)
-- [setfield](https://optics.ansys.com/hc/en-us/articles/360034932313-setfield)
-- [setglobalmonitor](https://optics.ansys.com/hc/en-us/articles/360034408494-setglobalmonitor)
-- [setglobalsource](https://optics.ansys.com/hc/en-us/articles/360034928813-setglobalsource)
-- [seticon](https://optics.ansys.com/hc/en-us/articles/360034409154-seticon)
-- [setlayer](https://optics.ansys.com/hc/en-us/articles/360034929453-setlayer)
-- [setmaterial](https://optics.ansys.com/hc/en-us/articles/360034409654-setmaterial)
-- [setname](https://optics.ansys.com/hc/en-us/articles/360034929353-setname)
-- [setnamed](https://optics.ansys.com/hc/en-us/articles/360034928793-setnamed)
-- [setpersistcheckouts](https://optics.ansys.com/hc/en-us/articles/46544852153747-setpersistcheckouts-Script-Command)
-- [setplot](https://optics.ansys.com/hc/en-us/articles/360034931293-setplot)
-- [setposition](https://optics.ansys.com/hc/en-us/articles/360034408534-setposition)
-- [setpsfoutput](https://optics.ansys.com/hc/en-us/articles/360034411574-setpsfoutput)
-- [setrectangle](https://optics.ansys.com/hc/en-us/articles/360034928833-setrectangle)
-- [setresource](https://optics.ansys.com/hc/en-us/articles/360034410754-setresource)
-- [setresult](https://optics.ansys.com/hc/en-us/articles/360034407694-setresult)
-- [setsetting](https://optics.ansys.com/hc/en-us/articles/360034927973-setsetting)
-- [setsourcesignal](https://optics.ansys.com/hc/en-us/articles/360034929053-setsourcesignal)
-- [setsweep](https://optics.ansys.com/hc/en-us/articles/360034930473-setsweep)
-- [setvalue](https://optics.ansys.com/hc/en-us/articles/360034927773-setvalue)
-- [setview](https://optics.ansys.com/hc/en-us/articles/360034929173-setview)
-- [shiftselect](https://optics.ansys.com/hc/en-us/articles/360034928633-shiftselect)
-- [shiftselectpartial](https://optics.ansys.com/hc/en-us/articles/360034408394-shiftselectpartial)
-- [show](https://optics.ansys.com/hc/en-us/articles/360034932033-show)
-- [showmenubar](https://optics.ansys.com/hc/en-us/articles/360034411394-showmenubar)
-- [sign](https://optics.ansys.com/hc/en-us/articles/360034926393-sign)
-- [simulation](https://optics.ansys.com/hc/en-us/articles/360034409634-simulation)
-- [simulationdiverged](https://optics.ansys.com/hc/en-us/articles/360034410054-simulationdiverged)
-- [sin](https://optics.ansys.com/hc/en-us/articles/360034405534-sin)
-- [size](https://optics.ansys.com/hc/en-us/articles/360034405654-size)
-- [smithchart](https://optics.ansys.com/hc/en-us/articles/360034931213-smithchart)
-- [solar](https://optics.ansys.com/hc/en-us/articles/360034926473-solar)
-- [sort](https://optics.ansys.com/hc/en-us/articles/360034406654-sort)
-- [sortmap](https://optics.ansys.com/hc/en-us/articles/360034926873-sortmap)
-- [sourceintensity](https://optics.ansys.com/hc/en-us/articles/360034925373-sourceintensity)
-- [sourceintensity_avg](https://optics.ansys.com/hc/en-us/articles/360034925393-sourceintensity-avg)
-- [sourceintensity_pavg](https://optics.ansys.com/hc/en-us/articles/360034925413-sourceintensity-pavg)
-- [sourcenorm](https://optics.ansys.com/hc/en-us/articles/360034925273-sourcenorm)
-- [sourcenorm2_avg](https://optics.ansys.com/hc/en-us/articles/360034405474-sourcenorm2-avg)
-- [sourcenorm2_pavg](https://optics.ansys.com/hc/en-us/articles/360034405494-sourcenorm2-pavg)
-- [sourcepower](https://optics.ansys.com/hc/en-us/articles/360034925313-sourcepower)
-- [sourcepower_avg](https://optics.ansys.com/hc/en-us/articles/360034925333-sourcepower-avg)
-- [sourcepower_pavg](https://optics.ansys.com/hc/en-us/articles/360034925353-sourcepower-pavg)
-- [spline](https://optics.ansys.com/hc/en-us/articles/360034405794-spline)
-- [splitstring](https://optics.ansys.com/hc/en-us/articles/360034926093-splitstring)
-- [sqrt](https://optics.ansys.com/hc/en-us/articles/360034925613-sqrt)
-- [sroughness](https://optics.ansys.com/hc/en-us/articles/360034926193-sroughness)
-- [stackdipole](https://optics.ansys.com/hc/en-us/articles/360034926493-stackdipole)
-- [stackfield](https://optics.ansys.com/hc/en-us/articles/360034406294-stackfield)
-- [stackpurcell](https://optics.ansys.com/hc/en-us/articles/360034926513-stackpurcell)
-- [stackrt](https://optics.ansys.com/hc/en-us/articles/360034406254-stackrt)
-- [std](https://optics.ansys.com/hc/en-us/articles/360034406374-std)
-- [stepimport](https://optics.ansys.com/hc/en-us/articles/360034404734-stepimport)
-- [stlimport](https://optics.ansys.com/hc/en-us/articles/360034924733-stlimport)
-- [str2num](https://optics.ansys.com/hc/en-us/articles/360034405914-str2num)
-- [struct](https://optics.ansys.com/hc/en-us/articles/360034409574-struct)
-- [substring](https://optics.ansys.com/hc/en-us/articles/360034926033-substring)
-- [sum](https://optics.ansys.com/hc/en-us/articles/360034405694-sum)
-- [svd](https://optics.ansys.com/hc/en-us/articles/360034926713-svd)
-- [switchtodesign](https://optics.ansys.com/hc/en-us/articles/360034924013-switchtodesign)
-- [switchtolayout](https://optics.ansys.com/hc/en-us/articles/360034923993-switchtolayout)
-- [system](https://optics.ansys.com/hc/en-us/articles/360034410894-system)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [rand](./en/rand.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926413-rand) | [rand.md](./en/rand.md) |
+| [randmatrix](./en/randmatrix.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409274-randmatrix) | [randmatrix.md](./en/randmatrix.md) |
+| [randn](./en/randn.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926433-randn) | [randn.md](./en/randn.md) |
+| [randnmatrix](./en/randnmatrix.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409294-randnmatrix) | [randnmatrix.md](./en/randnmatrix.md) |
+| [read](./en/read.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931933-read) | [read.md](./en/read.md) |
+| [readdata](./en/readdata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411234-readdata) | [readdata.md](./en/readdata.md) |
+| [readnportsparameterat](./en/readnportsparameterat.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409214-readnportsparameterat) | [readnportsparameterat.md](./en/readnportsparameterat.md) |
+| [readstltriangles](./en/readstltriangles.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932233-readstltriangles) | [readstltriangles.md](./en/readstltriangles.md) |
+| [real](./en/real.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925493-real) | [real.md](./en/real.md) |
+| [rectilineardataset](./en/rectilineardataset.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409474-rectilineardataset) | [rectilineardataset.md](./en/rectilineardataset.md) |
+| [redo](./en/redo.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929253-redo) | [redo.md](./en/redo.md) |
+| [redraw](./en/redraw.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929133-redraw) | [redraw.md](./en/redraw.md) |
+| [redrawmode](./en/redrawmode.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408854-redrawmode) | [redrawmode.md](./en/redrawmode.md) |
+| [redrawoff](./en/redrawoff.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408814-redrawoff) | [redrawoff.md](./en/redrawoff.md) |
+| [redrawon](./en/redrawon.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929153-redrawon) | [redrawon.md](./en/redrawon.md) |
+| [refresh](./en/refresh.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411514-refresh) | [refresh.md](./en/refresh.md) |
+| [reloaddesignkit](./en/reloaddesignkit.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927653-reloaddesignkit) | [reloaddesignkit.md](./en/reloaddesignkit.md) |
+| [removecustom](./en/removecustom.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407594-removecustom) | [removecustom.md](./en/removecustom.md) |
+| [removedesignkit](./en/removedesignkit.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407494-removedesignkit) | [removedesignkit.md](./en/removedesignkit.md) |
+| [removeexpansion](./en/removeexpansion.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408994-removeexpansion) | [removeexpansion.md](./en/removeexpansion.md) |
+| [removeport](./en/removeport.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929293-removeport) | [removeport.md](./en/removeport.md) |
+| [removesweepparameter](./en/removesweepparameter.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930513-removesweepparameter) | [removesweepparameter.md](./en/removesweepparameter.md) |
+| [removesweepresult](./en/removesweepresult.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930533-removesweepresult) | [removesweepresult.md](./en/removesweepresult.md) |
+| [renameport](./en/renameport.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927693-renameport) | [renameport.md](./en/renameport.md) |
+| [replace](./en/replace.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926053-replace) | [replace.md](./en/replace.md) |
+| [replacelibrary](./en/replacelibrary.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407334-replacelibrary) | [replacelibrary.md](./en/replacelibrary.md) |
+| [replacestring](./en/replacestring.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926073-replacestring) | [replacestring.md](./en/replacestring.md) |
+| [reportmeshstatistics](./en/reportmeshstatistics.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411034-reportmeshstatistics) | [reportmeshstatistics.md](./en/reportmeshstatistics.md) |
+| [reshape](./en/reshape.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925873-reshape) | [reshape.md](./en/reshape.md) |
+| [resume](./en/resume.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360036896474-resume) | [resume.md](./en/resume.md) |
+| [resumejobs](./en/resumejobs.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360036896654-resumejobs) | [resumejobs.md](./en/resumejobs.md) |
+| [rm](./en/rm.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931533-rm) | [rm.md](./en/rm.md) |
+| [rotateelement](./en/rotateelement.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928693-rotateelement) | [rotateelement.md](./en/rotateelement.md) |
+| [round](./en/round.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406194-round) | [round.md](./en/round.md) |
+| [run](./en/run.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931333-run) | [run.md](./en/run.md) |
+| [runanalysis](./en/runanalysis.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409874-runanalysis) | [runanalysis.md](./en/runanalysis.md) |
+| [runfinalize](./en/runfinalize.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931753-runfinalize) | [runfinalize.md](./en/runfinalize.md) |
+| [runinitialize](./en/runinitialize.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410974-runinitialize) | [runinitialize.md](./en/runinitialize.md) |
+| [runjobs](./en/runjobs.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931373-runjobs) | [runjobs.md](./en/runjobs.md) |
+| [runoptimization](./en/runoptimization.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407794-runoptimization) | [runoptimization.md](./en/runoptimization.md) |
+| [runparallel](./en/runparallel.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410694-runparallel) | [runparallel.md](./en/runparallel.md) |
+| [runsetup](./en/runsetup.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928893-runsetup) | [runsetup.md](./en/runsetup.md) |
+| [runstartupscripts](./en/runstartupscripts.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411014-runstartupscripts) | [runstartupscripts.md](./en/runstartupscripts.md) |
+| [runstep](./en/runstep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931733-runstep) | [runstep.md](./en/runstep.md) |
+| [runsweep](./en/runsweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931413-runsweep) | [runsweep.md](./en/runsweep.md) |
+| [runwizard](./en/runwizard.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411774-runwizard) | [runwizard.md](./en/runwizard.md) |
 
-## T
+### S
 
-- [tan](https://optics.ansys.com/hc/en-us/articles/360034925433-tan)
-- [tecplotread](https://optics.ansys.com/hc/en-us/articles/360034411294-tecplotread)
-- [toscript](https://optics.ansys.com/hc/en-us/articles/360034405994-toscript)
-- [touchstoneload](https://optics.ansys.com/hc/en-us/articles/360034932013-touchstoneload)
-- [transmission](https://optics.ansys.com/hc/en-us/articles/360034405354-transmission)
-- [transmission_avg](https://optics.ansys.com/hc/en-us/articles/360034405374-transmission-avg)
-- [transmission_pavg](https://optics.ansys.com/hc/en-us/articles/360034405414-transmission-pavg)
-- [transpose](https://optics.ansys.com/hc/en-us/articles/360034925973-transpose)
-- [try](https://optics.ansys.com/hc/en-us/articles/360034928513-try)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [save](./en/save.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410814-save) | [save.md](./en/save.md) |
+| [savedata](./en/savedata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411174-savedata) | [savedata.md](./en/savedata.md) |
+| [savedcard](./en/savedcard.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411154-savedcard) | [savedcard.md](./en/savedcard.md) |
+| [saveelement](./en/saveelement.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927493-saveelement) | [saveelement.md](./en/saveelement.md) |
+| [savesweep](./en/savesweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410014-savesweep) | [savesweep.md](./en/savesweep.md) |
+| [scorrcoef](./en/scorrcoef.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406714-scorrcoef) | [scorrcoef.md](./en/scorrcoef.md) |
+| [scriptautorun](./en/scriptautorun.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410954-scriptautorun) | [scriptautorun.md](./en/scriptautorun.md) |
+| [select](./en/select.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928593-select) | [select.md](./en/select.md) |
+| [selectall](./en/selectall.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408354-selectall) | [selectall.md](./en/selectall.md) |
+| [selectfigure](./en/selectfigure.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410554-selectfigure) | [selectfigure.md](./en/selectfigure.md) |
+| [selectmode](./en/selectmode.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405234-selectmode) | [selectmode.md](./en/selectmode.md) |
+| [selectpartial](./en/selectpartial.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928613-selectpartial) | [selectpartial.md](./en/selectpartial.md) |
+| [set](./en/set.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928773-set) | [set.md](./en/set.md) |
+| [setactivesolver](./en/setactivesolver.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409014-setactivesolver) | [setactivesolver.md](./en/setactivesolver.md) |
+| [setanalysis](./en/setanalysis.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925113-setanalysis) | [setanalysis.md](./en/setanalysis.md) |
+| [setconnectionrouting](./en/setconnectionrouting.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932253-setconnectionrouting) | [setconnectionrouting.md](./en/setconnectionrouting.md) |
+| [setdevice](./en/setdevice.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/42996468347667-setdevice-Script-command) | [setdevice.md](./en/setdevice.md) |
+| [seteigensolver](./en/seteigensolver.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929113-seteigensolver) | [seteigensolver.md](./en/seteigensolver.md) |
+| [setemeanalysis](./en/setemeanalysis.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405074-setemeanalysis) | [setemeanalysis.md](./en/setemeanalysis.md) |
+| [setexpansion](./en/setexpansion.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408974-setexpansion) | [setexpansion.md](./en/setexpansion.md) |
+| [setexpression](./en/setexpression.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409094-setexpression) | [setexpression.md](./en/setexpression.md) |
+| [setfield](./en/setfield.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932313-setfield) | [setfield.md](./en/setfield.md) |
+| [setglobalmonitor](./en/setglobalmonitor.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408494-setglobalmonitor) | [setglobalmonitor.md](./en/setglobalmonitor.md) |
+| [setglobalsource](./en/setglobalsource.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928813-setglobalsource) | [setglobalsource.md](./en/setglobalsource.md) |
+| [seticon](./en/seticon.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409154-seticon) | [seticon.md](./en/seticon.md) |
+| [setlayer](./en/setlayer.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929453-setlayer) | [setlayer.md](./en/setlayer.md) |
+| [setmaterial](./en/setmaterial.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409654-setmaterial) | [setmaterial.md](./en/setmaterial.md) |
+| [setname](./en/setname.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929353-setname) | [setname.md](./en/setname.md) |
+| [setnamed](./en/setnamed.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928793-setnamed) | [setnamed.md](./en/setnamed.md) |
+| [setpersistcheckouts](./en/setpersistcheckouts.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/46544852153747-setpersistcheckouts-Script-Command) | [setpersistcheckouts.md](./en/setpersistcheckouts.md) |
+| [setplot](./en/setplot.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931293-setplot) | [setplot.md](./en/setplot.md) |
+| [setposition](./en/setposition.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408534-setposition) | [setposition.md](./en/setposition.md) |
+| [setpsfoutput](./en/setpsfoutput.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411574-setpsfoutput) | [setpsfoutput.md](./en/setpsfoutput.md) |
+| [setrectangle](./en/setrectangle.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928833-setrectangle) | [setrectangle.md](./en/setrectangle.md) |
+| [setresource](./en/setresource.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410754-setresource) | [setresource.md](./en/setresource.md) |
+| [setresult](./en/setresult.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407694-setresult) | [setresult.md](./en/setresult.md) |
+| [setsetting](./en/setsetting.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927973-setsetting) | [setsetting.md](./en/setsetting.md) |
+| [setsourcesignal](./en/setsourcesignal.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929053-setsourcesignal) | [setsourcesignal.md](./en/setsourcesignal.md) |
+| [setsweep](./en/setsweep.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034930473-setsweep) | [setsweep.md](./en/setsweep.md) |
+| [setvalue](./en/setvalue.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927773-setvalue) | [setvalue.md](./en/setvalue.md) |
+| [setview](./en/setview.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929173-setview) | [setview.md](./en/setview.md) |
+| [shiftselect](./en/shiftselect.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928633-shiftselect) | [shiftselect.md](./en/shiftselect.md) |
+| [shiftselectpartial](./en/shiftselectpartial.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408394-shiftselectpartial) | [shiftselectpartial.md](./en/shiftselectpartial.md) |
+| [show](./en/show.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932033-show) | [show.md](./en/show.md) |
+| [showmenubar](./en/showmenubar.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411394-showmenubar) | [showmenubar.md](./en/showmenubar.md) |
+| [sign](./en/sign.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926393-sign) | [sign.md](./en/sign.md) |
+| [simulation](./en/simulation.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409634-simulation) | [simulation.md](./en/simulation.md) |
+| [simulationdiverged](./en/simulationdiverged.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410054-simulationdiverged) | [simulationdiverged.md](./en/simulationdiverged.md) |
+| [sin](./en/sin.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405534-sin) | [sin.md](./en/sin.md) |
+| [size](./en/size.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405654-size) | [size.md](./en/size.md) |
+| [smithchart](./en/smithchart.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034931213-smithchart) | [smithchart.md](./en/smithchart.md) |
+| [solar](./en/solar.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926473-solar) | [solar.md](./en/solar.md) |
+| [sort](./en/sort.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406654-sort) | [sort.md](./en/sort.md) |
+| [sortmap](./en/sortmap.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926873-sortmap) | [sortmap.md](./en/sortmap.md) |
+| [sourceintensity](./en/sourceintensity.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925373-sourceintensity) | [sourceintensity.md](./en/sourceintensity.md) |
+| [sourceintensity_avg](./en/sourceintensity_avg.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925393-sourceintensity-avg) | [sourceintensity_avg.md](./en/sourceintensity_avg.md) |
+| [sourceintensity_pavg](./en/sourceintensity_pavg.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925413-sourceintensity-pavg) | [sourceintensity_pavg.md](./en/sourceintensity_pavg.md) |
+| [sourcenorm](./en/sourcenorm.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925273-sourcenorm) | [sourcenorm.md](./en/sourcenorm.md) |
+| [sourcenorm2_avg](./en/sourcenorm2_avg.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405474-sourcenorm2-avg) | [sourcenorm2_avg.md](./en/sourcenorm2_avg.md) |
+| [sourcenorm2_pavg](./en/sourcenorm2_pavg.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405494-sourcenorm2-pavg) | [sourcenorm2_pavg.md](./en/sourcenorm2_pavg.md) |
+| [sourcepower](./en/sourcepower.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925313-sourcepower) | [sourcepower.md](./en/sourcepower.md) |
+| [sourcepower_avg](./en/sourcepower_avg.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925333-sourcepower-avg) | [sourcepower_avg.md](./en/sourcepower_avg.md) |
+| [sourcepower_pavg](./en/sourcepower_pavg.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925353-sourcepower-pavg) | [sourcepower_pavg.md](./en/sourcepower_pavg.md) |
+| [spline](./en/spline.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405794-spline) | [spline.md](./en/spline.md) |
+| [splitstring](./en/splitstring.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926093-splitstring) | [splitstring.md](./en/splitstring.md) |
+| [sqrt](./en/sqrt.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925613-sqrt) | [sqrt.md](./en/sqrt.md) |
+| [sroughness](./en/sroughness.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926193-sroughness) | [sroughness.md](./en/sroughness.md) |
+| [stackdipole](./en/stackdipole.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926493-stackdipole) | [stackdipole.md](./en/stackdipole.md) |
+| [stackfield](./en/stackfield.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406294-stackfield) | [stackfield.md](./en/stackfield.md) |
+| [stackpurcell](./en/stackpurcell.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926513-stackpurcell) | [stackpurcell.md](./en/stackpurcell.md) |
+| [stackrt](./en/stackrt.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406254-stackrt) | [stackrt.md](./en/stackrt.md) |
+| [std](./en/std.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406374-std) | [std.md](./en/std.md) |
+| [stepimport](./en/stepimport.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034404734-stepimport) | [stepimport.md](./en/stepimport.md) |
+| [stlimport](./en/stlimport.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924733-stlimport) | [stlimport.md](./en/stlimport.md) |
+| [str2num](./en/str2num.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405914-str2num) | [str2num.md](./en/str2num.md) |
+| [struct](./en/struct.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409574-struct) | [struct.md](./en/struct.md) |
+| [substring](./en/substring.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926033-substring) | [substring.md](./en/substring.md) |
+| [sum](./en/sum.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405694-sum) | [sum.md](./en/sum.md) |
+| [svd](./en/svd.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926713-svd) | [svd.md](./en/svd.md) |
+| [switchtodesign](./en/switchtodesign.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034924013-switchtodesign) | [switchtodesign.md](./en/switchtodesign.md) |
+| [switchtolayout](./en/switchtolayout.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034923993-switchtolayout) | [switchtolayout.md](./en/switchtolayout.md) |
+| [system](./en/system.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410894-system) | [system.md](./en/system.md) |
 
-## U
+### T
 
-- [undo](https://optics.ansys.com/hc/en-us/articles/360034408894-undo)
-- [unfoldsymmetricdata](https://optics.ansys.com/hc/en-us/articles/360034929953-unfoldsymmetricdata)
-- [uninstalldesignkit](https://optics.ansys.com/hc/en-us/articles/360034407554-uninstalldesignkit)
-- [unique](https://optics.ansys.com/hc/en-us/articles/360034406574-unique)
-- [uniquevertices](https://optics.ansys.com/hc/en-us/articles/360034406594-uniquevertices)
-- [unselectall](https://optics.ansys.com/hc/en-us/articles/360034408374-unselectall)
-- [unstructureddataset](https://optics.ansys.com/hc/en-us/articles/360034929933-unstructureddataset)
-- [unwrap](https://optics.ansys.com/hc/en-us/articles/360034405634-unwrap)
-- [updatemodes](https://optics.ansys.com/hc/en-us/articles/360034929073-updatemodes)
-- [updateportmodes](https://optics.ansys.com/hc/en-us/articles/360034409174-updateportmodes)
-- [updatesourcemode](https://optics.ansys.com/hc/en-us/articles/360034408754-updatesourcemode)
-- [upper](https://optics.ansys.com/hc/en-us/articles/360034926113-upper)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [tan](./en/tan.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925433-tan) | [tan.md](./en/tan.md) |
+| [tecplotread](./en/tecplotread.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411294-tecplotread) | [tecplotread.md](./en/tecplotread.md) |
+| [toscript](./en/toscript.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405994-toscript) | [toscript.md](./en/toscript.md) |
+| [touchstoneload](./en/touchstoneload.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932013-touchstoneload) | [touchstoneload.md](./en/touchstoneload.md) |
+| [transmission](./en/transmission.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405354-transmission) | [transmission.md](./en/transmission.md) |
+| [transmission_avg](./en/transmission_avg.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405374-transmission-avg) | [transmission_avg.md](./en/transmission_avg.md) |
+| [transmission_pavg](./en/transmission_pavg.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405414-transmission-pavg) | [transmission_pavg.md](./en/transmission_pavg.md) |
+| [transpose](./en/transpose.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034925973-transpose) | [transpose.md](./en/transpose.md) |
+| [try](./en/try.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928513-try) | [try.md](./en/try.md) |
 
-## V
+### U
 
-- [validate](https://optics.ansys.com/hc/en-us/articles/360034927733-validate)
-- [validateall](https://optics.ansys.com/hc/en-us/articles/360034927753-validateall)
-- [var](https://optics.ansys.com/hc/en-us/articles/360034406354-var)
-- [vectorplot](https://optics.ansys.com/hc/en-us/articles/360034410614-vectorplot)
-- [version](https://optics.ansys.com/hc/en-us/articles/360034932053-version)
-- [versionfile](https://optics.ansys.com/hc/en-us/articles/360034411434-versionfile)
-- [visualize](https://optics.ansys.com/hc/en-us/articles/360034410514-visualize)
-- [vtksave](https://optics.ansys.com/hc/en-us/articles/360034411354-vtksave)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [undo](./en/undo.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408894-undo) | [undo.md](./en/undo.md) |
+| [unfoldsymmetricdata](./en/unfoldsymmetricdata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929953-unfoldsymmetricdata) | [unfoldsymmetricdata.md](./en/unfoldsymmetricdata.md) |
+| [uninstalldesignkit](./en/uninstalldesignkit.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034407554-uninstalldesignkit) | [uninstalldesignkit.md](./en/uninstalldesignkit.md) |
+| [unique](./en/unique.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406574-unique) | [unique.md](./en/unique.md) |
+| [uniquevertices](./en/uniquevertices.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406594-uniquevertices) | [uniquevertices.md](./en/uniquevertices.md) |
+| [unselectall](./en/unselectall.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408374-unselectall) | [unselectall.md](./en/unselectall.md) |
+| [unstructureddataset](./en/unstructureddataset.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929933-unstructureddataset) | [unstructureddataset.md](./en/unstructureddataset.md) |
+| [unwrap](./en/unwrap.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034405634-unwrap) | [unwrap.md](./en/unwrap.md) |
+| [updatemodes](./en/updatemodes.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929073-updatemodes) | [updatemodes.md](./en/updatemodes.md) |
+| [updateportmodes](./en/updateportmodes.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409174-updateportmodes) | [updateportmodes.md](./en/updateportmodes.md) |
+| [updatesourcemode](./en/updatesourcemode.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408754-updatesourcemode) | [updatesourcemode.md](./en/updatesourcemode.md) |
+| [upper](./en/upper.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034926113-upper) | [upper.md](./en/upper.md) |
 
-## W
+### V
 
-- [waituntildone](https://optics.ansys.com/hc/en-us/articles/360034410994-waituntildone)
-- [which](https://optics.ansys.com/hc/en-us/articles/360034411094-which)
-- [wizarddata](https://optics.ansys.com/hc/en-us/articles/360034411754-wizarddata)
-- [wizardgetdata](https://optics.ansys.com/hc/en-us/articles/360034932393-wizardgetdata)
-- [wizardoption](https://optics.ansys.com/hc/en-us/articles/360034932413-wizardoption)
-- [wizardwidget](https://optics.ansys.com/hc/en-us/articles/360034411734-wizardwidget)
-- [workspace](https://optics.ansys.com/hc/en-us/articles/360034409394-workspace)
-- [write](https://optics.ansys.com/hc/en-us/articles/360034411134-write)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [validate](./en/validate.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927733-validate) | [validate.md](./en/validate.md) |
+| [validateall](./en/validateall.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034927753-validateall) | [validateall.md](./en/validateall.md) |
+| [var](./en/var.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034406354-var) | [var.md](./en/var.md) |
+| [vectorplot](./en/vectorplot.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410614-vectorplot) | [vectorplot.md](./en/vectorplot.md) |
+| [version](./en/version.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932053-version) | [version.md](./en/version.md) |
+| [versionfile](./en/versionfile.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411434-versionfile) | [versionfile.md](./en/versionfile.md) |
+| [visualize](./en/visualize.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410514-visualize) | [visualize.md](./en/visualize.md) |
+| [vtksave](./en/vtksave.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411354-vtksave) | [vtksave.md](./en/vtksave.md) |
 
-## X
+### W
 
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [waituntildone](./en/waituntildone.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034410994-waituntildone) | [waituntildone.md](./en/waituntildone.md) |
+| [which](./en/which.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411094-which) | [which.md](./en/which.md) |
+| [wizarddata](./en/wizarddata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411754-wizarddata) | [wizarddata.md](./en/wizarddata.md) |
+| [wizardgetdata](./en/wizardgetdata.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932393-wizardgetdata) | [wizardgetdata.md](./en/wizardgetdata.md) |
+| [wizardoption](./en/wizardoption.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034932413-wizardoption) | [wizardoption.md](./en/wizardoption.md) |
+| [wizardwidget](./en/wizardwidget.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411734-wizardwidget) | [wizardwidget.md](./en/wizardwidget.md) |
+| [workspace](./en/workspace.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034409394-workspace) | [workspace.md](./en/workspace.md) |
+| [write](./en/write.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034411134-write) | [write.md](./en/write.md) |
 
-## Y
+### Z
 
-
-## Z
-
-- [zbfexport](https://optics.ansys.com/hc/en-us/articles/360034928253-zbfexport)
-- [zbfload](https://optics.ansys.com/hc/en-us/articles/360034928273-zbfload)
-- [zbfread](https://optics.ansys.com/hc/en-us/articles/360034408154-zbfread)
-- [zbfwrite](https://optics.ansys.com/hc/en-us/articles/360034928293-zbfwrite)
-- [zeros](https://optics.ansys.com/hc/en-us/articles/360034929653-zeros)
-
-## Misc
-
-- [!](https://optics.ansys.com/hc/en-us/articles/360034931013--)
-- [!=](https://optics.ansys.com/hc/en-us/articles/360034930913--)
-- ["](https://optics.ansys.com/hc/en-us/articles/360034410394--)
-- [#](https://optics.ansys.com/hc/en-us/articles/360034410454--)
-- [%](https://optics.ansys.com/hc/en-us/articles/360034929593--)
-- [&](https://optics.ansys.com/hc/en-us/articles/360034930973--)
-- ['](https://optics.ansys.com/hc/en-us/articles/360034931053--)
-- [*](https://optics.ansys.com/hc/en-us/articles/360034930833--)
-- [+](https://optics.ansys.com/hc/en-us/articles/360034410254--)
-- [-](https://optics.ansys.com/hc/en-us/articles/360034930873--)
-- [.](https://optics.ansys.com/hc/en-us/articles/360034930813--)
-- [/](https://optics.ansys.com/hc/en-us/articles/360034930853--)
-- [:](https://optics.ansys.com/hc/en-us/articles/360034929533--)
-- [<](https://optics.ansys.com/hc/en-us/articles/360034410334--)
-- [<=](https://optics.ansys.com/hc/en-us/articles/360034410314--)
-- [=](https://optics.ansys.com/hc/en-us/articles/360034929513--)
-- [==](https://optics.ansys.com/hc/en-us/articles/360034930893--)
-- [>](https://optics.ansys.com/hc/en-us/articles/360034930953--)
-- [>=](https://optics.ansys.com/hc/en-us/articles/360034930933--)
-- [?](https://optics.ansys.com/hc/en-us/articles/360034410434--)
-- [[]](https://optics.ansys.com/hc/en-us/articles/360034929573--)
-- [^](https://optics.ansys.com/hc/en-us/articles/360034410274--)
-- [|](https://optics.ansys.com/hc/en-us/articles/360034410374--)
-- [~](https://optics.ansys.com/hc/en-us/articles/360034931033--)
+| Command | Official Docs | Local Docs |
+|---------|---------------|------------|
+| [zbfexport](./en/zbfexport.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928253-zbfexport) | [zbfexport.md](./en/zbfexport.md) |
+| [zbfload](./en/zbfload.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928273-zbfload) | [zbfload.md](./en/zbfload.md) |
+| [zbfread](./en/zbfread.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034408154-zbfread) | [zbfread.md](./en/zbfread.md) |
+| [zbfwrite](./en/zbfwrite.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034928293-zbfwrite) | [zbfwrite.md](./en/zbfwrite.md) |
+| [zeros](./en/zeros.md) | [ANSYS](https://optics.ansys.com/hc/en-us/articles/360034929653-zeros) | [zeros.md](./en/zeros.md) |

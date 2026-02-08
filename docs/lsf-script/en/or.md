@@ -1,27 +1,31 @@
 # or
 
-Is the logical OR function. Imaginary components of x and y are ignored. 
+Is the logical OR function. Imaginary components of x and y are ignored.
 
-**Syntax** |  **Description**  
----|---  
-out = y | x;  |  If the real part of either or both of x,y is non-zero, then return 1. Otherwise return 0.   
-y or x;  |  Same as |.   
-  
+| **Syntax** | **Description** |
+| ---------- | --------------- |
+| out = y    | x;              |
+| y or x;    | Same as         |
+
 **Examples**
 
-This example shows the usage of the "|" and OR function. 
-    
-    
-    ? (2) | (4);
-    result: 
-    1 
-    ?(3 > 4) or (4 >3);
-    result: 
-    1  
-    ? (0+1i) | (0);
-    result: 
-    0 
+This example shows the usage of the "|" and OR function.
+
+```
+? (2) | (4);
+result: 
+1 
+?(3 > 4) or (4 >3);
+result: 
+1  
+? (0+1i) | (0);
+result: 
+0 
+```
 
 **See Also**
 
-[ List of commands ](/hc/en-us/articles/360037228834) , [ == ](/hc/en-us/articles/360034930893--) , [ != ](/hc/en-us/articles/360034930913--) , [ <= ](/hc/en-us/articles/360034410314--) , [ >= ](/hc/en-us/articles/360034930933--) , [ < ](/hc/en-us/articles/360034410334--) , [ > ](/hc/en-us/articles/360034930953--) , [ & ](/hc/en-us/articles/360034930973--) , [ and ](/hc/en-us/articles/360034410354-and) , [ | ](/hc/en-us/articles/360034410374--) , [ or ](/hc/en-us/articles/360034930993-or) , [ ! ](/hc/en-us/articles/360034931013--) , [ ~ ](/hc/en-us/articles/360034931033--)
+[ List of commands ](../lsf-script-commands-alphabetical.md) , [ == ](./minus.md) ,
+[ != ](./minus.md) , [ \<= ](./minus.md) , [ >= ](./minus.md) , [ < ](./minus.md) ,
+[ > ](./minus.md) , [ & ](./minus.md) , [ and ](./and.md) , [ | ](./minus.md) ,
+[ or ](./or.md) , [ ! ](./minus.md) , [ ~ ](./minus.md)

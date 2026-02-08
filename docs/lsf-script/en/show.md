@@ -1,11 +1,11 @@
 # show
 
-Shows the graphical user interface, can be used with the [ hide ](/hc/en-us/articles/360034411374-hide) command. 
+Shows the graphical user interface, can be used with the [ hide ](./hide.md) command.
 
-**Syntax** |  **Description**  
----|---  
-show;  |  shows the GUI.   
-  
+| **Syntax** | **Description** |
+| ---------- | --------------- |
+| show;      | shows the GUI.  |
+
 **See Also**
 
-[ List of commands ](/hc/en-us/articles/360037228834) , [ hide ](/hc/en-us/articles/360034411374-hide)
+[ List of commands ](../lsf-script-commands-alphabetical.md) , [ hide ](./hide.md)

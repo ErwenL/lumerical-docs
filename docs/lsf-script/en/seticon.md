@@ -2,17 +2,18 @@
 
 Sets a user defined icon for an element.
 
-**Syntax** |  **Description**  
----|---  
-seticon (name,icon); |  Set a user defined icon for element ‘name’. Parameter ‘icon’ should be a vector image format SVG (Scalable Vector Graphics) file.  
-  
+| **Syntax**           | **Description**                                                                                                                   |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| seticon (name,icon); | Set a user defined icon for element ‘name’. Parameter ‘icon’ should be a vector image format SVG (Scalable Vector Graphics) file. |
+
 **Example**
 
 Set the icon ‘transmission.svg’ to an existing compound element ‘COMPOUND_1’
-    
-    
-    seticon("COMPOUND_1","transmission.svg");
+
+```
+seticon("COMPOUND_1","transmission.svg");
+```
 
 **See Also**
 
-[Manipulating objects](/hc/en-us/articles/360037228834)
+[Manipulating objects](../lsf-script-commands-alphabetical.md)

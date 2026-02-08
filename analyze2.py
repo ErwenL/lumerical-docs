@@ -2,50 +2,53 @@ import os
 import re
 
 # Load command names
-with open('docs/lsf-script/lsf-script-commands-alphabetical.md', 'r', encoding='utf-8') as f:
+with open(
+    "docs/lsf-script/lsf-script-commands-alphabetical.md", "r", encoding="utf-8"
+) as f:
     content = f.read()
-commands = re.findall(r'\[([^\]]+)\]', content)
+commands = re.findall(r"\[([^\]]+)\]", content)
 print(f"Total commands: {len(commands)}")
 
 # Load filenames (without extension)
 filenames = []
-for fname in os.listdir('docs/lsf-script/en'):
-    if fname.endswith('.md'):
+for fname in os.listdir("docs/lsf-script/en"):
+    if fname.endswith(".md"):
         filenames.append(fname[:-3])
 print(f"Total filenames: {len(filenames)}")
 
 # Define mapping rules
 # Order matters: longer sequences first
 replacements = [
-    ('!=', 'exclamationequals'),
-    ('<=', 'lte'),
-    ('>=', 'gte'),
-    ('==', 'equalsequals'),
-    (' ', '_'),
-    ('(', 'lparen'),
-    (')', 'rparen'),
-    ('!', 'exclamation'),
-    ('"', 'quote'),
-    ('#', 'hash'),
-    ('%', 'percent'),
-    ('&', 'ampersand'),
-    ("'", 'apostrophe'),
-    ('*', 'asterisk'),
-    ('+', 'plus'),
-    ('-', 'minus'),
-    ('.', 'dot'),
-    ('/', 'slash'),
-    (':', 'colon'),
-    ('<', 'lt'),
-    ('=', 'equals'),
-    ('>', 'gt'),
-    ('?', 'question'),
-    ('[', 'lbracket'),
-    (']', 'rbracket'),
-    ('^', 'caret'),
-    ('|', 'pipe'),
-    ('~', 'tilde'),
+    ("!=", "exclamationequals"),
+    ("<=", "lte"),
+    (">=", "gte"),
+    ("==", "equalsequals"),
+    (" ", "_"),
+    ("(", "lparen"),
+    (")", "rparen"),
+    ("!", "exclamation"),
+    ('"', "quote"),
+    ("#", "hash"),
+    ("%", "percent"),
+    ("&", "ampersand"),
+    ("'", "apostrophe"),
+    ("*", "asterisk"),
+    ("+", "plus"),
+    ("-", "minus"),
+    (".", "dot"),
+    ("/", "slash"),
+    (":", "colon"),
+    ("<", "lt"),
+    ("=", "equals"),
+    (">", "gt"),
+    ("?", "question"),
+    ("[", "lbracket"),
+    ("]", "rbracket"),
+    ("^", "caret"),
+    ("|", "pipe"),
+    ("~", "tilde"),
 ]
+
 
 def command_to_filename(cmd):
     result = cmd
@@ -53,10 +56,11 @@ def command_to_filename(cmd):
         result = result.replace(old, new)
     return result
 
+
 # Special case: dot command conflict
 special_cases = {
-    'dot': 'dot_cmd',  # dot command -> dot_cmd
-    '.': 'dot',        # . command -> dot
+    "dot": "dot_cmd",  # dot command -> dot_cmd
+    ".": "dot",  # . command -> dot
 }
 
 # Build mapping
@@ -93,7 +97,9 @@ if missing_filenames:
 
 # Print special character mapping table
 print("\n=== Special Character Mapping Table ===")
-special_chars = [c for c in commands if any(ch in c for ch in ' !\"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~')]
+special_chars = [
+    c for c in commands if any(ch in c for ch in " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~")
+]
 special_chars.sort()
 for cmd in special_chars:
     if cmd in mapping:
